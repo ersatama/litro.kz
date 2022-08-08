@@ -2,20 +2,17 @@
 
 namespace App\Domain\Contracts;
 
-class NewsContract extends MainContract
+class AutoPartCategoryContract extends MainContract
 {
-    const TABLE =   'news';
+    const TABLE =   'auto_part_categories';
     const FILLABLE  =   [
-        self::ID,
+        self::POSITION,
+        self::PARENT_ID,
         self::TITLE,
         self::TITLE_KZ,
         self::TITLE_EN,
         self::DESCRIPTION,
         self::DESCRIPTION_KZ,
         self::DESCRIPTION_EN,
-        self::IMAGE_ID,
-        self::NEWS_CATEGORY_ID,
-        self::IS_ACTIVE,
-        self::LINK
     ];
 }

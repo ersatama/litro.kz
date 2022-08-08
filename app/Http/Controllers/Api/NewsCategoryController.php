@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Services\NewsCategoryService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\NewsCategory\NewsCategoryCollection;
-use App\Services\NewsCategoryService;
-use Illuminate\Http\Request;
 
 class NewsCategoryController extends Controller
 {

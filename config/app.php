@@ -197,6 +197,11 @@ return [
 
 
         App\Providers\Repositories\NewsCategoryRepositoryProvider::class,
+        App\Providers\Repositories\NewsRepositoryProvider::class,
+        App\Providers\Repositories\AutoPartCategoryRepositoryProvider::class,
+        App\Providers\Repositories\AutoPartParamRepositoryProvider::class,
+        App\Providers\Repositories\AutoPartParamOptionRepositoryProvider::class,
+        App\Providers\Repositories\AutoPartTypeRepositoryProvider::class,
     ],
 
     /*

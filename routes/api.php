@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\Api\AutoPartCategoryController;
+use App\Http\Controllers\Api\AutoPartParamController;
+use App\Http\Controllers\Api\AutoPartParamOptionController;
+use App\Http\Controllers\Api\AutoPartTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
+use App\Http\Controllers\Api\NewsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +24,39 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('newsCategory')->group(function() {
-    Route::get('get',[NewsCategoryController::class,'get'])
-        ->name('newsCategory.get');
+Route::controller(AutoPartParamOptionController::class)->group(function() {
+    Route::prefix('autoPartParamOption')->group(function() {
+        Route::get('get','get')->name('autoPartParamOption.get');
+    });
+});
+
+Route::controller(AutoPartTypeController::class)->group(function() {
+    Route::prefix('autoPartType')->group(function() {
+        Route::get('get','get')->name('autoPartType.get');
+    });
+});
+
+Route::controller(AutoPartParamController::class)->group(function() {
+    Route::prefix('autoPartParam')->group(function() {
+        Route::get('get','get')->name('autoPartParam.get');
+    });
+});
+
+Route::controller(AutoPartCategoryController::class)->group(function() {
+    Route::prefix('autoPartCategory')->group(function() {
+        Route::get('get','get')->name('autoPartCategory.get');
+    });
+});
+
+Route::controller(NewsController::class)->group(function() {
+    Route::prefix('news')->group(function() {
+        Route::get('get','get')->name('news.get');
+        Route::get('getById/{id}','getById')->name('news.getById');
+    });
+});
+
+Route::controller(NewsCategoryController::class)->group(function() {
+    Route::prefix('newsCategory')->group(function() {
+        Route::get('get','get')->name('newsCategory.get');
+    });
 });

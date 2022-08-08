@@ -4,6 +4,12 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const AUTO_PART_TYPE_ID =   'auto_part_type_id';
+    const AUTO_PART_PARAM_ID    =   'auto_part_param_id';
+    const FILTER    =   'filter';
+    const TYPE  =   'type';
+    const POSITION  =   'position';
+    const PARENT_ID =   'parent_id';
     const NEWS_CATEGORY_ID  =   'news_category_id';
     const DESCRIPTION_EN    =   'description_en';
     const DESCRIPTION_KZ    =   'description_kz';
