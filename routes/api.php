@@ -4,6 +4,8 @@ use App\Http\Controllers\Api\AutoPartCategoryController;
 use App\Http\Controllers\Api\AutoPartParamController;
 use App\Http\Controllers\Api\AutoPartParamOptionController;
 use App\Http\Controllers\Api\AutoPartTypeController;
+use App\Http\Controllers\Api\CarBrandController;
+use App\Http\Controllers\Api\CarCategoryController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use Illuminate\Http\Request;
@@ -22,6 +24,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(CarBrandController::class)->group(function() {
+    Route::prefix('carBrand')->group(function() {
+        Route::get('get','get')->name('carBrand.get');
+    });
+});
+
+Route::controller(CarCategoryController::class)->group(function() {
+    Route::prefix('carCategory')->group(function() {
+        Route::get('get','get')->name('carCategory.get');
+    });
 });
 
 Route::controller(AutoPartParamOptionController::class)->group(function() {

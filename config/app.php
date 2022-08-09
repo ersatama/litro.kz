@@ -202,6 +202,8 @@ return [
         App\Providers\Repositories\AutoPartParamRepositoryProvider::class,
         App\Providers\Repositories\AutoPartParamOptionRepositoryProvider::class,
         App\Providers\Repositories\AutoPartTypeRepositoryProvider::class,
+        App\Providers\Repositories\CarCategoryRepositoryProvider::class,
+        App\Providers\Repositories\CarBrandRepositoryProvider::class,
     ],
 
     /*
