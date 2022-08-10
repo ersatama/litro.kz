@@ -204,6 +204,8 @@ return [
         App\Providers\Repositories\AutoPartTypeRepositoryProvider::class,
         App\Providers\Repositories\CarCategoryRepositoryProvider::class,
         App\Providers\Repositories\CarBrandRepositoryProvider::class,
+        App\Providers\Repositories\CarModelRepositoryProvider::class,
+        App\Providers\Repositories\CityRepositoryProvider::class,
     ],
 
     /*

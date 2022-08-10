@@ -4,6 +4,11 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const ISO_TITLE =   'iso_title';
+    const LONG  =   'long';
+    const LAT   =   'lat';
+    const REGION_ID =   'region_id';
+    const CAR_BRAND_ID  =   'car_brand_id';
     const AUTO_PART_TYPE_ID =   'auto_part_type_id';
     const AUTO_PART_PARAM_ID    =   'auto_part_param_id';
     const FILTER    =   'filter';
