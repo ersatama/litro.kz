@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\AutoPartParamOptionController;
 use App\Http\Controllers\Api\AutoPartTypeController;
 use App\Http\Controllers\Api\CarBrandController;
 use App\Http\Controllers\Api\CarCategoryController;
+use App\Http\Controllers\Api\CardCategoryController;
 use App\Http\Controllers\Api\CarModelController;
 use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\CountryController;
@@ -16,19 +17,14 @@ use App\Http\Controllers\Api\RegionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(CardCategoryController::class)->group(function() {
+    Route::prefix('cardCategory')->group(function() {
+        Route::get('get','get')->name('cardCategory.get');
+    });
 });
 
 Route::controller(RegionController::class)->group(function() {

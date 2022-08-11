@@ -209,6 +209,7 @@ return [
         App\Providers\Repositories\CurrencyRepositoryProvider::class,
         App\Providers\Repositories\CountryRepositoryProvider::class,
         App\Providers\Repositories\RegionRepositoryProvider::class,
+        App\Providers\Repositories\CardCategoryRepositoryProvider::class,
     ],
 
     /*
