@@ -206,6 +206,9 @@ return [
         App\Providers\Repositories\CarBrandRepositoryProvider::class,
         App\Providers\Repositories\CarModelRepositoryProvider::class,
         App\Providers\Repositories\CityRepositoryProvider::class,
+        App\Providers\Repositories\CurrencyRepositoryProvider::class,
+        App\Providers\Repositories\CountryRepositoryProvider::class,
+        App\Providers\Repositories\RegionRepositoryProvider::class,
     ],
 
     /*

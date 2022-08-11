@@ -4,6 +4,7 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const COUNTRY_ID    =   'country_id';
     const ISO_TITLE =   'iso_title';
     const LONG  =   'long';
     const LAT   =   'lat';

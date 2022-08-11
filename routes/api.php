@@ -8,8 +8,11 @@ use App\Http\Controllers\Api\CarBrandController;
 use App\Http\Controllers\Api\CarCategoryController;
 use App\Http\Controllers\Api\CarModelController;
 use App\Http\Controllers\Api\CityController;
+use App\Http\Controllers\Api\CountryController;
+use App\Http\Controllers\Api\CurrencyController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\RegionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +29,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(RegionController::class)->group(function() {
+    Route::prefix('region')->group(function() {
+        Route::get('get','get')->name('region.get');
+    });
+});
+
+Route::controller(CountryController::class)->group(function() {
+    Route::prefix('country')->group(function() {
+        Route::get('get','get')->name('country.get');
+    });
+});
+
+Route::controller(CurrencyController::class)->group(function() {
+    Route::prefix('currency')->group(function() {
+        Route::get('get','get')->name('currency.get');
+    });
 });
 
 Route::controller(CityController::class)->group(function() {
