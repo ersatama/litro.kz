@@ -28,7 +28,7 @@ class NewsController extends Controller
         if ($news = $this->newsService->getById($id)) {
             return new NewsResource($news);
         }
-        return response(['message'  =>  'Пользователь не найден'],404);
+        return response(['message'  =>  'News not found'],404);
     }
 
 }

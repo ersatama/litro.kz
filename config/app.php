@@ -82,7 +82,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +95,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -210,6 +210,9 @@ return [
         App\Providers\Repositories\CountryRepositoryProvider::class,
         App\Providers\Repositories\RegionRepositoryProvider::class,
         App\Providers\Repositories\CardCategoryRepositoryProvider::class,
+        App\Providers\Repositories\ServiceRepositoryProvider::class,
+        App\Providers\Repositories\ServiceTypeRepositoryProvider::class,
+        App\Providers\Repositories\ServicePriceRepositoryProvider::class,
     ],
 
     /*

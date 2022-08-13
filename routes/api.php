@@ -14,11 +14,39 @@ use App\Http\Controllers\Api\CurrencyController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\RegionController;
+use App\Http\Controllers\Api\ServiceController;
+use App\Http\Controllers\Api\ServicePriceController;
+use App\Http\Controllers\Api\ServiceTypeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Authorization,X-localization,X-No-Cache');
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(ServicePriceController::class)->group(function() {
+    Route::prefix('servicePrice')->group(function() {
+        Route::get('get','get')->name('servicePrice.get');
+        Route::get('getById/{id}','getById')->name('servicePrice.getById');
+    });
+});
+
+Route::controller(ServiceTypeController::class)->group(function() {
+    Route::prefix('serviceType')->group(function() {
+        Route::get('get','get')->name('serviceType.get');
+        Route::get('getById/{id}','getById')->name('serviceType.getById');
+    });
+});
+
+Route::controller(ServiceController::class)->group(function() {
+    Route::prefix('service')->group(function() {
+        Route::get('get','get')->name('service.get');
+        Route::get('getById/{id}','getById')->name('service.getById');
+    });
 });
 
 Route::controller(CardCategoryController::class)->group(function() {
