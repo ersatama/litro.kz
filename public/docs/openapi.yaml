@@ -47,7 +47,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: consequatur
+        example: ex
         required: true
         schema:
           type: string
@@ -91,7 +91,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: consectetur
+        example: quo
         required: true
         schema:
           type: string
@@ -135,7 +135,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: aut
+        example: voluptatum
         required: true
         schema:
           type: string
@@ -179,7 +179,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: fuga
+        example: alias
         required: true
         schema:
           type: string
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: distinctio
+        example: esse
         required: true
         schema:
           type: string
@@ -255,16 +255,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: iure
-                    take: fugit
+                    skip: laboriosam
+                    take: ab
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: iure
-                      take: fugit
+                      skip: laboriosam
+                      take: ab
                       count: 0
                   data:
                     type: array
@@ -277,7 +277,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: iure
+        example: laboriosam
         required: true
         schema:
           type: string
@@ -285,7 +285,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: fugit
+        example: ab
         required: true
         schema:
           type: string
@@ -317,16 +317,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: exercitationem
-                    take: adipisci
+                    skip: dolor
+                    take: ut
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: exercitationem
-                      take: adipisci
+                      skip: dolor
+                      take: ut
                       count: 0
                   data:
                     type: array
@@ -339,7 +339,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: exercitationem
+        example: dolor
         required: true
         schema:
           type: string
@@ -347,7 +347,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: adipisci
+        example: ut
         required: true
         schema:
           type: string
@@ -379,16 +379,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: ut
-                    take: totam
+                    skip: aspernatur
+                    take: qui
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: ut
-                      take: totam
+                      skip: aspernatur
+                      take: qui
                       count: 0
                   data:
                     type: array
@@ -401,7 +401,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ut
+        example: aspernatur
         required: true
         schema:
           type: string
@@ -409,7 +409,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: totam
+        example: qui
         required: true
         schema:
           type: string
@@ -441,7 +441,7 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: dolorum
+                    skip: perferendis
                     take: aut
                     count: 0
                   data: []
@@ -449,7 +449,7 @@ paths:
                   info:
                     type: object
                     example:
-                      skip: dolorum
+                      skip: perferendis
                       take: aut
                       count: 0
                   data:
@@ -463,7 +463,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolorum
+        example: perferendis
         required: true
         schema:
           type: string
@@ -503,16 +503,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: quis
-                    take: sit
+                    skip: iusto
+                    take: delectus
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: quis
-                      take: sit
+                      skip: iusto
+                      take: delectus
                       count: 0
                   data:
                     type: array
@@ -525,7 +525,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quis
+        example: iusto
         required: true
         schema:
           type: string
@@ -533,7 +533,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sit
+        example: delectus
         required: true
         schema:
           type: string
@@ -565,16 +565,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: placeat
-                    take: inventore
+                    skip: ab
+                    take: omnis
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: placeat
-                      take: inventore
+                      skip: ab
+                      take: omnis
                       count: 0
                   data:
                     type: array
@@ -587,7 +587,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: placeat
+        example: ab
         required: true
         schema:
           type: string
@@ -595,7 +595,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: inventore
+        example: omnis
         required: true
         schema:
           type: string
@@ -627,16 +627,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: et
-                    take: vitae
+                    skip: ducimus
+                    take: sapiente
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: et
-                      take: vitae
+                      skip: ducimus
+                      take: sapiente
                       count: 0
                   data:
                     type: array
@@ -649,7 +649,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: ducimus
         required: true
         schema:
           type: string
@@ -657,7 +657,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: vitae
+        example: sapiente
         required: true
         schema:
           type: string
@@ -689,16 +689,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: nihil
-                    take: libero
+                    skip: qui
+                    take: vel
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: nihil
-                      take: libero
+                      skip: qui
+                      take: vel
                       count: 0
                   data:
                     type: array
@@ -711,7 +711,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nihil
+        example: qui
         required: true
         schema:
           type: string
@@ -719,7 +719,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: libero
+        example: vel
         required: true
         schema:
           type: string
@@ -751,16 +751,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: ab
-                    take: consequatur
+                    skip: quam
+                    take: quasi
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: ab
-                      take: consequatur
+                      skip: quam
+                      take: quasi
                       count: 0
                   data:
                     type: array
@@ -773,7 +773,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ab
+        example: quam
         required: true
         schema:
           type: string
@@ -781,7 +781,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: consequatur
+        example: quasi
         required: true
         schema:
           type: string
@@ -813,17 +813,17 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: neque
-                    take: corrupti
-                    count: 2
+                    skip: veritatis
+                    take: ut
+                    count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: neque
-                      take: corrupti
-                      count: 2
+                      skip: veritatis
+                      take: ut
+                      count: 0
                   data:
                     type: array
                     example: []
@@ -835,7 +835,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: neque
+        example: veritatis
         required: true
         schema:
           type: string
@@ -843,7 +843,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: corrupti
+        example: ut
         required: true
         schema:
           type: string
@@ -875,16 +875,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: et
-                    take: autem
+                    skip: reprehenderit
+                    take: in
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: et
-                      take: autem
+                      skip: reprehenderit
+                      take: in
                       count: 0
                   data:
                     type: array
@@ -897,7 +897,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: reprehenderit
         required: true
         schema:
           type: string
@@ -905,7 +905,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: autem
+        example: in
         required: true
         schema:
           type: string
@@ -937,16 +937,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: eaque
-                    take: autem
+                    skip: nemo
+                    take: minima
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: eaque
-                      take: autem
+                      skip: nemo
+                      take: minima
                       count: 0
                   data:
                     type: array
@@ -959,7 +959,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: eaque
+        example: nemo
         required: true
         schema:
           type: string
@@ -967,7 +967,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: autem
+        example: minima
         required: true
         schema:
           type: string
@@ -999,16 +999,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: et
-                    take: non
+                    skip: aut
+                    take: dolore
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: et
-                      take: non
+                      skip: aut
+                      take: dolore
                       count: 0
                   data:
                     type: array
@@ -1021,7 +1021,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: aut
         required: true
         schema:
           type: string
@@ -1029,7 +1029,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: non
+        example: dolore
         required: true
         schema:
           type: string
@@ -1061,16 +1061,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: neque
-                    take: culpa
+                    skip: et
+                    take: sed
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: neque
-                      take: culpa
+                      skip: et
+                      take: sed
                       count: 0
                   data:
                     type: array
@@ -1083,7 +1083,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: neque
+        example: et
         required: true
         schema:
           type: string
@@ -1091,7 +1091,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: culpa
+        example: sed
         required: true
         schema:
           type: string
@@ -1123,16 +1123,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: laborum
-                    take: debitis
+                    skip: aut
+                    take: omnis
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: laborum
-                      take: debitis
+                      skip: aut
+                      take: omnis
                       count: 0
                   data:
                     type: array
@@ -1145,7 +1145,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: laborum
+        example: aut
         required: true
         schema:
           type: string
@@ -1153,7 +1153,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: debitis
+        example: omnis
         required: true
         schema:
           type: string
@@ -1185,16 +1185,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: ex
-                    take: et
+                    skip: corrupti
+                    take: enim
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: ex
-                      take: et
+                      skip: corrupti
+                      take: enim
                       count: 0
                   data:
                     type: array
@@ -1207,7 +1207,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ex
+        example: corrupti
         required: true
         schema:
           type: string
@@ -1215,7 +1215,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: enim
         required: true
         schema:
           type: string
@@ -1247,16 +1247,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: est
-                    take: ut
+                    skip: veniam
+                    take: autem
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: est
-                      take: ut
+                      skip: veniam
+                      take: autem
                       count: 0
                   data:
                     type: array
@@ -1269,7 +1269,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: est
+        example: veniam
         required: true
         schema:
           type: string
@@ -1277,7 +1277,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: autem
         required: true
         schema:
           type: string
@@ -1309,16 +1309,16 @@ paths:
                 type: object
                 example:
                   info:
-                    skip: distinctio
-                    take: molestiae
+                    skip: ullam
+                    take: similique
                     count: 0
                   data: []
                 properties:
                   info:
                     type: object
                     example:
-                      skip: distinctio
-                      take: molestiae
+                      skip: ullam
+                      take: similique
                       count: 0
                   data:
                     type: array
@@ -1331,7 +1331,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: distinctio
+        example: ullam
         required: true
         schema:
           type: string
@@ -1339,7 +1339,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: molestiae
+        example: similique
         required: true
         schema:
           type: string
@@ -1383,7 +1383,113 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: voluptas
+        example: voluptatem
+        required: true
+        schema:
+          type: string
+  '/api/moneyOperationType/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  info:
+                    skip: deserunt
+                    take: ullam
+                    count: 0
+                  data: []
+                properties:
+                  info:
+                    type: object
+                    example:
+                      skip: deserunt
+                      take: ullam
+                      count: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: deserunt
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: ullam
+        required: true
+        schema:
+          type: string
+  '/api/moneyOperationType/getById/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: quia
         required: true
         schema:
           type: string

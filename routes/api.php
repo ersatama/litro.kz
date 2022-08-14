@@ -12,6 +12,7 @@ use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\CurrencyController;
 use App\Http\Controllers\Api\MoneyOperationController;
+use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\RegionController;
@@ -27,6 +28,13 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(MoneyOperationTypeController::class)->group(function() {
+    Route::prefix('moneyOperationType')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('moneyOperationType.get');
+        Route::get('getById/{id}','getById')->name('moneyOperationType.getById');
+    });
 });
 
 Route::controller(MoneyOperationController::class)->group(function() {

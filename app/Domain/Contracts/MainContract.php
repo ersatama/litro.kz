@@ -4,6 +4,7 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const NOT_FOUND =   'not found';
     const MESSAGE   =   'message';
     const PAYMENT_ID    =   'payment_id';
     const WALLET_RECORD_ID  =   'wallet_record_id';
