@@ -12,9 +12,14 @@ class NewsService
         $this->newsRepository   =   $newsRepository;
     }
 
-    public function get()
+    public function count($where)
     {
-        return $this->newsRepository->get();
+        return $this->newsRepository->count($where);
+    }
+
+    public function get($skip,$take)
+    {
+        return $this->newsRepository->get($skip,$take);
     }
 
     public function getById($id)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\MainContract;
 use App\Domain\Services\AutoPartTypeService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AutoPartType\AutoPartTypeCollection;
@@ -15,9 +16,16 @@ class AutoPartTypeController extends Controller
         $this->autoPartTypeService  =   $autoPartTypeService;
     }
 
-    public function get(): AutoPartTypeCollection
+    public function get($skip,$take)
     {
-        return new AutoPartTypeCollection($this->autoPartTypeService->get());
+        return response([
+            MainContract::INFO  =>  [
+                MainContract::SKIP  =>  $skip,
+                MainContract::TAKE  =>  $take,
+                MainContract::COUNT =>  $this->autoPartTypeService->count([]),
+            ],
+            MainContract::DATA  =>  new AutoPartTypeCollection($this->autoPartTypeService->get($skip,$take))
+        ],200);
     }
 
 }

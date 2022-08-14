@@ -7,9 +7,14 @@ use App\Models\News;
 
 class NewsRepositoryEloquent implements NewsRepositoryInterface
 {
-    public function get()
+    public function count($where)
     {
-        return News::get();
+        return News::where($where)->count();
+    }
+
+    public function get($skip,$take)
+    {
+        return News::skip($skip)->take($take)->get();
     }
 
     public function getById($id)

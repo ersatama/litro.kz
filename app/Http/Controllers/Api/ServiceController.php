@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\MainContract;
 use App\Domain\Services\ServiceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Service\ServiceCollection;
@@ -19,9 +20,16 @@ class ServiceController extends Controller
         $this->serviceService   =   $serviceService;
     }
 
-    public function get(): ServiceCollection
+    public function get($skip,$take): Response|Application|ResponseFactory
     {
-        return new ServiceCollection($this->serviceService->get());
+        return response([
+            MainContract::INFO  =>  [
+                MainContract::SKIP  =>  $skip,
+                MainContract::TAKE  =>  $take,
+                MainContract::COUNT =>  $this->serviceService->count([]),
+            ],
+            MainContract::DATA  =>  new ServiceCollection($this->serviceService->get($skip,$take))
+        ],200);
     }
 
     public function getById($id): Response|ServiceResource|Application|ResponseFactory

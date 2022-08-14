@@ -12,9 +12,14 @@ class CityService
         $this->cityRepository   =   $cityRepository;
     }
 
-    public function get()
+    public function get($skip,$take)
     {
-        return $this->cityRepository->get();
+        return $this->cityRepository->get($skip,$take);
+    }
+
+    public function count($where)
+    {
+        return $this->cityRepository->count($where);
     }
 
 }

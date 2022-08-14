@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\MainContract;
 use App\Domain\Services\AutoPartParamService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AutoPartParam\AutoPartParamCollection;
@@ -15,9 +16,16 @@ class AutoPartParamController extends Controller
         $this->autoPartParamService =   $autoPartParamService;
     }
 
-    public function get(): AutoPartParamCollection
+    public function get($skip,$take)
     {
-        return new AutoPartParamCollection($this->autoPartParamService->get());
+        return response([
+            MainContract::INFO  =>  [
+                MainContract::SKIP  =>  $skip,
+                MainContract::TAKE  =>  $take,
+                MainContract::COUNT =>  $this->autoPartParamService->count([]),
+            ],
+            MainContract::DATA  =>  new AutoPartParamCollection($this->autoPartParamService->get($skip,$take))
+        ],200);
     }
 
 }

@@ -6,8 +6,14 @@ use App\Models\CarCategory;
 
 class CarCategoryRepositoryEloquent implements CarCategoryRepositoryInterface
 {
-    public function get()
+
+    public function count($where)
     {
-        return CarCategory::get();
+        return CarCategory::where($where)->count();
+    }
+
+    public function get($skip,$take)
+    {
+        return CarCategory::skip($skip)->take($take)->get();
     }
 }

@@ -4,6 +4,11 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const INFO  =   'info';
+    const SKIP  =   'skip';
+    const TAKE  =   'take';
+    const DATA  =   'data';
+    const COUNT =   'count';
     const IS_NEGOTIABLE_PRICE   =   'is_negotiable_price';
     const IS_WITH_CHECK =   'is_with_check';
     const IS_FREE   =   'is_free';

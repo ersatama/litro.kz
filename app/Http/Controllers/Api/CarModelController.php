@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\MainContract;
 use App\Domain\Services\CarModelService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CarModel\CarModelCollection;
@@ -19,9 +20,31 @@ class CarModelController extends Controller
         $this->carModelService  =   $carModelService;
     }
 
-    public function get(): CarModelCollection
+    public function get($skip,$take): Response|Application|ResponseFactory
     {
-        return new CarModelCollection($this->carModelService->get());
+        return response([
+            MainContract::INFO  =>  [
+                MainContract::SKIP  =>  $skip,
+                MainContract::TAKE  =>  $take,
+                MainContract::COUNT =>  $this->carModelService->count([]),
+            ],
+            MainContract::DATA  =>  new CarModelCollection($this->carModelService->get($skip,$take))
+        ],200);
+    }
+
+
+    public function getByCarBrandId($carBrandId,$skip,$take): Response|Application|ResponseFactory
+    {
+        return response([
+            MainContract::INFO  =>  [
+                MainContract::SKIP  =>  $skip,
+                MainContract::TAKE  =>  $take,
+                MainContract::COUNT =>  $this->carModelService->count([
+                    MainContract::CAR_BRAND_ID,$carBrandId
+                ]),
+            ],
+            MainContract::DATA  =>  new CarModelCollection($this->carModelService->getByCarBrandId($carBrandId,$skip,$take))
+        ],200);
     }
 
     public function getById($id): Response|CarModelResource|Application|ResponseFactory
@@ -30,11 +53,6 @@ class CarModelController extends Controller
             return new CarModelResource($carModel);
         }
         return response(['message'  =>  'Модель не найдена'],404);
-    }
-
-    public function getByBrandId($brandId): CarModelCollection
-    {
-        return new CarModelCollection($this->carModelService->getByBrandId($brandId));
     }
 
 }

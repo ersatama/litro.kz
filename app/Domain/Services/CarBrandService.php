@@ -12,9 +12,14 @@ class CarBrandService
         $this->carBrandRepository   =   $carBrandRepository;
     }
 
-    public function get()
+    public function get($skip,$take)
     {
-        return $this->carBrandRepository->get();
+        return $this->carBrandRepository->get($skip,$take);
+    }
+
+    public function count($where)
+    {
+        return $this->carBrandRepository->count($where);
     }
 
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\MainContract;
 use App\Domain\Services\ServicePriceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ServicePrice\ServicePriceCollection;
@@ -19,9 +20,16 @@ class ServicePriceController extends Controller
         $this->servicePriceService  =   $servicePriceService;
     }
 
-    public function get(): ServicePriceCollection
+    public function get($skip,$take): Response|Application|ResponseFactory
     {
-        return new ServicePriceCollection($this->servicePriceService->get());
+        return response([
+            MainContract::INFO  =>  [
+                MainContract::SKIP  =>  $skip,
+                MainContract::TAKE  =>  $take,
+                MainContract::COUNT =>  $this->servicePriceService->count([]),
+            ],
+            MainContract::DATA  =>  new ServicePriceCollection($this->servicePriceService->get($skip,$take)),
+        ],200);
     }
 
     public function getById($id): ServicePriceResource|Response|Application|ResponseFactory

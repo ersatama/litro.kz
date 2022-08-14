@@ -7,9 +7,14 @@ use App\Models\Service;
 
 class ServiceRepositoryEloquent implements ServiceRepositoryInterface
 {
-    public function get()
+    public function count($where)
     {
-        return Service::get();
+        return Service::where($where)->count();
+    }
+
+    public function get($skip,$take)
+    {
+        return Service::skip($skip)->take($take)->get();
     }
 
     public function getById($id)

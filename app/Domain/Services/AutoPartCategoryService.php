@@ -12,9 +12,14 @@ class AutoPartCategoryService
         $this->autoPartCategoryRepository   =   $autoPartCategoryRepository;
     }
 
-    public function get()
+    public function count($where)
     {
-        return $this->autoPartCategoryRepository->get();
+        return $this->autoPartCategoryRepository->count($where);
+    }
+
+    public function get($skip,$take)
+    {
+        return $this->autoPartCategoryRepository->get($skip,$take);
     }
 
 }

@@ -23,6 +23,8 @@
         /* starts out as display none and is replaced with js later  */
                     body .content .bash-example code { display: none; }
                     body .content .javascript-example code { display: none; }
+                    body .content .php-example code { display: none; }
+                    body .content .python-example code { display: none; }
             </style>
 
     <script>
@@ -36,7 +38,7 @@
 
 </head>
 
-<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;,&quot;php&quot;,&quot;python&quot;]">
 
 <a href="#" id="nav-button">
     <span>
@@ -46,12 +48,14 @@
 </a>
 <div class="tocify-wrapper">
             <div style="background: white;padding: 10px 70px 10px 70px;display: flex;border: 10px solid #393939;box-sizing: border-box;border-radius: 15px;">
-            <img src="img/litro.svg" alt="logo" class="logo" width="100%"/>
+            <img src="/img/litro.svg" alt="logo" class="logo" width="100%"/>
         </div>
     
             <div class="lang-selector">
                                             <button type="button" class="lang-button" data-language-name="bash">bash</button>
                                             <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                                            <button type="button" class="lang-button" data-language-name="php">php</button>
+                                            <button type="button" class="lang-button" data-language-name="python">python</button>
                     </div>
     
     <div class="search">
@@ -77,74 +81,71 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-serviceType-get">
-                        <a href="#endpoints-GETapi-serviceType-get">GET api/serviceType/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-serviceType-getById--id-">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-serviceType-getById--id-">
                         <a href="#endpoints-GETapi-serviceType-getById--id-">GET api/serviceType/getById/{id}</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-service-get">
-                        <a href="#endpoints-GETapi-service-get">GET api/service/get</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-service-getById--id-">
                         <a href="#endpoints-GETapi-service-getById--id-">GET api/service/getById/{id}</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-cardCategory-get">
-                        <a href="#endpoints-GETapi-cardCategory-get">GET api/cardCategory/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-region-get">
-                        <a href="#endpoints-GETapi-region-get">GET api/region/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-country-get">
-                        <a href="#endpoints-GETapi-country-get">GET api/country/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-currency-get">
-                        <a href="#endpoints-GETapi-currency-get">GET api/currency/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-city-get">
-                        <a href="#endpoints-GETapi-city-get">GET api/city/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-carModel-get">
-                        <a href="#endpoints-GETapi-carModel-get">GET api/carModel/get</a>
-                    </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-carModel-getById--id-">
                         <a href="#endpoints-GETapi-carModel-getById--id-">GET api/carModel/getById/{id}</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-carModel-getByBrandId--brandId-">
-                        <a href="#endpoints-GETapi-carModel-getByBrandId--brandId-">GET api/carModel/getByBrandId/{brandId}</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-carBrand-get">
-                        <a href="#endpoints-GETapi-carBrand-get">GET api/carBrand/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-carCategory-get">
-                        <a href="#endpoints-GETapi-carCategory-get">GET api/carCategory/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autoPartParamOption-get">
-                        <a href="#endpoints-GETapi-autoPartParamOption-get">GET api/autoPartParamOption/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autoPartType-get">
-                        <a href="#endpoints-GETapi-autoPartType-get">GET api/autoPartType/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autoPartParam-get">
-                        <a href="#endpoints-GETapi-autoPartParam-get">GET api/autoPartParam/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autoPartCategory-get">
-                        <a href="#endpoints-GETapi-autoPartCategory-get">GET api/autoPartCategory/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-news-get">
-                        <a href="#endpoints-GETapi-news-get">GET api/news/get</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-news-getById--id-">
                         <a href="#endpoints-GETapi-news-getById--id-">GET api/news/getById/{id}</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-newsCategory-get">
-                        <a href="#endpoints-GETapi-newsCategory-get">GET api/newsCategory/get</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-servicePrice-get">
-                        <a href="#endpoints-GETapi-servicePrice-get">GET api/servicePrice/get</a>
-                    </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-servicePrice-getById--id-">
                         <a href="#endpoints-GETapi-servicePrice-getById--id-">GET api/servicePrice/getById/{id}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-servicePrice-get--skip---take-">
+                        <a href="#endpoints-GETapi-servicePrice-get--skip---take-">GET api/servicePrice/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-serviceType-get--skip---take-">
+                        <a href="#endpoints-GETapi-serviceType-get--skip---take-">GET api/serviceType/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-service-get--skip---take-">
+                        <a href="#endpoints-GETapi-service-get--skip---take-">GET api/service/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-cardCategory-get--skip---take-">
+                        <a href="#endpoints-GETapi-cardCategory-get--skip---take-">GET api/cardCategory/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-region-get--skip---take-">
+                        <a href="#endpoints-GETapi-region-get--skip---take-">GET api/region/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-country-get--skip---take-">
+                        <a href="#endpoints-GETapi-country-get--skip---take-">GET api/country/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-currency-get--skip---take-">
+                        <a href="#endpoints-GETapi-currency-get--skip---take-">GET api/currency/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-city-get--skip---take-">
+                        <a href="#endpoints-GETapi-city-get--skip---take-">GET api/city/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-carModel-get--skip---take-">
+                        <a href="#endpoints-GETapi-carModel-get--skip---take-">GET api/carModel/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-carBrand-get--skip---take-">
+                        <a href="#endpoints-GETapi-carBrand-get--skip---take-">GET api/carBrand/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-carCategory-get--skip---take-">
+                        <a href="#endpoints-GETapi-carCategory-get--skip---take-">GET api/carCategory/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autoPartParamOption-get--skip---take-">
+                        <a href="#endpoints-GETapi-autoPartParamOption-get--skip---take-">GET api/autoPartParamOption/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autoPartType-get--skip---take-">
+                        <a href="#endpoints-GETapi-autoPartType-get--skip---take-">GET api/autoPartType/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autoPartParam-get--skip---take-">
+                        <a href="#endpoints-GETapi-autoPartParam-get--skip---take-">GET api/autoPartParam/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autoPartCategory-get--skip---take-">
+                        <a href="#endpoints-GETapi-autoPartCategory-get--skip---take-">GET api/autoPartCategory/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-news-get--skip---take-">
+                        <a href="#endpoints-GETapi-news-get--skip---take-">GET api/news/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-newsCategory-get--skip---take-">
+                        <a href="#endpoints-GETapi-newsCategory-get--skip---take-">GET api/newsCategory/get/{skip}/{take}</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -158,7 +159,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 13 2022</li>
+        <li>Last updated: August 14 2022</li>
     </ul>
 </div>
 
@@ -187,103 +188,6 @@
 
     
 
-            <h2 id="endpoints-GETapi-serviceType-get">GET api/serviceType/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-serviceType-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/serviceType/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/serviceType/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-serviceType-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-serviceType-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-serviceType-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-serviceType-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-serviceType-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-serviceType-get"></code></pre>
-</span>
-<form id="form-GETapi-serviceType-get" data-method="GET"
-      data-path="api/serviceType/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-serviceType-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-serviceType-get"
-                    onclick="tryItOut('GETapi-serviceType-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-serviceType-get"
-                    onclick="cancelTryOut('GETapi-serviceType-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-serviceType-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/serviceType/get</code></b>
-        </p>
-                    </form>
-
             <h2 id="endpoints-GETapi-serviceType-getById--id-">GET api/serviceType/getById/{id}</h2>
 
 <p>
@@ -297,14 +201,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/serviceType/getById/voluptas" \
+    --get "http://localhost:8000/api/serviceType/getById/ipsam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/serviceType/getById/voluptas"
+    "http://localhost:8000/api/serviceType/getById/ipsam"
 );
 
 const headers = {
@@ -316,6 +220,35 @@ fetch(url, {
     method: "GET",
     headers,
 }).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/serviceType/getById/ipsam',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/serviceType/getById/ipsam'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
 
 </span>
 
@@ -330,7 +263,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -385,108 +318,11 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-serviceType-getById--id-"
-               value="voluptas"
+               value="ipsam"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
             </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-service-get">GET api/service/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-service-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/service/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/service/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-service-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-service-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-service-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-service-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-service-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-service-get"></code></pre>
-</span>
-<form id="form-GETapi-service-get" data-method="GET"
-      data-path="api/service/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-service-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-service-get"
-                    onclick="tryItOut('GETapi-service-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-service-get"
-                    onclick="cancelTryOut('GETapi-service-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-service-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/service/get</code></b>
-        </p>
                     </form>
 
             <h2 id="endpoints-GETapi-service-getById--id-">GET api/service/getById/{id}</h2>
@@ -502,14 +338,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/service/getById/velit" \
+    --get "http://localhost:8000/api/service/getById/minima" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/service/getById/velit"
+    "http://localhost:8000/api/service/getById/minima"
 );
 
 const headers = {
@@ -521,6 +357,35 @@ fetch(url, {
     method: "GET",
     headers,
 }).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/service/getById/minima',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/service/getById/minima'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
 
 </span>
 
@@ -535,7 +400,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
+x-ratelimit-remaining: 54
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -590,593 +455,11 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-service-getById--id-"
-               value="velit"
+               value="minima"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
             </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-cardCategory-get">GET api/cardCategory/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-cardCategory-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardCategory/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardCategory/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-cardCategory-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-cardCategory-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-cardCategory-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-cardCategory-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-cardCategory-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-cardCategory-get"></code></pre>
-</span>
-<form id="form-GETapi-cardCategory-get" data-method="GET"
-      data-path="api/cardCategory/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-cardCategory-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-cardCategory-get"
-                    onclick="tryItOut('GETapi-cardCategory-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-cardCategory-get"
-                    onclick="cancelTryOut('GETapi-cardCategory-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-cardCategory-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/cardCategory/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-region-get">GET api/region/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-region-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/region/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/region/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-region-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 51
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-region-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-region-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-region-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-region-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-region-get"></code></pre>
-</span>
-<form id="form-GETapi-region-get" data-method="GET"
-      data-path="api/region/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-region-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-region-get"
-                    onclick="tryItOut('GETapi-region-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-region-get"
-                    onclick="cancelTryOut('GETapi-region-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-region-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/region/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-country-get">GET api/country/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-country-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/country/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/country/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-country-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 50
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-country-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-country-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-country-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-country-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-country-get"></code></pre>
-</span>
-<form id="form-GETapi-country-get" data-method="GET"
-      data-path="api/country/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-country-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-country-get"
-                    onclick="tryItOut('GETapi-country-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-country-get"
-                    onclick="cancelTryOut('GETapi-country-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-country-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/country/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-currency-get">GET api/currency/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-currency-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/currency/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/currency/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-currency-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 49
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-currency-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-currency-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-currency-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-currency-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-currency-get"></code></pre>
-</span>
-<form id="form-GETapi-currency-get" data-method="GET"
-      data-path="api/currency/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-currency-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-currency-get"
-                    onclick="tryItOut('GETapi-currency-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-currency-get"
-                    onclick="cancelTryOut('GETapi-currency-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-currency-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/currency/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-city-get">GET api/city/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-city-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/city/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/city/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-city-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 48
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-city-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-city-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-city-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-city-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-city-get"></code></pre>
-</span>
-<form id="form-GETapi-city-get" data-method="GET"
-      data-path="api/city/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-city-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-city-get"
-                    onclick="tryItOut('GETapi-city-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-city-get"
-                    onclick="cancelTryOut('GETapi-city-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-city-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/city/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-carModel-get">GET api/carModel/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-carModel-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModel/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModel/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-carModel-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 47
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-carModel-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-carModel-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-carModel-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-carModel-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-carModel-get"></code></pre>
-</span>
-<form id="form-GETapi-carModel-get" data-method="GET"
-      data-path="api/carModel/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-carModel-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-carModel-get"
-                    onclick="tryItOut('GETapi-carModel-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-carModel-get"
-                    onclick="cancelTryOut('GETapi-carModel-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-carModel-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/carModel/get</code></b>
-        </p>
                     </form>
 
             <h2 id="endpoints-GETapi-carModel-getById--id-">GET api/carModel/getById/{id}</h2>
@@ -1192,14 +475,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModel/getById/quam" \
+    --get "http://localhost:8000/api/carModel/getById/facilis" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModel/getById/quam"
+    "http://localhost:8000/api/carModel/getById/facilis"
 );
 
 const headers = {
@@ -1212,11 +495,40 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre></div>
 
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/carModel/getById/facilis',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/carModel/getById/facilis'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
 </span>
 
 <span id="example-responses-GETapi-carModel-getById--id-">
             <blockquote>
-            <p>Пример запроса (200):</p>
+            <p>Пример запроса (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -1225,13 +537,13 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 46
+x-ratelimit-remaining: 47
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;data&quot;: []
+    &quot;message&quot;: &quot;Модель не найдена&quot;
 }</code>
  </pre>
     </span>
@@ -1280,803 +592,11 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-carModel-getById--id-"
-               value="quam"
+               value="facilis"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
             </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-carModel-getByBrandId--brandId-">GET api/carModel/getByBrandId/{brandId}</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-carModel-getByBrandId--brandId-">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModel/getByBrandId/qui" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModel/getByBrandId/qui"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-carModel-getByBrandId--brandId-">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 45
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-carModel-getByBrandId--brandId-" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-carModel-getByBrandId--brandId-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-carModel-getByBrandId--brandId-"></code></pre>
-</span>
-<span id="execution-error-GETapi-carModel-getByBrandId--brandId-" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-carModel-getByBrandId--brandId-"></code></pre>
-</span>
-<form id="form-GETapi-carModel-getByBrandId--brandId-" data-method="GET"
-      data-path="api/carModel/getByBrandId/{brandId}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-carModel-getByBrandId--brandId-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-carModel-getByBrandId--brandId-"
-                    onclick="tryItOut('GETapi-carModel-getByBrandId--brandId-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-carModel-getByBrandId--brandId-"
-                    onclick="cancelTryOut('GETapi-carModel-getByBrandId--brandId-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-carModel-getByBrandId--brandId-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/carModel/getByBrandId/{brandId}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
-                    <p>
-                <b><code>brandId</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="brandId"
-               data-endpoint="GETapi-carModel-getByBrandId--brandId-"
-               value="qui"
-               data-component="url" hidden>
-    <br>
-
-            </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-carBrand-get">GET api/carBrand/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-carBrand-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carBrand/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carBrand/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-carBrand-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 44
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;title&quot;: &quot;Acura&quot;
-        }
-    ]
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-carBrand-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-carBrand-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-carBrand-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-carBrand-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-carBrand-get"></code></pre>
-</span>
-<form id="form-GETapi-carBrand-get" data-method="GET"
-      data-path="api/carBrand/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-carBrand-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-carBrand-get"
-                    onclick="tryItOut('GETapi-carBrand-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-carBrand-get"
-                    onclick="cancelTryOut('GETapi-carBrand-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-carBrand-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/carBrand/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-carCategory-get">GET api/carCategory/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-carCategory-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carCategory/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carCategory/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-carCategory-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 43
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-carCategory-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-carCategory-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-carCategory-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-carCategory-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-carCategory-get"></code></pre>
-</span>
-<form id="form-GETapi-carCategory-get" data-method="GET"
-      data-path="api/carCategory/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-carCategory-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-carCategory-get"
-                    onclick="tryItOut('GETapi-carCategory-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-carCategory-get"
-                    onclick="cancelTryOut('GETapi-carCategory-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-carCategory-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/carCategory/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-autoPartParamOption-get">GET api/autoPartParamOption/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-autoPartParamOption-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartParamOption/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartParamOption/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-autoPartParamOption-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 42
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-autoPartParamOption-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-autoPartParamOption-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-autoPartParamOption-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-autoPartParamOption-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-autoPartParamOption-get"></code></pre>
-</span>
-<form id="form-GETapi-autoPartParamOption-get" data-method="GET"
-      data-path="api/autoPartParamOption/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-autoPartParamOption-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-autoPartParamOption-get"
-                    onclick="tryItOut('GETapi-autoPartParamOption-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-autoPartParamOption-get"
-                    onclick="cancelTryOut('GETapi-autoPartParamOption-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-autoPartParamOption-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/autoPartParamOption/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-autoPartType-get">GET api/autoPartType/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-autoPartType-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartType/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartType/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-autoPartType-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 41
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-autoPartType-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-autoPartType-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-autoPartType-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-autoPartType-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-autoPartType-get"></code></pre>
-</span>
-<form id="form-GETapi-autoPartType-get" data-method="GET"
-      data-path="api/autoPartType/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-autoPartType-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-autoPartType-get"
-                    onclick="tryItOut('GETapi-autoPartType-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-autoPartType-get"
-                    onclick="cancelTryOut('GETapi-autoPartType-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-autoPartType-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/autoPartType/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-autoPartParam-get">GET api/autoPartParam/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-autoPartParam-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartParam/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartParam/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-autoPartParam-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 40
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-autoPartParam-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-autoPartParam-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-autoPartParam-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-autoPartParam-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-autoPartParam-get"></code></pre>
-</span>
-<form id="form-GETapi-autoPartParam-get" data-method="GET"
-      data-path="api/autoPartParam/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-autoPartParam-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-autoPartParam-get"
-                    onclick="tryItOut('GETapi-autoPartParam-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-autoPartParam-get"
-                    onclick="cancelTryOut('GETapi-autoPartParam-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-autoPartParam-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/autoPartParam/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-autoPartCategory-get">GET api/autoPartCategory/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-autoPartCategory-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartCategory/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartCategory/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-autoPartCategory-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 39
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-autoPartCategory-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-autoPartCategory-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-autoPartCategory-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-autoPartCategory-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-autoPartCategory-get"></code></pre>
-</span>
-<form id="form-GETapi-autoPartCategory-get" data-method="GET"
-      data-path="api/autoPartCategory/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-autoPartCategory-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-autoPartCategory-get"
-                    onclick="tryItOut('GETapi-autoPartCategory-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-autoPartCategory-get"
-                    onclick="cancelTryOut('GETapi-autoPartCategory-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-autoPartCategory-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/autoPartCategory/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-news-get">GET api/news/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-news-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/news/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/news/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-news-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 38
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-news-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-news-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-news-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-news-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-news-get"></code></pre>
-</span>
-<form id="form-GETapi-news-get" data-method="GET"
-      data-path="api/news/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-news-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-news-get"
-                    onclick="tryItOut('GETapi-news-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-news-get"
-                    onclick="cancelTryOut('GETapi-news-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-news-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/news/get</code></b>
-        </p>
                     </form>
 
             <h2 id="endpoints-GETapi-news-getById--id-">GET api/news/getById/{id}</h2>
@@ -2092,14 +612,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/news/getById/qui" \
+    --get "http://localhost:8000/api/news/getById/dolorum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/news/getById/qui"
+    "http://localhost:8000/api/news/getById/dolorum"
 );
 
 const headers = {
@@ -2111,6 +631,35 @@ fetch(url, {
     method: "GET",
     headers,
 }).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/news/getById/dolorum',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/news/getById/dolorum'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
 
 </span>
 
@@ -2125,7 +674,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 37
+x-ratelimit-remaining: 39
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -2180,205 +729,11 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-news-getById--id-"
-               value="qui"
+               value="dolorum"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
             </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-newsCategory-get">GET api/newsCategory/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-newsCategory-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/newsCategory/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/newsCategory/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-newsCategory-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 36
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-newsCategory-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-newsCategory-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-newsCategory-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-newsCategory-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-newsCategory-get"></code></pre>
-</span>
-<form id="form-GETapi-newsCategory-get" data-method="GET"
-      data-path="api/newsCategory/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-newsCategory-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-newsCategory-get"
-                    onclick="tryItOut('GETapi-newsCategory-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-newsCategory-get"
-                    onclick="cancelTryOut('GETapi-newsCategory-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-newsCategory-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/newsCategory/get</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-servicePrice-get">GET api/servicePrice/get</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-servicePrice-get">
-<blockquote>Пример запроса:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/servicePrice/get" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/servicePrice/get"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-servicePrice-get">
-            <blockquote>
-            <p>Пример запроса (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;data&quot;: []
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-servicePrice-get" hidden>
-    <blockquote>HTTP ответ<span
-                id="execution-response-status-GETapi-servicePrice-get"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-servicePrice-get"></code></pre>
-</span>
-<span id="execution-error-GETapi-servicePrice-get" hidden>
-    <blockquote>HTTP ответ ошибка:</blockquote>
-    <pre><code id="execution-error-message-GETapi-servicePrice-get"></code></pre>
-</span>
-<form id="form-GETapi-servicePrice-get" data-method="GET"
-      data-path="api/servicePrice/get"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-servicePrice-get', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-servicePrice-get"
-                    onclick="tryItOut('GETapi-servicePrice-get');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-servicePrice-get"
-                    onclick="cancelTryOut('GETapi-servicePrice-get');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-servicePrice-get" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/servicePrice/get</code></b>
-        </p>
                     </form>
 
             <h2 id="endpoints-GETapi-servicePrice-getById--id-">GET api/servicePrice/getById/{id}</h2>
@@ -2394,14 +749,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/servicePrice/getById/amet" \
+    --get "http://localhost:8000/api/servicePrice/getById/non" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/servicePrice/getById/amet"
+    "http://localhost:8000/api/servicePrice/getById/non"
 );
 
 const headers = {
@@ -2413,6 +768,35 @@ fetch(url, {
     method: "GET",
     headers,
 }).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/servicePrice/getById/non',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/servicePrice/getById/non'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
 
 </span>
 
@@ -2427,7 +811,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -2482,10 +866,2594 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-servicePrice-getById--id-"
-               value="amet"
+               value="non"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-servicePrice-get--skip---take-">GET api/servicePrice/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-servicePrice-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/servicePrice/get/labore/ex" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/servicePrice/get/labore/ex"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/servicePrice/get/labore/ex',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/servicePrice/get/labore/ex'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-servicePrice-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;labore&quot;,
+        &quot;take&quot;: &quot;ex&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-servicePrice-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-servicePrice-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-servicePrice-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-servicePrice-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-servicePrice-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-servicePrice-get--skip---take-" data-method="GET"
+      data-path="api/servicePrice/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-servicePrice-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-servicePrice-get--skip---take-"
+                    onclick="tryItOut('GETapi-servicePrice-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-servicePrice-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-servicePrice-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-servicePrice-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/servicePrice/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-servicePrice-get--skip---take-"
+               value="labore"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-servicePrice-get--skip---take-"
+               value="ex"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-serviceType-get--skip---take-">GET api/serviceType/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-serviceType-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/serviceType/get/omnis/quod" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/serviceType/get/omnis/quod"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/serviceType/get/omnis/quod',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/serviceType/get/omnis/quod'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-serviceType-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 57
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;omnis&quot;,
+        &quot;take&quot;: &quot;quod&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-serviceType-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-serviceType-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-serviceType-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-serviceType-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-serviceType-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-serviceType-get--skip---take-" data-method="GET"
+      data-path="api/serviceType/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-serviceType-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-serviceType-get--skip---take-"
+                    onclick="tryItOut('GETapi-serviceType-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-serviceType-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-serviceType-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-serviceType-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/serviceType/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-serviceType-get--skip---take-"
+               value="omnis"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-serviceType-get--skip---take-"
+               value="quod"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-service-get--skip---take-">GET api/service/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-service-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/service/get/corporis/voluptatem" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/service/get/corporis/voluptatem"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/service/get/corporis/voluptatem',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/service/get/corporis/voluptatem'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-service-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 55
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;corporis&quot;,
+        &quot;take&quot;: &quot;voluptatem&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-service-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-service-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-service-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-service-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-service-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-service-get--skip---take-" data-method="GET"
+      data-path="api/service/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-service-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-service-get--skip---take-"
+                    onclick="tryItOut('GETapi-service-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-service-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-service-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-service-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/service/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-service-get--skip---take-"
+               value="corporis"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-service-get--skip---take-"
+               value="voluptatem"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-cardCategory-get--skip---take-">GET api/cardCategory/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-cardCategory-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/cardCategory/get/autem/dignissimos" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/cardCategory/get/autem/dignissimos"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/cardCategory/get/autem/dignissimos',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/cardCategory/get/autem/dignissimos'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-cardCategory-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 53
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;autem&quot;,
+        &quot;take&quot;: &quot;dignissimos&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-cardCategory-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-cardCategory-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-cardCategory-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-cardCategory-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-cardCategory-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-cardCategory-get--skip---take-" data-method="GET"
+      data-path="api/cardCategory/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-cardCategory-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-cardCategory-get--skip---take-"
+                    onclick="tryItOut('GETapi-cardCategory-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-cardCategory-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-cardCategory-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-cardCategory-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/cardCategory/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-cardCategory-get--skip---take-"
+               value="autem"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-cardCategory-get--skip---take-"
+               value="dignissimos"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-region-get--skip---take-">GET api/region/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-region-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/region/get/nostrum/voluptas" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/region/get/nostrum/voluptas"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/region/get/nostrum/voluptas',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/region/get/nostrum/voluptas'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-region-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 52
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;nostrum&quot;,
+        &quot;take&quot;: &quot;voluptas&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-region-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-region-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-region-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-region-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-region-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-region-get--skip---take-" data-method="GET"
+      data-path="api/region/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-region-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-region-get--skip---take-"
+                    onclick="tryItOut('GETapi-region-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-region-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-region-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-region-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/region/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-region-get--skip---take-"
+               value="nostrum"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-region-get--skip---take-"
+               value="voluptas"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-country-get--skip---take-">GET api/country/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-country-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/country/get/et/quos" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/country/get/et/quos"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/country/get/et/quos',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/country/get/et/quos'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-country-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 51
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;et&quot;,
+        &quot;take&quot;: &quot;quos&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-country-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-country-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-country-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-country-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-country-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-country-get--skip---take-" data-method="GET"
+      data-path="api/country/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-country-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-country-get--skip---take-"
+                    onclick="tryItOut('GETapi-country-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-country-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-country-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-country-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/country/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-country-get--skip---take-"
+               value="et"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-country-get--skip---take-"
+               value="quos"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-currency-get--skip---take-">GET api/currency/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-currency-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/currency/get/suscipit/quis" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/currency/get/suscipit/quis"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/currency/get/suscipit/quis',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/currency/get/suscipit/quis'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-currency-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 50
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;suscipit&quot;,
+        &quot;take&quot;: &quot;quis&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-currency-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-currency-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-currency-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-currency-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-currency-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-currency-get--skip---take-" data-method="GET"
+      data-path="api/currency/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-currency-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-currency-get--skip---take-"
+                    onclick="tryItOut('GETapi-currency-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-currency-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-currency-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-currency-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/currency/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-currency-get--skip---take-"
+               value="suscipit"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-currency-get--skip---take-"
+               value="quis"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-city-get--skip---take-">GET api/city/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-city-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/city/get/quia/commodi" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/city/get/quia/commodi"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/city/get/quia/commodi',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/city/get/quia/commodi'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-city-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 49
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;quia&quot;,
+        &quot;take&quot;: &quot;commodi&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-city-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-city-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-city-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-city-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-city-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-city-get--skip---take-" data-method="GET"
+      data-path="api/city/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-city-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-city-get--skip---take-"
+                    onclick="tryItOut('GETapi-city-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-city-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-city-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-city-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/city/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-city-get--skip---take-"
+               value="quia"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-city-get--skip---take-"
+               value="commodi"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-carModel-get--skip---take-">GET api/carModel/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-carModel-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/carModel/get/eius/sit" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/carModel/get/eius/sit"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/carModel/get/eius/sit',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/carModel/get/eius/sit'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-carModel-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 48
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;eius&quot;,
+        &quot;take&quot;: &quot;sit&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-carModel-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-carModel-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-carModel-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-carModel-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-carModel-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-carModel-get--skip---take-" data-method="GET"
+      data-path="api/carModel/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-carModel-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-carModel-get--skip---take-"
+                    onclick="tryItOut('GETapi-carModel-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-carModel-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-carModel-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-carModel-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/carModel/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-carModel-get--skip---take-"
+               value="eius"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-carModel-get--skip---take-"
+               value="sit"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-carBrand-get--skip---take-">GET api/carBrand/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-carBrand-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/carBrand/get/animi/consequatur" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/carBrand/get/animi/consequatur"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/carBrand/get/animi/consequatur',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/carBrand/get/animi/consequatur'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-carBrand-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 46
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;animi&quot;,
+        &quot;take&quot;: &quot;consequatur&quot;,
+        &quot;count&quot;: 2
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-carBrand-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-carBrand-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-carBrand-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-carBrand-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-carBrand-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-carBrand-get--skip---take-" data-method="GET"
+      data-path="api/carBrand/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-carBrand-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-carBrand-get--skip---take-"
+                    onclick="tryItOut('GETapi-carBrand-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-carBrand-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-carBrand-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-carBrand-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/carBrand/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-carBrand-get--skip---take-"
+               value="animi"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-carBrand-get--skip---take-"
+               value="consequatur"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-carCategory-get--skip---take-">GET api/carCategory/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-carCategory-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/carCategory/get/quisquam/quia" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/carCategory/get/quisquam/quia"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/carCategory/get/quisquam/quia',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/carCategory/get/quisquam/quia'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-carCategory-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 45
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;quisquam&quot;,
+        &quot;take&quot;: &quot;quia&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-carCategory-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-carCategory-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-carCategory-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-carCategory-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-carCategory-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-carCategory-get--skip---take-" data-method="GET"
+      data-path="api/carCategory/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-carCategory-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-carCategory-get--skip---take-"
+                    onclick="tryItOut('GETapi-carCategory-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-carCategory-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-carCategory-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-carCategory-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/carCategory/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-carCategory-get--skip---take-"
+               value="quisquam"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-carCategory-get--skip---take-"
+               value="quia"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-autoPartParamOption-get--skip---take-">GET api/autoPartParamOption/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-autoPartParamOption-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/autoPartParamOption/get/consequuntur/ea" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/autoPartParamOption/get/consequuntur/ea"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/autoPartParamOption/get/consequuntur/ea',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/autoPartParamOption/get/consequuntur/ea'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-autoPartParamOption-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 44
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;consequuntur&quot;,
+        &quot;take&quot;: &quot;ea&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-autoPartParamOption-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-autoPartParamOption-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-autoPartParamOption-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-autoPartParamOption-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-autoPartParamOption-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-autoPartParamOption-get--skip---take-" data-method="GET"
+      data-path="api/autoPartParamOption/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-autoPartParamOption-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-autoPartParamOption-get--skip---take-"
+                    onclick="tryItOut('GETapi-autoPartParamOption-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-autoPartParamOption-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-autoPartParamOption-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-autoPartParamOption-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/autoPartParamOption/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-autoPartParamOption-get--skip---take-"
+               value="consequuntur"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-autoPartParamOption-get--skip---take-"
+               value="ea"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-autoPartType-get--skip---take-">GET api/autoPartType/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-autoPartType-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/autoPartType/get/praesentium/perferendis" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/autoPartType/get/praesentium/perferendis"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/autoPartType/get/praesentium/perferendis',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/autoPartType/get/praesentium/perferendis'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-autoPartType-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 43
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;praesentium&quot;,
+        &quot;take&quot;: &quot;perferendis&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-autoPartType-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-autoPartType-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-autoPartType-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-autoPartType-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-autoPartType-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-autoPartType-get--skip---take-" data-method="GET"
+      data-path="api/autoPartType/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-autoPartType-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-autoPartType-get--skip---take-"
+                    onclick="tryItOut('GETapi-autoPartType-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-autoPartType-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-autoPartType-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-autoPartType-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/autoPartType/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-autoPartType-get--skip---take-"
+               value="praesentium"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-autoPartType-get--skip---take-"
+               value="perferendis"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-autoPartParam-get--skip---take-">GET api/autoPartParam/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-autoPartParam-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/autoPartParam/get/saepe/voluptas" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/autoPartParam/get/saepe/voluptas"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/autoPartParam/get/saepe/voluptas',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/autoPartParam/get/saepe/voluptas'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-autoPartParam-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 42
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;saepe&quot;,
+        &quot;take&quot;: &quot;voluptas&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-autoPartParam-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-autoPartParam-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-autoPartParam-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-autoPartParam-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-autoPartParam-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-autoPartParam-get--skip---take-" data-method="GET"
+      data-path="api/autoPartParam/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-autoPartParam-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-autoPartParam-get--skip---take-"
+                    onclick="tryItOut('GETapi-autoPartParam-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-autoPartParam-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-autoPartParam-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-autoPartParam-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/autoPartParam/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-autoPartParam-get--skip---take-"
+               value="saepe"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-autoPartParam-get--skip---take-"
+               value="voluptas"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-autoPartCategory-get--skip---take-">GET api/autoPartCategory/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-autoPartCategory-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/autoPartCategory/get/ut/voluptate" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/autoPartCategory/get/ut/voluptate"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/autoPartCategory/get/ut/voluptate',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/autoPartCategory/get/ut/voluptate'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-autoPartCategory-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 41
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;ut&quot;,
+        &quot;take&quot;: &quot;voluptate&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-autoPartCategory-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-autoPartCategory-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-autoPartCategory-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-autoPartCategory-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-autoPartCategory-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-autoPartCategory-get--skip---take-" data-method="GET"
+      data-path="api/autoPartCategory/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-autoPartCategory-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-autoPartCategory-get--skip---take-"
+                    onclick="tryItOut('GETapi-autoPartCategory-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-autoPartCategory-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-autoPartCategory-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-autoPartCategory-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/autoPartCategory/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-autoPartCategory-get--skip---take-"
+               value="ut"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-autoPartCategory-get--skip---take-"
+               value="voluptate"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-news-get--skip---take-">GET api/news/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-news-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/news/get/labore/sunt" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/news/get/labore/sunt"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/news/get/labore/sunt',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/news/get/labore/sunt'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-news-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 40
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;labore&quot;,
+        &quot;take&quot;: &quot;sunt&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-news-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-news-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-news-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-news-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-news-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-news-get--skip---take-" data-method="GET"
+      data-path="api/news/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-news-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-news-get--skip---take-"
+                    onclick="tryItOut('GETapi-news-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-news-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-news-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-news-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/news/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-news-get--skip---take-"
+               value="labore"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-news-get--skip---take-"
+               value="sunt"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-newsCategory-get--skip---take-">GET api/newsCategory/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-newsCategory-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/newsCategory/get/hic/cumque" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/newsCategory/get/hic/cumque"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/newsCategory/get/hic/cumque',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/newsCategory/get/hic/cumque'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-newsCategory-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 38
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;info&quot;: {
+        &quot;skip&quot;: &quot;hic&quot;,
+        &quot;take&quot;: &quot;cumque&quot;,
+        &quot;count&quot;: 0
+    },
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-newsCategory-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-newsCategory-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-newsCategory-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-newsCategory-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-newsCategory-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-newsCategory-get--skip---take-" data-method="GET"
+      data-path="api/newsCategory/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-newsCategory-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-newsCategory-get--skip---take-"
+                    onclick="tryItOut('GETapi-newsCategory-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-newsCategory-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-newsCategory-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-newsCategory-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/newsCategory/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-newsCategory-get--skip---take-"
+               value="hic"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-newsCategory-get--skip---take-"
+               value="cumque"
+               data-component="url" hidden>
+    <br>
+
             </p>
                     </form>
 
@@ -2497,6 +3465,8 @@ access-control-allow-origin: *
                     <div class="lang-selector">
                                                         <button type="button" class="lang-button" data-language-name="bash">bash</button>
                                                         <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                                                        <button type="button" class="lang-button" data-language-name="php">php</button>
+                                                        <button type="button" class="lang-button" data-language-name="python">python</button>
                             </div>
             </div>
 </div>

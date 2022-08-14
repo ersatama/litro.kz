@@ -12,9 +12,14 @@ class CardCategoryService
         $this->cardCategoryRepository   =   $cardCategoryRepository;
     }
 
-    public function get()
+    public function get($skip,$take)
     {
-        return $this->cardCategoryRepository->get();
+        return $this->cardCategoryRepository->get($skip,$take);
+    }
+
+    public function count($where)
+    {
+        return $this->cardCategoryRepository->count($where);
     }
 
 }

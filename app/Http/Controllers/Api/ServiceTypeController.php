@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\MainContract;
 use App\Domain\Services\ServiceTypeService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ServiceType\ServiceTypeCollection;
@@ -20,9 +21,16 @@ class ServiceTypeController extends Controller
         $this->serviceTypeService   =   $serviceTypeService;
     }
 
-    public function get(): ServiceTypeCollection
+    public function get($skip,$take): Response|Application|ResponseFactory
     {
-        return new ServiceTypeCollection($this->serviceTypeService->get());
+        return response([
+            MainContract::INFO  =>  [
+                MainContract::SKIP  =>  $skip,
+                MainContract::TAKE  =>  $take,
+                MainContract::COUNT =>  $this->serviceTypeService->count([]),
+            ],
+            MainContract::DATA  =>  new ServiceTypeCollection($this->serviceTypeService->get($skip,$take))
+        ],200);
     }
 
     public function getById($id): Response|Application|ResponseFactory|ServiceTypeResource

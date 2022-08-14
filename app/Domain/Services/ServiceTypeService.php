@@ -12,9 +12,14 @@ class ServiceTypeService
         $this->serviceTypeRepository    =   $serviceTypeRepository;
     }
 
-    public function get()
+    public function count($where)
     {
-        return $this->serviceTypeRepository->get();
+        return $this->serviceTypeRepository->count($where);
+    }
+
+    public function get($skip,$take)
+    {
+        return $this->serviceTypeRepository->get($skip,$take);
     }
 
     public function getById($id)

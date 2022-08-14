@@ -12,9 +12,14 @@ class CarCategoryService
         $this->carCategoryRepository    =   $carCategoryRepository;
     }
 
-    public function get()
+    public function count($where)
     {
-        return $this->carCategoryRepository->get();
+        return $this->carCategoryRepository->count($where);
+    }
+
+    public function get($skip,$take)
+    {
+        return $this->carCategoryRepository->get($skip,$take);
     }
 
 }

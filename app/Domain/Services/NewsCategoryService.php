@@ -12,8 +12,13 @@ class NewsCategoryService
         $this->newsCategoryRepository   =   $newsCategoryRepository;
     }
 
-    public function get()
+    public function count($where)
     {
-        return $this->newsCategoryRepository->get();
+        return $this->newsCategoryRepository->count($where);
+    }
+
+    public function get($skip,$take)
+    {
+        return $this->newsCategoryRepository->get($skip,$take);
     }
 }

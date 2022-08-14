@@ -12,9 +12,14 @@ class CurrencyService
         $this->currencyRepository   =   $currencyRepository;
     }
 
-    public function get()
+    public function get($skip,$take)
     {
-        return $this->currencyRepository->get();
+        return $this->currencyRepository->get($skip,$take);
+    }
+
+    public function count($where)
+    {
+        return $this->currencyRepository->count($where);
     }
 
 }

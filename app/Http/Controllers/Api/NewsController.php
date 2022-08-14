@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\MainContract;
 use App\Domain\Services\NewsService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\News\NewsCollection;
@@ -18,9 +19,16 @@ class NewsController extends Controller
         $this->newsService  =   $newsService;
     }
 
-    public function get(): NewsCollection
+    public function get($skip,$take): Response|Application|ResponseFactory
     {
-        return new NewsCollection($this->newsService->get());
+        return response([
+            MainContract::INFO  =>  [
+                MainContract::SKIP  =>  $skip,
+                MainContract::TAKE  =>  $take,
+                MainContract::COUNT =>  $this->newsService->count([]),
+            ],
+            MainContract::DATA  =>  new NewsCollection($this->newsService->get($skip,$take))
+        ],200);
     }
 
     public function getById($id): Response|NewsResource|Application|ResponseFactory

@@ -12,13 +12,19 @@ class ServicePriceService
         $this->servicePriceRepository   =   $servicePriceRepository;
     }
 
-    public function get()
+    public function get($skip,$take)
     {
-        return $this->servicePriceRepository->get();
+        return $this->servicePriceRepository->get($skip,$take);
     }
 
     public function getById($id)
     {
         return $this->servicePriceRepository->getById($id);
     }
+
+    public function count($where)
+    {
+        return $this->servicePriceRepository->count($where);
+    }
+
 }

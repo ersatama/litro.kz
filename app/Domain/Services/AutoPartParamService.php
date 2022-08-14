@@ -12,9 +12,14 @@ class AutoPartParamService
         $this->autoPartParamRepository  =   $autoPartParamRepository;
     }
 
-    public function get()
+    public function count($where)
     {
-        return $this->autoPartParamRepository->get();
+        return $this->autoPartParamRepository->count($where);
+    }
+
+    public function get($skip,$take)
+    {
+        return $this->autoPartParamRepository->get($skip,$take);
     }
 
 }

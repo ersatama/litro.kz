@@ -12,9 +12,14 @@ class AutoPartTypeService
         $this->autoPartTypeRepository   =   $autoPartTypeRepository;
     }
 
-    public function get()
+    public function count($where)
     {
-        return $this->autoPartTypeRepository->get();
+        return $this->autoPartTypeRepository->count($where);
+    }
+
+    public function get($skip,$take)
+    {
+        return $this->autoPartTypeRepository->get($skip,$take);
     }
 
 }

@@ -12,9 +12,14 @@ class CarModelService
         $this->carModelRepository   =   $carModelRepository;
     }
 
-    public function get()
+    public function count($where)
     {
-        return $this->carModelRepository->get();
+        return $this->carModelRepository->count($where);
+    }
+
+    public function get($skip,$take)
+    {
+        return $this->carModelRepository->get($skip,$take);
     }
 
     public function getById($id)
@@ -22,9 +27,9 @@ class CarModelService
         return $this->carModelRepository->getById($id);
     }
 
-    public function getByBrandId($brandId)
+    public function getByCarBrandId($carBrandId,$skip,$take)
     {
-        return $this->carModelRepository->getByBrandId($brandId);
+        return $this->carModelRepository->getByCarBrandId($carBrandId,$skip,$take);
     }
 
 }

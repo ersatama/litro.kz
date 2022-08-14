@@ -6,8 +6,14 @@ use App\Models\CarBrand;
 
 class CarBrandRepositoryEloquent implements CarBrandRepositoryInterface
 {
-    public function get()
+    public function get($skip,$take)
     {
-        return CarBrand::get();
+        return CarBrand::skip($skip)->take($take)->get();
     }
+
+    public function count($where)
+    {
+        return CarBrand::where($where)->count();
+    }
+
 }

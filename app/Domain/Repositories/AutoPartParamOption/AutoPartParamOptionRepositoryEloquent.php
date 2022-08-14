@@ -6,8 +6,13 @@ use App\Models\AutoPartParamOption;
 
 class AutoPartParamOptionRepositoryEloquent implements AutoPartParamOptionRepositoryInterface
 {
-    public function get()
+    public function count($where)
     {
-        return AutoPartParamOption::get();
+        return AutoPartParamOption::where($where)->count();
+    }
+
+    public function get($skip,$take)
+    {
+        return AutoPartParamOption::skip($skip)->take($take)->get();
     }
 }

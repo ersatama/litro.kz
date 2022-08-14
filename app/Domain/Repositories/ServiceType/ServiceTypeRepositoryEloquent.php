@@ -7,9 +7,15 @@ use App\Models\ServiceType;
 
 class ServiceTypeRepositoryEloquent implements ServiceTypeRepositoryInterface
 {
-    public function get()
+
+    public function count($where)
     {
-        return ServiceType::get();
+        return ServiceType::where($where)->count();
+    }
+
+    public function get($skip,$take)
+    {
+        return ServiceType::skip($skip)->take($take)->get();
     }
 
     public function getById($id)

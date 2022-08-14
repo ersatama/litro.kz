@@ -12,9 +12,14 @@ class RegionService
         $this->regionRepository =   $regionRepository;
     }
 
-    public function get()
+    public function get($skip,$take)
     {
-        return $this->regionRepository->get();
+        return $this->regionRepository->get($skip,$take);
+    }
+
+    public function count($where)
+    {
+        return $this->regionRepository->count($where);
     }
 
 }

@@ -6,8 +6,14 @@ use App\Models\AutoPartType;
 
 class AutoPartTypeRepositoryEloquent implements AutoPartTypeRepositoryInterface
 {
-    public function get()
+
+    public function count($where)
     {
-        return AutoPartType::get();
+        return AutoPartType::where($where)->count();
+    }
+
+    public function get($skip,$take)
+    {
+        return AutoPartType::skip($skip)->take($take)->get();
     }
 }

@@ -6,8 +6,14 @@ use App\Models\Country;
 
 class CountryRepositoryEloquent implements CountryRepositoryInterface
 {
-    public function get()
+    public function get($skip,$take)
     {
-        return Country::get();
+        return Country::skip($skip)->take($take)->get();
     }
+
+    public function count($where)
+    {
+        return Country::where($where)->count();
+    }
+
 }

@@ -12,9 +12,14 @@ class CountryService
         $this->countryRepository    =   $countryRepository;
     }
 
-    public function get()
+    public function get($skip,$take)
     {
-        return $this->countryRepository->get();
+        return $this->countryRepository->get($skip,$take);
+    }
+
+    public function count($where)
+    {
+        return $this->countryRepository->count($where);
     }
 
 }
