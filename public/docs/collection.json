@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f",
-        "_postman_id": "79cd0a8c-6f4f-473c-8f30-5e7729a0efd3",
+        "_postman_id": "509971b6-c71c-424e-ad11-a4a0e5c46fe9",
         "description": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f \u0434\u043b\u044f litro.kz",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -31,7 +31,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ipsam",
+                                    "value": "consequatur",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -70,7 +70,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "56"
+                                    "value": "30"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -95,7 +95,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "minima",
+                                    "value": "consectetur",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -134,7 +134,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "54"
+                                    "value": "28"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -159,7 +159,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "facilis",
+                                    "value": "aut",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -198,7 +198,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "47"
+                                    "value": "21"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -223,7 +223,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "dolorum",
+                                    "value": "fuga",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -262,7 +262,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "39"
+                                    "value": "13"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -287,7 +287,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "non",
+                                    "value": "distinctio",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -326,7 +326,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "58"
+                                    "value": "32"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -351,13 +351,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "labore",
+                                    "value": "iure",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ex",
+                                    "value": "fugit",
                                     "description": ""
                                 }
                             ]
@@ -396,7 +396,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "59"
+                                    "value": "33"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -404,7 +404,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"labore\",\"take\":\"ex\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"iure\",\"take\":\"fugit\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -421,13 +421,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "omnis",
+                                    "value": "exercitationem",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "quod",
+                                    "value": "adipisci",
                                     "description": ""
                                 }
                             ]
@@ -466,7 +466,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "57"
+                                    "value": "31"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -474,7 +474,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"omnis\",\"take\":\"quod\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"exercitationem\",\"take\":\"adipisci\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -491,13 +491,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "corporis",
+                                    "value": "ut",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "voluptatem",
+                                    "value": "totam",
                                     "description": ""
                                 }
                             ]
@@ -536,7 +536,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "55"
+                                    "value": "29"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -544,7 +544,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"corporis\",\"take\":\"voluptatem\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"ut\",\"take\":\"totam\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -561,13 +561,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "autem",
+                                    "value": "dolorum",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "dignissimos",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -606,7 +606,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "53"
+                                    "value": "27"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -614,7 +614,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"autem\",\"take\":\"dignissimos\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"dolorum\",\"take\":\"aut\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -631,287 +631,7 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "nostrum",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "voluptas",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "52"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"nostrum\",\"take\":\"voluptas\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/country\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/country\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/country\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "et",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "quos",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "51"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"et\",\"take\":\"quos\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/currency\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/currency\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/currency\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "suscipit",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
                                     "value": "quis",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "50"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"suscipit\",\"take\":\"quis\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/city\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/city\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/city\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "quia",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "commodi",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "49"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"quia\",\"take\":\"commodi\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/carModel\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/carModel\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/carModel\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "eius",
                                     "description": ""
                                 },
                                 {
@@ -956,7 +676,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "48"
+                                    "value": "26"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -964,24 +684,234 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"eius\",\"take\":\"sit\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"quis\",\"take\":\"sit\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/carBrand\/get\/{skip}\/{take}",
+                    "name": "api\/country\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/carBrand\/get\/:skip\/:take",
+                            "path": "api\/country\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/carBrand\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/country\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "animi",
+                                    "value": "placeat",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "inventore",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "25"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"placeat\",\"take\":\"inventore\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/currency\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/currency\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/currency\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "et",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "vitae",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "24"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"et\",\"take\":\"vitae\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/city\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/city\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/city\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "nihil",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "libero",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "23"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"nihil\",\"take\":\"libero\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/carModel\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/carModel\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/carModel\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "ab",
                                     "description": ""
                                 },
                                 {
@@ -1026,7 +956,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "46"
+                                    "value": "22"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1034,7 +964,77 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"animi\",\"take\":\"consequatur\",\"count\":2},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"ab\",\"take\":\"consequatur\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/carBrand\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/carBrand\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/carBrand\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "neque",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "corrupti",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "20"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"neque\",\"take\":\"corrupti\",\"count\":2},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1051,13 +1051,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "quisquam",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "quia",
+                                    "value": "autem",
                                     "description": ""
                                 }
                             ]
@@ -1096,7 +1096,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "45"
+                                    "value": "19"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1104,7 +1104,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"quisquam\",\"take\":\"quia\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"et\",\"take\":\"autem\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1121,13 +1121,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "consequuntur",
+                                    "value": "eaque",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ea",
+                                    "value": "autem",
                                     "description": ""
                                 }
                             ]
@@ -1166,7 +1166,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "44"
+                                    "value": "18"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1174,7 +1174,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"consequuntur\",\"take\":\"ea\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"eaque\",\"take\":\"autem\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1191,13 +1191,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "praesentium",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "perferendis",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -1236,7 +1236,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "43"
+                                    "value": "17"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1244,7 +1244,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"praesentium\",\"take\":\"perferendis\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"et\",\"take\":\"non\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1261,13 +1261,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "saepe",
+                                    "value": "neque",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "voluptas",
+                                    "value": "culpa",
                                     "description": ""
                                 }
                             ]
@@ -1306,7 +1306,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "42"
+                                    "value": "16"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1314,7 +1314,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"saepe\",\"take\":\"voluptas\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"neque\",\"take\":\"culpa\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1331,13 +1331,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ut",
+                                    "value": "laborum",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "voluptate",
+                                    "value": "debitis",
                                     "description": ""
                                 }
                             ]
@@ -1376,7 +1376,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "41"
+                                    "value": "15"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1384,7 +1384,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"ut\",\"take\":\"voluptate\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"laborum\",\"take\":\"debitis\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1401,13 +1401,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "labore",
+                                    "value": "ex",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "sunt",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1446,7 +1446,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "40"
+                                    "value": "14"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1454,7 +1454,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"labore\",\"take\":\"sunt\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"ex\",\"take\":\"et\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1471,13 +1471,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "hic",
+                                    "value": "est",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "cumque",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -1516,7 +1516,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "38"
+                                    "value": "12"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1524,7 +1524,141 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"hic\",\"take\":\"cumque\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"est\",\"take\":\"ut\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/moneyOperation\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/moneyOperation\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/moneyOperation\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "distinctio",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "molestiae",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "35"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"distinctio\",\"take\":\"molestiae\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/moneyOperation\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/moneyOperation\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/moneyOperation\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "voluptas",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "34"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"MoneyOperation not found\"}",
                             "name": ""
                         }
                     ]

@@ -213,6 +213,7 @@ return [
         App\Providers\Repositories\ServiceRepositoryProvider::class,
         App\Providers\Repositories\ServiceTypeRepositoryProvider::class,
         App\Providers\Repositories\ServicePriceRepositoryProvider::class,
+        App\Providers\Repositories\MoneyOperationRepositoryProvider::class
     ],
 
     /*

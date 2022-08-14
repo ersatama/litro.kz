@@ -4,6 +4,12 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const MESSAGE   =   'message';
+    const PAYMENT_ID    =   'payment_id';
+    const WALLET_RECORD_ID  =   'wallet_record_id';
+    const USER_ID   =   'user_id';
+    const STATUS    =   'status';
+    const MONEY_OPERATION_TYPE_ID   =   'money_operation_type_id';
     const INFO  =   'info';
     const SKIP  =   'skip';
     const TAKE  =   'take';

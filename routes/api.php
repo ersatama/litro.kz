@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\CarModelController;
 use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\CurrencyController;
+use App\Http\Controllers\Api\MoneyOperationController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\RegionController;
@@ -26,6 +27,13 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(MoneyOperationController::class)->group(function() {
+    Route::prefix('moneyOperation')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('moneyOperation.get');
+        Route::get('getById/{id}','getById')->name('moneyOperation.getById');
+    });
 });
 
 Route::controller(ServicePriceController::class)->group(function() {
