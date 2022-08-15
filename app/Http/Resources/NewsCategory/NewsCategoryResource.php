@@ -16,7 +16,7 @@ class NewsCategoryResource extends JsonResource
             MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN},
             MainContract::TITLE_KZ  =>  $this->{MainContract::TITLE_KZ},
             MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT}
+            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
         ];
     }
 }

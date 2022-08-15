@@ -21,6 +21,8 @@ class NewsResource extends JsonResource
             MainContract::NEWS_CATEGORY_ID  =>  $this->{MainContract::NEWS_CATEGORY_ID},
             MainContract::IS_ACTIVE =>  $this->{MainContract::IS_ACTIVE},
             MainContract::LINK  =>  $this->{MainContract::LINK},
+            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
+            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
         ];
     }
 }

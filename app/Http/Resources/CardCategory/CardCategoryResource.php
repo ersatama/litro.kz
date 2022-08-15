@@ -18,6 +18,8 @@ class CardCategoryResource extends JsonResource
             MainContract::DESCRIPTION   =>  $this->{MainContract::DESCRIPTION},
             MainContract::DESCRIPTION_KZ    =>  $this->{MainContract::DESCRIPTION_KZ},
             MainContract::DESCRIPTION_EN    =>  $this->{MainContract::DESCRIPTION_EN},
+            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
+            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
         ];
     }
 }

@@ -15,7 +15,9 @@ class MoneyOperationResource extends JsonResource
             MainContract::USER_ID   =>  $this->{MainContract::USER_ID},
             MainContract::WALLET_RECORD_ID  =>  $this->{MainContract::WALLET_RECORD_ID},
             MainContract::PAYMENT_ID    =>  $this->{MainContract::PAYMENT_ID},
-            MainContract::STATUS    =>  $this->{MainContract::STATUS}
+            MainContract::STATUS    =>  $this->{MainContract::STATUS},
+            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
+            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
         ];
     }
 }

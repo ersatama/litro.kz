@@ -17,6 +17,7 @@ use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\RegionController;
 use App\Http\Controllers\Api\ServiceController;
+use App\Http\Controllers\Api\ServiceLimitController;
 use App\Http\Controllers\Api\ServicePriceController;
 use App\Http\Controllers\Api\ServiceTypeController;
 use Illuminate\Http\Request;
@@ -28,6 +29,13 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(ServiceLimitController::class)->group(function() {
+    Route::prefix('serviceLimit')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('serviceLimit.get');
+        Route::get('getById/{id}','getById')->name('serviceLimit.getById');
+    });
 });
 
 Route::controller(MoneyOperationTypeController::class)->group(function() {

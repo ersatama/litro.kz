@@ -18,6 +18,8 @@ class CityResource extends JsonResource
             MainContract::IS_ACTIVE =>  $this->{MainContract::IS_ACTIVE},
             MainContract::LAT   =>  $this->{MainContract::LAT},
             MainContract::LONG  =>  $this->{MainContract::LONG},
+            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
+            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
         ];
     }
 }

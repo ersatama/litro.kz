@@ -4,6 +4,8 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const LIMIT =   'limit';
+    const CARD_ID   =   'card_id';
     const NOT_FOUND =   'not found';
     const MESSAGE   =   'message';
     const PAYMENT_ID    =   'payment_id';

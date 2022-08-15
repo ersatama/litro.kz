@@ -14,7 +14,9 @@ class CarCategoryResource extends JsonResource
             MainContract::IMAGE_ID  =>  $this->{MainContract::IMAGE_ID},
             MainContract::TITLE =>  $this->{MainContract::TITLE},
             MainContract::TITLE_KZ  =>  $this->{MainContract::TITLE_KZ},
-            MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN}
+            MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN},
+            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
+            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
         ];
     }
 }

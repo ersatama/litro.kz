@@ -12,6 +12,8 @@ class CarBrandResource extends JsonResource
         return [
             MainContract::ID    =>  $this->{MainContract::ID},
             MainContract::TITLE =>  $this->{MainContract::TITLE},
+            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
+            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
         ];
     }
 }

@@ -215,6 +215,7 @@ return [
         App\Providers\Repositories\ServicePriceRepositoryProvider::class,
         App\Providers\Repositories\MoneyOperationRepositoryProvider::class,
         App\Providers\Repositories\MoneyOperationTypeRepositoryProvider::class,
+        App\Providers\Repositories\ServiceLimitRepositoryProvider::class,
     ],
 
     /*

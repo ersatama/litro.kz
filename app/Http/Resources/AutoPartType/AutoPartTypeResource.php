@@ -12,6 +12,8 @@ class AutoPartTypeResource extends JsonResource
         return [
             MainContract::ID    =>  $this->{MainContract::ID},
             MainContract::FILTER    =>  $this->{MainContract::FILTER},
+            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
+            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
         ];
     }
 }

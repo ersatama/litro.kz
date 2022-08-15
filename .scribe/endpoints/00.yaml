@@ -18,7 +18,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: ex
+        example: placeat
         type: string
         custom: []
     queryParameters: []
@@ -31,7 +31,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '28'
+          x-ratelimit-remaining: '50'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -52,7 +52,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: quo
+        example: assumenda
         type: string
         custom: []
     queryParameters: []
@@ -65,7 +65,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '26'
+          x-ratelimit-remaining: '48'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -86,7 +86,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: voluptatum
+        example: sit
         type: string
         custom: []
     queryParameters: []
@@ -99,7 +99,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '19'
+          x-ratelimit-remaining: '41'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -120,7 +120,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: alias
+        example: possimus
         type: string
         custom: []
     queryParameters: []
@@ -133,7 +133,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '11'
+          x-ratelimit-remaining: '33'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -154,7 +154,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: esse
+        example: voluptatem
         type: string
         custom: []
     queryParameters: []
@@ -167,7 +167,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '30'
+          x-ratelimit-remaining: '52'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -188,14 +188,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: laboriosam
+        example: aut
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ab
+        example: consequatur
         type: string
         custom: []
     queryParameters: []
@@ -203,12 +203,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"laboriosam","take":"ab","count":0},"data":[]}'
+        content: '{"info":{"skip":"aut","take":"consequatur","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '31'
+          x-ratelimit-remaining: '53'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -229,14 +229,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: dolor
+        example: fugiat
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ut
+        example: voluptatem
         type: string
         custom: []
     queryParameters: []
@@ -244,12 +244,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"dolor","take":"ut","count":0},"data":[]}'
+        content: '{"info":{"skip":"fugiat","take":"voluptatem","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '29'
+          x-ratelimit-remaining: '51'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -270,14 +270,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: aspernatur
+        example: facere
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: qui
+        example: ut
         type: string
         custom: []
     queryParameters: []
@@ -285,12 +285,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"aspernatur","take":"qui","count":0},"data":[]}'
+        content: '{"info":{"skip":"facere","take":"ut","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '27'
+          x-ratelimit-remaining: '49'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -311,14 +311,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: perferendis
+        example: qui
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: aut
+        example: consequuntur
         type: string
         custom: []
     queryParameters: []
@@ -326,12 +326,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"perferendis","take":"aut","count":0},"data":[]}'
+        content: '{"info":{"skip":"qui","take":"consequuntur","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '25'
+          x-ratelimit-remaining: '47'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -352,14 +352,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: iusto
+        example: sunt
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: delectus
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -367,12 +367,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"iusto","take":"delectus","count":0},"data":[]}'
+        content: '{"info":{"skip":"sunt","take":"et","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '24'
+          x-ratelimit-remaining: '46'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -393,14 +393,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: ab
+        example: deleniti
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: omnis
+        example: autem
         type: string
         custom: []
     queryParameters: []
@@ -408,12 +408,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"ab","take":"omnis","count":0},"data":[]}'
+        content: '{"info":{"skip":"deleniti","take":"autem","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '23'
+          x-ratelimit-remaining: '45'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -434,14 +434,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: ducimus
+        example: suscipit
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: sapiente
+        example: rerum
         type: string
         custom: []
     queryParameters: []
@@ -449,12 +449,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"ducimus","take":"sapiente","count":0},"data":[]}'
+        content: '{"info":{"skip":"suscipit","take":"rerum","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '22'
+          x-ratelimit-remaining: '44'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -482,7 +482,7 @@ endpoints:
         name: take
         description: ''
         required: true
-        example: vel
+        example: molestiae
         type: string
         custom: []
     queryParameters: []
@@ -490,12 +490,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"qui","take":"vel","count":0},"data":[]}'
+        content: '{"info":{"skip":"qui","take":"molestiae","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '21'
+          x-ratelimit-remaining: '43'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -516,14 +516,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: quam
+        example: amet
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quasi
+        example: optio
         type: string
         custom: []
     queryParameters: []
@@ -531,12 +531,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"quam","take":"quasi","count":0},"data":[]}'
+        content: '{"info":{"skip":"amet","take":"optio","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '20'
+          x-ratelimit-remaining: '42'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -557,14 +557,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: veritatis
+        example: blanditiis
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ut
+        example: voluptatem
         type: string
         custom: []
     queryParameters: []
@@ -572,12 +572,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"veritatis","take":"ut","count":0},"data":[]}'
+        content: '{"info":{"skip":"blanditiis","take":"voluptatem","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '18'
+          x-ratelimit-remaining: '40'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -598,14 +598,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: reprehenderit
+        example: est
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: in
+        example: nihil
         type: string
         custom: []
     queryParameters: []
@@ -613,12 +613,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"reprehenderit","take":"in","count":0},"data":[]}'
+        content: '{"info":{"skip":"est","take":"nihil","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '17'
+          x-ratelimit-remaining: '39'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -639,14 +639,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: nemo
+        example: sunt
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: minima
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -654,12 +654,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"nemo","take":"minima","count":0},"data":[]}'
+        content: '{"info":{"skip":"sunt","take":"et","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '16'
+          x-ratelimit-remaining: '38'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -680,14 +680,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: aut
+        example: sed
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: dolore
+        example: eos
         type: string
         custom: []
     queryParameters: []
@@ -695,12 +695,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"aut","take":"dolore","count":0},"data":[]}'
+        content: '{"info":{"skip":"sed","take":"eos","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '15'
+          x-ratelimit-remaining: '37'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -721,14 +721,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: et
+        example: dicta
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: sed
+        example: aut
         type: string
         custom: []
     queryParameters: []
@@ -736,12 +736,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"et","take":"sed","count":0},"data":[]}'
+        content: '{"info":{"skip":"dicta","take":"aut","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '14'
+          x-ratelimit-remaining: '36'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -762,14 +762,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: aut
+        example: illo
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: omnis
+        example: corrupti
         type: string
         custom: []
     queryParameters: []
@@ -777,12 +777,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"aut","take":"omnis","count":0},"data":[]}'
+        content: '{"info":{"skip":"illo","take":"corrupti","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '13'
+          x-ratelimit-remaining: '35'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -803,14 +803,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: corrupti
+        example: sed
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: enim
+        example: nostrum
         type: string
         custom: []
     queryParameters: []
@@ -818,12 +818,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"corrupti","take":"enim","count":0},"data":[]}'
+        content: '{"info":{"skip":"sed","take":"nostrum","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '12'
+          x-ratelimit-remaining: '34'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -844,14 +844,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: veniam
+        example: vitae
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: autem
+        example: quo
         type: string
         custom: []
     queryParameters: []
@@ -859,12 +859,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"veniam","take":"autem","count":0},"data":[]}'
+        content: '{"info":{"skip":"vitae","take":"quo","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '10'
+          x-ratelimit-remaining: '32'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -885,14 +885,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: ullam
+        example: totam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: similique
+        example: iusto
         type: string
         custom: []
     queryParameters: []
@@ -900,12 +900,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"ullam","take":"similique","count":0},"data":[]}'
+        content: '{"info":{"skip":"totam","take":"iusto","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '33'
+          x-ratelimit-remaining: '55'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -926,7 +926,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: voluptatem
+        example: tempora
         type: string
         custom: []
     queryParameters: []
@@ -939,7 +939,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '32'
+          x-ratelimit-remaining: '54'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -960,14 +960,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: deserunt
+        example: praesentium
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ullam
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -975,12 +975,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"deserunt","take":"ullam","count":0},"data":[]}'
+        content: '{"info":{"skip":"praesentium","take":"et","count":0},"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '35'
+          x-ratelimit-remaining: '57'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1001,7 +1001,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: quia
+        example: officiis
         type: string
         custom: []
     queryParameters: []
@@ -1014,7 +1014,1134 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '34'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/serviceLimit/get/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: eligendi
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: dolorem
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'admin.service_limits' doesn't exist (SQL: select count(*) as aggregate from `service_limits`)",
+              "exception": "Illuminate\\Database\\QueryException",
+              "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+              "line": 759,
+              "trace": [
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+                      "line": 719,
+                      "function": "runQueryCallback",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+                      "line": 421,
+                      "function": "run",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2630,
+                      "function": "select",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2618,
+                      "function": "runSelect",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 3154,
+                      "function": "Illuminate\\Database\\Query\\{closure}",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2619,
+                      "function": "onceWithColumns",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 3081,
+                      "function": "get",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 3009,
+                      "function": "aggregate",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+                      "line": 1834,
+                      "function": "count",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/app/Domain/Repositories/ServiceLimit/ServiceLimitRepositoryEloquent.php",
+                      "line": 17,
+                      "function": "__call",
+                      "class": "Illuminate\\Database\\Eloquent\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/app/Domain/Services/ServiceLimitService.php",
+                      "line": 22,
+                      "function": "count",
+                      "class": "App\\Domain\\Repositories\\ServiceLimit\\ServiceLimitRepositoryEloquent",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/app/Http/Controllers/Api/ServiceLimitController.php",
+                      "line": 30,
+                      "function": "count",
+                      "class": "App\\Domain\\Services\\ServiceLimitService",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
+                      "line": 54,
+                      "function": "get",
+                      "class": "App\\Http\\Controllers\\Api\\ServiceLimitController",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php",
+                      "line": 45,
+                      "function": "callAction",
+                      "class": "Illuminate\\Routing\\Controller",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+                      "line": 261,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\ControllerDispatcher",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+                      "line": 204,
+                      "function": "runController",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 725,
+                      "function": "run",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Routing\\{closure}",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 126,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 102,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 54,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 726,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 703,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 667,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 656,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 167,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 142,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 111,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 89,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 222,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 179,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 116,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 123,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 80,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 56,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 55,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 651,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 139,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Command/Command.php",
+                      "line": 308,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 124,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 998,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 299,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 171,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php",
+                      "line": 102,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 129,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/serviceLimit/getById/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the getById.'
+        required: true
+        example: eum
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'admin.service_limits' doesn't exist (SQL: select * from `service_limits` where `id` = eum limit 1)",
+              "exception": "Illuminate\\Database\\QueryException",
+              "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+              "line": 759,
+              "trace": [
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+                      "line": 719,
+                      "function": "runQueryCallback",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+                      "line": 421,
+                      "function": "run",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2630,
+                      "function": "select",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2618,
+                      "function": "runSelect",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 3154,
+                      "function": "Illuminate\\Database\\Query\\{closure}",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2619,
+                      "function": "onceWithColumns",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+                      "line": 698,
+                      "function": "get",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+                      "line": 682,
+                      "function": "getModels",
+                      "class": "Illuminate\\Database\\Eloquent\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php",
+                      "line": 296,
+                      "function": "get",
+                      "class": "Illuminate\\Database\\Eloquent\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/app/Domain/Repositories/ServiceLimit/ServiceLimitRepositoryEloquent.php",
+                      "line": 22,
+                      "function": "first",
+                      "class": "Illuminate\\Database\\Eloquent\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/app/Domain/Services/ServiceLimitService.php",
+                      "line": 27,
+                      "function": "getById",
+                      "class": "App\\Domain\\Repositories\\ServiceLimit\\ServiceLimitRepositoryEloquent",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/app/Http/Controllers/Api/ServiceLimitController.php",
+                      "line": 38,
+                      "function": "getById",
+                      "class": "App\\Domain\\Services\\ServiceLimitService",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
+                      "line": 54,
+                      "function": "getById",
+                      "class": "App\\Http\\Controllers\\Api\\ServiceLimitController",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php",
+                      "line": 45,
+                      "function": "callAction",
+                      "class": "Illuminate\\Routing\\Controller",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+                      "line": 261,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\ControllerDispatcher",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+                      "line": 204,
+                      "function": "runController",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 725,
+                      "function": "run",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Routing\\{closure}",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 126,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 102,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 54,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 726,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 703,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 667,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 656,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 167,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 142,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 111,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 89,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 222,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 179,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 116,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 123,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 80,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 56,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 55,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 651,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 139,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Command/Command.php",
+                      "line": 308,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 124,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 998,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 299,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 171,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php",
+                      "line": 102,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 129,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
         description: null
     responseFields: []

@@ -159,6 +159,12 @@
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-moneyOperationType-getById--id-">
                         <a href="#endpoints-GETapi-moneyOperationType-getById--id-">GET api/moneyOperationType/getById/{id}</a>
                     </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-serviceLimit-get--skip---take-">
+                        <a href="#endpoints-GETapi-serviceLimit-get--skip---take-">GET api/serviceLimit/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-serviceLimit-getById--id-">
+                        <a href="#endpoints-GETapi-serviceLimit-getById--id-">GET api/serviceLimit/getById/{id}</a>
+                    </li>
                                                     </ul>
                             </ul>
         
@@ -171,7 +177,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 14 2022</li>
+        <li>Last updated: August 15 2022</li>
     </ul>
 </div>
 
@@ -213,14 +219,14 @@
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/serviceType/getById/ex" \
+    --get "http://localhost:8000/api/serviceType/getById/placeat" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/serviceType/getById/ex"
+    "http://localhost:8000/api/serviceType/getById/placeat"
 );
 
 const headers = {
@@ -237,7 +243,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/serviceType/getById/ex',
+    'http://localhost:8000/api/serviceType/getById/placeat',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -253,7 +259,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/serviceType/getById/ex'
+url = 'http://localhost:8000/api/serviceType/getById/placeat'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -275,7 +281,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 28
+x-ratelimit-remaining: 50
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -330,7 +336,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-serviceType-getById--id-"
-               value="ex"
+               value="placeat"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -350,14 +356,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/service/getById/quo" \
+    --get "http://localhost:8000/api/service/getById/assumenda" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/service/getById/quo"
+    "http://localhost:8000/api/service/getById/assumenda"
 );
 
 const headers = {
@@ -374,7 +380,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/service/getById/quo',
+    'http://localhost:8000/api/service/getById/assumenda',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -390,7 +396,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/service/getById/quo'
+url = 'http://localhost:8000/api/service/getById/assumenda'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -412,7 +418,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 26
+x-ratelimit-remaining: 48
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -467,7 +473,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-service-getById--id-"
-               value="quo"
+               value="assumenda"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -487,14 +493,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModel/getById/voluptatum" \
+    --get "http://localhost:8000/api/carModel/getById/sit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModel/getById/voluptatum"
+    "http://localhost:8000/api/carModel/getById/sit"
 );
 
 const headers = {
@@ -511,7 +517,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carModel/getById/voluptatum',
+    'http://localhost:8000/api/carModel/getById/sit',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -527,7 +533,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carModel/getById/voluptatum'
+url = 'http://localhost:8000/api/carModel/getById/sit'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -549,7 +555,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 19
+x-ratelimit-remaining: 41
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -604,7 +610,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-carModel-getById--id-"
-               value="voluptatum"
+               value="sit"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -624,14 +630,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/news/getById/alias" \
+    --get "http://localhost:8000/api/news/getById/possimus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/news/getById/alias"
+    "http://localhost:8000/api/news/getById/possimus"
 );
 
 const headers = {
@@ -648,7 +654,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/news/getById/alias',
+    'http://localhost:8000/api/news/getById/possimus',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -664,7 +670,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/news/getById/alias'
+url = 'http://localhost:8000/api/news/getById/possimus'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -686,7 +692,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 11
+x-ratelimit-remaining: 33
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -741,7 +747,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-news-getById--id-"
-               value="alias"
+               value="possimus"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -761,14 +767,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/servicePrice/getById/esse" \
+    --get "http://localhost:8000/api/servicePrice/getById/voluptatem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/servicePrice/getById/esse"
+    "http://localhost:8000/api/servicePrice/getById/voluptatem"
 );
 
 const headers = {
@@ -785,7 +791,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/servicePrice/getById/esse',
+    'http://localhost:8000/api/servicePrice/getById/voluptatem',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -801,7 +807,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/servicePrice/getById/esse'
+url = 'http://localhost:8000/api/servicePrice/getById/voluptatem'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -823,7 +829,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 30
+x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -878,7 +884,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-servicePrice-getById--id-"
-               value="esse"
+               value="voluptatem"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -898,14 +904,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/servicePrice/get/laboriosam/ab" \
+    --get "http://localhost:8000/api/servicePrice/get/aut/consequatur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/servicePrice/get/laboriosam/ab"
+    "http://localhost:8000/api/servicePrice/get/aut/consequatur"
 );
 
 const headers = {
@@ -922,7 +928,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/servicePrice/get/laboriosam/ab',
+    'http://localhost:8000/api/servicePrice/get/aut/consequatur',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -938,7 +944,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/servicePrice/get/laboriosam/ab'
+url = 'http://localhost:8000/api/servicePrice/get/aut/consequatur'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -960,15 +966,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 31
+x-ratelimit-remaining: 53
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;laboriosam&quot;,
-        &quot;take&quot;: &quot;ab&quot;,
+        &quot;skip&quot;: &quot;aut&quot;,
+        &quot;take&quot;: &quot;consequatur&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -1020,7 +1026,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-servicePrice-get--skip---take-"
-               value="laboriosam"
+               value="aut"
                data-component="url" hidden>
     <br>
 
@@ -1030,7 +1036,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-servicePrice-get--skip---take-"
-               value="ab"
+               value="consequatur"
                data-component="url" hidden>
     <br>
 
@@ -1050,14 +1056,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/serviceType/get/dolor/ut" \
+    --get "http://localhost:8000/api/serviceType/get/fugiat/voluptatem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/serviceType/get/dolor/ut"
+    "http://localhost:8000/api/serviceType/get/fugiat/voluptatem"
 );
 
 const headers = {
@@ -1074,7 +1080,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/serviceType/get/dolor/ut',
+    'http://localhost:8000/api/serviceType/get/fugiat/voluptatem',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1090,7 +1096,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/serviceType/get/dolor/ut'
+url = 'http://localhost:8000/api/serviceType/get/fugiat/voluptatem'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1112,15 +1118,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 29
+x-ratelimit-remaining: 51
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;dolor&quot;,
-        &quot;take&quot;: &quot;ut&quot;,
+        &quot;skip&quot;: &quot;fugiat&quot;,
+        &quot;take&quot;: &quot;voluptatem&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -1172,7 +1178,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-serviceType-get--skip---take-"
-               value="dolor"
+               value="fugiat"
                data-component="url" hidden>
     <br>
 
@@ -1182,7 +1188,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-serviceType-get--skip---take-"
-               value="ut"
+               value="voluptatem"
                data-component="url" hidden>
     <br>
 
@@ -1202,14 +1208,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/service/get/aspernatur/qui" \
+    --get "http://localhost:8000/api/service/get/facere/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/service/get/aspernatur/qui"
+    "http://localhost:8000/api/service/get/facere/ut"
 );
 
 const headers = {
@@ -1226,7 +1232,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/service/get/aspernatur/qui',
+    'http://localhost:8000/api/service/get/facere/ut',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1242,7 +1248,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/service/get/aspernatur/qui'
+url = 'http://localhost:8000/api/service/get/facere/ut'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1264,15 +1270,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 27
+x-ratelimit-remaining: 49
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;aspernatur&quot;,
-        &quot;take&quot;: &quot;qui&quot;,
+        &quot;skip&quot;: &quot;facere&quot;,
+        &quot;take&quot;: &quot;ut&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -1324,7 +1330,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-service-get--skip---take-"
-               value="aspernatur"
+               value="facere"
                data-component="url" hidden>
     <br>
 
@@ -1334,7 +1340,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-service-get--skip---take-"
-               value="qui"
+               value="ut"
                data-component="url" hidden>
     <br>
 
@@ -1354,14 +1360,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardCategory/get/perferendis/aut" \
+    --get "http://localhost:8000/api/cardCategory/get/qui/consequuntur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardCategory/get/perferendis/aut"
+    "http://localhost:8000/api/cardCategory/get/qui/consequuntur"
 );
 
 const headers = {
@@ -1378,7 +1384,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardCategory/get/perferendis/aut',
+    'http://localhost:8000/api/cardCategory/get/qui/consequuntur',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1394,7 +1400,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardCategory/get/perferendis/aut'
+url = 'http://localhost:8000/api/cardCategory/get/qui/consequuntur'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1416,15 +1422,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 25
+x-ratelimit-remaining: 47
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;perferendis&quot;,
-        &quot;take&quot;: &quot;aut&quot;,
+        &quot;skip&quot;: &quot;qui&quot;,
+        &quot;take&quot;: &quot;consequuntur&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -1476,7 +1482,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cardCategory-get--skip---take-"
-               value="perferendis"
+               value="qui"
                data-component="url" hidden>
     <br>
 
@@ -1486,7 +1492,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cardCategory-get--skip---take-"
-               value="aut"
+               value="consequuntur"
                data-component="url" hidden>
     <br>
 
@@ -1506,14 +1512,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/region/get/iusto/delectus" \
+    --get "http://localhost:8000/api/region/get/sunt/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/region/get/iusto/delectus"
+    "http://localhost:8000/api/region/get/sunt/et"
 );
 
 const headers = {
@@ -1530,7 +1536,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/region/get/iusto/delectus',
+    'http://localhost:8000/api/region/get/sunt/et',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1546,7 +1552,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/region/get/iusto/delectus'
+url = 'http://localhost:8000/api/region/get/sunt/et'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1568,15 +1574,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 24
+x-ratelimit-remaining: 46
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;iusto&quot;,
-        &quot;take&quot;: &quot;delectus&quot;,
+        &quot;skip&quot;: &quot;sunt&quot;,
+        &quot;take&quot;: &quot;et&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -1628,7 +1634,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-region-get--skip---take-"
-               value="iusto"
+               value="sunt"
                data-component="url" hidden>
     <br>
 
@@ -1638,7 +1644,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-region-get--skip---take-"
-               value="delectus"
+               value="et"
                data-component="url" hidden>
     <br>
 
@@ -1658,14 +1664,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/country/get/ab/omnis" \
+    --get "http://localhost:8000/api/country/get/deleniti/autem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/country/get/ab/omnis"
+    "http://localhost:8000/api/country/get/deleniti/autem"
 );
 
 const headers = {
@@ -1682,7 +1688,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/country/get/ab/omnis',
+    'http://localhost:8000/api/country/get/deleniti/autem',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1698,7 +1704,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/country/get/ab/omnis'
+url = 'http://localhost:8000/api/country/get/deleniti/autem'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1720,15 +1726,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 23
+x-ratelimit-remaining: 45
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;ab&quot;,
-        &quot;take&quot;: &quot;omnis&quot;,
+        &quot;skip&quot;: &quot;deleniti&quot;,
+        &quot;take&quot;: &quot;autem&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -1780,7 +1786,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-country-get--skip---take-"
-               value="ab"
+               value="deleniti"
                data-component="url" hidden>
     <br>
 
@@ -1790,7 +1796,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-country-get--skip---take-"
-               value="omnis"
+               value="autem"
                data-component="url" hidden>
     <br>
 
@@ -1810,14 +1816,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/currency/get/ducimus/sapiente" \
+    --get "http://localhost:8000/api/currency/get/suscipit/rerum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/currency/get/ducimus/sapiente"
+    "http://localhost:8000/api/currency/get/suscipit/rerum"
 );
 
 const headers = {
@@ -1834,7 +1840,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/currency/get/ducimus/sapiente',
+    'http://localhost:8000/api/currency/get/suscipit/rerum',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1850,7 +1856,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/currency/get/ducimus/sapiente'
+url = 'http://localhost:8000/api/currency/get/suscipit/rerum'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1872,15 +1878,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 22
+x-ratelimit-remaining: 44
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;ducimus&quot;,
-        &quot;take&quot;: &quot;sapiente&quot;,
+        &quot;skip&quot;: &quot;suscipit&quot;,
+        &quot;take&quot;: &quot;rerum&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -1932,7 +1938,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-currency-get--skip---take-"
-               value="ducimus"
+               value="suscipit"
                data-component="url" hidden>
     <br>
 
@@ -1942,7 +1948,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-currency-get--skip---take-"
-               value="sapiente"
+               value="rerum"
                data-component="url" hidden>
     <br>
 
@@ -1962,14 +1968,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/city/get/qui/vel" \
+    --get "http://localhost:8000/api/city/get/qui/molestiae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/city/get/qui/vel"
+    "http://localhost:8000/api/city/get/qui/molestiae"
 );
 
 const headers = {
@@ -1986,7 +1992,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/city/get/qui/vel',
+    'http://localhost:8000/api/city/get/qui/molestiae',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2002,7 +2008,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/city/get/qui/vel'
+url = 'http://localhost:8000/api/city/get/qui/molestiae'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2024,7 +2030,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 21
+x-ratelimit-remaining: 43
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -2032,7 +2038,7 @@ access-control-allow-origin: *
 <code class="language-json">{
     &quot;info&quot;: {
         &quot;skip&quot;: &quot;qui&quot;,
-        &quot;take&quot;: &quot;vel&quot;,
+        &quot;take&quot;: &quot;molestiae&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -2094,7 +2100,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-city-get--skip---take-"
-               value="vel"
+               value="molestiae"
                data-component="url" hidden>
     <br>
 
@@ -2114,14 +2120,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModel/get/quam/quasi" \
+    --get "http://localhost:8000/api/carModel/get/amet/optio" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModel/get/quam/quasi"
+    "http://localhost:8000/api/carModel/get/amet/optio"
 );
 
 const headers = {
@@ -2138,7 +2144,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carModel/get/quam/quasi',
+    'http://localhost:8000/api/carModel/get/amet/optio',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2154,7 +2160,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carModel/get/quam/quasi'
+url = 'http://localhost:8000/api/carModel/get/amet/optio'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2176,15 +2182,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 20
+x-ratelimit-remaining: 42
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;quam&quot;,
-        &quot;take&quot;: &quot;quasi&quot;,
+        &quot;skip&quot;: &quot;amet&quot;,
+        &quot;take&quot;: &quot;optio&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -2236,7 +2242,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carModel-get--skip---take-"
-               value="quam"
+               value="amet"
                data-component="url" hidden>
     <br>
 
@@ -2246,7 +2252,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carModel-get--skip---take-"
-               value="quasi"
+               value="optio"
                data-component="url" hidden>
     <br>
 
@@ -2266,14 +2272,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carBrand/get/veritatis/ut" \
+    --get "http://localhost:8000/api/carBrand/get/blanditiis/voluptatem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carBrand/get/veritatis/ut"
+    "http://localhost:8000/api/carBrand/get/blanditiis/voluptatem"
 );
 
 const headers = {
@@ -2290,7 +2296,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carBrand/get/veritatis/ut',
+    'http://localhost:8000/api/carBrand/get/blanditiis/voluptatem',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2306,7 +2312,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carBrand/get/veritatis/ut'
+url = 'http://localhost:8000/api/carBrand/get/blanditiis/voluptatem'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2328,15 +2334,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 18
+x-ratelimit-remaining: 40
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;veritatis&quot;,
-        &quot;take&quot;: &quot;ut&quot;,
+        &quot;skip&quot;: &quot;blanditiis&quot;,
+        &quot;take&quot;: &quot;voluptatem&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -2388,7 +2394,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carBrand-get--skip---take-"
-               value="veritatis"
+               value="blanditiis"
                data-component="url" hidden>
     <br>
 
@@ -2398,7 +2404,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carBrand-get--skip---take-"
-               value="ut"
+               value="voluptatem"
                data-component="url" hidden>
     <br>
 
@@ -2418,14 +2424,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carCategory/get/reprehenderit/in" \
+    --get "http://localhost:8000/api/carCategory/get/est/nihil" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carCategory/get/reprehenderit/in"
+    "http://localhost:8000/api/carCategory/get/est/nihil"
 );
 
 const headers = {
@@ -2442,7 +2448,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carCategory/get/reprehenderit/in',
+    'http://localhost:8000/api/carCategory/get/est/nihil',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2458,7 +2464,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carCategory/get/reprehenderit/in'
+url = 'http://localhost:8000/api/carCategory/get/est/nihil'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2480,15 +2486,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 17
+x-ratelimit-remaining: 39
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;reprehenderit&quot;,
-        &quot;take&quot;: &quot;in&quot;,
+        &quot;skip&quot;: &quot;est&quot;,
+        &quot;take&quot;: &quot;nihil&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -2540,7 +2546,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carCategory-get--skip---take-"
-               value="reprehenderit"
+               value="est"
                data-component="url" hidden>
     <br>
 
@@ -2550,7 +2556,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carCategory-get--skip---take-"
-               value="in"
+               value="nihil"
                data-component="url" hidden>
     <br>
 
@@ -2570,14 +2576,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartParamOption/get/nemo/minima" \
+    --get "http://localhost:8000/api/autoPartParamOption/get/sunt/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartParamOption/get/nemo/minima"
+    "http://localhost:8000/api/autoPartParamOption/get/sunt/et"
 );
 
 const headers = {
@@ -2594,7 +2600,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPartParamOption/get/nemo/minima',
+    'http://localhost:8000/api/autoPartParamOption/get/sunt/et',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2610,7 +2616,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPartParamOption/get/nemo/minima'
+url = 'http://localhost:8000/api/autoPartParamOption/get/sunt/et'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2632,15 +2638,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 16
+x-ratelimit-remaining: 38
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;nemo&quot;,
-        &quot;take&quot;: &quot;minima&quot;,
+        &quot;skip&quot;: &quot;sunt&quot;,
+        &quot;take&quot;: &quot;et&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -2692,7 +2698,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPartParamOption-get--skip---take-"
-               value="nemo"
+               value="sunt"
                data-component="url" hidden>
     <br>
 
@@ -2702,7 +2708,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPartParamOption-get--skip---take-"
-               value="minima"
+               value="et"
                data-component="url" hidden>
     <br>
 
@@ -2722,14 +2728,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartType/get/aut/dolore" \
+    --get "http://localhost:8000/api/autoPartType/get/sed/eos" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartType/get/aut/dolore"
+    "http://localhost:8000/api/autoPartType/get/sed/eos"
 );
 
 const headers = {
@@ -2746,7 +2752,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPartType/get/aut/dolore',
+    'http://localhost:8000/api/autoPartType/get/sed/eos',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2762,7 +2768,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPartType/get/aut/dolore'
+url = 'http://localhost:8000/api/autoPartType/get/sed/eos'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2784,15 +2790,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 15
+x-ratelimit-remaining: 37
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;aut&quot;,
-        &quot;take&quot;: &quot;dolore&quot;,
+        &quot;skip&quot;: &quot;sed&quot;,
+        &quot;take&quot;: &quot;eos&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -2844,7 +2850,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPartType-get--skip---take-"
-               value="aut"
+               value="sed"
                data-component="url" hidden>
     <br>
 
@@ -2854,7 +2860,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPartType-get--skip---take-"
-               value="dolore"
+               value="eos"
                data-component="url" hidden>
     <br>
 
@@ -2874,14 +2880,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartParam/get/et/sed" \
+    --get "http://localhost:8000/api/autoPartParam/get/dicta/aut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartParam/get/et/sed"
+    "http://localhost:8000/api/autoPartParam/get/dicta/aut"
 );
 
 const headers = {
@@ -2898,7 +2904,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPartParam/get/et/sed',
+    'http://localhost:8000/api/autoPartParam/get/dicta/aut',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2914,7 +2920,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPartParam/get/et/sed'
+url = 'http://localhost:8000/api/autoPartParam/get/dicta/aut'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2936,15 +2942,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 14
+x-ratelimit-remaining: 36
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;et&quot;,
-        &quot;take&quot;: &quot;sed&quot;,
+        &quot;skip&quot;: &quot;dicta&quot;,
+        &quot;take&quot;: &quot;aut&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -2996,7 +3002,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPartParam-get--skip---take-"
-               value="et"
+               value="dicta"
                data-component="url" hidden>
     <br>
 
@@ -3006,7 +3012,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPartParam-get--skip---take-"
-               value="sed"
+               value="aut"
                data-component="url" hidden>
     <br>
 
@@ -3026,14 +3032,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartCategory/get/aut/omnis" \
+    --get "http://localhost:8000/api/autoPartCategory/get/illo/corrupti" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartCategory/get/aut/omnis"
+    "http://localhost:8000/api/autoPartCategory/get/illo/corrupti"
 );
 
 const headers = {
@@ -3050,7 +3056,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPartCategory/get/aut/omnis',
+    'http://localhost:8000/api/autoPartCategory/get/illo/corrupti',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3066,7 +3072,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPartCategory/get/aut/omnis'
+url = 'http://localhost:8000/api/autoPartCategory/get/illo/corrupti'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3088,15 +3094,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 13
+x-ratelimit-remaining: 35
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;aut&quot;,
-        &quot;take&quot;: &quot;omnis&quot;,
+        &quot;skip&quot;: &quot;illo&quot;,
+        &quot;take&quot;: &quot;corrupti&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -3148,7 +3154,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPartCategory-get--skip---take-"
-               value="aut"
+               value="illo"
                data-component="url" hidden>
     <br>
 
@@ -3158,7 +3164,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPartCategory-get--skip---take-"
-               value="omnis"
+               value="corrupti"
                data-component="url" hidden>
     <br>
 
@@ -3178,14 +3184,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/news/get/corrupti/enim" \
+    --get "http://localhost:8000/api/news/get/sed/nostrum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/news/get/corrupti/enim"
+    "http://localhost:8000/api/news/get/sed/nostrum"
 );
 
 const headers = {
@@ -3202,7 +3208,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/news/get/corrupti/enim',
+    'http://localhost:8000/api/news/get/sed/nostrum',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3218,7 +3224,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/news/get/corrupti/enim'
+url = 'http://localhost:8000/api/news/get/sed/nostrum'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3240,15 +3246,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 12
+x-ratelimit-remaining: 34
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;corrupti&quot;,
-        &quot;take&quot;: &quot;enim&quot;,
+        &quot;skip&quot;: &quot;sed&quot;,
+        &quot;take&quot;: &quot;nostrum&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -3300,7 +3306,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-news-get--skip---take-"
-               value="corrupti"
+               value="sed"
                data-component="url" hidden>
     <br>
 
@@ -3310,7 +3316,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-news-get--skip---take-"
-               value="enim"
+               value="nostrum"
                data-component="url" hidden>
     <br>
 
@@ -3330,14 +3336,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/newsCategory/get/veniam/autem" \
+    --get "http://localhost:8000/api/newsCategory/get/vitae/quo" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/newsCategory/get/veniam/autem"
+    "http://localhost:8000/api/newsCategory/get/vitae/quo"
 );
 
 const headers = {
@@ -3354,7 +3360,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/newsCategory/get/veniam/autem',
+    'http://localhost:8000/api/newsCategory/get/vitae/quo',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3370,7 +3376,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/newsCategory/get/veniam/autem'
+url = 'http://localhost:8000/api/newsCategory/get/vitae/quo'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3392,15 +3398,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 10
+x-ratelimit-remaining: 32
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;veniam&quot;,
-        &quot;take&quot;: &quot;autem&quot;,
+        &quot;skip&quot;: &quot;vitae&quot;,
+        &quot;take&quot;: &quot;quo&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -3452,7 +3458,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-newsCategory-get--skip---take-"
-               value="veniam"
+               value="vitae"
                data-component="url" hidden>
     <br>
 
@@ -3462,7 +3468,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-newsCategory-get--skip---take-"
-               value="autem"
+               value="quo"
                data-component="url" hidden>
     <br>
 
@@ -3482,14 +3488,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/moneyOperation/get/ullam/similique" \
+    --get "http://localhost:8000/api/moneyOperation/get/totam/iusto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/moneyOperation/get/ullam/similique"
+    "http://localhost:8000/api/moneyOperation/get/totam/iusto"
 );
 
 const headers = {
@@ -3506,7 +3512,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/moneyOperation/get/ullam/similique',
+    'http://localhost:8000/api/moneyOperation/get/totam/iusto',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3522,7 +3528,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/moneyOperation/get/ullam/similique'
+url = 'http://localhost:8000/api/moneyOperation/get/totam/iusto'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3544,15 +3550,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 33
+x-ratelimit-remaining: 55
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;ullam&quot;,
-        &quot;take&quot;: &quot;similique&quot;,
+        &quot;skip&quot;: &quot;totam&quot;,
+        &quot;take&quot;: &quot;iusto&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -3604,7 +3610,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-moneyOperation-get--skip---take-"
-               value="ullam"
+               value="totam"
                data-component="url" hidden>
     <br>
 
@@ -3614,7 +3620,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-moneyOperation-get--skip---take-"
-               value="similique"
+               value="iusto"
                data-component="url" hidden>
     <br>
 
@@ -3634,14 +3640,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/moneyOperation/getById/voluptatem" \
+    --get "http://localhost:8000/api/moneyOperation/getById/tempora" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/moneyOperation/getById/voluptatem"
+    "http://localhost:8000/api/moneyOperation/getById/tempora"
 );
 
 const headers = {
@@ -3658,7 +3664,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/moneyOperation/getById/voluptatem',
+    'http://localhost:8000/api/moneyOperation/getById/tempora',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3674,7 +3680,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/moneyOperation/getById/voluptatem'
+url = 'http://localhost:8000/api/moneyOperation/getById/tempora'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3696,7 +3702,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 32
+x-ratelimit-remaining: 54
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -3751,7 +3757,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-moneyOperation-getById--id-"
-               value="voluptatem"
+               value="tempora"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -3771,14 +3777,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/moneyOperationType/get/deserunt/ullam" \
+    --get "http://localhost:8000/api/moneyOperationType/get/praesentium/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/moneyOperationType/get/deserunt/ullam"
+    "http://localhost:8000/api/moneyOperationType/get/praesentium/et"
 );
 
 const headers = {
@@ -3795,7 +3801,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/moneyOperationType/get/deserunt/ullam',
+    'http://localhost:8000/api/moneyOperationType/get/praesentium/et',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3811,7 +3817,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/moneyOperationType/get/deserunt/ullam'
+url = 'http://localhost:8000/api/moneyOperationType/get/praesentium/et'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3833,15 +3839,15 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 35
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
     &quot;info&quot;: {
-        &quot;skip&quot;: &quot;deserunt&quot;,
-        &quot;take&quot;: &quot;ullam&quot;,
+        &quot;skip&quot;: &quot;praesentium&quot;,
+        &quot;take&quot;: &quot;et&quot;,
         &quot;count&quot;: 0
     },
     &quot;data&quot;: []
@@ -3893,7 +3899,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-moneyOperationType-get--skip---take-"
-               value="deserunt"
+               value="praesentium"
                data-component="url" hidden>
     <br>
 
@@ -3903,7 +3909,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-moneyOperationType-get--skip---take-"
-               value="ullam"
+               value="et"
                data-component="url" hidden>
     <br>
 
@@ -3923,14 +3929,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/moneyOperationType/getById/quia" \
+    --get "http://localhost:8000/api/moneyOperationType/getById/officiis" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/moneyOperationType/getById/quia"
+    "http://localhost:8000/api/moneyOperationType/getById/officiis"
 );
 
 const headers = {
@@ -3947,7 +3953,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/moneyOperationType/getById/quia',
+    'http://localhost:8000/api/moneyOperationType/getById/officiis',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3963,7 +3969,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/moneyOperationType/getById/quia'
+url = 'http://localhost:8000/api/moneyOperationType/getById/officiis'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3985,7 +3991,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 34
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -4040,7 +4046,1337 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-moneyOperationType-getById--id-"
-               value="quia"
+               value="officiis"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the getById.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-serviceLimit-get--skip---take-">GET api/serviceLimit/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-serviceLimit-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/serviceLimit/get/eligendi/dolorem" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/serviceLimit/get/eligendi/dolorem"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/serviceLimit/get/eligendi/dolorem',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/serviceLimit/get/eligendi/dolorem'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-serviceLimit-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (500):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;admin.service_limits&#039; doesn&#039;t exist (SQL: select count(*) as aggregate from `service_limits`)&quot;,
+    &quot;exception&quot;: &quot;Illuminate\\Database\\QueryException&quot;,
+    &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
+    &quot;line&quot;: 759,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
+            &quot;line&quot;: 719,
+            &quot;function&quot;: &quot;runQueryCallback&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
+            &quot;line&quot;: 421,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 2630,
+            &quot;function&quot;: &quot;select&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 2618,
+            &quot;function&quot;: &quot;runSelect&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 3154,
+            &quot;function&quot;: &quot;Illuminate\\Database\\Query\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 2619,
+            &quot;function&quot;: &quot;onceWithColumns&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 3081,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 3009,
+            &quot;function&quot;: &quot;aggregate&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php&quot;,
+            &quot;line&quot;: 1834,
+            &quot;function&quot;: &quot;count&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/app/Domain/Repositories/ServiceLimit/ServiceLimitRepositoryEloquent.php&quot;,
+            &quot;line&quot;: 17,
+            &quot;function&quot;: &quot;__call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/app/Domain/Services/ServiceLimitService.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;count&quot;,
+            &quot;class&quot;: &quot;App\\Domain\\Repositories\\ServiceLimit\\ServiceLimitRepositoryEloquent&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/app/Http/Controllers/Api/ServiceLimitController.php&quot;,
+            &quot;line&quot;: 30,
+            &quot;function&quot;: &quot;count&quot;,
+            &quot;class&quot;: &quot;App\\Domain\\Services\\ServiceLimitService&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\ServiceLimitController&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;callAction&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
+            &quot;line&quot;: 261,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
+            &quot;line&quot;: 204,
+            &quot;function&quot;: &quot;runController&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 725,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 126,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 726,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 703,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 667,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 656,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 142,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 111,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 89,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 222,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 179,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 123,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 80,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 56,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 55,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
+            &quot;line&quot;: 651,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 139,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/symfony/console/Command/Command.php&quot;,
+            &quot;line&quot;: 308,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 998,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 171,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
+            &quot;line&quot;: 129,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/artisan&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-serviceLimit-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-serviceLimit-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-serviceLimit-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-serviceLimit-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-serviceLimit-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-serviceLimit-get--skip---take-" data-method="GET"
+      data-path="api/serviceLimit/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-serviceLimit-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-serviceLimit-get--skip---take-"
+                    onclick="tryItOut('GETapi-serviceLimit-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-serviceLimit-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-serviceLimit-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-serviceLimit-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/serviceLimit/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-serviceLimit-get--skip---take-"
+               value="eligendi"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-serviceLimit-get--skip---take-"
+               value="dolorem"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-serviceLimit-getById--id-">GET api/serviceLimit/getById/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-serviceLimit-getById--id-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/serviceLimit/getById/eum" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/serviceLimit/getById/eum"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/serviceLimit/getById/eum',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/serviceLimit/getById/eum'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-serviceLimit-getById--id-">
+            <blockquote>
+            <p>Пример запроса (500):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;admin.service_limits&#039; doesn&#039;t exist (SQL: select * from `service_limits` where `id` = eum limit 1)&quot;,
+    &quot;exception&quot;: &quot;Illuminate\\Database\\QueryException&quot;,
+    &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
+    &quot;line&quot;: 759,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
+            &quot;line&quot;: 719,
+            &quot;function&quot;: &quot;runQueryCallback&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
+            &quot;line&quot;: 421,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 2630,
+            &quot;function&quot;: &quot;select&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 2618,
+            &quot;function&quot;: &quot;runSelect&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 3154,
+            &quot;function&quot;: &quot;Illuminate\\Database\\Query\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php&quot;,
+            &quot;line&quot;: 2619,
+            &quot;function&quot;: &quot;onceWithColumns&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php&quot;,
+            &quot;line&quot;: 698,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php&quot;,
+            &quot;line&quot;: 682,
+            &quot;function&quot;: &quot;getModels&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php&quot;,
+            &quot;line&quot;: 296,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/app/Domain/Repositories/ServiceLimit/ServiceLimitRepositoryEloquent.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;first&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/app/Domain/Services/ServiceLimitService.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;getById&quot;,
+            &quot;class&quot;: &quot;App\\Domain\\Repositories\\ServiceLimit\\ServiceLimitRepositoryEloquent&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/app/Http/Controllers/Api/ServiceLimitController.php&quot;,
+            &quot;line&quot;: 38,
+            &quot;function&quot;: &quot;getById&quot;,
+            &quot;class&quot;: &quot;App\\Domain\\Services\\ServiceLimitService&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;getById&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\ServiceLimitController&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;callAction&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
+            &quot;line&quot;: 261,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
+            &quot;line&quot;: 204,
+            &quot;function&quot;: &quot;runController&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 725,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 126,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 726,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 703,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 667,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 656,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 167,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 142,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 111,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 89,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 222,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 179,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 123,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 80,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 56,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 55,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
+            &quot;line&quot;: 651,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 139,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/symfony/console/Command/Command.php&quot;,
+            &quot;line&quot;: 308,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 998,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 171,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php&quot;,
+            &quot;line&quot;: 102,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
+            &quot;line&quot;: 129,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/var/www/admin-unified/artisan&quot;,
+            &quot;line&quot;: 37,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-serviceLimit-getById--id-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-serviceLimit-getById--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-serviceLimit-getById--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-serviceLimit-getById--id-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-serviceLimit-getById--id-"></code></pre>
+</span>
+<form id="form-GETapi-serviceLimit-getById--id-" data-method="GET"
+      data-path="api/serviceLimit/getById/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-serviceLimit-getById--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-serviceLimit-getById--id-"
+                    onclick="tryItOut('GETapi-serviceLimit-getById--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-serviceLimit-getById--id-"
+                    onclick="cancelTryOut('GETapi-serviceLimit-getById--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-serviceLimit-getById--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/serviceLimit/getById/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="GETapi-serviceLimit-getById--id-"
+               value="eum"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
