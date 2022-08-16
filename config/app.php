@@ -217,6 +217,8 @@ return [
         App\Providers\Repositories\MoneyOperationTypeRepositoryProvider::class,
         App\Providers\Repositories\ServiceLimitRepositoryProvider::class,
         App\Providers\Repositories\AutoPartRepositoryProvider::class,
+        App\Providers\Repositories\CategoryRepositoryProvider::class,
+        App\Providers\Repositories\ImageRepositoryProvider::class,
     ],
 
     /*

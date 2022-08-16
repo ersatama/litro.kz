@@ -4,6 +4,9 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const WEBP  =   'webp';
+    const JPG   =   'jpg';
+    const PNG   =   'png';
     const LIMIT =   'limit';
     const CARD_ID   =   'card_id';
     const NOT_FOUND =   'not found';

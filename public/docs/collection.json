@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f",
-        "_postman_id": "e38147f0-144b-4db9-b53f-07a996bc3662",
+        "_postman_id": "2d007e33-6d10-4291-8df3-c582a34e29a2",
         "description": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f \u0434\u043b\u044f litro.kz",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -31,7 +31,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "placeat",
+                                    "value": "at",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -70,7 +70,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "50"
+                                    "value": "43"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -95,71 +95,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "assumenda",
-                                    "description": "The ID of the getById."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "48"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"Service not found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/carModel\/getById\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/carModel\/getById\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/carModel\/getById\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "sit",
+                                    "value": "autem",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -206,24 +142,24 @@
                                 }
                             ],
                             "code": 404,
-                            "body": "{\"message\":\"\\u041c\\u043e\\u0434\\u0435\\u043b\\u044c \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u0430\"}",
+                            "body": "{\"message\":\"Service not found\"}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/news\/getById\/{id}",
+                    "name": "api\/carModel\/getById\/{id}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/news\/getById\/:id",
+                            "path": "api\/carModel\/getById\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/news\/getById\/:id",
+                            "raw": "{{baseUrl}}\/api\/carModel\/getById\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "possimus",
+                                    "value": "hic",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -262,7 +198,71 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "33"
+                                    "value": "34"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"\\u041c\\u043e\\u0434\\u0435\\u043b\\u044c \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u0430\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/news\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/news\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/news\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "tempora",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "26"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -287,7 +287,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptatem",
+                                    "value": "vel",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -326,7 +326,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "52"
+                                    "value": "45"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -351,293 +351,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "aut",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "consequatur",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "53"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"aut\",\"take\":\"consequatur\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/serviceType\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/serviceType\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/serviceType\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "fugiat",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "voluptatem",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "51"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"fugiat\",\"take\":\"voluptatem\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/service\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/service\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/service\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "facere",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "ut",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "49"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"facere\",\"take\":\"ut\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/cardCategory\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/cardCategory\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/cardCategory\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
                                     "value": "qui",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "consequuntur",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "47"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"qui\",\"take\":\"consequuntur\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/region\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/region\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/region\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "sunt",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "et",
+                                    "value": "perferendis",
                                     "description": ""
                                 }
                             ]
@@ -684,100 +404,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"sunt\",\"take\":\"et\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"qui\",\"take\":\"perferendis\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/country\/get\/{skip}\/{take}",
+                    "name": "api\/serviceType\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/country\/get\/:skip\/:take",
+                            "path": "api\/serviceType\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/country\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/serviceType\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "deleniti",
+                                    "value": "doloribus",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "autem",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "45"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"deleniti\",\"take\":\"autem\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/currency\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/currency\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/currency\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "suscipit",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "rerum",
+                                    "value": "nam",
                                     "description": ""
                                 }
                             ]
@@ -824,100 +474,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"suscipit\",\"take\":\"rerum\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"doloribus\",\"take\":\"nam\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/city\/get\/{skip}\/{take}",
+                    "name": "api\/service\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/city\/get\/:skip\/:take",
+                            "path": "api\/service\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/city\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/service\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "qui",
+                                    "value": "quia",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "molestiae",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "43"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"qui\",\"take\":\"molestiae\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/carModel\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/carModel\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/carModel\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "amet",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "optio",
+                                    "value": "sapiente",
                                     "description": ""
                                 }
                             ]
@@ -964,30 +544,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"amet\",\"take\":\"optio\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"quia\",\"take\":\"sapiente\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/carBrand\/get\/{skip}\/{take}",
+                    "name": "api\/cardCategory\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/carBrand\/get\/:skip\/:take",
+                            "path": "api\/cardCategory\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/carBrand\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/cardCategory\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "blanditiis",
+                                    "value": "sint",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "voluptatem",
+                                    "value": "earum",
                                     "description": ""
                                 }
                             ]
@@ -1034,30 +614,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"blanditiis\",\"take\":\"voluptatem\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"sint\",\"take\":\"earum\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/carCategory\/get\/{skip}\/{take}",
+                    "name": "api\/region\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/carCategory\/get\/:skip\/:take",
+                            "path": "api\/region\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/carCategory\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/region\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "est",
+                                    "value": "velit",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "nihil",
+                                    "value": "dolor",
                                     "description": ""
                                 }
                             ]
@@ -1104,30 +684,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"est\",\"take\":\"nihil\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"velit\",\"take\":\"dolor\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/autoPartParamOption\/get\/{skip}\/{take}",
+                    "name": "api\/country\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/autoPartParamOption\/get\/:skip\/:take",
+                            "path": "api\/country\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartParamOption\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/country\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "sunt",
+                                    "value": "praesentium",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "et",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -1174,30 +754,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"sunt\",\"take\":\"et\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"praesentium\",\"take\":\"aut\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/autoPartType\/get\/{skip}\/{take}",
+                    "name": "api\/currency\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/autoPartType\/get\/:skip\/:take",
+                            "path": "api\/currency\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartType\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/currency\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "sed",
+                                    "value": "odio",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "eos",
+                                    "value": "recusandae",
                                     "description": ""
                                 }
                             ]
@@ -1244,30 +824,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"sed\",\"take\":\"eos\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"odio\",\"take\":\"recusandae\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/autoPartParam\/get\/{skip}\/{take}",
+                    "name": "api\/city\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/autoPartParam\/get\/:skip\/:take",
+                            "path": "api\/city\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartParam\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/city\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "dicta",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "aut",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1314,30 +894,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"dicta\",\"take\":\"aut\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"et\",\"take\":\"et\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/autoPartCategory\/get\/{skip}\/{take}",
+                    "name": "api\/carModel\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/autoPartCategory\/get\/:skip\/:take",
+                            "path": "api\/carModel\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartCategory\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/carModel\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "illo",
+                                    "value": "sequi",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "corrupti",
+                                    "value": "deserunt",
                                     "description": ""
                                 }
                             ]
@@ -1384,30 +964,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"illo\",\"take\":\"corrupti\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"sequi\",\"take\":\"deserunt\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/news\/get\/{skip}\/{take}",
+                    "name": "api\/carBrand\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/news\/get\/:skip\/:take",
+                            "path": "api\/carBrand\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/news\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/carBrand\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "sed",
+                                    "value": "qui",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "nostrum",
+                                    "value": "quia",
                                     "description": ""
                                 }
                             ]
@@ -1446,7 +1026,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "34"
+                                    "value": "33"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1454,30 +1034,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"sed\",\"take\":\"nostrum\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"qui\",\"take\":\"quia\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/newsCategory\/get\/{skip}\/{take}",
+                    "name": "api\/carCategory\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/newsCategory\/get\/:skip\/:take",
+                            "path": "api\/carCategory\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/newsCategory\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/carCategory\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "vitae",
+                                    "value": "ut",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "quo",
+                                    "value": "ipsa",
                                     "description": ""
                                 }
                             ]
@@ -1524,30 +1104,30 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"vitae\",\"take\":\"quo\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"ut\",\"take\":\"ipsa\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/moneyOperation\/get\/{skip}\/{take}",
+                    "name": "api\/autoPartParamOption\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/moneyOperation\/get\/:skip\/:take",
+                            "path": "api\/autoPartParamOption\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/moneyOperation\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/autoPartParamOption\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "totam",
+                                    "value": "repellendus",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "iusto",
+                                    "value": "dolorum",
                                     "description": ""
                                 }
                             ]
@@ -1586,7 +1166,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "55"
+                                    "value": "31"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1594,7 +1174,427 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"totam\",\"take\":\"iusto\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"repellendus\",\"take\":\"dolorum\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPartType\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPartType\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPartType\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "quisquam",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "a",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "30"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"quisquam\",\"take\":\"a\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPartParam\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPartParam\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPartParam\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "excepturi",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "aut",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "29"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"excepturi\",\"take\":\"aut\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPartCategory\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPartCategory\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPartCategory\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "est",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "sit",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "28"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"est\",\"take\":\"sit\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/news\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/news\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/news\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "commodi",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "omnis",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "27"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"commodi\",\"take\":\"omnis\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/newsCategory\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/newsCategory\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/newsCategory\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "ut",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "repellat",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "25"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"ut\",\"take\":\"repellat\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/moneyOperation\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/moneyOperation\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/moneyOperation\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "eligendi",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "est",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "48"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"eligendi\",\"take\":\"est\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1611,7 +1611,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "tempora",
+                                    "value": "in",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1650,7 +1650,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "54"
+                                    "value": "47"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1675,13 +1675,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "praesentium",
+                                    "value": "ipsam",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "et",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -1720,7 +1720,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "57"
+                                    "value": "50"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1728,7 +1728,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"praesentium\",\"take\":\"et\",\"count\":0},\"data\":[]}",
+                            "body": "{\"info\":{\"skip\":\"ipsam\",\"take\":\"sit\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -1745,8 +1745,212 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "officiis",
+                                    "value": "molestias",
                                     "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "49"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/serviceLimit\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/serviceLimit\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/serviceLimit\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "mollitia",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "rerum",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"mollitia\",\"take\":\"rerum\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/serviceLimit\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/serviceLimit\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/serviceLimit\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "velit",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "51"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/category\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/category\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/category\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "exercitationem",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "dolorum",
+                                    "description": ""
                                 }
                             ]
                         },
@@ -1791,6 +1995,70 @@
                                     "value": "*"
                                 }
                             ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"exercitationem\",\"take\":\"dolorum\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/category\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/category\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/category\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "sit",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
                             "code": 404,
                             "body": "{\"message\":\"not found\"}",
                             "name": ""
@@ -1798,24 +2066,158 @@
                     ]
                 },
                 {
-                    "name": "api\/serviceLimit\/get\/{skip}\/{take}",
+                    "name": "api\/autoPart\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/serviceLimit\/get\/:skip\/:take",
+                            "path": "api\/autoPart\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/serviceLimit\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/autoPart\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "eligendi",
+                                    "value": "vero",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "dolorem",
+                                    "value": "qui",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"vero\",\"take\":\"qui\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPart\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPart\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPart\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "quisquam",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/image\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/image\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/image\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "aut",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -1861,26 +2263,38 @@
                                     "value": "*"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'admin.service_limits' doesn't exist (SQL: select count(*) as aggregate from `service_limits`)\",\n    \"exception\": \"Illuminate\\\\Database\\\\QueryException\",\n    \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n    \"line\": 759,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n            \"line\": 719,\n            \"function\": \"runQueryCallback\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n            \"line\": 421,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2630,\n            \"function\": \"select\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2618,\n            \"function\": \"runSelect\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 3154,\n            \"function\": \"Illuminate\\\\Database\\\\Query\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2619,\n            \"function\": \"onceWithColumns\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 3081,\n            \"function\": \"get\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 3009,\n            \"function\": \"aggregate\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Eloquent\/Builder.php\",\n            \"line\": 1834,\n            \"function\": \"count\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Domain\/Repositories\/ServiceLimit\/ServiceLimitRepositoryEloquent.php\",\n            \"line\": 17,\n            \"function\": \"__call\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Domain\/Services\/ServiceLimitService.php\",\n            \"line\": 22,\n            \"function\": \"count\",\n            \"class\": \"App\\\\Domain\\\\Repositories\\\\ServiceLimit\\\\ServiceLimitRepositoryEloquent\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Http\/Controllers\/Api\/ServiceLimitController.php\",\n            \"line\": 30,\n            \"function\": \"count\",\n            \"class\": \"App\\\\Domain\\\\Services\\\\ServiceLimitService\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"get\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\Api\\\\ServiceLimitController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 261,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 204,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 725,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 126,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 102,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 54,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 726,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 703,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 667,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 656,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 123,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 80,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 56,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 55,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 651,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 139,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 308,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 124,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 998,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 299,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 102,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"aut\",\"take\":\"est\",\"count\":0},\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/serviceLimit\/getById\/{id}",
+                    "name": "api\/image\/getByUserId\/{userId}\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/serviceLimit\/getById\/:id",
+                            "path": "api\/image\/getByUserId\/:userId\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/serviceLimit\/getById\/:id",
+                            "raw": "{{baseUrl}}\/api\/image\/getByUserId\/:userId\/:skip\/:take",
                             "variable": [
                                 {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "eum",
-                                    "description": "The ID of the getById."
+                                    "id": "userId",
+                                    "key": "userId",
+                                    "value": "iusto",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "vel",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "ex",
+                                    "description": ""
                                 }
                             ]
                         },
@@ -1925,8 +2339,72 @@
                                     "value": "*"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'admin.service_limits' doesn't exist (SQL: select * from `service_limits` where `id` = eum limit 1)\",\n    \"exception\": \"Illuminate\\\\Database\\\\QueryException\",\n    \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n    \"line\": 759,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n            \"line\": 719,\n            \"function\": \"runQueryCallback\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php\",\n            \"line\": 421,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2630,\n            \"function\": \"select\",\n            \"class\": \"Illuminate\\\\Database\\\\Connection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2618,\n            \"function\": \"runSelect\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 3154,\n            \"function\": \"Illuminate\\\\Database\\\\Query\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Query\/Builder.php\",\n            \"line\": 2619,\n            \"function\": \"onceWithColumns\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Eloquent\/Builder.php\",\n            \"line\": 698,\n            \"function\": \"get\",\n            \"class\": \"Illuminate\\\\Database\\\\Query\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Eloquent\/Builder.php\",\n            \"line\": 682,\n            \"function\": \"getModels\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Concerns\/BuildsQueries.php\",\n            \"line\": 296,\n            \"function\": \"get\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Domain\/Repositories\/ServiceLimit\/ServiceLimitRepositoryEloquent.php\",\n            \"line\": 22,\n            \"function\": \"first\",\n            \"class\": \"Illuminate\\\\Database\\\\Eloquent\\\\Builder\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Domain\/Services\/ServiceLimitService.php\",\n            \"line\": 27,\n            \"function\": \"getById\",\n            \"class\": \"App\\\\Domain\\\\Repositories\\\\ServiceLimit\\\\ServiceLimitRepositoryEloquent\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Http\/Controllers\/Api\/ServiceLimitController.php\",\n            \"line\": 38,\n            \"function\": \"getById\",\n            \"class\": \"App\\\\Domain\\\\Services\\\\ServiceLimitService\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"getById\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\Api\\\\ServiceLimitController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 261,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 204,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 725,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 126,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 102,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php\",\n            \"line\": 54,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 726,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 703,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 667,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 656,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 123,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 80,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 56,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 55,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 651,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 139,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 308,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 124,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 998,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 299,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 102,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "code": 200,
+                            "body": "{\"info\":{\"skip\":\"iusto\",\"take\":\"vel\",\"count\":0},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/image\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/image\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/image\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "porro",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
                             "name": ""
                         }
                     ]

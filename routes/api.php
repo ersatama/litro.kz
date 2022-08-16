@@ -9,9 +9,11 @@ use App\Http\Controllers\Api\CarBrandController;
 use App\Http\Controllers\Api\CarCategoryController;
 use App\Http\Controllers\Api\CardCategoryController;
 use App\Http\Controllers\Api\CarModelController;
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\CurrencyController;
+use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\MoneyOperationController;
 use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
@@ -30,6 +32,21 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(ImageController::class)->group(function() {
+    Route::prefix('image')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('image.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','get')->name('image.getByUserId');
+        Route::get('getById/{id}','getById')->name('image.getById');
+    });
+});
+
+Route::controller(CategoryController::class)->group(function() {
+    Route::prefix('category')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('category.get');
+        Route::get('getById/{id}','getById')->name('category.getById');
+    });
 });
 
 Route::controller(AutoPartController::class)->group(function() {
