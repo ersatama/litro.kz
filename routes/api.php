@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AutoPartCategoryController;
+use App\Http\Controllers\Api\AutoPartController;
 use App\Http\Controllers\Api\AutoPartParamController;
 use App\Http\Controllers\Api\AutoPartParamOptionController;
 use App\Http\Controllers\Api\AutoPartTypeController;
@@ -29,6 +30,13 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(AutoPartController::class)->group(function() {
+    Route::prefix('autoPart')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('autoPart.get');
+        Route::get('getById/{id}','getById')->name('autoPart.getById');
+    });
 });
 
 Route::controller(ServiceLimitController::class)->group(function() {
