@@ -4,6 +4,21 @@ namespace App\Domain\Contracts;
 
 class MainContract
 {
+    const COLORS    =   'colors';
+    const IMAGE =   'image';
+    const ICON  =   'icon';
+    const IS_FOR_CORPORATE_USE  =   'is_for_corporate_use';
+    const REFERRAL_PRICE_MONTHLY_FIRST_MONTH    =   'referral_price_monthly_first_month';
+    const REFERRAL_PRICE_MONTHLY    =   'referral_price_monthly';
+    const PRICE_MONTHLY_FIRST_MONTH =   'price_monthly_first_month';
+    const CLIENT_DISCOUNT   =   'client_discount';
+    const PRICE_MONTHLY =   'price_monthly';
+    const ALLOWED_CARS  =   'allowed_cars';
+    const ALLOWED_DRIVERS   =   'allowed_drivers';
+    const RANK  =   'rank';
+    const DETAIL_EN =   'detail_en';
+    const DETAIL_KZ =   'detail_kz';
+    const DETAIL    =   'detail';
     const WEBP  =   'webp';
     const JPG   =   'jpg';
     const PNG   =   'png';

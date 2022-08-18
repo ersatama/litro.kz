@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\AutoPartTypeController;
 use App\Http\Controllers\Api\CarBrandController;
 use App\Http\Controllers\Api\CarCategoryController;
 use App\Http\Controllers\Api\CardCategoryController;
+use App\Http\Controllers\Api\CardController;
 use App\Http\Controllers\Api\CarModelController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CityController;
@@ -32,6 +33,14 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(CardController::class)->group(function() {
+    Route::prefix('card')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('card.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','get')->name('card.getByUserId');
+        Route::get('getById/{id}','getById')->name('card.getById');
+    });
 });
 
 Route::controller(ImageController::class)->group(function() {

@@ -219,6 +219,7 @@ return [
         App\Providers\Repositories\AutoPartRepositoryProvider::class,
         App\Providers\Repositories\CategoryRepositoryProvider::class,
         App\Providers\Repositories\ImageRepositoryProvider::class,
+        App\Providers\Repositories\CardRepositoryProvider::class,
     ],
 
     /*
