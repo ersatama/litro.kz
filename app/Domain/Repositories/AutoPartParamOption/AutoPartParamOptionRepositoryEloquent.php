@@ -2,17 +2,17 @@
 
 namespace App\Domain\Repositories\AutoPartParamOption;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\AutoPartParamOption;
 
 class AutoPartParamOptionRepositoryEloquent implements AutoPartParamOptionRepositoryInterface
 {
-    public function count($where)
-    {
-        return AutoPartParamOption::where($where)->count();
-    }
+    use MainRepositoryEloquent;
 
-    public function get($skip,$take)
+    protected AutoPartParamOption $model;
+
+    public function __construct(AutoPartParamOption $autoPartParamOption)
     {
-        return AutoPartParamOption::skip($skip)->take($take)->get();
+        $this->model    =   $autoPartParamOption;
     }
 }

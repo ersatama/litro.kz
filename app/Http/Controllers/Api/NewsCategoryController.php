@@ -6,6 +6,9 @@ use App\Domain\Contracts\MainContract;
 use App\Domain\Services\NewsCategoryService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\NewsCategory\NewsCategoryCollection;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Http\Response;
 
 class NewsCategoryController extends Controller
 {
@@ -15,16 +18,11 @@ class NewsCategoryController extends Controller
         $this->newsCategoryService  =   $newsCategoryService;
     }
 
-    public function get($skip,$take)
+    public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->newsCategoryService->count([]),
-            ],
-            MainContract::DATA  =>  new NewsCategoryCollection($this->newsCategoryService->get($skip,$take))
+            MainContract::COUNT =>  $this->newsCategoryService->newsCategoryRepository->count([]),
+            MainContract::DATA  =>  new NewsCategoryCollection($this->newsCategoryService->newsCategoryRepository->get($skip,$take))
         ],200);
     }
-
 }

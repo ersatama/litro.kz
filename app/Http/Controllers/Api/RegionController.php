@@ -22,12 +22,8 @@ class RegionController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->regionService->count([]),
-            ],
-            MainContract::DATA  =>  new RegionCollection($this->regionService->get($skip,$take))
+            MainContract::COUNT =>  $this->regionService->regionRepository->count([]),
+            MainContract::DATA  =>  new RegionCollection($this->regionService->regionRepository->get($skip,$take))
         ]);
     }
 

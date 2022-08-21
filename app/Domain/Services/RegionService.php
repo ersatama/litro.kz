@@ -4,22 +4,11 @@ namespace App\Domain\Services;
 
 use App\Domain\Repositories\Region\RegionRepositoryInterface;
 
-class RegionService
+class RegionService extends MainService
 {
-    protected RegionRepositoryInterface $regionRepository;
+    public RegionRepositoryInterface $regionRepository;
     public function __construct(RegionRepositoryInterface $regionRepository)
     {
         $this->regionRepository =   $regionRepository;
     }
-
-    public function get($skip,$take)
-    {
-        return $this->regionRepository->get($skip,$take);
-    }
-
-    public function count($where)
-    {
-        return $this->regionRepository->count($where);
-    }
-
 }

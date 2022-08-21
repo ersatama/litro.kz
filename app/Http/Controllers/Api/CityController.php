@@ -22,12 +22,8 @@ class CityController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->cityService->count([]),
-            ],
-            MainContract::DATA  =>  new CityCollection($this->cityService->get($skip,$take))
+            MainContract::COUNT =>  $this->cityService->cityRepository->count([]),
+            MainContract::DATA  =>  new CityCollection($this->cityService->cityRepository->get($skip,$take))
         ],200);
     }
 

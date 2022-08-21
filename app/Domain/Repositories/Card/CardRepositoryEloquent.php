@@ -2,28 +2,17 @@
 
 namespace App\Domain\Repositories\Card;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\Card;
 
 class CardRepositoryEloquent implements CardRepositoryInterface
 {
-    public function count($where)
-    {
-        return Card::where($where)->count();
-    }
+    use MainRepositoryEloquent;
 
-    public function get($skip,$take)
-    {
-        return Card::skip($skip)->take($take)->get();
-    }
+    protected Card $model;
 
-    public function getByUserId($userId,$skip,$take)
+    public function __construct(Card $card)
     {
-        return Card::where(MainContract::USER_ID,$userId)->skip($skip)->take($take)->get();
-    }
-
-    public function getById($id)
-    {
-        return Card::where(MainContract::ID,$id)->first();
+        $this->model    =   $card;
     }
 }

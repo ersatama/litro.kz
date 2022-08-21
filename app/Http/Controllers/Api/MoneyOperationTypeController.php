@@ -24,18 +24,14 @@ class MoneyOperationTypeController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->moneyOperationTypeService->count([]),
-            ],
-            MainContract::DATA  =>  new MoneyOperationTypeCollection($this->moneyOperationTypeService->get($skip,$take))
+            MainContract::COUNT =>  $this->moneyOperationTypeService->moneyOperationTypeRepository->count([]),
+            MainContract::DATA  =>  new MoneyOperationTypeCollection($this->moneyOperationTypeService->moneyOperationTypeRepository->get($skip,$take))
         ],200);
     }
 
     public function getById($id): Response|MoneyOperationTypeResource|Application|ResponseFactory
     {
-        if ($moneyOperationType = $this->moneyOperationTypeService->getById($id)) {
+        if ($moneyOperationType = $this->moneyOperationTypeService->moneyOperationTypeRepository->getById($id)) {
             return new MoneyOperationTypeResource($moneyOperationType);
         }
         return response(ErrorContract::ERROR_NOT_FOUND,404);

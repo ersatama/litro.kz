@@ -22,12 +22,8 @@ class AutoPartParamOptionController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->autoPartParamOptionService->count([]),
-            ],
-            MainContract::DATA  =>  new AutoPartParamOptionCollection($this->autoPartParamOptionService->get($skip,$take))
+            MainContract::COUNT =>  $this->autoPartParamOptionService->autoPartParamOptionRepository->count([]),
+            MainContract::DATA  =>  new AutoPartParamOptionCollection($this->autoPartParamOptionService->autoPartParamOptionRepository->get($skip,$take))
         ],200);
     }
 

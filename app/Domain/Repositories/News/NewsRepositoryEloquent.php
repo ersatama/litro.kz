@@ -3,24 +3,17 @@
 namespace App\Domain\Repositories\News;
 
 use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\News;
 
 class NewsRepositoryEloquent implements NewsRepositoryInterface
 {
-    public function count($where)
-    {
-        return News::where($where)->count();
-    }
+    use MainRepositoryEloquent;
 
-    public function get($skip,$take)
-    {
-        return News::skip($skip)->take($take)->get();
-    }
+    protected News $model;
 
-    public function getById($id)
+    public function __construct(News $news)
     {
-        return News::where(MainContract::ID,$id)
-            ->first();
+        $this->model    =   $news;
     }
-
 }

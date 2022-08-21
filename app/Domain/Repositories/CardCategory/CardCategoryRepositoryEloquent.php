@@ -2,18 +2,17 @@
 
 namespace App\Domain\Repositories\CardCategory;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\CardCategory;
 
 class CardCategoryRepositoryEloquent implements CardCategoryRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return CardCategory::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function count($where)
-    {
-        return CardCategory::where($where)->count();
-    }
+    protected CardCategory $model;
 
+    public function __construct(CardCategory $cardCategory)
+    {
+        $this->model    =   $cardCategory;
+    }
 }

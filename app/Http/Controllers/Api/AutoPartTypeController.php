@@ -6,7 +6,10 @@ use App\Domain\Contracts\MainContract;
 use App\Domain\Services\AutoPartTypeService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AutoPartType\AutoPartTypeCollection;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class AutoPartTypeController extends Controller
 {
@@ -16,15 +19,11 @@ class AutoPartTypeController extends Controller
         $this->autoPartTypeService  =   $autoPartTypeService;
     }
 
-    public function get($skip,$take)
+    public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->autoPartTypeService->count([]),
-            ],
-            MainContract::DATA  =>  new AutoPartTypeCollection($this->autoPartTypeService->get($skip,$take))
+            MainContract::COUNT =>  $this->autoPartTypeService->autoPartTypeRepository->count([]),
+            MainContract::DATA  =>  new AutoPartTypeCollection($this->autoPartTypeService->autoPartTypeRepository->get($skip,$take))
         ],200);
     }
 

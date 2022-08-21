@@ -2,17 +2,17 @@
 
 namespace App\Domain\Repositories\NewsCategory;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\NewsCategory;
 
 class NewsCategoryRepositoryEloquent implements NewsCategoryRepositoryInterface
 {
-    public function count($where)
-    {
-        return NewsCategory::where($where)->count();
-    }
+    use MainRepositoryEloquent;
 
-    public function get($skip,$take)
+    protected NewsCategory $model;
+
+    public function __construct(NewsCategory $newsCategory)
     {
-        return NewsCategory::skip($skip)->take($take)->get();
+        $this->model    =   $newsCategory;
     }
 }

@@ -2,23 +2,17 @@
 
 namespace App\Domain\Repositories\ServiceLimit;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\ServiceLimit;
 
 class ServiceLimitRepositoryEloquent implements ServiceLimitRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return ServiceLimit::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function count($where)
-    {
-        return ServiceLimit::where($where)->count();
-    }
+    protected ServiceLimit $model;
 
-    public function getById($id)
+    public function __construct(ServiceLimit $serviceLimit)
     {
-        return ServiceLimit::where(MainContract::ID,$id)->first();
+        $this->model    =   $serviceLimit;
     }
 }

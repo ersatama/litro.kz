@@ -18,7 +18,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: laboriosam
+        example: illum
         type: string
         custom: []
     queryParameters: []
@@ -26,12 +26,10 @@ endpoints:
     responses:
       -
         status: 404
-        content: '{"message":"ServiceType not found"}'
+        content: '{"message":"not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '40'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -52,7 +50,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: repellat
+        example: ex
         type: string
         custom: []
     queryParameters: []
@@ -60,12 +58,10 @@ endpoints:
     responses:
       -
         status: 404
-        content: '{"message":"Service not found"}'
+        content: '{"message":"not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '38'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -86,7 +82,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: nisi
+        example: qui
         type: string
         custom: []
     queryParameters: []
@@ -98,8 +94,6 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '31'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -120,7 +114,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: eos
+        example: repudiandae
         type: string
         custom: []
     queryParameters: []
@@ -128,12 +122,10 @@ endpoints:
     responses:
       -
         status: 404
-        content: '{"message":"News not found"}'
+        content: '{"message":"not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '23'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -154,7 +146,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: illo
+        example: tempora
         type: string
         custom: []
     queryParameters: []
@@ -162,12 +154,10 @@ endpoints:
     responses:
       -
         status: 404
-        content: '{"message":"ServicePrice not found"}'
+        content: '{"message":"not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '42'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -188,7 +178,7 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: fuga
+        example: quo
         type: string
         custom: []
       take:
@@ -203,12 +193,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"fuga","take":"voluptas","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '43'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -229,14 +217,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: soluta
+        example: optio
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: necessitatibus
+        example: est
         type: string
         custom: []
     queryParameters: []
@@ -244,12 +232,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"soluta","take":"necessitatibus","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '41'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -270,14 +256,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: perferendis
+        example: vero
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: veniam
+        example: assumenda
         type: string
         custom: []
     queryParameters: []
@@ -285,12 +271,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"perferendis","take":"veniam","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '39'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -311,14 +295,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: deleniti
+        example: atque
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ut
+        example: iste
         type: string
         custom: []
     queryParameters: []
@@ -326,12 +310,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"deleniti","take":"ut","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '37'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -352,14 +334,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: ad
+        example: fugit
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: est
+        example: qui
         type: string
         custom: []
     queryParameters: []
@@ -367,12 +349,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"ad","take":"est","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '36'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -393,14 +373,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: impedit
+        example: omnis
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quia
+        example: facere
         type: string
         custom: []
     queryParameters: []
@@ -408,12 +388,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"impedit","take":"quia","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '35'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -434,14 +412,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: tempore
+        example: accusamus
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: magnam
+        example: omnis
         type: string
         custom: []
     queryParameters: []
@@ -449,12 +427,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"tempore","take":"magnam","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '34'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -475,14 +451,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: nihil
+        example: rem
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: inventore
+        example: quia
         type: string
         custom: []
     queryParameters: []
@@ -490,12 +466,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"nihil","take":"inventore","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '33'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -516,14 +490,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: placeat
+        example: officiis
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: delectus
+        example: quam
         type: string
         custom: []
     queryParameters: []
@@ -531,12 +505,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"placeat","take":"delectus","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '32'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -557,14 +529,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: doloremque
+        example: ratione
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: debitis
+        example: cupiditate
         type: string
         custom: []
     queryParameters: []
@@ -572,12 +544,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"doloremque","take":"debitis","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '30'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -598,14 +568,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: neque
+        example: ipsum
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: eum
+        example: ea
         type: string
         custom: []
     queryParameters: []
@@ -613,12 +583,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"neque","take":"eum","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '29'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -639,14 +607,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: exercitationem
+        example: non
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: tenetur
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -654,12 +622,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"exercitationem","take":"tenetur","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '28'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -680,14 +646,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: voluptate
+        example: voluptatibus
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: dolor
+        example: consequatur
         type: string
         custom: []
     queryParameters: []
@@ -695,12 +661,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"voluptate","take":"dolor","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '27'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -721,14 +685,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: aspernatur
+        example: dolorem
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: et
+        example: soluta
         type: string
         custom: []
     queryParameters: []
@@ -736,12 +700,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"aspernatur","take":"et","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '26'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -762,14 +724,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: ut
+        example: animi
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: neque
+        example: quo
         type: string
         custom: []
     queryParameters: []
@@ -777,12 +739,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"ut","take":"neque","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '25'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -803,14 +763,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: maxime
+        example: aperiam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: tempore
+        example: tempora
         type: string
         custom: []
     queryParameters: []
@@ -818,12 +778,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"maxime","take":"tempore","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '24'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -844,14 +802,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: saepe
+        example: a
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: blanditiis
+        example: quasi
         type: string
         custom: []
     queryParameters: []
@@ -859,12 +817,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"saepe","take":"blanditiis","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '22'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -885,14 +841,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: consequatur
+        example: molestiae
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: inventore
+        example: incidunt
         type: string
         custom: []
     queryParameters: []
@@ -900,12 +856,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"consequatur","take":"inventore","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '45'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -926,7 +880,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: nemo
+        example: corporis
         type: string
         custom: []
     queryParameters: []
@@ -934,12 +888,10 @@ endpoints:
     responses:
       -
         status: 404
-        content: '{"message":"MoneyOperation not found"}'
+        content: '{"message":"not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '44'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -960,14 +912,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: eveniet
+        example: expedita
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: at
+        example: dolore
         type: string
         custom: []
     queryParameters: []
@@ -975,12 +927,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"eveniet","take":"at","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '47'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1001,7 +951,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: amet
+        example: omnis
         type: string
         custom: []
     queryParameters: []
@@ -1013,8 +963,6 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '46'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1035,14 +983,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: pariatur
+        example: dignissimos
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quasi
+        example: assumenda
         type: string
         custom: []
     queryParameters: []
@@ -1050,12 +998,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"pariatur","take":"quasi","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '49'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1076,7 +1022,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: numquam
+        example: pariatur
         type: string
         custom: []
     queryParameters: []
@@ -1088,8 +1034,6 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '48'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1110,14 +1054,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: qui
+        example: quisquam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: doloribus
+        example: eaque
         type: string
         custom: []
     queryParameters: []
@@ -1125,12 +1069,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"qui","take":"doloribus","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1151,7 +1093,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: iure
+        example: dolore
         type: string
         custom: []
     queryParameters: []
@@ -1163,8 +1105,6 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1185,14 +1125,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: est
+        example: vitae
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: provident
+        example: vel
         type: string
         custom: []
     queryParameters: []
@@ -1200,12 +1140,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"est","take":"provident","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '51'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1226,7 +1164,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: voluptatum
+        example: nobis
         type: string
         custom: []
     queryParameters: []
@@ -1238,8 +1176,6 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '50'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1260,14 +1196,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: ut
+        example: ullam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quia
+        example: velit
         type: string
         custom: []
     queryParameters: []
@@ -1275,12 +1211,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"ut","take":"quia","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1301,21 +1235,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: voluptatum
+        example: commodi
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: reiciendis
+        example: porro
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: iure
+        example: reprehenderit
         type: string
         custom: []
     queryParameters: []
@@ -1323,12 +1257,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"voluptatum","take":"reiciendis","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '55'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1349,7 +1281,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: consequuntur
+        example: ratione
         type: string
         custom: []
     queryParameters: []
@@ -1361,8 +1293,6 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1383,14 +1313,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: assumenda
+        example: corporis
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quam
+        example: corporis
         type: string
         custom: []
     queryParameters: []
@@ -1398,60 +1328,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"info":{"skip":"assumenda","take":"quam","count":0},"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/card/getByUserId/{userId}/{skip}/{take}'
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      userId:
-        name: userId
-        description: ''
-        required: true
-        example: iusto
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: veniam
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: molestiae
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"info":{"skip":"iusto","take":"veniam","count":0},"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -1472,7 +1352,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: quod
+        example: qui
         type: string
         custom: []
     queryParameters: []
@@ -1484,8 +1364,495 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/cardService/get/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: laudantium
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: dolorem
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/cardService/getByCardId/{cardId}/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cardId:
+        name: cardId
+        description: ''
+        required: true
+        example: perferendis
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: inventore
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/cardService/getById/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the getById.'
+        required: true
+        example: quia
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/cardRange/get/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: voluptatem
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: quo
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/cardRange/getByCardId/{cardId}/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cardId:
+        name: cardId
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: aut
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: magnam
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/cardRange/getByCityId/{cityId}/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: consectetur
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: rem
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: non
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/cardRange/getById/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the getById.'
+        required: true
+        example: pariatur
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/carModelAveragePrice/get/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: deleniti
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: qui
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/carModelAveragePrice/getByCarModelId/{carModelId}/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      carModelId:
+        name: carModelId
+        description: ''
+        required: true
+        example: rerum
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: dignissimos
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: saepe
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/carModelAveragePrice/getById/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the getById.'
+        required: true
+        example: labore
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/carModel/getByCarBrandId/{carBrandId}/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      carBrandId:
+        name: carBrandId
+        description: ''
+        required: true
+        example: est
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: eius
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: eligendi
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/cardService/getByServiceId/{cityId}/{skip}/{take}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: ab
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: laborum
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: fugit
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
           access-control-allow-origin: '*'
         description: null
     responseFields: []

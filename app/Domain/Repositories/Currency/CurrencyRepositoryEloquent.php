@@ -2,18 +2,17 @@
 
 namespace App\Domain\Repositories\Currency;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\Currency;
 
 class CurrencyRepositoryEloquent implements CurrencyRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return Currency::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function count($where)
-    {
-        return Currency::where($where)->count();
-    }
+    protected Currency $model;
 
+    public function __construct(Currency $currency)
+    {
+        $this->model    =   $currency;
+    }
 }

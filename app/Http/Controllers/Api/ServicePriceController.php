@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\ErrorContract;
 use App\Domain\Contracts\MainContract;
 use App\Domain\Services\ServicePriceService;
 use App\Http\Controllers\Controller;
@@ -23,20 +24,16 @@ class ServicePriceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->servicePriceService->count([]),
-            ],
-            MainContract::DATA  =>  new ServicePriceCollection($this->servicePriceService->get($skip,$take)),
+            MainContract::COUNT =>  $this->servicePriceService->servicePriceRepository->count([]),
+            MainContract::DATA  =>  new ServicePriceCollection($this->servicePriceService->servicePriceRepository->get($skip,$take)),
         ],200);
     }
 
     public function getById($id): ServicePriceResource|Response|Application|ResponseFactory
     {
-        if ($servicePrice = $this->servicePriceService->getById($id)) {
+        if ($servicePrice = $this->servicePriceService->servicePriceRepository->getById($id)) {
             return new ServicePriceResource($servicePrice);
         }
-        return response(['message'  =>  'ServicePrice not found'],404);
+        return response(ErrorContract::ERROR_NOT_FOUND,404);
     }
 }

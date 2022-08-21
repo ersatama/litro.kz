@@ -2,24 +2,17 @@
 
 namespace App\Domain\Repositories\AutoPart;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\AutoPart;
 
 class AutoPartRepositoryEloquent implements AutoPartRepositoryInterface
 {
-    public function count($where)
-    {
-        return AutoPart::where($where)->count();
-    }
+    use MainRepositoryEloquent;
 
-    public function get($skip,$take)
-    {
-        return AutoPart::skip($skip)->take($take)->get();
-    }
+    protected AutoPart $model;
 
-    public function getById($id)
+    public function __construct(AutoPart $autoPart)
     {
-        return AutoPart::where(MainContract::ID,$id)->first();
+        $this->model    =   $autoPart;
     }
-
 }

@@ -2,18 +2,17 @@
 
 namespace App\Domain\Repositories\Region;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\Region;
 
 class RegionRepositoryEloquent implements RegionRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return Region::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function count($where)
-    {
-        return Region::where($where)->count();
-    }
+    protected Region $model;
 
+    public function __construct(Region $region)
+    {
+        $this->model    =   $region;
+    }
 }

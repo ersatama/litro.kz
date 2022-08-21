@@ -2,18 +2,17 @@
 
 namespace App\Domain\Repositories\CarCategory;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\CarCategory;
 
 class CarCategoryRepositoryEloquent implements CarCategoryRepositoryInterface
 {
+    use MainRepositoryEloquent;
 
-    public function count($where)
-    {
-        return CarCategory::where($where)->count();
-    }
+    protected CarCategory $model;
 
-    public function get($skip,$take)
+    public function __construct(CarCategory $carCategory)
     {
-        return CarCategory::skip($skip)->take($take)->get();
+        $this->model    =   $carCategory;
     }
 }

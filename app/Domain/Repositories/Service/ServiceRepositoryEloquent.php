@@ -2,24 +2,17 @@
 
 namespace App\Domain\Repositories\Service;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\Service;
 
 class ServiceRepositoryEloquent implements ServiceRepositoryInterface
 {
-    public function count($where)
-    {
-        return Service::where($where)->count();
-    }
+    use MainRepositoryEloquent;
 
-    public function get($skip,$take)
-    {
-        return Service::skip($skip)->take($take)->get();
-    }
+    protected Service $model;
 
-    public function getById($id)
+    public function __construct(Service $service)
     {
-        return Service::where(MainContract::ID,$id)->first();
+        $this->model    =   $service;
     }
-
 }

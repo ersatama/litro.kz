@@ -2,17 +2,17 @@
 
 namespace App\Domain\Repositories\AutoPartParam;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\AutoPartParam;
 
 class AutoPartParamRepositoryEloquent implements AutoPartParamRepositoryInterface
 {
-    public function count($where)
-    {
-        return AutoPartParam::where($where)->count();
-    }
+    use MainRepositoryEloquent;
 
-    public function get($skip,$take)
+    protected AutoPartParam $model;
+
+    public function __construct(AutoPartParam $autoPartParam)
     {
-        return AutoPartParam::skip($skip)->take($take)->get();
+        $this->model    =   $autoPartParam;
     }
 }

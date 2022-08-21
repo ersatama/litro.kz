@@ -9,6 +9,9 @@ use App\Http\Controllers\Api\CarBrandController;
 use App\Http\Controllers\Api\CarCategoryController;
 use App\Http\Controllers\Api\CardCategoryController;
 use App\Http\Controllers\Api\CardController;
+use App\Http\Controllers\Api\CardRangeController;
+use App\Http\Controllers\Api\CardServiceController;
+use App\Http\Controllers\Api\CarModelAveragePriceController;
 use App\Http\Controllers\Api\CarModelController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CityController;
@@ -35,10 +38,35 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::controller(CardServiceController::class)->group(function() {
+    Route::prefix('cardService')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('cardService.get');
+        Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('cardService.getByCardId');
+        Route::get('getByServiceId/{cityId}/{skip}/{take}','getByServiceId')->name('cardService.getByServiceId');
+        Route::get('getById/{id}','getById')->name('cardService.getById');
+    });
+});
+
+Route::controller(CardRangeController::class)->group(function() {
+    Route::prefix('cardRange')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('cardRange.get');
+        Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('cardRange.getByCardId');
+        Route::get('getByCityId/{cityId}/{skip}/{take}','getByCityId')->name('cardRange.getByCityId');
+        Route::get('getById/{id}','getById')->name('cardRange.getById');
+    });
+});
+
+Route::controller(CarModelAveragePriceController::class)->group(function() {
+    Route::prefix('carModelAveragePrice')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('carModelAveragePrice.get');
+        Route::get('getByCarModelId/{carModelId}/{skip}/{take}','getByCarModelId')->name('carModelAveragePrice.getByCarModelId');
+        Route::get('getById/{id}','getById')->name('carModelAveragePrice.getById');
+    });
+});
+
 Route::controller(CardController::class)->group(function() {
     Route::prefix('card')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('card.get');
-        Route::get('getByUserId/{userId}/{skip}/{take}','get')->name('card.getByUserId');
         Route::get('getById/{id}','getById')->name('card.getById');
     });
 });
@@ -46,7 +74,7 @@ Route::controller(CardController::class)->group(function() {
 Route::controller(ImageController::class)->group(function() {
     Route::prefix('image')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('image.get');
-        Route::get('getByUserId/{userId}/{skip}/{take}','get')->name('image.getByUserId');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('image.getByUserId');
         Route::get('getById/{id}','getById')->name('image.getById');
     });
 });
@@ -140,7 +168,7 @@ Route::controller(CityController::class)->group(function() {
 Route::controller(CarModelController::class)->group(function() {
     Route::prefix('carModel')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('carModel.get');
-        Route::get('getByCarBrandId/{carBrandId}/{skip}/{take}','getByBrandId')->name('carModel.getByCarBrandId');
+        Route::get('getByCarBrandId/{carBrandId}/{skip}/{take}','getByCarBrandId')->name('carModel.getByCarBrandId');
         Route::get('getById/{id}','getById')->name('carModel.getById');
     });
 });

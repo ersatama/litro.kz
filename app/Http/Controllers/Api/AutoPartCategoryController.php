@@ -22,12 +22,8 @@ class AutoPartCategoryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->autoPartCategoryService->count([]),
-            ],
-            MainContract::DATA  =>  new AutoPartCategoryCollection($this->autoPartCategoryService->get($skip,$take))
+            MainContract::COUNT =>  $this->autoPartCategoryService->autoPartCategoryRepository->count([]),
+            MainContract::DATA  =>  new AutoPartCategoryCollection($this->autoPartCategoryService->autoPartCategoryRepository->get($skip,$take))
         ],200);
     }
 }

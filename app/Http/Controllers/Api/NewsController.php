@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\ErrorContract;
 use App\Domain\Contracts\MainContract;
 use App\Domain\Services\NewsService;
 use App\Http\Controllers\Controller;
@@ -22,21 +23,17 @@ class NewsController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->newsService->count([]),
-            ],
-            MainContract::DATA  =>  new NewsCollection($this->newsService->get($skip,$take))
+            MainContract::COUNT =>  $this->newsService->newsRepository->count([]),
+            MainContract::DATA  =>  new NewsCollection($this->newsService->newsRepository->get($skip,$take))
         ],200);
     }
 
     public function getById($id): Response|NewsResource|Application|ResponseFactory
     {
-        if ($news = $this->newsService->getById($id)) {
+        if ($news = $this->newsService->newsRepository->getById($id)) {
             return new NewsResource($news);
         }
-        return response(['message'  =>  'News not found'],404);
+        return response(ErrorContract::ERROR_NOT_FOUND,404);
     }
 
 }

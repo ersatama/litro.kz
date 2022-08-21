@@ -19,16 +19,11 @@ class CarBrandController extends Controller
         $this->carBrandService  =   $carBrandService;
     }
 
-    public function get($skip = 0,$take = 1): Response|Application|ResponseFactory
+    public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->carBrandService->count([]),
-            ],
-            MainContract::DATA  =>  new CarBrandCollection($this->carBrandService->get($skip,$take))
+            MainContract::COUNT =>  $this->carBrandService->carBrandRepository->count([]),
+            MainContract::DATA  =>  new CarBrandCollection($this->carBrandService->carBrandRepository->get($skip,$take))
         ],200);
     }
-
 }

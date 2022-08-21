@@ -2,24 +2,17 @@
 
 namespace App\Domain\Repositories\ServicePrice;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\ServicePrice;
 
 class ServicePriceRepositoryEloquent implements ServicePriceRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return ServicePrice::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function getById($id)
-    {
-        return ServicePrice::where(MainContract::ID,$id)->first();
-    }
+    protected ServicePrice $model;
 
-    public function count($where)
+    public function __construct(ServicePrice $servicePrice)
     {
-        return ServicePrice::where($where)->count();
+        $this->model    =   $servicePrice;
     }
-
 }

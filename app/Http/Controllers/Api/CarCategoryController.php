@@ -22,12 +22,8 @@ class CarCategoryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->carCategoryService->count([]),
-            ],
-            MainContract::DATA  =>  new CarCategoryCollection($this->carCategoryService->get($skip,$take))
+            MainContract::COUNT =>  $this->carCategoryService->carCategoryRepository->count([]),
+            MainContract::DATA  =>  new CarCategoryCollection($this->carCategoryService->carCategoryRepository->get($skip,$take))
         ],200);
     }
 

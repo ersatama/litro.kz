@@ -22,12 +22,8 @@ class CurrencyController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->currencyService->count([]),
-            ],
-            MainContract::DATA  =>  new CurrencyCollection($this->currencyService->get($skip,$take))
+            MainContract::COUNT =>  $this->currencyService->currencyRepository->count([]),
+            MainContract::DATA  =>  new CurrencyCollection($this->currencyService->currencyRepository->get($skip,$take))
         ],200);
     }
 

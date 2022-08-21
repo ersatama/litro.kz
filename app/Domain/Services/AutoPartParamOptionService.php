@@ -6,20 +6,9 @@ use App\Domain\Repositories\AutoPartParamOption\AutoPartParamOptionRepositoryInt
 
 class AutoPartParamOptionService
 {
-    protected AutoPartParamOptionRepositoryInterface $autoPartParamOptionRepository;
+    public AutoPartParamOptionRepositoryInterface $autoPartParamOptionRepository;
     public function __construct(AutoPartParamOptionRepositoryInterface $autoPartParamOptionRepository)
     {
         $this->autoPartParamOptionRepository    =   $autoPartParamOptionRepository;
     }
-
-    public function count($where)
-    {
-        return $this->autoPartParamOptionRepository->count($where);
-    }
-
-    public function get($skip,$take)
-    {
-        return $this->autoPartParamOptionRepository->get($skip,$take);
-    }
-
 }

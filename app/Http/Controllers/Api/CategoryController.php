@@ -24,18 +24,14 @@ class CategoryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->categoryService->count([]),
-            ],
-            MainContract::DATA  =>  new CategoryCollection($this->categoryService->get($skip,$take))
+            MainContract::COUNT =>  $this->categoryService->categoryRepository->count([]),
+            MainContract::DATA  =>  new CategoryCollection($this->categoryService->categoryRepository->get($skip,$take))
         ],200);
     }
 
     public function getById($id): Response|CategoryResource|Application|ResponseFactory
     {
-        if ($category = $this->categoryService->getById($id)) {
+        if ($category = $this->categoryService->categoryRepository->getById($id)) {
             return new CategoryResource($category);
         }
         return response(ErrorContract::ERROR_NOT_FOUND,404);

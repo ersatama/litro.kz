@@ -24,18 +24,14 @@ class ServiceLimitController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->serviceLimitService->count([]),
-            ],
-            MainContract::DATA  =>  new ServiceLimitCollection($this->serviceLimitService->get($skip,$take))
+            MainContract::COUNT =>  $this->serviceLimitService->serviceLimitRepository->count([]),
+            MainContract::DATA  =>  new ServiceLimitCollection($this->serviceLimitService->serviceLimitRepository->get($skip,$take))
         ],200);
     }
 
     public function getById($id): ServiceLimitResource|Response|Application|ResponseFactory
     {
-        if ($serviceLimit = $this->serviceLimitService->getById($id)) {
+        if ($serviceLimit = $this->serviceLimitService->serviceLimitRepository->getById($id)) {
             return new ServiceLimitResource($serviceLimit);
         }
         return response(ErrorContract::ERROR_NOT_FOUND,404);

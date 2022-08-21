@@ -2,18 +2,17 @@
 
 namespace App\Domain\Repositories\CarBrand;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\CarBrand;
 
 class CarBrandRepositoryEloquent implements CarBrandRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return CarBrand::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function count($where)
+    protected CarBrand $model;
+    
+    public function __construct(CarBrand $carBrand)
     {
-        return CarBrand::where($where)->count();
+        $this->model    =   $carBrand;
     }
-
 }

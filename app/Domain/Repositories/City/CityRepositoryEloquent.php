@@ -2,17 +2,17 @@
 
 namespace App\Domain\Repositories\City;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\City;
 
 class CityRepositoryEloquent implements CityRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return City::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function count($where)
+    protected City $model;
+
+    public function __construct(City $city)
     {
-        return City::where($where)->count();
+        $this->model    =   $city;
     }
 }

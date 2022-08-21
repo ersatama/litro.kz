@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Contracts\ErrorContract;
 use App\Domain\Contracts\MainContract;
 use App\Domain\Services\ServiceService;
 use App\Http\Controllers\Controller;
@@ -23,21 +24,17 @@ class ServiceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->serviceService->count([]),
-            ],
-            MainContract::DATA  =>  new ServiceCollection($this->serviceService->get($skip,$take))
+            MainContract::COUNT =>  $this->serviceService->serviceRepository->count([]),
+            MainContract::DATA  =>  new ServiceCollection($this->serviceService->serviceRepository->get($skip,$take))
         ],200);
     }
 
     public function getById($id): Response|ServiceResource|Application|ResponseFactory
     {
-        if ($service = $this->serviceService->getById($id)) {
+        if ($service = $this->serviceService->serviceRepository->getById($id)) {
             return new ServiceResource($service);
         }
-        return response(['message'  =>  'Service not found'],404);
+        return response(ErrorContract::ERROR_NOT_FOUND,404);
     }
 
 }

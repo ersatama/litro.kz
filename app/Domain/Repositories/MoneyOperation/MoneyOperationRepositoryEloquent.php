@@ -2,23 +2,15 @@
 
 namespace App\Domain\Repositories\MoneyOperation;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\MoneyOperation;
 
 class MoneyOperationRepositoryEloquent implements MoneyOperationRepositoryInterface
 {
-    public function get($skip,$take)
+    use MainRepositoryEloquent;
+    protected MoneyOperation $model;
+    public function __construct(MoneyOperation $moneyOperation)
     {
-        return MoneyOperation::skip($skip)->take($take)->get();
-    }
-
-    public function count($where)
-    {
-        return MoneyOperation::where($where)->count();
-    }
-
-    public function getById($id)
-    {
-        return MoneyOperation::where(MainContract::ID,$id)->first();
+        $this->model    =   $moneyOperation;
     }
 }

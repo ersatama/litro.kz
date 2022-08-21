@@ -2,18 +2,17 @@
 
 namespace App\Domain\Repositories\Country;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\Country;
 
 class CountryRepositoryEloquent implements CountryRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return Country::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function count($where)
-    {
-        return Country::where($where)->count();
-    }
+    protected Country $model;
 
+    public function __construct(Country $country)
+    {
+        $this->model    =   $country;
+    }
 }

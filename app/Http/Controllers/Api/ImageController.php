@@ -21,36 +21,25 @@ class ImageController extends Controller
         $this->imageService =   $imageService;
     }
 
-
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->imageService->count([]),
-            ],
-            MainContract::DATA  =>  new ImageCollection($this->imageService->get($skip,$take))
+            MainContract::COUNT =>  $this->imageService->imageRepository->count([]),
+            MainContract::DATA  =>  new ImageCollection($this->imageService->imageRepository->get($skip,$take))
         ],200);
     }
 
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->imageService->count([
-                    MainContract::USER_ID   =>  $userId
-                ]),
-            ],
-            MainContract::DATA  =>  new ImageCollection($this->imageService->getByUserId($userId,$skip,$take))
+            MainContract::COUNT =>  $this->imageService->imageRepository->count([MainContract::USER_ID => $userId]),
+            MainContract::DATA  =>  new ImageCollection($this->imageService->imageRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 
     public function getById($id): Response|ImageResource|Application|ResponseFactory
     {
-        if ($image = $this->imageService->getById($id)) {
+        if ($image = $this->imageService->imageRepository->getById($id)) {
             return new ImageResource($image);
         }
         return response(ErrorContract::ERROR_NOT_FOUND,404);

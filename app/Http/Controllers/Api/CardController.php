@@ -21,35 +21,17 @@ class CardController extends Controller
         $this->cardService  =   $cardService;
     }
 
-    public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
-    {
-        return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->cardService->count([
-                    MainContract::USER_ID   =>  $userId
-                ]),
-            ],
-            MainContract::DATA  =>  new CardCollection($this->cardService->getByUserId($userId,$skip,$take))
-        ],200);
-    }
-
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->cardService->count([]),
-            ],
-            MainContract::DATA  =>  new CardCollection($this->cardService->get($skip,$take))
+            MainContract::COUNT =>  $this->cardService->cardRepository->count([]),
+            MainContract::DATA  =>  new CardCollection($this->cardService->cardRepository->get($skip,$take))
         ],200);
     }
 
     public function getById($id): Response|CardResource|Application|ResponseFactory
     {
-        if ($serviceLimit = $this->cardService->getById($id)) {
+        if ($serviceLimit = $this->cardService->cardRepository->getById($id)) {
             return new CardResource($serviceLimit);
         }
         return response(ErrorContract::ERROR_NOT_FOUND,404);

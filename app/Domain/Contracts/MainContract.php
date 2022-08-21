@@ -2,8 +2,16 @@
 
 namespace App\Domain\Contracts;
 
-class MainContract
+abstract class MainContract
 {
+    const VALUE =   'value';
+    const C_TO  =   'c_to';
+    const C_FROM    =   'c_form';
+    const LEGAL_PERSON  =   'legal_person';
+    const CURRENT_SYNCED    =   'current_synced';
+    const YEAR  =   'year';
+    const AVERAGE_PRICE =   'average_price';
+    const CAR_MODEL_ID  =   'car_model_id';
     const COLORS    =   'colors';
     const IMAGE =   'image';
     const ICON  =   'icon';

@@ -22,13 +22,8 @@ class CardCategoryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->cardCategoryService->count([]),
-            ],
-            MainContract::DATA  =>  new CardCategoryCollection($this->cardCategoryService->get($skip,$take))
+            MainContract::COUNT =>  $this->cardCategoryService->cardCategoryRepository->count([]),
+            MainContract::DATA  =>  new CardCategoryCollection($this->cardCategoryService->cardCategoryRepository->get($skip,$take))
         ],200);
     }
-
 }

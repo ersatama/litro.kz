@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f",
-        "_postman_id": "60a1fbe3-518e-47b8-9f7d-100eedce5862",
+        "_postman_id": "6845f7c9-7714-4f6d-9ad5-5c533259f23d",
         "description": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f \u0434\u043b\u044f litro.kz",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -31,7 +31,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "laboriosam",
+                                    "value": "illum",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -65,20 +65,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "40"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 404,
-                            "body": "{\"message\":\"ServiceType not found\"}",
+                            "body": "{\"message\":\"not found\"}",
                             "name": ""
                         }
                     ]
@@ -95,7 +87,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "repellat",
+                                    "value": "ex",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -129,20 +121,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "38"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 404,
-                            "body": "{\"message\":\"Service not found\"}",
+                            "body": "{\"message\":\"not found\"}",
                             "name": ""
                         }
                     ]
@@ -159,7 +143,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nisi",
+                                    "value": "qui",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -191,14 +175,6 @@
                                 {
                                     "key": "content-type",
                                     "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "31"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -223,7 +199,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "eos",
+                                    "value": "repudiandae",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -257,20 +233,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "23"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 404,
-                            "body": "{\"message\":\"News not found\"}",
+                            "body": "{\"message\":\"not found\"}",
                             "name": ""
                         }
                     ]
@@ -287,7 +255,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "illo",
+                                    "value": "tempora",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -321,20 +289,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "42"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 404,
-                            "body": "{\"message\":\"ServicePrice not found\"}",
+                            "body": "{\"message\":\"not found\"}",
                             "name": ""
                         }
                     ]
@@ -351,7 +311,7 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "fuga",
+                                    "value": "quo",
                                     "description": ""
                                 },
                                 {
@@ -391,20 +351,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "43"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"fuga\",\"take\":\"voluptas\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -421,13 +373,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "soluta",
+                                    "value": "optio",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "necessitatibus",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -461,20 +413,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "41"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"soluta\",\"take\":\"necessitatibus\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -491,13 +435,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "perferendis",
+                                    "value": "vero",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "veniam",
+                                    "value": "assumenda",
                                     "description": ""
                                 }
                             ]
@@ -531,20 +475,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "39"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"perferendis\",\"take\":\"veniam\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -561,13 +497,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "deleniti",
+                                    "value": "atque",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ut",
+                                    "value": "iste",
                                     "description": ""
                                 }
                             ]
@@ -601,20 +537,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "37"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"deleniti\",\"take\":\"ut\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -631,13 +559,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ad",
+                                    "value": "fugit",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "est",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -671,20 +599,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "36"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"ad\",\"take\":\"est\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -701,13 +621,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "impedit",
+                                    "value": "omnis",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "quia",
+                                    "value": "facere",
                                     "description": ""
                                 }
                             ]
@@ -741,20 +661,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "35"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"impedit\",\"take\":\"quia\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -771,13 +683,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "tempore",
+                                    "value": "accusamus",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "magnam",
+                                    "value": "omnis",
                                     "description": ""
                                 }
                             ]
@@ -811,20 +723,12 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "34"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"tempore\",\"take\":\"magnam\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -841,1377 +745,7 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "nihil",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "inventore",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "33"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"nihil\",\"take\":\"inventore\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/carModel\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/carModel\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/carModel\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "placeat",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "delectus",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "32"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"placeat\",\"take\":\"delectus\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/carBrand\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/carBrand\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/carBrand\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "doloremque",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "debitis",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "30"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"doloremque\",\"take\":\"debitis\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/carCategory\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/carCategory\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/carCategory\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "neque",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "eum",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "29"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"neque\",\"take\":\"eum\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/autoPartParamOption\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/autoPartParamOption\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartParamOption\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "exercitationem",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "tenetur",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "28"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"exercitationem\",\"take\":\"tenetur\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/autoPartType\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/autoPartType\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartType\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "voluptate",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "dolor",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "27"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"voluptate\",\"take\":\"dolor\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/autoPartParam\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/autoPartParam\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartParam\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "aspernatur",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "et",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "26"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"aspernatur\",\"take\":\"et\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/autoPartCategory\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/autoPartCategory\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartCategory\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "ut",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "neque",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "25"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"ut\",\"take\":\"neque\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/news\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/news\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/news\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "maxime",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "tempore",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "24"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"maxime\",\"take\":\"tempore\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/newsCategory\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/newsCategory\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/newsCategory\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "saepe",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "blanditiis",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "22"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"saepe\",\"take\":\"blanditiis\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/moneyOperation\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/moneyOperation\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/moneyOperation\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "consequatur",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "inventore",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "45"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"consequatur\",\"take\":\"inventore\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/moneyOperation\/getById\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/moneyOperation\/getById\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/moneyOperation\/getById\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "nemo",
-                                    "description": "The ID of the getById."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "44"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"MoneyOperation not found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/moneyOperationType\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/moneyOperationType\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/moneyOperationType\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "eveniet",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "at",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "47"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"eveniet\",\"take\":\"at\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/moneyOperationType\/getById\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/moneyOperationType\/getById\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/moneyOperationType\/getById\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "amet",
-                                    "description": "The ID of the getById."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "46"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"not found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/serviceLimit\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/serviceLimit\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/serviceLimit\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "pariatur",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "quasi",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "49"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"pariatur\",\"take\":\"quasi\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/serviceLimit\/getById\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/serviceLimit\/getById\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/serviceLimit\/getById\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "numquam",
-                                    "description": "The ID of the getById."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "48"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"not found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/category\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/category\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/category\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "qui",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "doloribus",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "53"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"qui\",\"take\":\"doloribus\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/category\/getById\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/category\/getById\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/category\/getById\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "iure",
-                                    "description": "The ID of the getById."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "52"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"not found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/autoPart\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/autoPart\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPart\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "est",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "provident",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "51"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"est\",\"take\":\"provident\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/autoPart\/getById\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/autoPart\/getById\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPart\/getById\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "voluptatum",
-                                    "description": "The ID of the getById."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "50"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"not found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/image\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/image\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/image\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "ut",
+                                    "value": "rem",
                                     "description": ""
                                 },
                                 {
@@ -2251,177 +785,29 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "56"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"ut\",\"take\":\"quia\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/image\/getByUserId\/{userId}\/{skip}\/{take}",
+                    "name": "api\/carModel\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/image\/getByUserId\/:userId\/:skip\/:take",
+                            "path": "api\/carModel\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/image\/getByUserId\/:userId\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "userId",
-                                    "key": "userId",
-                                    "value": "voluptatum",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "reiciendis",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "iure",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "55"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"info\":{\"skip\":\"voluptatum\",\"take\":\"reiciendis\",\"count\":0},\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/image\/getById\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/image\/getById\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/image\/getById\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "consequuntur",
-                                    "description": "The ID of the getById."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "54"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "{\"message\":\"not found\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/card\/get\/{skip}\/{take}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/card\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/card\/get\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/carModel\/get\/:skip\/:take",
                             "variable": [
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "assumenda",
+                                    "value": "officiis",
                                     "description": ""
                                 },
                                 {
@@ -2461,49 +847,35 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "59"
-                                },
-                                {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"assumenda\",\"take\":\"quam\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/card\/getByUserId\/{userId}\/{skip}\/{take}",
+                    "name": "api\/carBrand\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/card\/getByUserId\/:userId\/:skip\/:take",
+                            "path": "api\/carBrand\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/card\/getByUserId\/:userId\/:skip\/:take",
+                            "raw": "{{baseUrl}}\/api\/carBrand\/get\/:skip\/:take",
                             "variable": [
-                                {
-                                    "id": "userId",
-                                    "key": "userId",
-                                    "value": "iusto",
-                                    "description": ""
-                                },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "veniam",
+                                    "value": "ratione",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "molestiae",
+                                    "value": "cupiditate",
                                     "description": ""
                                 }
                             ]
@@ -2537,12 +909,66 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/carCategory\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/carCategory\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/carCategory\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "ipsum",
+                                    "description": ""
                                 },
                                 {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "58"
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "ea",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -2550,24 +976,458 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"info\":{\"skip\":\"iusto\",\"take\":\"veniam\",\"count\":0},\"data\":[]}",
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "api\/card\/getById\/{id}",
+                    "name": "api\/autoPartParamOption\/get\/{skip}\/{take}",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/card\/getById\/:id",
+                            "path": "api\/autoPartParamOption\/get\/:skip\/:take",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/card\/getById\/:id",
+                            "raw": "{{baseUrl}}\/api\/autoPartParamOption\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "non",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "et",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPartType\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPartType\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPartType\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "voluptatibus",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "consequatur",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPartParam\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPartParam\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPartParam\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "dolorem",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "soluta",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPartCategory\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPartCategory\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPartCategory\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "animi",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "quo",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/news\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/news\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/news\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "aperiam",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "tempora",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/newsCategory\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/newsCategory\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/newsCategory\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "a",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "quasi",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/moneyOperation\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/moneyOperation\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/moneyOperation\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "molestiae",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "incidunt",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/moneyOperation\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/moneyOperation\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/moneyOperation\/getById\/:id",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quod",
+                                    "value": "corporis",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2601,12 +1461,122 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/moneyOperationType\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/moneyOperationType\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/moneyOperationType\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "expedita",
+                                    "description": ""
                                 },
                                 {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "57"
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "dolore",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/moneyOperationType\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/moneyOperationType\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/moneyOperationType\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "omnis",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -2615,6 +1585,1426 @@
                             ],
                             "code": 404,
                             "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/serviceLimit\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/serviceLimit\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/serviceLimit\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "dignissimos",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "assumenda",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/serviceLimit\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/serviceLimit\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/serviceLimit\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "pariatur",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/category\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/category\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/category\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "quisquam",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "eaque",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/category\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/category\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/category\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "dolore",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPart\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPart\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPart\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "vitae",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "vel",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/autoPart\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPart\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPart\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "nobis",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/image\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/image\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/image\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "ullam",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "velit",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/image\/getByUserId\/{userId}\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/image\/getByUserId\/:userId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/image\/getByUserId\/:userId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "userId",
+                                    "key": "userId",
+                                    "value": "commodi",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "porro",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "reprehenderit",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/image\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/image\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/image\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "ratione",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/card\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/card\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/card\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "corporis",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "corporis",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/card\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/card\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/card\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "qui",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cardService\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cardService\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cardService\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "laudantium",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "dolorem",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cardService\/getByCardId\/{cardId}\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cardService\/getByCardId\/:cardId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cardService\/getByCardId\/:cardId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "cardId",
+                                    "key": "cardId",
+                                    "value": "perferendis",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "et",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "inventore",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cardService\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cardService\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cardService\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "quia",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cardRange\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cardRange\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cardRange\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "voluptatem",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "quo",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cardRange\/getByCardId\/{cardId}\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cardRange\/getByCardId\/:cardId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cardRange\/getByCardId\/:cardId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "cardId",
+                                    "key": "cardId",
+                                    "value": "consequatur",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "aut",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "magnam",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cardRange\/getByCityId\/{cityId}\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cardRange\/getByCityId\/:cityId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cardRange\/getByCityId\/:cityId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "cityId",
+                                    "key": "cityId",
+                                    "value": "consectetur",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "rem",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "non",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cardRange\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cardRange\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cardRange\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "pariatur",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/carModelAveragePrice\/get\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/carModelAveragePrice\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/carModelAveragePrice\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "deleniti",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "qui",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/carModelAveragePrice\/getByCarModelId\/{carModelId}\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/carModelAveragePrice\/getByCarModelId\/:carModelId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/carModelAveragePrice\/getByCarModelId\/:carModelId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "carModelId",
+                                    "key": "carModelId",
+                                    "value": "rerum",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "dignissimos",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "saepe",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/carModelAveragePrice\/getById\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/carModelAveragePrice\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/carModelAveragePrice\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "labore",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/carModel\/getByCarBrandId\/{carBrandId}\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/carModel\/getByCarBrandId\/:carBrandId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/carModel\/getByCarBrandId\/:carBrandId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "carBrandId",
+                                    "key": "carBrandId",
+                                    "value": "est",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "eius",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "eligendi",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/cardService\/getByServiceId\/{cityId}\/{skip}\/{take}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cardService\/getByServiceId\/:cityId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cardService\/getByServiceId\/:cityId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "cityId",
+                                    "key": "cityId",
+                                    "value": "ab",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "laborum",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "fugit",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]

@@ -2,17 +2,17 @@
 
 namespace App\Domain\Repositories\AutoPartCategory;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\AutoPartCategory;
 
 class AutoPartCategoryRepositoryEloquent implements AutoPartCategoryRepositoryInterface
 {
-    public function count($where)
-    {
-        return AutoPartCategory::where($where)->count();
-    }
+    use MainRepositoryEloquent;
 
-    public function get($skip,$take)
+    protected AutoPartCategory $model;
+
+    public function __construct(AutoPartCategory $autoPartCategory)
     {
-        return AutoPartCategory::skip($skip)->take($take)->get();
+        $this->model    =   $autoPartCategory;
     }
 }

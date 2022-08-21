@@ -220,6 +220,9 @@ return [
         App\Providers\Repositories\CategoryRepositoryProvider::class,
         App\Providers\Repositories\ImageRepositoryProvider::class,
         App\Providers\Repositories\CardRepositoryProvider::class,
+        App\Providers\Repositories\CarModelAveragePriceRepositoryProvider::class,
+        App\Providers\Repositories\CardRangeRepositoryProvider::class,
+        App\Providers\Repositories\CardServiceRepositoryProvider::class,
     ],
 
     /*

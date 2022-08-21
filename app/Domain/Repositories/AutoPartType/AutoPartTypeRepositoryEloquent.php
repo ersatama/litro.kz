@@ -2,18 +2,17 @@
 
 namespace App\Domain\Repositories\AutoPartType;
 
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\AutoPartType;
 
 class AutoPartTypeRepositoryEloquent implements AutoPartTypeRepositoryInterface
 {
+    use MainRepositoryEloquent;
 
-    public function count($where)
-    {
-        return AutoPartType::where($where)->count();
-    }
+    protected AutoPartType $model;
 
-    public function get($skip,$take)
+    public function __construct(AutoPartType $autoPartType)
     {
-        return AutoPartType::skip($skip)->take($take)->get();
+        $this->model    =   $autoPartType;
     }
 }

@@ -2,23 +2,17 @@
 
 namespace App\Domain\Repositories\Category;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\Category;
 
 class CategoryRepositoryEloquent implements CategoryRepositoryInterface
 {
-    public function get($skip,$take)
-    {
-        return Category::skip($skip)->take($take)->get();
-    }
+    use MainRepositoryEloquent;
 
-    public function count($where)
-    {
-        return Category::where($where)->count();
-    }
+    protected Category $model;
 
-    public function getById($id)
+    public function __construct(Category $category)
     {
-        return Category::where(MainContract::ID,$id)->first();
+        $this->model    =   $category;
     }
 }

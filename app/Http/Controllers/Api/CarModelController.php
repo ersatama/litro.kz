@@ -23,36 +23,24 @@ class CarModelController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->carModelService->count([]),
-            ],
-            MainContract::DATA  =>  new CarModelCollection($this->carModelService->get($skip,$take))
+            MainContract::COUNT =>  $this->carModelService->carModelRepository->count([]),
+            MainContract::DATA  =>  new CarModelCollection($this->carModelService->carModelRepository->get($skip,$take))
         ],200);
     }
-
 
     public function getByCarBrandId($carBrandId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->carModelService->count([
-                    MainContract::CAR_BRAND_ID,$carBrandId
-                ]),
-            ],
-            MainContract::DATA  =>  new CarModelCollection($this->carModelService->getByCarBrandId($carBrandId,$skip,$take))
+            MainContract::COUNT =>  $this->carModelService->carModelRepository->count([MainContract::CAR_BRAND_ID => $carBrandId]),
+            MainContract::DATA  =>  new CarModelCollection($this->carModelService->carModelRepository->getByCarBrandId($carBrandId,$skip,$take))
         ],200);
     }
 
     public function getById($id): Response|CarModelResource|Application|ResponseFactory
     {
-        if ($carModel = $this->carModelService->getById($id)) {
+        if ($carModel = $this->carModelService->carModelRepository->getById($id)) {
             return new CarModelResource($carModel);
         }
         return response(['message'  =>  'Модель не найдена'],404);
     }
-
 }

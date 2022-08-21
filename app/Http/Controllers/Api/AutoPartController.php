@@ -24,18 +24,14 @@ class AutoPartController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::INFO  =>  [
-                MainContract::SKIP  =>  $skip,
-                MainContract::TAKE  =>  $take,
-                MainContract::COUNT =>  $this->autoPartService->count([]),
-            ],
-            MainContract::DATA  =>  new AutoPartCollection($this->autoPartService->get($skip,$take))
+            MainContract::COUNT =>  $this->autoPartService->autoPartRepository->count([]),
+            MainContract::DATA  =>  new AutoPartCollection($this->autoPartService->autoPartRepository->get($skip,$take))
         ],200);
     }
 
     public function getById($id): Response|AutoPartResource|Application|ResponseFactory
     {
-        if ($serviceLimit = $this->autoPartService->getById($id)) {
+        if ($serviceLimit = $this->autoPartService->autoPartRepository->getById($id)) {
             return new AutoPartResource($serviceLimit);
         }
         return response(ErrorContract::ERROR_NOT_FOUND,404);

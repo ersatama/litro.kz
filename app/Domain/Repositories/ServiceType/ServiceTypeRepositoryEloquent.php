@@ -3,24 +3,17 @@
 namespace App\Domain\Repositories\ServiceType;
 
 use App\Domain\Contracts\MainContract;
+use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\ServiceType;
 
 class ServiceTypeRepositoryEloquent implements ServiceTypeRepositoryInterface
 {
+    use MainRepositoryEloquent;
 
-    public function count($where)
+    protected ServiceType $model;
+
+    public function __construct(ServiceType $serviceType)
     {
-        return ServiceType::where($where)->count();
+        $this->model    =   $serviceType;
     }
-
-    public function get($skip,$take)
-    {
-        return ServiceType::skip($skip)->take($take)->get();
-    }
-
-    public function getById($id)
-    {
-        return ServiceType::where(MainContract::ID,$id)->first();
-    }
-
 }
