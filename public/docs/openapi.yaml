@@ -47,7 +47,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: alias
+        example: laboriosam
         required: true
         schema:
           type: string
@@ -91,7 +91,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: qui
+        example: tempora
         required: true
         schema:
           type: string
@@ -135,7 +135,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: expedita
+        example: quo
         required: true
         schema:
           type: string
@@ -179,7 +179,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: nulla
+        example: aperiam
         required: true
         schema:
           type: string
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: sed
+        example: alias
         required: true
         schema:
           type: string
@@ -271,7 +271,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: molestiae
+        example: rerum
         required: true
         schema:
           type: string
@@ -279,7 +279,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: vel
+        example: et
         required: true
         schema:
           type: string
@@ -327,7 +327,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: incidunt
+        example: iusto
         required: true
         schema:
           type: string
@@ -335,7 +335,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: enim
+        example: quos
         required: true
         schema:
           type: string
@@ -383,7 +383,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolor
+        example: nihil
         required: true
         schema:
           type: string
@@ -391,123 +391,11 @@ paths:
         in: path
         name: take
         description: ''
-        example: reprehenderit
+        example: tenetur
         required: true
         schema:
           type: string
   '/api/cardCategory/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: dolore
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: et
-        required: true
-        schema:
-          type: string
-  '/api/region/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: harum
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: maiores
-        required: true
-        schema:
-          type: string
-  '/api/country/get/{skip}/{take}':
     get:
       summary: ''
       description: ''
@@ -559,7 +447,119 @@ paths:
         in: path
         name: take
         description: ''
-        example: consequatur
+        example: neque
+        required: true
+        schema:
+          type: string
+  '/api/region/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: ut
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: repellat
+        required: true
+        schema:
+          type: string
+  '/api/country/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: amet
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: porro
         required: true
         schema:
           type: string
@@ -607,7 +607,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: magnam
+        example: et
         required: true
         schema:
           type: string
@@ -615,7 +615,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: nihil
+        example: in
         required: true
         schema:
           type: string
@@ -663,7 +663,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sapiente
+        example: atque
         required: true
         schema:
           type: string
@@ -671,7 +671,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eum
+        example: error
         required: true
         schema:
           type: string
@@ -719,7 +719,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: praesentium
+        example: vitae
         required: true
         schema:
           type: string
@@ -727,7 +727,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sit
+        example: eum
         required: true
         schema:
           type: string
@@ -775,7 +775,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: reiciendis
+        example: non
         required: true
         schema:
           type: string
@@ -783,7 +783,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: fuga
+        example: in
         required: true
         schema:
           type: string
@@ -831,7 +831,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ipsa
+        example: est
         required: true
         schema:
           type: string
@@ -839,7 +839,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ullam
+        example: temporibus
         required: true
         schema:
           type: string
@@ -887,7 +887,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: consequatur
+        example: cupiditate
         required: true
         schema:
           type: string
@@ -895,291 +895,11 @@ paths:
         in: path
         name: take
         description: ''
-        example: vel
+        example: animi
         required: true
         schema:
           type: string
   '/api/autoPartType/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: quis
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: voluptas
-        required: true
-        schema:
-          type: string
-  '/api/autoPartParam/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: fugiat
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: temporibus
-        required: true
-        schema:
-          type: string
-  '/api/autoPartCategory/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: asperiores
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: aut
-        required: true
-        schema:
-          type: string
-  '/api/news/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: ullam
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: asperiores
-        required: true
-        schema:
-          type: string
-  '/api/newsCategory/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: dolores
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: sint
-        required: true
-        schema:
-          type: string
-  '/api/moneyOperation/get/{skip}/{take}':
     get:
       summary: ''
       description: ''
@@ -1231,7 +951,287 @@ paths:
         in: path
         name: take
         description: ''
-        example: mollitia
+        example: qui
+        required: true
+        schema:
+          type: string
+  '/api/autoPartParam/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: quis
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: enim
+        required: true
+        schema:
+          type: string
+  '/api/autoPartCategory/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: sunt
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: laborum
+        required: true
+        schema:
+          type: string
+  '/api/news/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: rerum
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: quia
+        required: true
+        schema:
+          type: string
+  '/api/newsCategory/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: aut
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: sunt
+        required: true
+        schema:
+          type: string
+  '/api/moneyOperation/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: et
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: dolor
         required: true
         schema:
           type: string
@@ -1275,7 +1275,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: enim
+        example: exercitationem
         required: true
         schema:
           type: string
@@ -1323,7 +1323,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: natus
+        example: dolor
         required: true
         schema:
           type: string
@@ -1331,7 +1331,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: beatae
         required: true
         schema:
           type: string
@@ -1375,7 +1375,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: laborum
+        example: ad
         required: true
         schema:
           type: string
@@ -1423,7 +1423,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolorem
+        example: reprehenderit
         required: true
         schema:
           type: string
@@ -1431,7 +1431,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eligendi
+        example: saepe
         required: true
         schema:
           type: string
@@ -1475,7 +1475,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: eaque
+        example: ea
         required: true
         schema:
           type: string
@@ -1523,7 +1523,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: unde
+        example: quia
         required: true
         schema:
           type: string
@@ -1531,7 +1531,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: facere
+        example: commodi
         required: true
         schema:
           type: string
@@ -1575,7 +1575,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: sit
+        example: veritatis
         required: true
         schema:
           type: string
@@ -1623,7 +1623,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: non
+        example: distinctio
         required: true
         schema:
           type: string
@@ -1631,7 +1631,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: iste
+        example: asperiores
         required: true
         schema:
           type: string
@@ -1675,7 +1675,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: perspiciatis
+        example: ut
         required: true
         schema:
           type: string
@@ -1723,7 +1723,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: dolores
         required: true
         schema:
           type: string
@@ -1731,7 +1731,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: tempore
+        example: earum
         required: true
         schema:
           type: string
@@ -1779,7 +1779,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: atque
+        example: corporis
         required: true
         schema:
           type: string
@@ -1787,7 +1787,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ex
+        example: deserunt
         required: true
         schema:
           type: string
@@ -1795,7 +1795,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: neque
+        example: ratione
         required: true
         schema:
           type: string
@@ -1839,7 +1839,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: dolor
+        example: rerum
         required: true
         schema:
           type: string
@@ -1887,7 +1887,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: reiciendis
+        example: laudantium
         required: true
         schema:
           type: string
@@ -1895,7 +1895,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: laudantium
+        example: qui
         required: true
         schema:
           type: string
@@ -1939,7 +1939,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: velit
+        example: rerum
         required: true
         schema:
           type: string
@@ -1987,7 +1987,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: iste
+        example: et
         required: true
         schema:
           type: string
@@ -1995,7 +1995,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quam
+        example: magnam
         required: true
         schema:
           type: string
@@ -2043,7 +2043,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: dolorem
+        example: molestias
         required: true
         schema:
           type: string
@@ -2051,7 +2051,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: fugit
+        example: non
         required: true
         schema:
           type: string
@@ -2059,7 +2059,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: maxime
+        example: dolorem
         required: true
         schema:
           type: string
@@ -2103,7 +2103,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: non
+        example: veniam
         required: true
         schema:
           type: string
@@ -2151,7 +2151,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: voluptatem
+        example: in
         required: true
         schema:
           type: string
@@ -2159,7 +2159,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: tenetur
+        example: dolorum
         required: true
         schema:
           type: string
@@ -2207,7 +2207,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: consectetur
+        example: pariatur
         required: true
         schema:
           type: string
@@ -2215,7 +2215,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: suscipit
+        example: ab
         required: true
         schema:
           type: string
@@ -2223,7 +2223,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: id
+        example: consequatur
         required: true
         schema:
           type: string
@@ -2271,7 +2271,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: ea
+        example: et
         required: true
         schema:
           type: string
@@ -2287,7 +2287,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eum
+        example: in
         required: true
         schema:
           type: string
@@ -2331,7 +2331,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: doloremque
+        example: ab
         required: true
         schema:
           type: string
@@ -2379,7 +2379,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: mollitia
+        example: non
         required: true
         schema:
           type: string
@@ -2387,7 +2387,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ullam
+        example: sit
         required: true
         schema:
           type: string
@@ -2435,7 +2435,7 @@ paths:
         in: path
         name: carModelId
         description: ''
-        example: illum
+        example: velit
         required: true
         schema:
           type: string
@@ -2443,7 +2443,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: at
+        example: quisquam
         required: true
         schema:
           type: string
@@ -2451,7 +2451,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: debitis
+        example: laboriosam
         required: true
         schema:
           type: string
@@ -2495,7 +2495,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: non
+        example: vel
         required: true
         schema:
           type: string
@@ -2543,7 +2543,7 @@ paths:
         in: path
         name: carBrandId
         description: ''
-        example: est
+        example: sunt
         required: true
         schema:
           type: string
@@ -2551,7 +2551,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: fugiat
+        example: quasi
         required: true
         schema:
           type: string
@@ -2559,7 +2559,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: non
+        example: occaecati
         required: true
         schema:
           type: string
@@ -2607,7 +2607,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: placeat
+        example: illum
         required: true
         schema:
           type: string
@@ -2615,7 +2615,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: iste
+        example: laudantium
         required: true
         schema:
           type: string
@@ -2623,7 +2623,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: enim
+        example: unde
         required: true
         schema:
           type: string
@@ -2647,744 +2647,22 @@ paths:
           schema:
             type: string
       responses:
-        500:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Call to undefined method App\Domain\Services\CityService::where()'
-                  exception: Error
-                  file: /var/www/admin-unified/app/Domain/Repositories/MainRepositoryEloquent.php
-                  line: 21
-                  trace:
-                    -
-                      file: /var/www/admin-unified/app/Http/Controllers/Api/CityServiceController.php
-                      line: 27
-                      function: count
-                      class: App\Domain\Repositories\CityService\CityServiceRepositoryEloquent
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                      line: 54
-                      function: get
-                      class: App\Http\Controllers\Api\CityServiceController
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                      line: 45
-                      function: callAction
-                      class: Illuminate\Routing\Controller
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 261
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 204
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 725
-                      function: run
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
-                      line: 50
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\SubstituteBindings
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 726
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 703
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 667
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 656
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 167
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 142
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 111
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 89
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 222
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 179
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 116
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 123
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 80
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 56
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 55
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 651
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 139
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
-                      line: 308
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 124
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 998
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 299
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 171
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                      line: 102
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 129
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/artisan
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
+                  count: 0
+                  data: []
                 properties:
-                  message:
-                    type: string
-                    example: 'Call to undefined method App\Domain\Services\CityService::where()'
-                  exception:
-                    type: string
-                    example: Error
-                  file:
-                    type: string
-                    example: /var/www/admin-unified/app/Domain/Repositories/MainRepositoryEloquent.php
-                  line:
+                  count:
                     type: integer
-                    example: 21
-                  trace:
+                    example: 0
+                  data:
                     type: array
-                    example:
-                      -
-                        file: /var/www/admin-unified/app/Http/Controllers/Api/CityServiceController.php
-                        line: 27
-                        function: count
-                        class: App\Domain\Repositories\CityService\CityServiceRepositoryEloquent
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                        line: 54
-                        function: get
-                        class: App\Http\Controllers\Api\CityServiceController
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                        line: 45
-                        function: callAction
-                        class: Illuminate\Routing\Controller
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 261
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 204
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 725
-                        function: run
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
-                        line: 50
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\SubstituteBindings
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 726
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 703
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 667
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 656
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 167
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 142
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 111
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 89
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 222
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 179
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 116
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 123
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 80
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 56
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 55
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 651
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 139
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
-                        line: 308
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 124
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 998
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 299
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 171
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                        line: 102
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 129
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/artisan
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
+                    example: []
       tags:
         - Endpoints
       security: []
@@ -3393,7 +2671,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: deserunt
+        example: quaerat
         required: true
         schema:
           type: string
@@ -3425,744 +2703,22 @@ paths:
           schema:
             type: string
       responses:
-        500:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Call to undefined method App\Domain\Services\CityService::where()'
-                  exception: Error
-                  file: /var/www/admin-unified/app/Domain/Repositories/MainRepositoryEloquent.php
-                  line: 21
-                  trace:
-                    -
-                      file: /var/www/admin-unified/app/Http/Controllers/Api/CityServiceController.php
-                      line: 36
-                      function: count
-                      class: App\Domain\Repositories\CityService\CityServiceRepositoryEloquent
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                      line: 54
-                      function: getByServiceId
-                      class: App\Http\Controllers\Api\CityServiceController
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                      line: 45
-                      function: callAction
-                      class: Illuminate\Routing\Controller
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 261
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 204
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 725
-                      function: run
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
-                      line: 50
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\SubstituteBindings
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 726
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 703
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 667
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 656
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 167
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 142
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 111
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 89
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 222
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 179
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 116
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 123
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 80
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 56
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 55
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 651
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 139
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
-                      line: 308
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 124
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 998
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 299
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 171
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                      line: 102
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 129
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/artisan
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
+                  count: 0
+                  data: []
                 properties:
-                  message:
-                    type: string
-                    example: 'Call to undefined method App\Domain\Services\CityService::where()'
-                  exception:
-                    type: string
-                    example: Error
-                  file:
-                    type: string
-                    example: /var/www/admin-unified/app/Domain/Repositories/MainRepositoryEloquent.php
-                  line:
+                  count:
                     type: integer
-                    example: 21
-                  trace:
+                    example: 0
+                  data:
                     type: array
-                    example:
-                      -
-                        file: /var/www/admin-unified/app/Http/Controllers/Api/CityServiceController.php
-                        line: 36
-                        function: count
-                        class: App\Domain\Repositories\CityService\CityServiceRepositoryEloquent
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                        line: 54
-                        function: getByServiceId
-                        class: App\Http\Controllers\Api\CityServiceController
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                        line: 45
-                        function: callAction
-                        class: Illuminate\Routing\Controller
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 261
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 204
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 725
-                        function: run
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
-                        line: 50
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\SubstituteBindings
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 726
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 703
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 667
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 656
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 167
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 142
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 111
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 89
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 222
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 179
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 116
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 123
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 80
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 56
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 55
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 651
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 139
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
-                        line: 308
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 124
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 998
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 299
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 171
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                        line: 102
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 129
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/artisan
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
+                    example: []
       tags:
         - Endpoints
       security: []
@@ -4171,7 +2727,7 @@ paths:
         in: path
         name: serviceId
         description: ''
-        example: est
+        example: enim
         required: true
         schema:
           type: string
@@ -4179,7 +2735,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: autem
+        example: reprehenderit
         required: true
         schema:
           type: string
@@ -4187,7 +2743,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: nam
+        example: ducimus
         required: true
         schema:
           type: string
@@ -4211,744 +2767,22 @@ paths:
           schema:
             type: string
       responses:
-        500:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Call to undefined method App\Domain\Services\CityService::where()'
-                  exception: Error
-                  file: /var/www/admin-unified/app/Domain/Repositories/MainRepositoryEloquent.php
-                  line: 21
-                  trace:
-                    -
-                      file: /var/www/admin-unified/app/Http/Controllers/Api/CityServiceController.php
-                      line: 46
-                      function: count
-                      class: App\Domain\Repositories\CityService\CityServiceRepositoryEloquent
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                      line: 54
-                      function: getByCityId
-                      class: App\Http\Controllers\Api\CityServiceController
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                      line: 45
-                      function: callAction
-                      class: Illuminate\Routing\Controller
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 261
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 204
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 725
-                      function: run
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
-                      line: 50
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\SubstituteBindings
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 726
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 703
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 667
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 656
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 167
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 142
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 111
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 89
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 222
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 179
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 116
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 123
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 80
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 56
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 55
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 651
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 139
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
-                      line: 308
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 124
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 998
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 299
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 171
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                      line: 102
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 129
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/artisan
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
+                  count: 0
+                  data: []
                 properties:
-                  message:
-                    type: string
-                    example: 'Call to undefined method App\Domain\Services\CityService::where()'
-                  exception:
-                    type: string
-                    example: Error
-                  file:
-                    type: string
-                    example: /var/www/admin-unified/app/Domain/Repositories/MainRepositoryEloquent.php
-                  line:
+                  count:
                     type: integer
-                    example: 21
-                  trace:
+                    example: 0
+                  data:
                     type: array
-                    example:
-                      -
-                        file: /var/www/admin-unified/app/Http/Controllers/Api/CityServiceController.php
-                        line: 46
-                        function: count
-                        class: App\Domain\Repositories\CityService\CityServiceRepositoryEloquent
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                        line: 54
-                        function: getByCityId
-                        class: App\Http\Controllers\Api\CityServiceController
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                        line: 45
-                        function: callAction
-                        class: Illuminate\Routing\Controller
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 261
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 204
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 725
-                        function: run
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
-                        line: 50
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\SubstituteBindings
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 726
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 703
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 667
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 656
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 167
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 142
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 111
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 89
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 222
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 179
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 116
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 123
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 80
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 56
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 55
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 651
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 139
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
-                        line: 308
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 124
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 998
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 299
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 171
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                        line: 102
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 129
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/artisan
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
+                    example: []
       tags:
         - Endpoints
       security: []
@@ -4957,7 +2791,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: aperiam
+        example: quaerat
         required: true
         schema:
           type: string
@@ -4965,7 +2799,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: repudiandae
+        example: id
         required: true
         schema:
           type: string
@@ -4973,7 +2807,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: dolor
+        example: sint
         required: true
         schema:
           type: string
@@ -4997,744 +2831,18 @@ paths:
           schema:
             type: string
       responses:
-        500:
+        404:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Call to undefined method App\Domain\Services\CityService::where()'
-                  exception: Error
-                  file: /var/www/admin-unified/app/Domain/Repositories/MainRepositoryEloquent.php
-                  line: 16
-                  trace:
-                    -
-                      file: /var/www/admin-unified/app/Http/Controllers/Api/CityServiceController.php
-                      line: 54
-                      function: getById
-                      class: App\Domain\Repositories\CityService\CityServiceRepositoryEloquent
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                      line: 54
-                      function: getById
-                      class: App\Http\Controllers\Api\CityServiceController
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                      line: 45
-                      function: callAction
-                      class: Illuminate\Routing\Controller
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 261
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 204
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 725
-                      function: run
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
-                      line: 50
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\SubstituteBindings
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 726
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 703
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 667
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 656
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 167
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 142
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                      line: 111
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 89
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 222
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 179
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                      line: 116
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 123
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 80
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                      line: 56
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                      line: 55
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                      line: 651
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 139
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
-                      line: 308
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                      line: 124
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 998
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 299
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                      line: 171
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                      line: 102
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                      line: 129
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: /var/www/admin-unified/artisan
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
+                  message: 'not found'
                 properties:
                   message:
                     type: string
-                    example: 'Call to undefined method App\Domain\Services\CityService::where()'
-                  exception:
-                    type: string
-                    example: Error
-                  file:
-                    type: string
-                    example: /var/www/admin-unified/app/Domain/Repositories/MainRepositoryEloquent.php
-                  line:
-                    type: integer
-                    example: 16
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: /var/www/admin-unified/app/Http/Controllers/Api/CityServiceController.php
-                        line: 54
-                        function: getById
-                        class: App\Domain\Repositories\CityService\CityServiceRepositoryEloquent
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
-                        line: 54
-                        function: getById
-                        class: App\Http\Controllers\Api\CityServiceController
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                        line: 45
-                        function: callAction
-                        class: Illuminate\Routing\Controller
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 261
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 204
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 725
-                        function: run
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
-                        line: 50
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\SubstituteBindings
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 726
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 703
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 667
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 656
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 167
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 142
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
-                        line: 111
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 89
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 222
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 179
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
-                        line: 116
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 123
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 80
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
-                        line: 56
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
-                        line: 55
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
-                        line: 651
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 139
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
-                        line: 308
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
-                        line: 124
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 998
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 299
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
-                        line: 171
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
-                        line: 102
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
-                        line: 129
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: /var/www/admin-unified/artisan
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
+                    example: 'not found'
       tags:
         - Endpoints
       security: []
@@ -5743,7 +2851,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: ex
+        example: veniam
         required: true
         schema:
           type: string
@@ -5791,7 +2899,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nam
+        example: nesciunt
         required: true
         schema:
           type: string
@@ -5799,7 +2907,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sed
+        example: quo
         required: true
         schema:
           type: string
@@ -5847,7 +2955,7 @@ paths:
         in: path
         name: orderCardId
         description: ''
-        example: et
+        example: est
         required: true
         schema:
           type: string
@@ -5891,7 +2999,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: temporibus
+        example: doloribus
         required: true
         schema:
           type: string

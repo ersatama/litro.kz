@@ -3,7 +3,7 @@
 namespace App\Domain\Repositories\CityService;
 
 use App\Domain\Repositories\MainRepositoryEloquent;
-use App\Domain\Services\CityService;
+use App\Models\CityService;
 
 class CityServiceRepositoryEloquent implements CityServiceRepositoryInterface
 {

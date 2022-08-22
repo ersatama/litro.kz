@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f",
-        "_postman_id": "747ddf0b-2c54-455f-8224-cb8426ab274b",
+        "_postman_id": "63621da5-8d80-4b10-8514-f573514b36a9",
         "description": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f \u0434\u043b\u044f litro.kz",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -31,7 +31,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "alias",
+                                    "value": "laboriosam",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -87,7 +87,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "qui",
+                                    "value": "tempora",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -143,7 +143,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "expedita",
+                                    "value": "quo",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -199,7 +199,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nulla",
+                                    "value": "aperiam",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -255,7 +255,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sed",
+                                    "value": "alias",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -311,13 +311,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "molestiae",
+                                    "value": "rerum",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "vel",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -373,13 +373,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "incidunt",
+                                    "value": "iusto",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "enim",
+                                    "value": "quos",
                                     "description": ""
                                 }
                             ]
@@ -435,13 +435,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "dolor",
+                                    "value": "nihil",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "reprehenderit",
+                                    "value": "tenetur",
                                     "description": ""
                                 }
                             ]
@@ -497,13 +497,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "dolore",
+                                    "value": "quaerat",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "et",
+                                    "value": "neque",
                                     "description": ""
                                 }
                             ]
@@ -559,13 +559,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "harum",
+                                    "value": "ut",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "maiores",
+                                    "value": "repellat",
                                     "description": ""
                                 }
                             ]
@@ -621,13 +621,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "quaerat",
+                                    "value": "amet",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "consequatur",
+                                    "value": "porro",
                                     "description": ""
                                 }
                             ]
@@ -683,13 +683,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "magnam",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "nihil",
+                                    "value": "in",
                                     "description": ""
                                 }
                             ]
@@ -745,13 +745,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "sapiente",
+                                    "value": "atque",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "eum",
+                                    "value": "error",
                                     "description": ""
                                 }
                             ]
@@ -807,13 +807,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "praesentium",
+                                    "value": "vitae",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "sit",
+                                    "value": "eum",
                                     "description": ""
                                 }
                             ]
@@ -869,13 +869,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "reiciendis",
+                                    "value": "non",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "fuga",
+                                    "value": "in",
                                     "description": ""
                                 }
                             ]
@@ -931,13 +931,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ipsa",
+                                    "value": "est",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ullam",
+                                    "value": "temporibus",
                                     "description": ""
                                 }
                             ]
@@ -993,13 +993,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "consequatur",
+                                    "value": "cupiditate",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "vel",
+                                    "value": "animi",
                                     "description": ""
                                 }
                             ]
@@ -1055,13 +1055,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "quis",
+                                    "value": "delectus",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "voluptas",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -1117,13 +1117,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "fugiat",
+                                    "value": "quis",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "temporibus",
+                                    "value": "enim",
                                     "description": ""
                                 }
                             ]
@@ -1179,13 +1179,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "asperiores",
+                                    "value": "sunt",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "aut",
+                                    "value": "laborum",
                                     "description": ""
                                 }
                             ]
@@ -1241,13 +1241,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ullam",
+                                    "value": "rerum",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "asperiores",
+                                    "value": "quia",
                                     "description": ""
                                 }
                             ]
@@ -1303,13 +1303,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "dolores",
+                                    "value": "aut",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "sint",
+                                    "value": "sunt",
                                     "description": ""
                                 }
                             ]
@@ -1365,13 +1365,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "delectus",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "mollitia",
+                                    "value": "dolor",
                                     "description": ""
                                 }
                             ]
@@ -1427,7 +1427,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "enim",
+                                    "value": "exercitationem",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1483,13 +1483,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "natus",
+                                    "value": "dolor",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ut",
+                                    "value": "beatae",
                                     "description": ""
                                 }
                             ]
@@ -1545,7 +1545,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "laborum",
+                                    "value": "ad",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1601,13 +1601,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "dolorem",
+                                    "value": "reprehenderit",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "eligendi",
+                                    "value": "saepe",
                                     "description": ""
                                 }
                             ]
@@ -1663,7 +1663,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "eaque",
+                                    "value": "ea",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1719,13 +1719,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "unde",
+                                    "value": "quia",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "facere",
+                                    "value": "commodi",
                                     "description": ""
                                 }
                             ]
@@ -1781,7 +1781,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sit",
+                                    "value": "veritatis",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1837,13 +1837,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "non",
+                                    "value": "distinctio",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "iste",
+                                    "value": "asperiores",
                                     "description": ""
                                 }
                             ]
@@ -1899,7 +1899,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "perspiciatis",
+                                    "value": "ut",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1955,13 +1955,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "et",
+                                    "value": "dolores",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "tempore",
+                                    "value": "earum",
                                     "description": ""
                                 }
                             ]
@@ -2017,19 +2017,19 @@
                                 {
                                     "id": "userId",
                                     "key": "userId",
-                                    "value": "atque",
+                                    "value": "corporis",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ex",
+                                    "value": "deserunt",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "neque",
+                                    "value": "ratione",
                                     "description": ""
                                 }
                             ]
@@ -2085,7 +2085,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "dolor",
+                                    "value": "rerum",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2141,13 +2141,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "reiciendis",
+                                    "value": "laudantium",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "laudantium",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -2203,7 +2203,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "velit",
+                                    "value": "rerum",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2259,13 +2259,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "iste",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "quam",
+                                    "value": "magnam",
                                     "description": ""
                                 }
                             ]
@@ -2321,19 +2321,19 @@
                                 {
                                     "id": "cardId",
                                     "key": "cardId",
-                                    "value": "dolorem",
+                                    "value": "molestias",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "fugit",
+                                    "value": "non",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "maxime",
+                                    "value": "dolorem",
                                     "description": ""
                                 }
                             ]
@@ -2389,7 +2389,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "non",
+                                    "value": "veniam",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2445,13 +2445,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "voluptatem",
+                                    "value": "in",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "tenetur",
+                                    "value": "dolorum",
                                     "description": ""
                                 }
                             ]
@@ -2507,19 +2507,19 @@
                                 {
                                     "id": "cardId",
                                     "key": "cardId",
-                                    "value": "consectetur",
+                                    "value": "pariatur",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "suscipit",
+                                    "value": "ab",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "id",
+                                    "value": "consequatur",
                                     "description": ""
                                 }
                             ]
@@ -2575,7 +2575,7 @@
                                 {
                                     "id": "cityId",
                                     "key": "cityId",
-                                    "value": "ea",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
@@ -2587,7 +2587,7 @@
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "eum",
+                                    "value": "in",
                                     "description": ""
                                 }
                             ]
@@ -2643,7 +2643,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "doloremque",
+                                    "value": "ab",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2699,13 +2699,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "mollitia",
+                                    "value": "non",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ullam",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -2761,19 +2761,19 @@
                                 {
                                     "id": "carModelId",
                                     "key": "carModelId",
-                                    "value": "illum",
+                                    "value": "velit",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "at",
+                                    "value": "quisquam",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "debitis",
+                                    "value": "laboriosam",
                                     "description": ""
                                 }
                             ]
@@ -2829,7 +2829,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "non",
+                                    "value": "vel",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2885,19 +2885,19 @@
                                 {
                                     "id": "carBrandId",
                                     "key": "carBrandId",
-                                    "value": "est",
+                                    "value": "sunt",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "fugiat",
+                                    "value": "quasi",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "non",
+                                    "value": "occaecati",
                                     "description": ""
                                 }
                             ]
@@ -2953,19 +2953,19 @@
                                 {
                                     "id": "cityId",
                                     "key": "cityId",
-                                    "value": "placeat",
+                                    "value": "illum",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "iste",
+                                    "value": "laudantium",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "enim",
+                                    "value": "unde",
                                     "description": ""
                                 }
                             ]
@@ -3021,7 +3021,7 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "deserunt",
+                                    "value": "quaerat",
                                     "description": ""
                                 },
                                 {
@@ -3065,8 +3065,8 @@
                                     "value": "*"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"Call to undefined method App\\\\Domain\\\\Services\\\\CityService::where()\",\n    \"exception\": \"Error\",\n    \"file\": \"\/var\/www\/admin-unified\/app\/Domain\/Repositories\/MainRepositoryEloquent.php\",\n    \"line\": 21,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Http\/Controllers\/Api\/CityServiceController.php\",\n            \"line\": 27,\n            \"function\": \"count\",\n            \"class\": \"App\\\\Domain\\\\Repositories\\\\CityService\\\\CityServiceRepositoryEloquent\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"get\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\Api\\\\CityServiceController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 261,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 204,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 725,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 726,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 703,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 667,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 656,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 123,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 80,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 56,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 55,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 651,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 139,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 308,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 124,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 998,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 299,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 102,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -3083,19 +3083,19 @@
                                 {
                                     "id": "serviceId",
                                     "key": "serviceId",
-                                    "value": "est",
+                                    "value": "enim",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "autem",
+                                    "value": "reprehenderit",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "nam",
+                                    "value": "ducimus",
                                     "description": ""
                                 }
                             ]
@@ -3133,8 +3133,8 @@
                                     "value": "*"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"Call to undefined method App\\\\Domain\\\\Services\\\\CityService::where()\",\n    \"exception\": \"Error\",\n    \"file\": \"\/var\/www\/admin-unified\/app\/Domain\/Repositories\/MainRepositoryEloquent.php\",\n    \"line\": 21,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Http\/Controllers\/Api\/CityServiceController.php\",\n            \"line\": 36,\n            \"function\": \"count\",\n            \"class\": \"App\\\\Domain\\\\Repositories\\\\CityService\\\\CityServiceRepositoryEloquent\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"getByServiceId\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\Api\\\\CityServiceController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 261,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 204,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 725,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 726,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 703,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 667,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 656,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 123,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 80,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 56,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 55,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 651,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 139,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 308,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 124,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 998,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 299,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 102,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -3151,19 +3151,19 @@
                                 {
                                     "id": "cityId",
                                     "key": "cityId",
-                                    "value": "aperiam",
+                                    "value": "quaerat",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "repudiandae",
+                                    "value": "id",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "dolor",
+                                    "value": "sint",
                                     "description": ""
                                 }
                             ]
@@ -3201,8 +3201,8 @@
                                     "value": "*"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"Call to undefined method App\\\\Domain\\\\Services\\\\CityService::where()\",\n    \"exception\": \"Error\",\n    \"file\": \"\/var\/www\/admin-unified\/app\/Domain\/Repositories\/MainRepositoryEloquent.php\",\n    \"line\": 21,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Http\/Controllers\/Api\/CityServiceController.php\",\n            \"line\": 46,\n            \"function\": \"count\",\n            \"class\": \"App\\\\Domain\\\\Repositories\\\\CityService\\\\CityServiceRepositoryEloquent\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"getByCityId\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\Api\\\\CityServiceController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 261,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 204,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 725,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 726,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 703,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 667,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 656,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 123,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 80,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 56,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 55,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 651,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 139,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 308,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 124,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 998,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 299,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 102,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
                             "name": ""
                         }
                     ]
@@ -3219,7 +3219,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ex",
+                                    "value": "veniam",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -3257,8 +3257,8 @@
                                     "value": "*"
                                 }
                             ],
-                            "code": 500,
-                            "body": "{\n    \"message\": \"Call to undefined method App\\\\Domain\\\\Services\\\\CityService::where()\",\n    \"exception\": \"Error\",\n    \"file\": \"\/var\/www\/admin-unified\/app\/Domain\/Repositories\/MainRepositoryEloquent.php\",\n    \"line\": 16,\n    \"trace\": [\n        {\n            \"file\": \"\/var\/www\/admin-unified\/app\/Http\/Controllers\/Api\/CityServiceController.php\",\n            \"line\": 54,\n            \"function\": \"getById\",\n            \"class\": \"App\\\\Domain\\\\Repositories\\\\CityService\\\\CityServiceRepositoryEloquent\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php\",\n            \"line\": 54,\n            \"function\": \"getById\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\Api\\\\CityServiceController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 261,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php\",\n            \"line\": 204,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 725,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 726,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 703,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 667,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 656,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 123,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 80,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 56,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 55,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 651,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 139,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 308,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 124,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 998,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 299,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 102,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/var\/www\/admin-unified\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
                             "name": ""
                         }
                     ]
@@ -3275,13 +3275,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "nam",
+                                    "value": "nesciunt",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "sed",
+                                    "value": "quo",
                                     "description": ""
                                 }
                             ]
@@ -3337,7 +3337,7 @@
                                 {
                                     "id": "orderCardId",
                                     "key": "orderCardId",
-                                    "value": "et",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -3393,7 +3393,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "temporibus",
+                                    "value": "doloribus",
                                     "description": "The ID of the getById."
                                 }
                             ]
