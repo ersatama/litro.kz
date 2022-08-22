@@ -4,6 +4,9 @@ namespace App\Domain\Contracts;
 
 abstract class MainContract
 {
+    const VIN   =   'vin';
+    const ORDER_CARD_ID =   'order_card_id';
+    const CAR_NUMBER    =   'car_number';
     const VALUE =   'value';
     const C_TO  =   'c_to';
     const C_FROM    =   'c_form';

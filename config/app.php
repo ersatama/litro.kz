@@ -223,6 +223,8 @@ return [
         App\Providers\Repositories\CarModelAveragePriceRepositoryProvider::class,
         App\Providers\Repositories\CardRangeRepositoryProvider::class,
         App\Providers\Repositories\CardServiceRepositoryProvider::class,
+        App\Providers\Repositories\CarRepositoryProvider::class,
+        App\Providers\Repositories\CityServiceRepositoryProvider::class,
     ],
 
     /*

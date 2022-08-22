@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\AutoPartParamOptionController;
 use App\Http\Controllers\Api\AutoPartTypeController;
 use App\Http\Controllers\Api\CarBrandController;
 use App\Http\Controllers\Api\CarCategoryController;
+use App\Http\Controllers\Api\CarController;
 use App\Http\Controllers\Api\CardCategoryController;
 use App\Http\Controllers\Api\CardController;
 use App\Http\Controllers\Api\CardRangeController;
@@ -15,6 +16,7 @@ use App\Http\Controllers\Api\CarModelAveragePriceController;
 use App\Http\Controllers\Api\CarModelController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CityController;
+use App\Http\Controllers\Api\CityServiceController;
 use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\CurrencyController;
 use App\Http\Controllers\Api\ImageController;
@@ -36,6 +38,23 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(CityServiceController::class)->group(function() {
+    Route::prefix('cityService')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('cityService.get');
+        Route::get('getByServiceId/{serviceId}/{skip}/{take}','getByServiceId')->name('cityService.getByServiceId');
+        Route::get('getByCityId/{cityId}/{skip}/{take}','getByCityId')->name('cityService.getByCityId');
+        Route::get('getById/{id}','getById')->name('cityService.getById');
+    });
+});
+
+Route::controller(CarController::class)->group(function() {
+    Route::prefix('car')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('car.get');
+        Route::get('getByOrderCardId/{orderCardId}','getByOrderCardId')->name('car.getByOrderCardId');
+        Route::get('getById/{id}','getById')->name('car.getById');
+    });
 });
 
 Route::controller(CardServiceController::class)->group(function() {

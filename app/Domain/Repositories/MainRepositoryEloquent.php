@@ -37,6 +37,11 @@ trait MainRepositoryEloquent
             ->get();
     }
 
+    public function getByOrderCardId($orderCardId)
+    {
+        return $this->model::where(MainContract::ORDER_CARD_ID,$orderCardId)->get();
+    }
+
     public function getByServiceId($serviceId,$skip,$take)
     {
         return $this->model::where(MainContract::SERVICE_ID, $serviceId)

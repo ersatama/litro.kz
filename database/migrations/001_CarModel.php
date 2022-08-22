@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string(MainContract::TITLE);
             $table->timestamps();
             $table->softDeletes();
+            $table->index(MainContract::CAR_BRAND_ID);
         });
     }
 
