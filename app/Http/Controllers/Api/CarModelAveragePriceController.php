@@ -21,6 +21,11 @@ class CarModelAveragePriceController extends Controller
         $this->carModelAveragePriceService  =   $carModelAveragePriceService;
     }
 
+    /**
+     * Получить список - CarModelAveragePrice
+     *
+     * @group CarModelAveragePrice - АвтомобильМодельСредняяЦена
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class CarModelAveragePriceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через CarModelID - CarModelAveragePrice
+     *
+     * @group CarModelAveragePrice - АвтомобильМодельСредняяЦена
+     */
     public function getByCarModelId($carModelId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -37,6 +47,11 @@ class CarModelAveragePriceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - CarModelAveragePrice
+     *
+     * @group CarModelAveragePrice - АвтомобильМодельСредняяЦена
+     */
     public function getById($id): CarModelAveragePriceResource|Response|Application|ResponseFactory
     {
         if ($carModel = $this->carModelAveragePriceService->carModelAveragePriceRepository->getById($id)) {

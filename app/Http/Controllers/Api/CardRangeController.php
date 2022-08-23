@@ -21,6 +21,11 @@ class CardRangeController extends Controller
         $this->cardRangeService =   $cardRangeService;
     }
 
+    /**
+     * Получить список - CardRange
+     *
+     * @group CardRange - КарточкаДиапазон
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class CardRangeController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через CardID - CardRange
+     *
+     * @group CardRange - КарточкаДиапазон
+     */
     public function getByCardId($cardId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -37,6 +47,11 @@ class CardRangeController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через CityID - CardRange
+     *
+     * @group CardRange - КарточкаДиапазон
+     */
     public function getByCityId($cityId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -45,6 +60,11 @@ class CardRangeController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - CardRange
+     *
+     * @group CardRange - КарточкаДиапазон
+     */
     public function getById($id): Response|CardRangeResource|Application|ResponseFactory
     {
         if ($carModel = $this->cardRangeService->cardRangeRepository->getById($id)) {

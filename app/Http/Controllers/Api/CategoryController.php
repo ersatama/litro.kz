@@ -21,6 +21,11 @@ class CategoryController extends Controller
         $this->categoryService  =   $categoryService;
     }
 
+    /**
+     * Получить список - Category
+     *
+     * @group Category - Категория
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class CategoryController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - Category
+     *
+     * @group Category - Категория
+     */
     public function getById($id): Response|CategoryResource|Application|ResponseFactory
     {
         if ($category = $this->categoryService->categoryRepository->getById($id)) {

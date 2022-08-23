@@ -1,0 +1,42 @@
+name: 'Currency - Валюта'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: 'api/currency/get/{skip}/{take}'
+    metadata:
+      title: 'Получить список - Currency'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: est
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: delectus
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []

@@ -19,6 +19,11 @@ class CurrencyController extends Controller
         $this->currencyService  =   $currencyService;
     }
 
+    /**
+     * Получить список - Currency
+     *
+     * @group Currency - Валюта
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

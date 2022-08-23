@@ -21,6 +21,11 @@ class CardServiceController extends Controller
         $this->cardServiceService   =   $cardServiceService;
     }
 
+    /**
+     * Получить список - CardService
+     *
+     * @group CardService - КарточкаСервис
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class CardServiceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через CardID - CardService
+     *
+     * @group CardService - КарточкаСервис
+     */
     public function getByCardId($cardId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -37,6 +47,11 @@ class CardServiceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ServiceID - CardService
+     *
+     * @group CardService - КарточкаСервис
+     */
     public function getByServiceId($serviceId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -45,6 +60,11 @@ class CardServiceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - CardService
+     *
+     * @group CardService - КарточкаСервис
+     */
     public function getById($id): Response|CardServiceResource|Application|ResponseFactory
     {
         if ($carModel = $this->cardServiceService->cardServiceRepository->getById($id)) {

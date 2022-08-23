@@ -21,6 +21,11 @@ class AutoPartController extends Controller
         $this->autoPartService  =   $autoPartService;
     }
 
+    /**
+     * Получить список - AutoPart
+     *
+     * @group AutoPart - АвтомобильЗапчасти
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class AutoPartController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - AutoPart
+     *
+     * @group AutoPart - АвтомобильЗапчасти
+     */
     public function getById($id): Response|AutoPartResource|Application|ResponseFactory
     {
         if ($serviceLimit = $this->autoPartService->autoPartRepository->getById($id)) {

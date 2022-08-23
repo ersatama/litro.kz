@@ -18,6 +18,11 @@ class NewsCategoryController extends Controller
         $this->newsCategoryService  =   $newsCategoryService;
     }
 
+    /**
+     * Получить список - NewsCategory
+     *
+     * @group NewsCategory - НовостиКатегория
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

@@ -19,6 +19,11 @@ class CarBrandController extends Controller
         $this->carBrandService  =   $carBrandService;
     }
 
+    /**
+     * Получить список - CarBrand
+     *
+     * @group CarBrand - АвтомобильБрэнд
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

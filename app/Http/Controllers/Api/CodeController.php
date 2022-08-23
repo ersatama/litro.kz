@@ -24,6 +24,11 @@ class CodeController extends Controller
         $this->codeService  =   $codeService;
     }
 
+    /**
+     * Получить список - Code
+     *
+     * @group Code - Код
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -33,7 +38,10 @@ class CodeController extends Controller
     }
 
     /**
+     * Создать - Code
+     *
      * @throws ValidationException
+     * @group Code - Код
      */
     public function create(CodeCreateRequest $codeCreateRequest): CodeResource
     {
@@ -41,7 +49,10 @@ class CodeController extends Controller
     }
 
     /**
+     * Обновить - Code
+     *
      * @throws ValidationException
+     * @group Code - Код
      */
     public function update(CodeUpdateRequest $codeUpdateRequest): Response|Application|CodeResource|ResponseFactory
     {
@@ -59,6 +70,11 @@ class CodeController extends Controller
         return response(ErrorContract::INCORRECT_CODE,400);
     }
 
+    /**
+     * Получить данные через Email - Code
+     *
+     * @group Code - Код
+     */
     public function getByEmail($email): Response|CodeResource|Application|ResponseFactory
     {
         if ($carModel = $this->codeService->codeRepository->getByEmail($email)) {
@@ -67,6 +83,11 @@ class CodeController extends Controller
         return response(ErrorContract::ERROR_NOT_FOUND,404);
     }
 
+    /**
+     * Получить данные через Phone - Code
+     *
+     * @group Code - Код
+     */
     public function getByPhone($phone): Response|CodeResource|Application|ResponseFactory
     {
         if ($carModel = $this->codeService->codeRepository->getByPhone($phone)) {
@@ -75,6 +96,11 @@ class CodeController extends Controller
         return response(ErrorContract::ERROR_NOT_FOUND,404);
     }
 
+    /**
+     * Получить данные через ID - Code
+     *
+     * @group Code - Код
+     */
     public function getById($id): Response|CodeResource|Application|ResponseFactory
     {
         if ($carModel = $this->codeService->codeRepository->getById($id)) {

@@ -21,6 +21,11 @@ class CityServiceController extends Controller
         $this->cityServiceService   =   $cityServiceService;
     }
 
+    /**
+     * Получить список - CityService
+     *
+     * @group CityService - ГородСервис
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class CityServiceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ServiceID - CityService
+     *
+     * @group CityService - ГородСервис
+     */
     public function getByServiceId($serviceId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -39,6 +49,11 @@ class CityServiceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через CityID - CityService
+     *
+     * @group CityService - ГородСервис
+     */
     public function getByCityId($cityId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -49,6 +64,11 @@ class CityServiceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - CityService
+     *
+     * @group CityService - ГородСервис
+     */
     public function getById($id): Response|CityServiceResource|Application|ResponseFactory
     {
         if ($carModel = $this->cityServiceService->cityServiceRepository->getById($id)) {

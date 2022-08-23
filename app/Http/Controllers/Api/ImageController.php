@@ -21,6 +21,11 @@ class ImageController extends Controller
         $this->imageService =   $imageService;
     }
 
+    /**
+     * Получить список - Image
+     *
+     * @group Image - Картинка
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class ImageController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через UserID - Image
+     *
+     * @group Image - Картинка
+     */
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -37,6 +47,11 @@ class ImageController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - Image
+     *
+     * @group Image - Картинка
+     */
     public function getById($id): Response|ImageResource|Application|ResponseFactory
     {
         if ($image = $this->imageService->imageRepository->getById($id)) {

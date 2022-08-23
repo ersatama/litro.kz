@@ -20,6 +20,11 @@ class CarModelController extends Controller
         $this->carModelService  =   $carModelService;
     }
 
+    /**
+     * Получить список - CarModel
+     *
+     * @group CarModel - АвтомобильМодель
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -28,6 +33,11 @@ class CarModelController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через CarBrandID - CarModel
+     *
+     * @group CarModel - АвтомобильМодель
+     */
     public function getByCarBrandId($carBrandId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -36,6 +46,11 @@ class CarModelController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - CarModel
+     *
+     * @group CarModel - АвтомобильМодель
+     */
     public function getById($id): Response|CarModelResource|Application|ResponseFactory
     {
         if ($carModel = $this->carModelService->carModelRepository->getById($id)) {

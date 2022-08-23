@@ -19,6 +19,11 @@ class CountryController extends Controller
         $this->countryService   =   $countryService;
     }
 
+    /**
+     * Получить список - Country
+     *
+     * @group Country - Страна
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

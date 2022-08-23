@@ -20,6 +20,11 @@ class NewsController extends Controller
         $this->newsService  =   $newsService;
     }
 
+    /**
+     * Получить список - News
+     *
+     * @group News - Новости
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -28,6 +33,11 @@ class NewsController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - News
+     *
+     * @group News - Новости
+     */
     public function getById($id): Response|NewsResource|Application|ResponseFactory
     {
         if ($news = $this->newsService->newsRepository->getById($id)) {

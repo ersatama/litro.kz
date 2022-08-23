@@ -19,6 +19,11 @@ class CarCategoryController extends Controller
         $this->carCategoryService   =   $carCategoryService;
     }
 
+    /**
+     * Получить список - CarCategory
+     *
+     * @group CarCategory - АвтомобильКатегория
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

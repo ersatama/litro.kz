@@ -19,6 +19,11 @@ class CardCategoryController extends Controller
         $this->cardCategoryService  =   $cardCategoryService;
     }
 
+    /**
+     * Получить список - CardCategory
+     *
+     * @group CardCategory - КарточкаКатегория
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

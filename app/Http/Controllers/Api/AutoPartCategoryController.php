@@ -19,6 +19,11 @@ class AutoPartCategoryController extends Controller
         $this->autoPartCategoryService  =   $autoPartCategoryService;
     }
 
+    /**
+     * Получить список - AutoPartCategory
+     *
+     * @group AutoPartCategory - АвтомобильЗапчастиКатегория
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

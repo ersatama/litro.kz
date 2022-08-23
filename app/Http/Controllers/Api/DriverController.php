@@ -21,6 +21,11 @@ class DriverController extends Controller
         $this->driverService    =   $driverService;
     }
 
+    /**
+     * Получить список - Driver
+     *
+     * @group Driver - Водитель
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class DriverController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через OrderCardID - Driver
+     *
+     * @group Driver - Водитель
+     */
     public function getByOrderCardId($orderCardId): Response|Application|ResponseFactory
     {
         return response([
@@ -39,6 +49,11 @@ class DriverController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - Driver
+     *
+     * @group Driver - Водитель
+     */
     public function getById($id): Response|DriverResource|Application|ResponseFactory
     {
         if ($driver = $this->driverService->driverRepository->getById($id)) {

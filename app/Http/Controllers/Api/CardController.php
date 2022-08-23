@@ -21,6 +21,11 @@ class CardController extends Controller
         $this->cardService  =   $cardService;
     }
 
+    /**
+     * Получить список - Card
+     *
+     * @group Card - Карточка
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class CardController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - Card
+     *
+     * @group Card - Карточка
+     */
     public function getById($id): Response|CardResource|Application|ResponseFactory
     {
         if ($serviceLimit = $this->cardService->cardRepository->getById($id)) {

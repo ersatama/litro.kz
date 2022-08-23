@@ -21,6 +21,11 @@ class ServicePriceController extends Controller
         $this->servicePriceService  =   $servicePriceService;
     }
 
+    /**
+     * Получить список - ServicePrice
+     *
+     * @group ServicePrice - СервисЦена
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class ServicePriceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - ServicePrice
+     *
+     * @group ServicePrice - СервисЦена
+     */
     public function getById($id): ServicePriceResource|Response|Application|ResponseFactory
     {
         if ($servicePrice = $this->servicePriceService->servicePriceRepository->getById($id)) {

@@ -21,6 +21,11 @@ class CarController extends Controller
         $this->carService   =   $carService;
     }
 
+    /**
+     * Получить список - Car
+     *
+     * @group Car - Автомобиль
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class CarController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через OrderCardID - Car
+     *
+     * @group Car - Автомобиль
+     */
     public function getByOrderCardId($orderCardId): Response|Application|ResponseFactory
     {
         return response([
@@ -37,6 +47,11 @@ class CarController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - Car
+     *
+     * @group Car - Автомобиль
+     */
     public function getById($id): CarResource|Response|Application|ResponseFactory
     {
         if ($carModel = $this->carService->carRepository->getById($id)) {

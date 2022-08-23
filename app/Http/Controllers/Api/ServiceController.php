@@ -21,6 +21,11 @@ class ServiceController extends Controller
         $this->serviceService   =   $serviceService;
     }
 
+    /**
+     * Получить список - Service
+     *
+     * @group Service - Сервис
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class ServiceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - Service
+     *
+     * @group Service - Сервис
+     */
     public function getById($id): Response|ServiceResource|Application|ResponseFactory
     {
         if ($service = $this->serviceService->serviceRepository->getById($id)) {

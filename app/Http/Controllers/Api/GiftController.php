@@ -21,6 +21,11 @@ class GiftController extends Controller
         $this->giftService  =   $giftService;
     }
 
+    /**
+     * Получить список - Gift
+     *
+     * @group Gift - Подарок
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class GiftController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через UserID - Gift
+     *
+     * @group Gift - Подарок
+     */
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -39,6 +49,11 @@ class GiftController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через CardID - Gift
+     *
+     * @group Gift - Подарок
+     */
     public function getByCardId($cardId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -49,6 +64,11 @@ class GiftController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - Gift
+     *
+     * @group Gift - Подарок
+     */
     public function getById($id): Response|GiftResource|Application|ResponseFactory
     {
         if ($gift = $this->giftService->giftRepository->getById($id)) {

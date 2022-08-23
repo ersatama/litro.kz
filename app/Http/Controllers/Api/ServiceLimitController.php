@@ -21,6 +21,11 @@ class ServiceLimitController extends Controller
         $this->serviceLimitService  =   $serviceLimitService;
     }
 
+    /**
+     * Получить список - ServiceLimit
+     *
+     * @group ServiceLimit - СервисЛимит
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class ServiceLimitController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - ServiceLimit
+     *
+     * @group ServiceLimit - СервисЛимит
+     */
     public function getById($id): ServiceLimitResource|Response|Application|ResponseFactory
     {
         if ($serviceLimit = $this->serviceLimitService->serviceLimitRepository->getById($id)) {

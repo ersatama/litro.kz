@@ -19,6 +19,11 @@ class AutoPartTypeController extends Controller
         $this->autoPartTypeService  =   $autoPartTypeService;
     }
 
+    /**
+     * Получить список - AutoPartType
+     *
+     * @group AutoPartType - АвтомобильЗапчастиТип
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

@@ -19,6 +19,11 @@ class RegionController extends Controller
         $this->regionService    =   $regionService;
     }
 
+    /**
+     * Получить список - Region
+     *
+     * @group Region - Регион
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

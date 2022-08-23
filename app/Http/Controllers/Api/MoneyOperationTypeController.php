@@ -21,6 +21,11 @@ class MoneyOperationTypeController extends Controller
         $this->moneyOperationTypeService    =   $moneyOperationTypeService;
     }
 
+    /**
+     * Получить список - MoneyOperationType
+     *
+     * @group MoneyOperationType - ДеньгиОперацияТип
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class MoneyOperationTypeController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - MoneyOperationType
+     *
+     * @group MoneyOperationType - ДеньгиОперацияТип
+     */
     public function getById($id): Response|MoneyOperationTypeResource|Application|ResponseFactory
     {
         if ($moneyOperationType = $this->moneyOperationTypeService->moneyOperationTypeRepository->getById($id)) {

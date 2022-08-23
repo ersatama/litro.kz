@@ -21,6 +21,11 @@ class EcoServiceController extends Controller
         $this->ecoServiceService    =   $ecoServiceService;
     }
 
+    /**
+     * Получить список - EcoService
+     *
+     * @group EcoService - ЭкоСервис
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
@@ -29,6 +34,11 @@ class EcoServiceController extends Controller
         ],200);
     }
 
+    /**
+     * Получить данные через ID - EcoService
+     *
+     * @group EcoService - ЭкоСервис
+     */
     public function getById($id): Response|ResponseFactory|Application|EcoServiceResource
     {
         if ($ecoService = $this->ecoServiceService->ecoServiceRepository->getById($id)) {

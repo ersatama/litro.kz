@@ -19,6 +19,11 @@ class AutoPartParamController extends Controller
         $this->autoPartParamService =   $autoPartParamService;
     }
 
+    /**
+     * Получить список - AutoPartParam
+     *
+     * @group AutoPartParam - АвтомобильЗапчастиПараметры
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([

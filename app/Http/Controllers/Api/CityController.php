@@ -19,6 +19,11 @@ class CityController extends Controller
         $this->cityService  =   $cityService;
     }
 
+    /**
+     * Получить список - City
+     *
+     * @group City - Город
+     */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
