@@ -249,6 +249,51 @@
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-car-getById--id-">
                         <a href="#endpoints-GETapi-car-getById--id-">GET api/car/getById/{id}</a>
                     </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-code-create">
+                        <a href="#endpoints-POSTapi-code-create">POST api/code/create</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-code-get--skip---take-">
+                        <a href="#endpoints-GETapi-code-get--skip---take-">GET api/code/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-code-getByPhone--phone-">
+                        <a href="#endpoints-GETapi-code-getByPhone--phone-">GET api/code/getByPhone/{phone}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-code-getByEmail--email-">
+                        <a href="#endpoints-GETapi-code-getByEmail--email-">GET api/code/getByEmail/{email}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-code-getById--id-">
+                        <a href="#endpoints-GETapi-code-getById--id-">GET api/code/getById/{id}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-code-update">
+                        <a href="#endpoints-POSTapi-code-update">POST api/code/update</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-driver-get--skip---take-">
+                        <a href="#endpoints-GETapi-driver-get--skip---take-">GET api/driver/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-driver-getById--id-">
+                        <a href="#endpoints-GETapi-driver-getById--id-">GET api/driver/getById/{id}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-gift-get--skip---take-">
+                        <a href="#endpoints-GETapi-gift-get--skip---take-">GET api/gift/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-gift-getByUserId--userId---skip---take-">
+                        <a href="#endpoints-GETapi-gift-getByUserId--userId---skip---take-">GET api/gift/getByUserId/{userId}/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-gift-getByCardId--cardId---skip---take-">
+                        <a href="#endpoints-GETapi-gift-getByCardId--cardId---skip---take-">GET api/gift/getByCardId/{cardId}/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-gift-getById--id-">
+                        <a href="#endpoints-GETapi-gift-getById--id-">GET api/gift/getById/{id}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-ecoService-get--skip---take-">
+                        <a href="#endpoints-GETapi-ecoService-get--skip---take-">GET api/ecoService/get/{skip}/{take}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-ecoService-getById--id-">
+                        <a href="#endpoints-GETapi-ecoService-getById--id-">GET api/ecoService/getById/{id}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-driver-getByOrderCardId--orderCardId-">
+                        <a href="#endpoints-GETapi-driver-getByOrderCardId--orderCardId-">GET api/driver/getByOrderCardId/{orderCardId}</a>
+                    </li>
                                                     </ul>
                             </ul>
         
@@ -261,7 +306,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 22 2022</li>
+        <li>Last updated: August 23 2022</li>
     </ul>
 </div>
 
@@ -303,14 +348,14 @@
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/serviceType/getById/laboriosam" \
+    --get "http://localhost:8000/api/serviceType/getById/est" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/serviceType/getById/laboriosam"
+    "http://localhost:8000/api/serviceType/getById/est"
 );
 
 const headers = {
@@ -327,7 +372,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/serviceType/getById/laboriosam',
+    'http://localhost:8000/api/serviceType/getById/est',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -343,7 +388,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/serviceType/getById/laboriosam'
+url = 'http://localhost:8000/api/serviceType/getById/est'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -418,7 +463,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-serviceType-getById--id-"
-               value="laboriosam"
+               value="est"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -438,14 +483,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/service/getById/tempora" \
+    --get "http://localhost:8000/api/service/getById/molestiae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/service/getById/tempora"
+    "http://localhost:8000/api/service/getById/molestiae"
 );
 
 const headers = {
@@ -462,7 +507,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/service/getById/tempora',
+    'http://localhost:8000/api/service/getById/molestiae',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -478,7 +523,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/service/getById/tempora'
+url = 'http://localhost:8000/api/service/getById/molestiae'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -553,7 +598,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-service-getById--id-"
-               value="tempora"
+               value="molestiae"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -573,14 +618,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModel/getById/quo" \
+    --get "http://localhost:8000/api/carModel/getById/laborum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModel/getById/quo"
+    "http://localhost:8000/api/carModel/getById/laborum"
 );
 
 const headers = {
@@ -597,7 +642,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carModel/getById/quo',
+    'http://localhost:8000/api/carModel/getById/laborum',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -613,7 +658,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carModel/getById/quo'
+url = 'http://localhost:8000/api/carModel/getById/laborum'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -688,7 +733,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-carModel-getById--id-"
-               value="quo"
+               value="laborum"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -708,14 +753,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/news/getById/aperiam" \
+    --get "http://localhost:8000/api/news/getById/dolores" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/news/getById/aperiam"
+    "http://localhost:8000/api/news/getById/dolores"
 );
 
 const headers = {
@@ -732,7 +777,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/news/getById/aperiam',
+    'http://localhost:8000/api/news/getById/dolores',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -748,7 +793,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/news/getById/aperiam'
+url = 'http://localhost:8000/api/news/getById/dolores'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -823,7 +868,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-news-getById--id-"
-               value="aperiam"
+               value="dolores"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -843,14 +888,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/servicePrice/getById/alias" \
+    --get "http://localhost:8000/api/servicePrice/getById/sint" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/servicePrice/getById/alias"
+    "http://localhost:8000/api/servicePrice/getById/sint"
 );
 
 const headers = {
@@ -867,7 +912,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/servicePrice/getById/alias',
+    'http://localhost:8000/api/servicePrice/getById/sint',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -883,7 +928,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/servicePrice/getById/alias'
+url = 'http://localhost:8000/api/servicePrice/getById/sint'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -958,7 +1003,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-servicePrice-getById--id-"
-               value="alias"
+               value="sint"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -978,14 +1023,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/servicePrice/get/rerum/et" \
+    --get "http://localhost:8000/api/servicePrice/get/quas/incidunt" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/servicePrice/get/rerum/et"
+    "http://localhost:8000/api/servicePrice/get/quas/incidunt"
 );
 
 const headers = {
@@ -1002,7 +1047,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/servicePrice/get/rerum/et',
+    'http://localhost:8000/api/servicePrice/get/quas/incidunt',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1018,7 +1063,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/servicePrice/get/rerum/et'
+url = 'http://localhost:8000/api/servicePrice/get/quas/incidunt'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1094,7 +1139,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-servicePrice-get--skip---take-"
-               value="rerum"
+               value="quas"
                data-component="url" hidden>
     <br>
 
@@ -1104,7 +1149,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-servicePrice-get--skip---take-"
-               value="et"
+               value="incidunt"
                data-component="url" hidden>
     <br>
 
@@ -1124,14 +1169,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/serviceType/get/iusto/quos" \
+    --get "http://localhost:8000/api/serviceType/get/praesentium/modi" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/serviceType/get/iusto/quos"
+    "http://localhost:8000/api/serviceType/get/praesentium/modi"
 );
 
 const headers = {
@@ -1148,7 +1193,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/serviceType/get/iusto/quos',
+    'http://localhost:8000/api/serviceType/get/praesentium/modi',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1164,7 +1209,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/serviceType/get/iusto/quos'
+url = 'http://localhost:8000/api/serviceType/get/praesentium/modi'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1240,7 +1285,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-serviceType-get--skip---take-"
-               value="iusto"
+               value="praesentium"
                data-component="url" hidden>
     <br>
 
@@ -1250,7 +1295,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-serviceType-get--skip---take-"
-               value="quos"
+               value="modi"
                data-component="url" hidden>
     <br>
 
@@ -1270,14 +1315,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/service/get/nihil/tenetur" \
+    --get "http://localhost:8000/api/service/get/fuga/aut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/service/get/nihil/tenetur"
+    "http://localhost:8000/api/service/get/fuga/aut"
 );
 
 const headers = {
@@ -1294,7 +1339,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/service/get/nihil/tenetur',
+    'http://localhost:8000/api/service/get/fuga/aut',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1310,7 +1355,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/service/get/nihil/tenetur'
+url = 'http://localhost:8000/api/service/get/fuga/aut'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1386,7 +1431,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-service-get--skip---take-"
-               value="nihil"
+               value="fuga"
                data-component="url" hidden>
     <br>
 
@@ -1396,7 +1441,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-service-get--skip---take-"
-               value="tenetur"
+               value="aut"
                data-component="url" hidden>
     <br>
 
@@ -1416,14 +1461,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardCategory/get/quaerat/neque" \
+    --get "http://localhost:8000/api/cardCategory/get/sed/qui" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardCategory/get/quaerat/neque"
+    "http://localhost:8000/api/cardCategory/get/sed/qui"
 );
 
 const headers = {
@@ -1440,7 +1485,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardCategory/get/quaerat/neque',
+    'http://localhost:8000/api/cardCategory/get/sed/qui',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1456,7 +1501,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardCategory/get/quaerat/neque'
+url = 'http://localhost:8000/api/cardCategory/get/sed/qui'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1532,7 +1577,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cardCategory-get--skip---take-"
-               value="quaerat"
+               value="sed"
                data-component="url" hidden>
     <br>
 
@@ -1542,7 +1587,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cardCategory-get--skip---take-"
-               value="neque"
+               value="qui"
                data-component="url" hidden>
     <br>
 
@@ -1562,14 +1607,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/region/get/ut/repellat" \
+    --get "http://localhost:8000/api/region/get/nemo/sit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/region/get/ut/repellat"
+    "http://localhost:8000/api/region/get/nemo/sit"
 );
 
 const headers = {
@@ -1586,7 +1631,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/region/get/ut/repellat',
+    'http://localhost:8000/api/region/get/nemo/sit',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1602,7 +1647,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/region/get/ut/repellat'
+url = 'http://localhost:8000/api/region/get/nemo/sit'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1678,7 +1723,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-region-get--skip---take-"
-               value="ut"
+               value="nemo"
                data-component="url" hidden>
     <br>
 
@@ -1688,7 +1733,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-region-get--skip---take-"
-               value="repellat"
+               value="sit"
                data-component="url" hidden>
     <br>
 
@@ -1708,14 +1753,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/country/get/amet/porro" \
+    --get "http://localhost:8000/api/country/get/sit/ullam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/country/get/amet/porro"
+    "http://localhost:8000/api/country/get/sit/ullam"
 );
 
 const headers = {
@@ -1732,7 +1777,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/country/get/amet/porro',
+    'http://localhost:8000/api/country/get/sit/ullam',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1748,7 +1793,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/country/get/amet/porro'
+url = 'http://localhost:8000/api/country/get/sit/ullam'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1824,7 +1869,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-country-get--skip---take-"
-               value="amet"
+               value="sit"
                data-component="url" hidden>
     <br>
 
@@ -1834,7 +1879,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-country-get--skip---take-"
-               value="porro"
+               value="ullam"
                data-component="url" hidden>
     <br>
 
@@ -1854,14 +1899,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/currency/get/et/in" \
+    --get "http://localhost:8000/api/currency/get/aut/eaque" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/currency/get/et/in"
+    "http://localhost:8000/api/currency/get/aut/eaque"
 );
 
 const headers = {
@@ -1878,7 +1923,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/currency/get/et/in',
+    'http://localhost:8000/api/currency/get/aut/eaque',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1894,7 +1939,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/currency/get/et/in'
+url = 'http://localhost:8000/api/currency/get/aut/eaque'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1970,7 +2015,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-currency-get--skip---take-"
-               value="et"
+               value="aut"
                data-component="url" hidden>
     <br>
 
@@ -1980,7 +2025,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-currency-get--skip---take-"
-               value="in"
+               value="eaque"
                data-component="url" hidden>
     <br>
 
@@ -2000,14 +2045,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/city/get/atque/error" \
+    --get "http://localhost:8000/api/city/get/enim/assumenda" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/city/get/atque/error"
+    "http://localhost:8000/api/city/get/enim/assumenda"
 );
 
 const headers = {
@@ -2024,7 +2069,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/city/get/atque/error',
+    'http://localhost:8000/api/city/get/enim/assumenda',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2040,7 +2085,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/city/get/atque/error'
+url = 'http://localhost:8000/api/city/get/enim/assumenda'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2116,7 +2161,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-city-get--skip---take-"
-               value="atque"
+               value="enim"
                data-component="url" hidden>
     <br>
 
@@ -2126,7 +2171,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-city-get--skip---take-"
-               value="error"
+               value="assumenda"
                data-component="url" hidden>
     <br>
 
@@ -2146,14 +2191,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModel/get/vitae/eum" \
+    --get "http://localhost:8000/api/carModel/get/exercitationem/expedita" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModel/get/vitae/eum"
+    "http://localhost:8000/api/carModel/get/exercitationem/expedita"
 );
 
 const headers = {
@@ -2170,7 +2215,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carModel/get/vitae/eum',
+    'http://localhost:8000/api/carModel/get/exercitationem/expedita',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2186,7 +2231,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carModel/get/vitae/eum'
+url = 'http://localhost:8000/api/carModel/get/exercitationem/expedita'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2262,7 +2307,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carModel-get--skip---take-"
-               value="vitae"
+               value="exercitationem"
                data-component="url" hidden>
     <br>
 
@@ -2272,7 +2317,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carModel-get--skip---take-"
-               value="eum"
+               value="expedita"
                data-component="url" hidden>
     <br>
 
@@ -2292,14 +2337,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carBrand/get/non/in" \
+    --get "http://localhost:8000/api/carBrand/get/recusandae/molestias" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carBrand/get/non/in"
+    "http://localhost:8000/api/carBrand/get/recusandae/molestias"
 );
 
 const headers = {
@@ -2316,7 +2361,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carBrand/get/non/in',
+    'http://localhost:8000/api/carBrand/get/recusandae/molestias',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2332,7 +2377,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carBrand/get/non/in'
+url = 'http://localhost:8000/api/carBrand/get/recusandae/molestias'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2408,7 +2453,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carBrand-get--skip---take-"
-               value="non"
+               value="recusandae"
                data-component="url" hidden>
     <br>
 
@@ -2418,7 +2463,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carBrand-get--skip---take-"
-               value="in"
+               value="molestias"
                data-component="url" hidden>
     <br>
 
@@ -2438,14 +2483,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carCategory/get/est/temporibus" \
+    --get "http://localhost:8000/api/carCategory/get/aut/minus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carCategory/get/est/temporibus"
+    "http://localhost:8000/api/carCategory/get/aut/minus"
 );
 
 const headers = {
@@ -2462,7 +2507,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carCategory/get/est/temporibus',
+    'http://localhost:8000/api/carCategory/get/aut/minus',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2478,7 +2523,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carCategory/get/est/temporibus'
+url = 'http://localhost:8000/api/carCategory/get/aut/minus'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2554,7 +2599,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carCategory-get--skip---take-"
-               value="est"
+               value="aut"
                data-component="url" hidden>
     <br>
 
@@ -2564,7 +2609,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carCategory-get--skip---take-"
-               value="temporibus"
+               value="minus"
                data-component="url" hidden>
     <br>
 
@@ -2584,14 +2629,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartParamOption/get/cupiditate/animi" \
+    --get "http://localhost:8000/api/autoPartParamOption/get/sequi/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartParamOption/get/cupiditate/animi"
+    "http://localhost:8000/api/autoPartParamOption/get/sequi/et"
 );
 
 const headers = {
@@ -2608,7 +2653,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPartParamOption/get/cupiditate/animi',
+    'http://localhost:8000/api/autoPartParamOption/get/sequi/et',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2624,7 +2669,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPartParamOption/get/cupiditate/animi'
+url = 'http://localhost:8000/api/autoPartParamOption/get/sequi/et'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2700,7 +2745,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPartParamOption-get--skip---take-"
-               value="cupiditate"
+               value="sequi"
                data-component="url" hidden>
     <br>
 
@@ -2710,7 +2755,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPartParamOption-get--skip---take-"
-               value="animi"
+               value="et"
                data-component="url" hidden>
     <br>
 
@@ -2730,14 +2775,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartType/get/delectus/qui" \
+    --get "http://localhost:8000/api/autoPartType/get/molestias/voluptatem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartType/get/delectus/qui"
+    "http://localhost:8000/api/autoPartType/get/molestias/voluptatem"
 );
 
 const headers = {
@@ -2754,7 +2799,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPartType/get/delectus/qui',
+    'http://localhost:8000/api/autoPartType/get/molestias/voluptatem',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2770,7 +2815,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPartType/get/delectus/qui'
+url = 'http://localhost:8000/api/autoPartType/get/molestias/voluptatem'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2846,7 +2891,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPartType-get--skip---take-"
-               value="delectus"
+               value="molestias"
                data-component="url" hidden>
     <br>
 
@@ -2856,7 +2901,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPartType-get--skip---take-"
-               value="qui"
+               value="voluptatem"
                data-component="url" hidden>
     <br>
 
@@ -2876,14 +2921,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartParam/get/quis/enim" \
+    --get "http://localhost:8000/api/autoPartParam/get/ex/itaque" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartParam/get/quis/enim"
+    "http://localhost:8000/api/autoPartParam/get/ex/itaque"
 );
 
 const headers = {
@@ -2900,7 +2945,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPartParam/get/quis/enim',
+    'http://localhost:8000/api/autoPartParam/get/ex/itaque',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -2916,7 +2961,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPartParam/get/quis/enim'
+url = 'http://localhost:8000/api/autoPartParam/get/ex/itaque'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -2992,7 +3037,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPartParam-get--skip---take-"
-               value="quis"
+               value="ex"
                data-component="url" hidden>
     <br>
 
@@ -3002,7 +3047,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPartParam-get--skip---take-"
-               value="enim"
+               value="itaque"
                data-component="url" hidden>
     <br>
 
@@ -3022,14 +3067,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPartCategory/get/sunt/laborum" \
+    --get "http://localhost:8000/api/autoPartCategory/get/et/nihil" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPartCategory/get/sunt/laborum"
+    "http://localhost:8000/api/autoPartCategory/get/et/nihil"
 );
 
 const headers = {
@@ -3046,7 +3091,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPartCategory/get/sunt/laborum',
+    'http://localhost:8000/api/autoPartCategory/get/et/nihil',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3062,7 +3107,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPartCategory/get/sunt/laborum'
+url = 'http://localhost:8000/api/autoPartCategory/get/et/nihil'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3138,7 +3183,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPartCategory-get--skip---take-"
-               value="sunt"
+               value="et"
                data-component="url" hidden>
     <br>
 
@@ -3148,7 +3193,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPartCategory-get--skip---take-"
-               value="laborum"
+               value="nihil"
                data-component="url" hidden>
     <br>
 
@@ -3168,14 +3213,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/news/get/rerum/quia" \
+    --get "http://localhost:8000/api/news/get/expedita/incidunt" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/news/get/rerum/quia"
+    "http://localhost:8000/api/news/get/expedita/incidunt"
 );
 
 const headers = {
@@ -3192,7 +3237,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/news/get/rerum/quia',
+    'http://localhost:8000/api/news/get/expedita/incidunt',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3208,7 +3253,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/news/get/rerum/quia'
+url = 'http://localhost:8000/api/news/get/expedita/incidunt'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3284,7 +3329,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-news-get--skip---take-"
-               value="rerum"
+               value="expedita"
                data-component="url" hidden>
     <br>
 
@@ -3294,7 +3339,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-news-get--skip---take-"
-               value="quia"
+               value="incidunt"
                data-component="url" hidden>
     <br>
 
@@ -3314,14 +3359,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/newsCategory/get/aut/sunt" \
+    --get "http://localhost:8000/api/newsCategory/get/iure/ab" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/newsCategory/get/aut/sunt"
+    "http://localhost:8000/api/newsCategory/get/iure/ab"
 );
 
 const headers = {
@@ -3338,7 +3383,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/newsCategory/get/aut/sunt',
+    'http://localhost:8000/api/newsCategory/get/iure/ab',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3354,7 +3399,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/newsCategory/get/aut/sunt'
+url = 'http://localhost:8000/api/newsCategory/get/iure/ab'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3430,7 +3475,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-newsCategory-get--skip---take-"
-               value="aut"
+               value="iure"
                data-component="url" hidden>
     <br>
 
@@ -3440,7 +3485,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-newsCategory-get--skip---take-"
-               value="sunt"
+               value="ab"
                data-component="url" hidden>
     <br>
 
@@ -3460,14 +3505,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/moneyOperation/get/et/dolor" \
+    --get "http://localhost:8000/api/moneyOperation/get/autem/unde" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/moneyOperation/get/et/dolor"
+    "http://localhost:8000/api/moneyOperation/get/autem/unde"
 );
 
 const headers = {
@@ -3484,7 +3529,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/moneyOperation/get/et/dolor',
+    'http://localhost:8000/api/moneyOperation/get/autem/unde',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3500,7 +3545,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/moneyOperation/get/et/dolor'
+url = 'http://localhost:8000/api/moneyOperation/get/autem/unde'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3576,7 +3621,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-moneyOperation-get--skip---take-"
-               value="et"
+               value="autem"
                data-component="url" hidden>
     <br>
 
@@ -3586,7 +3631,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-moneyOperation-get--skip---take-"
-               value="dolor"
+               value="unde"
                data-component="url" hidden>
     <br>
 
@@ -3606,14 +3651,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/moneyOperation/getById/exercitationem" \
+    --get "http://localhost:8000/api/moneyOperation/getById/ea" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/moneyOperation/getById/exercitationem"
+    "http://localhost:8000/api/moneyOperation/getById/ea"
 );
 
 const headers = {
@@ -3630,7 +3675,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/moneyOperation/getById/exercitationem',
+    'http://localhost:8000/api/moneyOperation/getById/ea',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3646,7 +3691,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/moneyOperation/getById/exercitationem'
+url = 'http://localhost:8000/api/moneyOperation/getById/ea'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3721,7 +3766,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-moneyOperation-getById--id-"
-               value="exercitationem"
+               value="ea"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -3741,14 +3786,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/moneyOperationType/get/dolor/beatae" \
+    --get "http://localhost:8000/api/moneyOperationType/get/velit/in" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/moneyOperationType/get/dolor/beatae"
+    "http://localhost:8000/api/moneyOperationType/get/velit/in"
 );
 
 const headers = {
@@ -3765,7 +3810,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/moneyOperationType/get/dolor/beatae',
+    'http://localhost:8000/api/moneyOperationType/get/velit/in',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3781,7 +3826,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/moneyOperationType/get/dolor/beatae'
+url = 'http://localhost:8000/api/moneyOperationType/get/velit/in'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -3857,7 +3902,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-moneyOperationType-get--skip---take-"
-               value="dolor"
+               value="velit"
                data-component="url" hidden>
     <br>
 
@@ -3867,7 +3912,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-moneyOperationType-get--skip---take-"
-               value="beatae"
+               value="in"
                data-component="url" hidden>
     <br>
 
@@ -3887,14 +3932,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/moneyOperationType/getById/ad" \
+    --get "http://localhost:8000/api/moneyOperationType/getById/id" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/moneyOperationType/getById/ad"
+    "http://localhost:8000/api/moneyOperationType/getById/id"
 );
 
 const headers = {
@@ -3911,7 +3956,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/moneyOperationType/getById/ad',
+    'http://localhost:8000/api/moneyOperationType/getById/id',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -3927,7 +3972,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/moneyOperationType/getById/ad'
+url = 'http://localhost:8000/api/moneyOperationType/getById/id'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4002,7 +4047,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-moneyOperationType-getById--id-"
-               value="ad"
+               value="id"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -4022,14 +4067,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/serviceLimit/get/reprehenderit/saepe" \
+    --get "http://localhost:8000/api/serviceLimit/get/enim/earum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/serviceLimit/get/reprehenderit/saepe"
+    "http://localhost:8000/api/serviceLimit/get/enim/earum"
 );
 
 const headers = {
@@ -4046,7 +4091,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/serviceLimit/get/reprehenderit/saepe',
+    'http://localhost:8000/api/serviceLimit/get/enim/earum',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -4062,7 +4107,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/serviceLimit/get/reprehenderit/saepe'
+url = 'http://localhost:8000/api/serviceLimit/get/enim/earum'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4138,7 +4183,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-serviceLimit-get--skip---take-"
-               value="reprehenderit"
+               value="enim"
                data-component="url" hidden>
     <br>
 
@@ -4148,7 +4193,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-serviceLimit-get--skip---take-"
-               value="saepe"
+               value="earum"
                data-component="url" hidden>
     <br>
 
@@ -4168,14 +4213,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/serviceLimit/getById/ea" \
+    --get "http://localhost:8000/api/serviceLimit/getById/sequi" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/serviceLimit/getById/ea"
+    "http://localhost:8000/api/serviceLimit/getById/sequi"
 );
 
 const headers = {
@@ -4192,7 +4237,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/serviceLimit/getById/ea',
+    'http://localhost:8000/api/serviceLimit/getById/sequi',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -4208,7 +4253,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/serviceLimit/getById/ea'
+url = 'http://localhost:8000/api/serviceLimit/getById/sequi'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4283,7 +4328,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-serviceLimit-getById--id-"
-               value="ea"
+               value="sequi"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -4303,14 +4348,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/category/get/quia/commodi" \
+    --get "http://localhost:8000/api/category/get/laudantium/ducimus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/category/get/quia/commodi"
+    "http://localhost:8000/api/category/get/laudantium/ducimus"
 );
 
 const headers = {
@@ -4327,7 +4372,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/category/get/quia/commodi',
+    'http://localhost:8000/api/category/get/laudantium/ducimus',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -4343,7 +4388,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/category/get/quia/commodi'
+url = 'http://localhost:8000/api/category/get/laudantium/ducimus'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4419,7 +4464,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-category-get--skip---take-"
-               value="quia"
+               value="laudantium"
                data-component="url" hidden>
     <br>
 
@@ -4429,7 +4474,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-category-get--skip---take-"
-               value="commodi"
+               value="ducimus"
                data-component="url" hidden>
     <br>
 
@@ -4449,14 +4494,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/category/getById/veritatis" \
+    --get "http://localhost:8000/api/category/getById/velit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/category/getById/veritatis"
+    "http://localhost:8000/api/category/getById/velit"
 );
 
 const headers = {
@@ -4473,7 +4518,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/category/getById/veritatis',
+    'http://localhost:8000/api/category/getById/velit',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -4489,7 +4534,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/category/getById/veritatis'
+url = 'http://localhost:8000/api/category/getById/velit'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4564,7 +4609,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-category-getById--id-"
-               value="veritatis"
+               value="velit"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -4584,14 +4629,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPart/get/distinctio/asperiores" \
+    --get "http://localhost:8000/api/autoPart/get/quisquam/cum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPart/get/distinctio/asperiores"
+    "http://localhost:8000/api/autoPart/get/quisquam/cum"
 );
 
 const headers = {
@@ -4608,7 +4653,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPart/get/distinctio/asperiores',
+    'http://localhost:8000/api/autoPart/get/quisquam/cum',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -4624,7 +4669,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPart/get/distinctio/asperiores'
+url = 'http://localhost:8000/api/autoPart/get/quisquam/cum'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4700,7 +4745,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-autoPart-get--skip---take-"
-               value="distinctio"
+               value="quisquam"
                data-component="url" hidden>
     <br>
 
@@ -4710,7 +4755,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-autoPart-get--skip---take-"
-               value="asperiores"
+               value="cum"
                data-component="url" hidden>
     <br>
 
@@ -4730,14 +4775,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/autoPart/getById/ut" \
+    --get "http://localhost:8000/api/autoPart/getById/fugiat" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/autoPart/getById/ut"
+    "http://localhost:8000/api/autoPart/getById/fugiat"
 );
 
 const headers = {
@@ -4754,7 +4799,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/autoPart/getById/ut',
+    'http://localhost:8000/api/autoPart/getById/fugiat',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -4770,7 +4815,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/autoPart/getById/ut'
+url = 'http://localhost:8000/api/autoPart/getById/fugiat'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4845,7 +4890,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-autoPart-getById--id-"
-               value="ut"
+               value="fugiat"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -4865,14 +4910,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/image/get/dolores/earum" \
+    --get "http://localhost:8000/api/image/get/quia/pariatur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/image/get/dolores/earum"
+    "http://localhost:8000/api/image/get/quia/pariatur"
 );
 
 const headers = {
@@ -4889,7 +4934,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/image/get/dolores/earum',
+    'http://localhost:8000/api/image/get/quia/pariatur',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -4905,7 +4950,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/image/get/dolores/earum'
+url = 'http://localhost:8000/api/image/get/quia/pariatur'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -4981,7 +5026,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-image-get--skip---take-"
-               value="dolores"
+               value="quia"
                data-component="url" hidden>
     <br>
 
@@ -4991,7 +5036,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-image-get--skip---take-"
-               value="earum"
+               value="pariatur"
                data-component="url" hidden>
     <br>
 
@@ -5011,14 +5056,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/image/getByUserId/corporis/deserunt/ratione" \
+    --get "http://localhost:8000/api/image/getByUserId/impedit/neque/similique" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/image/getByUserId/corporis/deserunt/ratione"
+    "http://localhost:8000/api/image/getByUserId/impedit/neque/similique"
 );
 
 const headers = {
@@ -5035,7 +5080,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/image/getByUserId/corporis/deserunt/ratione',
+    'http://localhost:8000/api/image/getByUserId/impedit/neque/similique',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -5051,7 +5096,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/image/getByUserId/corporis/deserunt/ratione'
+url = 'http://localhost:8000/api/image/getByUserId/impedit/neque/similique'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -5127,7 +5172,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="userId"
                data-endpoint="GETapi-image-getByUserId--userId---skip---take-"
-               value="corporis"
+               value="impedit"
                data-component="url" hidden>
     <br>
 
@@ -5137,7 +5182,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-image-getByUserId--userId---skip---take-"
-               value="deserunt"
+               value="neque"
                data-component="url" hidden>
     <br>
 
@@ -5147,7 +5192,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-image-getByUserId--userId---skip---take-"
-               value="ratione"
+               value="similique"
                data-component="url" hidden>
     <br>
 
@@ -5167,14 +5212,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/image/getById/rerum" \
+    --get "http://localhost:8000/api/image/getById/quo" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/image/getById/rerum"
+    "http://localhost:8000/api/image/getById/quo"
 );
 
 const headers = {
@@ -5191,7 +5236,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/image/getById/rerum',
+    'http://localhost:8000/api/image/getById/quo',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -5207,7 +5252,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/image/getById/rerum'
+url = 'http://localhost:8000/api/image/getById/quo'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -5282,7 +5327,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-image-getById--id-"
-               value="rerum"
+               value="quo"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -5302,14 +5347,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/card/get/laudantium/qui" \
+    --get "http://localhost:8000/api/card/get/reiciendis/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/card/get/laudantium/qui"
+    "http://localhost:8000/api/card/get/reiciendis/ut"
 );
 
 const headers = {
@@ -5326,7 +5371,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/card/get/laudantium/qui',
+    'http://localhost:8000/api/card/get/reiciendis/ut',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -5342,7 +5387,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/card/get/laudantium/qui'
+url = 'http://localhost:8000/api/card/get/reiciendis/ut'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -5418,7 +5463,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-card-get--skip---take-"
-               value="laudantium"
+               value="reiciendis"
                data-component="url" hidden>
     <br>
 
@@ -5428,7 +5473,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-card-get--skip---take-"
-               value="qui"
+               value="ut"
                data-component="url" hidden>
     <br>
 
@@ -5448,14 +5493,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/card/getById/rerum" \
+    --get "http://localhost:8000/api/card/getById/delectus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/card/getById/rerum"
+    "http://localhost:8000/api/card/getById/delectus"
 );
 
 const headers = {
@@ -5472,7 +5517,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/card/getById/rerum',
+    'http://localhost:8000/api/card/getById/delectus',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -5488,7 +5533,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/card/getById/rerum'
+url = 'http://localhost:8000/api/card/getById/delectus'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -5563,7 +5608,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-card-getById--id-"
-               value="rerum"
+               value="delectus"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -5583,14 +5628,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardService/get/et/magnam" \
+    --get "http://localhost:8000/api/cardService/get/sed/quae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardService/get/et/magnam"
+    "http://localhost:8000/api/cardService/get/sed/quae"
 );
 
 const headers = {
@@ -5607,7 +5652,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardService/get/et/magnam',
+    'http://localhost:8000/api/cardService/get/sed/quae',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -5623,7 +5668,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardService/get/et/magnam'
+url = 'http://localhost:8000/api/cardService/get/sed/quae'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -5699,7 +5744,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cardService-get--skip---take-"
-               value="et"
+               value="sed"
                data-component="url" hidden>
     <br>
 
@@ -5709,7 +5754,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cardService-get--skip---take-"
-               value="magnam"
+               value="quae"
                data-component="url" hidden>
     <br>
 
@@ -5729,14 +5774,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardService/getByCardId/molestias/non/dolorem" \
+    --get "http://localhost:8000/api/cardService/getByCardId/et/ut/maxime" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardService/getByCardId/molestias/non/dolorem"
+    "http://localhost:8000/api/cardService/getByCardId/et/ut/maxime"
 );
 
 const headers = {
@@ -5753,7 +5798,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardService/getByCardId/molestias/non/dolorem',
+    'http://localhost:8000/api/cardService/getByCardId/et/ut/maxime',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -5769,7 +5814,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardService/getByCardId/molestias/non/dolorem'
+url = 'http://localhost:8000/api/cardService/getByCardId/et/ut/maxime'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -5845,7 +5890,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="cardId"
                data-endpoint="GETapi-cardService-getByCardId--cardId---skip---take-"
-               value="molestias"
+               value="et"
                data-component="url" hidden>
     <br>
 
@@ -5855,7 +5900,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cardService-getByCardId--cardId---skip---take-"
-               value="non"
+               value="ut"
                data-component="url" hidden>
     <br>
 
@@ -5865,7 +5910,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cardService-getByCardId--cardId---skip---take-"
-               value="dolorem"
+               value="maxime"
                data-component="url" hidden>
     <br>
 
@@ -5885,14 +5930,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardService/getById/veniam" \
+    --get "http://localhost:8000/api/cardService/getById/repellat" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardService/getById/veniam"
+    "http://localhost:8000/api/cardService/getById/repellat"
 );
 
 const headers = {
@@ -5909,7 +5954,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardService/getById/veniam',
+    'http://localhost:8000/api/cardService/getById/repellat',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -5925,7 +5970,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardService/getById/veniam'
+url = 'http://localhost:8000/api/cardService/getById/repellat'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -6000,7 +6045,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-cardService-getById--id-"
-               value="veniam"
+               value="repellat"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -6020,14 +6065,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardRange/get/in/dolorum" \
+    --get "http://localhost:8000/api/cardRange/get/eaque/tempore" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardRange/get/in/dolorum"
+    "http://localhost:8000/api/cardRange/get/eaque/tempore"
 );
 
 const headers = {
@@ -6044,7 +6089,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardRange/get/in/dolorum',
+    'http://localhost:8000/api/cardRange/get/eaque/tempore',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -6060,7 +6105,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardRange/get/in/dolorum'
+url = 'http://localhost:8000/api/cardRange/get/eaque/tempore'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -6136,7 +6181,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cardRange-get--skip---take-"
-               value="in"
+               value="eaque"
                data-component="url" hidden>
     <br>
 
@@ -6146,7 +6191,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cardRange-get--skip---take-"
-               value="dolorum"
+               value="tempore"
                data-component="url" hidden>
     <br>
 
@@ -6166,14 +6211,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardRange/getByCardId/pariatur/ab/consequatur" \
+    --get "http://localhost:8000/api/cardRange/getByCardId/dolorum/quos/odio" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardRange/getByCardId/pariatur/ab/consequatur"
+    "http://localhost:8000/api/cardRange/getByCardId/dolorum/quos/odio"
 );
 
 const headers = {
@@ -6190,7 +6235,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardRange/getByCardId/pariatur/ab/consequatur',
+    'http://localhost:8000/api/cardRange/getByCardId/dolorum/quos/odio',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -6206,7 +6251,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardRange/getByCardId/pariatur/ab/consequatur'
+url = 'http://localhost:8000/api/cardRange/getByCardId/dolorum/quos/odio'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -6282,7 +6327,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="cardId"
                data-endpoint="GETapi-cardRange-getByCardId--cardId---skip---take-"
-               value="pariatur"
+               value="dolorum"
                data-component="url" hidden>
     <br>
 
@@ -6292,7 +6337,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cardRange-getByCardId--cardId---skip---take-"
-               value="ab"
+               value="quos"
                data-component="url" hidden>
     <br>
 
@@ -6302,7 +6347,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cardRange-getByCardId--cardId---skip---take-"
-               value="consequatur"
+               value="odio"
                data-component="url" hidden>
     <br>
 
@@ -6322,14 +6367,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardRange/getByCityId/et/nihil/in" \
+    --get "http://localhost:8000/api/cardRange/getByCityId/asperiores/qui/illo" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardRange/getByCityId/et/nihil/in"
+    "http://localhost:8000/api/cardRange/getByCityId/asperiores/qui/illo"
 );
 
 const headers = {
@@ -6346,7 +6391,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardRange/getByCityId/et/nihil/in',
+    'http://localhost:8000/api/cardRange/getByCityId/asperiores/qui/illo',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -6362,7 +6407,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardRange/getByCityId/et/nihil/in'
+url = 'http://localhost:8000/api/cardRange/getByCityId/asperiores/qui/illo'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -6438,7 +6483,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="cityId"
                data-endpoint="GETapi-cardRange-getByCityId--cityId---skip---take-"
-               value="et"
+               value="asperiores"
                data-component="url" hidden>
     <br>
 
@@ -6448,7 +6493,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cardRange-getByCityId--cityId---skip---take-"
-               value="nihil"
+               value="qui"
                data-component="url" hidden>
     <br>
 
@@ -6458,7 +6503,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cardRange-getByCityId--cityId---skip---take-"
-               value="in"
+               value="illo"
                data-component="url" hidden>
     <br>
 
@@ -6478,14 +6523,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardRange/getById/ab" \
+    --get "http://localhost:8000/api/cardRange/getById/id" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardRange/getById/ab"
+    "http://localhost:8000/api/cardRange/getById/id"
 );
 
 const headers = {
@@ -6502,7 +6547,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardRange/getById/ab',
+    'http://localhost:8000/api/cardRange/getById/id',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -6518,7 +6563,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardRange/getById/ab'
+url = 'http://localhost:8000/api/cardRange/getById/id'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -6593,7 +6638,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-cardRange-getById--id-"
-               value="ab"
+               value="id"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -6613,14 +6658,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModelAveragePrice/get/non/sit" \
+    --get "http://localhost:8000/api/carModelAveragePrice/get/sunt/exercitationem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModelAveragePrice/get/non/sit"
+    "http://localhost:8000/api/carModelAveragePrice/get/sunt/exercitationem"
 );
 
 const headers = {
@@ -6637,7 +6682,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carModelAveragePrice/get/non/sit',
+    'http://localhost:8000/api/carModelAveragePrice/get/sunt/exercitationem',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -6653,7 +6698,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carModelAveragePrice/get/non/sit'
+url = 'http://localhost:8000/api/carModelAveragePrice/get/sunt/exercitationem'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -6729,7 +6774,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carModelAveragePrice-get--skip---take-"
-               value="non"
+               value="sunt"
                data-component="url" hidden>
     <br>
 
@@ -6739,7 +6784,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carModelAveragePrice-get--skip---take-"
-               value="sit"
+               value="exercitationem"
                data-component="url" hidden>
     <br>
 
@@ -6759,14 +6804,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModelAveragePrice/getByCarModelId/velit/quisquam/laboriosam" \
+    --get "http://localhost:8000/api/carModelAveragePrice/getByCarModelId/consequatur/sed/eligendi" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModelAveragePrice/getByCarModelId/velit/quisquam/laboriosam"
+    "http://localhost:8000/api/carModelAveragePrice/getByCarModelId/consequatur/sed/eligendi"
 );
 
 const headers = {
@@ -6783,7 +6828,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carModelAveragePrice/getByCarModelId/velit/quisquam/laboriosam',
+    'http://localhost:8000/api/carModelAveragePrice/getByCarModelId/consequatur/sed/eligendi',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -6799,7 +6844,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carModelAveragePrice/getByCarModelId/velit/quisquam/laboriosam'
+url = 'http://localhost:8000/api/carModelAveragePrice/getByCarModelId/consequatur/sed/eligendi'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -6875,7 +6920,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="carModelId"
                data-endpoint="GETapi-carModelAveragePrice-getByCarModelId--carModelId---skip---take-"
-               value="velit"
+               value="consequatur"
                data-component="url" hidden>
     <br>
 
@@ -6885,7 +6930,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carModelAveragePrice-getByCarModelId--carModelId---skip---take-"
-               value="quisquam"
+               value="sed"
                data-component="url" hidden>
     <br>
 
@@ -6895,7 +6940,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carModelAveragePrice-getByCarModelId--carModelId---skip---take-"
-               value="laboriosam"
+               value="eligendi"
                data-component="url" hidden>
     <br>
 
@@ -6915,14 +6960,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModelAveragePrice/getById/vel" \
+    --get "http://localhost:8000/api/carModelAveragePrice/getById/consequatur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModelAveragePrice/getById/vel"
+    "http://localhost:8000/api/carModelAveragePrice/getById/consequatur"
 );
 
 const headers = {
@@ -6939,7 +6984,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carModelAveragePrice/getById/vel',
+    'http://localhost:8000/api/carModelAveragePrice/getById/consequatur',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -6955,7 +7000,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carModelAveragePrice/getById/vel'
+url = 'http://localhost:8000/api/carModelAveragePrice/getById/consequatur'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -7030,7 +7075,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-carModelAveragePrice-getById--id-"
-               value="vel"
+               value="consequatur"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -7050,14 +7095,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/carModel/getByCarBrandId/sunt/quasi/occaecati" \
+    --get "http://localhost:8000/api/carModel/getByCarBrandId/itaque/dicta/qui" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/carModel/getByCarBrandId/sunt/quasi/occaecati"
+    "http://localhost:8000/api/carModel/getByCarBrandId/itaque/dicta/qui"
 );
 
 const headers = {
@@ -7074,7 +7119,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/carModel/getByCarBrandId/sunt/quasi/occaecati',
+    'http://localhost:8000/api/carModel/getByCarBrandId/itaque/dicta/qui',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -7090,7 +7135,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/carModel/getByCarBrandId/sunt/quasi/occaecati'
+url = 'http://localhost:8000/api/carModel/getByCarBrandId/itaque/dicta/qui'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -7166,7 +7211,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="carBrandId"
                data-endpoint="GETapi-carModel-getByCarBrandId--carBrandId---skip---take-"
-               value="sunt"
+               value="itaque"
                data-component="url" hidden>
     <br>
 
@@ -7176,7 +7221,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-carModel-getByCarBrandId--carBrandId---skip---take-"
-               value="quasi"
+               value="dicta"
                data-component="url" hidden>
     <br>
 
@@ -7186,7 +7231,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-carModel-getByCarBrandId--carBrandId---skip---take-"
-               value="occaecati"
+               value="qui"
                data-component="url" hidden>
     <br>
 
@@ -7206,14 +7251,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cardService/getByServiceId/illum/laudantium/unde" \
+    --get "http://localhost:8000/api/cardService/getByServiceId/iste/culpa/voluptas" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cardService/getByServiceId/illum/laudantium/unde"
+    "http://localhost:8000/api/cardService/getByServiceId/iste/culpa/voluptas"
 );
 
 const headers = {
@@ -7230,7 +7275,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cardService/getByServiceId/illum/laudantium/unde',
+    'http://localhost:8000/api/cardService/getByServiceId/iste/culpa/voluptas',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -7246,7 +7291,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cardService/getByServiceId/illum/laudantium/unde'
+url = 'http://localhost:8000/api/cardService/getByServiceId/iste/culpa/voluptas'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -7322,7 +7367,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="cityId"
                data-endpoint="GETapi-cardService-getByServiceId--cityId---skip---take-"
-               value="illum"
+               value="iste"
                data-component="url" hidden>
     <br>
 
@@ -7332,7 +7377,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cardService-getByServiceId--cityId---skip---take-"
-               value="laudantium"
+               value="culpa"
                data-component="url" hidden>
     <br>
 
@@ -7342,7 +7387,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cardService-getByServiceId--cityId---skip---take-"
-               value="unde"
+               value="voluptas"
                data-component="url" hidden>
     <br>
 
@@ -7362,14 +7407,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cityService/get/quaerat/et" \
+    --get "http://localhost:8000/api/cityService/get/facere/molestias" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cityService/get/quaerat/et"
+    "http://localhost:8000/api/cityService/get/facere/molestias"
 );
 
 const headers = {
@@ -7386,7 +7431,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cityService/get/quaerat/et',
+    'http://localhost:8000/api/cityService/get/facere/molestias',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -7402,7 +7447,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cityService/get/quaerat/et'
+url = 'http://localhost:8000/api/cityService/get/facere/molestias'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -7478,7 +7523,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cityService-get--skip---take-"
-               value="quaerat"
+               value="facere"
                data-component="url" hidden>
     <br>
 
@@ -7488,7 +7533,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cityService-get--skip---take-"
-               value="et"
+               value="molestias"
                data-component="url" hidden>
     <br>
 
@@ -7508,14 +7553,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cityService/getByServiceId/enim/reprehenderit/ducimus" \
+    --get "http://localhost:8000/api/cityService/getByServiceId/quod/sit/distinctio" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cityService/getByServiceId/enim/reprehenderit/ducimus"
+    "http://localhost:8000/api/cityService/getByServiceId/quod/sit/distinctio"
 );
 
 const headers = {
@@ -7532,7 +7577,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cityService/getByServiceId/enim/reprehenderit/ducimus',
+    'http://localhost:8000/api/cityService/getByServiceId/quod/sit/distinctio',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -7548,7 +7593,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cityService/getByServiceId/enim/reprehenderit/ducimus'
+url = 'http://localhost:8000/api/cityService/getByServiceId/quod/sit/distinctio'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -7624,7 +7669,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="serviceId"
                data-endpoint="GETapi-cityService-getByServiceId--serviceId---skip---take-"
-               value="enim"
+               value="quod"
                data-component="url" hidden>
     <br>
 
@@ -7634,7 +7679,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cityService-getByServiceId--serviceId---skip---take-"
-               value="reprehenderit"
+               value="sit"
                data-component="url" hidden>
     <br>
 
@@ -7644,7 +7689,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cityService-getByServiceId--serviceId---skip---take-"
-               value="ducimus"
+               value="distinctio"
                data-component="url" hidden>
     <br>
 
@@ -7664,14 +7709,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cityService/getByCityId/quaerat/id/sint" \
+    --get "http://localhost:8000/api/cityService/getByCityId/enim/aspernatur/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cityService/getByCityId/quaerat/id/sint"
+    "http://localhost:8000/api/cityService/getByCityId/enim/aspernatur/et"
 );
 
 const headers = {
@@ -7688,7 +7733,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cityService/getByCityId/quaerat/id/sint',
+    'http://localhost:8000/api/cityService/getByCityId/enim/aspernatur/et',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -7704,7 +7749,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cityService/getByCityId/quaerat/id/sint'
+url = 'http://localhost:8000/api/cityService/getByCityId/enim/aspernatur/et'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -7780,7 +7825,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="cityId"
                data-endpoint="GETapi-cityService-getByCityId--cityId---skip---take-"
-               value="quaerat"
+               value="enim"
                data-component="url" hidden>
     <br>
 
@@ -7790,7 +7835,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-cityService-getByCityId--cityId---skip---take-"
-               value="id"
+               value="aspernatur"
                data-component="url" hidden>
     <br>
 
@@ -7800,7 +7845,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-cityService-getByCityId--cityId---skip---take-"
-               value="sint"
+               value="et"
                data-component="url" hidden>
     <br>
 
@@ -7820,14 +7865,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/cityService/getById/veniam" \
+    --get "http://localhost:8000/api/cityService/getById/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/cityService/getById/veniam"
+    "http://localhost:8000/api/cityService/getById/ut"
 );
 
 const headers = {
@@ -7844,7 +7889,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/cityService/getById/veniam',
+    'http://localhost:8000/api/cityService/getById/ut',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -7860,7 +7905,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/cityService/getById/veniam'
+url = 'http://localhost:8000/api/cityService/getById/ut'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -7935,7 +7980,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-cityService-getById--id-"
-               value="veniam"
+               value="ut"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
@@ -7955,14 +8000,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/car/get/nesciunt/quo" \
+    --get "http://localhost:8000/api/car/get/saepe/laboriosam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/car/get/nesciunt/quo"
+    "http://localhost:8000/api/car/get/saepe/laboriosam"
 );
 
 const headers = {
@@ -7979,7 +8024,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/car/get/nesciunt/quo',
+    'http://localhost:8000/api/car/get/saepe/laboriosam',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -7995,7 +8040,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/car/get/nesciunt/quo'
+url = 'http://localhost:8000/api/car/get/saepe/laboriosam'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -8071,7 +8116,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="skip"
                data-endpoint="GETapi-car-get--skip---take-"
-               value="nesciunt"
+               value="saepe"
                data-component="url" hidden>
     <br>
 
@@ -8081,7 +8126,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="take"
                data-endpoint="GETapi-car-get--skip---take-"
-               value="quo"
+               value="laboriosam"
                data-component="url" hidden>
     <br>
 
@@ -8101,14 +8146,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/car/getByOrderCardId/est" \
+    --get "http://localhost:8000/api/car/getByOrderCardId/eveniet" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/car/getByOrderCardId/est"
+    "http://localhost:8000/api/car/getByOrderCardId/eveniet"
 );
 
 const headers = {
@@ -8125,7 +8170,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/car/getByOrderCardId/est',
+    'http://localhost:8000/api/car/getByOrderCardId/eveniet',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -8141,7 +8186,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/car/getByOrderCardId/est'
+url = 'http://localhost:8000/api/car/getByOrderCardId/eveniet'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -8217,7 +8262,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="orderCardId"
                data-endpoint="GETapi-car-getByOrderCardId--orderCardId-"
-               value="est"
+               value="eveniet"
                data-component="url" hidden>
     <br>
 
@@ -8237,14 +8282,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/car/getById/doloribus" \
+    --get "http://localhost:8000/api/car/getById/aut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/car/getById/doloribus"
+    "http://localhost:8000/api/car/getById/aut"
 );
 
 const headers = {
@@ -8261,7 +8306,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/car/getById/doloribus',
+    'http://localhost:8000/api/car/getById/aut',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -8277,7 +8322,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/car/getById/doloribus'
+url = 'http://localhost:8000/api/car/getById/aut'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -8352,10 +8397,2160 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-car-getById--id-"
-               value="doloribus"
+               value="aut"
                data-component="url" hidden>
     <br>
 <p>The ID of the getById.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-POSTapi-code-create">POST api/code/create</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-code-create">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/code/create" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"phone\": \"htyxszesdousgalmjfmzlywijboczkkflhhmbofyykpepxxmhlmbkuzfbzhvqaumszrfvybdqrtecqsjscxbcugqcwghotezibtshuguifrgrrcewwaciyqnvaticsxezyztvtflaapyaxrik\",
+    \"email\": \"dncvsaacqcueseqwyyupyqmjoa\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/code/create"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "phone": "htyxszesdousgalmjfmzlywijboczkkflhhmbofyykpepxxmhlmbkuzfbzhvqaumszrfvybdqrtecqsjscxbcugqcwghotezibtshuguifrgrrcewwaciyqnvaticsxezyztvtflaapyaxrik",
+    "email": "dncvsaacqcueseqwyyupyqmjoa"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/code/create',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'phone' =&gt; 'htyxszesdousgalmjfmzlywijboczkkflhhmbofyykpepxxmhlmbkuzfbzhvqaumszrfvybdqrtecqsjscxbcugqcwghotezibtshuguifrgrrcewwaciyqnvaticsxezyztvtflaapyaxrik',
+            'email' =&gt; 'dncvsaacqcueseqwyyupyqmjoa',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/code/create'
+payload = {
+    "phone": "htyxszesdousgalmjfmzlywijboczkkflhhmbofyykpepxxmhlmbkuzfbzhvqaumszrfvybdqrtecqsjscxbcugqcwghotezibtshuguifrgrrcewwaciyqnvaticsxezyztvtflaapyaxrik",
+    "email": "dncvsaacqcueseqwyyupyqmjoa"
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-code-create">
+</span>
+<span id="execution-results-POSTapi-code-create" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-POSTapi-code-create"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-code-create"></code></pre>
+</span>
+<span id="execution-error-POSTapi-code-create" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-code-create"></code></pre>
+</span>
+<form id="form-POSTapi-code-create" data-method="POST"
+      data-path="api/code/create"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-code-create', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-code-create"
+                    onclick="tryItOut('POSTapi-code-create');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-code-create"
+                    onclick="cancelTryOut('POSTapi-code-create');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-code-create" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/code/create</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>phone</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="phone"
+               data-endpoint="POSTapi-code-create"
+               value="htyxszesdousgalmjfmzlywijboczkkflhhmbofyykpepxxmhlmbkuzfbzhvqaumszrfvybdqrtecqsjscxbcugqcwghotezibtshuguifrgrrcewwaciyqnvaticsxezyztvtflaapyaxrik"
+               data-component="body" hidden>
+    <br>
+<p>validation.max.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-code-create"
+               value="dncvsaacqcueseqwyyupyqmjoa"
+               data-component="body" hidden>
+    <br>
+<p>validation.max.</p>
+        </p>
+        </form>
+
+            <h2 id="endpoints-GETapi-code-get--skip---take-">GET api/code/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-code-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/code/get/quasi/corporis" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/code/get/quasi/corporis"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/code/get/quasi/corporis',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/code/get/quasi/corporis'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-code-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;count&quot;: 0,
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-code-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-code-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-code-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-code-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-code-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-code-get--skip---take-" data-method="GET"
+      data-path="api/code/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-code-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-code-get--skip---take-"
+                    onclick="tryItOut('GETapi-code-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-code-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-code-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-code-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/code/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-code-get--skip---take-"
+               value="quasi"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-code-get--skip---take-"
+               value="corporis"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-code-getByPhone--phone-">GET api/code/getByPhone/{phone}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-code-getByPhone--phone-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/code/getByPhone/odit" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/code/getByPhone/odit"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/code/getByPhone/odit',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/code/getByPhone/odit'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-code-getByPhone--phone-">
+            <blockquote>
+            <p>Пример запроса (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;not found&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-code-getByPhone--phone-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-code-getByPhone--phone-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-code-getByPhone--phone-"></code></pre>
+</span>
+<span id="execution-error-GETapi-code-getByPhone--phone-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-code-getByPhone--phone-"></code></pre>
+</span>
+<form id="form-GETapi-code-getByPhone--phone-" data-method="GET"
+      data-path="api/code/getByPhone/{phone}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-code-getByPhone--phone-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-code-getByPhone--phone-"
+                    onclick="tryItOut('GETapi-code-getByPhone--phone-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-code-getByPhone--phone-"
+                    onclick="cancelTryOut('GETapi-code-getByPhone--phone-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-code-getByPhone--phone-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/code/getByPhone/{phone}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>phone</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="phone"
+               data-endpoint="GETapi-code-getByPhone--phone-"
+               value="odit"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-code-getByEmail--email-">GET api/code/getByEmail/{email}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-code-getByEmail--email-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/code/getByEmail/eaque" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/code/getByEmail/eaque"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/code/getByEmail/eaque',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/code/getByEmail/eaque'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-code-getByEmail--email-">
+            <blockquote>
+            <p>Пример запроса (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;not found&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-code-getByEmail--email-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-code-getByEmail--email-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-code-getByEmail--email-"></code></pre>
+</span>
+<span id="execution-error-GETapi-code-getByEmail--email-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-code-getByEmail--email-"></code></pre>
+</span>
+<form id="form-GETapi-code-getByEmail--email-" data-method="GET"
+      data-path="api/code/getByEmail/{email}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-code-getByEmail--email-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-code-getByEmail--email-"
+                    onclick="tryItOut('GETapi-code-getByEmail--email-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-code-getByEmail--email-"
+                    onclick="cancelTryOut('GETapi-code-getByEmail--email-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-code-getByEmail--email-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/code/getByEmail/{email}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="GETapi-code-getByEmail--email-"
+               value="eaque"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-code-getById--id-">GET api/code/getById/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-code-getById--id-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/code/getById/cumque" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/code/getById/cumque"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/code/getById/cumque',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/code/getById/cumque'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-code-getById--id-">
+            <blockquote>
+            <p>Пример запроса (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;not found&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-code-getById--id-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-code-getById--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-code-getById--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-code-getById--id-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-code-getById--id-"></code></pre>
+</span>
+<form id="form-GETapi-code-getById--id-" data-method="GET"
+      data-path="api/code/getById/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-code-getById--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-code-getById--id-"
+                    onclick="tryItOut('GETapi-code-getById--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-code-getById--id-"
+                    onclick="cancelTryOut('GETapi-code-getById--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-code-getById--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/code/getById/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="GETapi-code-getById--id-"
+               value="cumque"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the getById.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-POSTapi-code-update">POST api/code/update</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-code-update">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/code/update" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"phone\": \"oerhtzzjsxlimekncucfiuuvbtccuftxcsoufrmorhwsrnnpdprotfgtqsqirhiaczniueexgfaxrazzfulppqhxuiqbuvymgwwxcfqbqfrqtalanjkdqrwvtddqipwxuhzmdmljkxtemendhncwprvojgeadkhzsnmhftbgibfdydeihltrbeicvdinpplcwsgakgkwiyot\",
+    \"email\": \"wzwvuarlnhyttkymxdueblojsobmnsboyvmnkyjrfgoydcmcfipzfpgobyxmryekodrlwqdrmaklgonouctgnhjbinqemkzmqwyxtxmoxtqflvqngfkxbksyhxlylkeqplxrhmlugsgzekz\",
+    \"code\": 9800
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/code/update"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "phone": "oerhtzzjsxlimekncucfiuuvbtccuftxcsoufrmorhwsrnnpdprotfgtqsqirhiaczniueexgfaxrazzfulppqhxuiqbuvymgwwxcfqbqfrqtalanjkdqrwvtddqipwxuhzmdmljkxtemendhncwprvojgeadkhzsnmhftbgibfdydeihltrbeicvdinpplcwsgakgkwiyot",
+    "email": "wzwvuarlnhyttkymxdueblojsobmnsboyvmnkyjrfgoydcmcfipzfpgobyxmryekodrlwqdrmaklgonouctgnhjbinqemkzmqwyxtxmoxtqflvqngfkxbksyhxlylkeqplxrhmlugsgzekz",
+    "code": 9800
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/code/update',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'phone' =&gt; 'oerhtzzjsxlimekncucfiuuvbtccuftxcsoufrmorhwsrnnpdprotfgtqsqirhiaczniueexgfaxrazzfulppqhxuiqbuvymgwwxcfqbqfrqtalanjkdqrwvtddqipwxuhzmdmljkxtemendhncwprvojgeadkhzsnmhftbgibfdydeihltrbeicvdinpplcwsgakgkwiyot',
+            'email' =&gt; 'wzwvuarlnhyttkymxdueblojsobmnsboyvmnkyjrfgoydcmcfipzfpgobyxmryekodrlwqdrmaklgonouctgnhjbinqemkzmqwyxtxmoxtqflvqngfkxbksyhxlylkeqplxrhmlugsgzekz',
+            'code' =&gt; 9800,
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/code/update'
+payload = {
+    "phone": "oerhtzzjsxlimekncucfiuuvbtccuftxcsoufrmorhwsrnnpdprotfgtqsqirhiaczniueexgfaxrazzfulppqhxuiqbuvymgwwxcfqbqfrqtalanjkdqrwvtddqipwxuhzmdmljkxtemendhncwprvojgeadkhzsnmhftbgibfdydeihltrbeicvdinpplcwsgakgkwiyot",
+    "email": "wzwvuarlnhyttkymxdueblojsobmnsboyvmnkyjrfgoydcmcfipzfpgobyxmryekodrlwqdrmaklgonouctgnhjbinqemkzmqwyxtxmoxtqflvqngfkxbksyhxlylkeqplxrhmlugsgzekz",
+    "code": 9800
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-code-update">
+</span>
+<span id="execution-results-POSTapi-code-update" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-POSTapi-code-update"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-code-update"></code></pre>
+</span>
+<span id="execution-error-POSTapi-code-update" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-code-update"></code></pre>
+</span>
+<form id="form-POSTapi-code-update" data-method="POST"
+      data-path="api/code/update"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-code-update', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-code-update"
+                    onclick="tryItOut('POSTapi-code-update');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-code-update"
+                    onclick="cancelTryOut('POSTapi-code-update');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-code-update" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/code/update</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>phone</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="phone"
+               data-endpoint="POSTapi-code-update"
+               value="oerhtzzjsxlimekncucfiuuvbtccuftxcsoufrmorhwsrnnpdprotfgtqsqirhiaczniueexgfaxrazzfulppqhxuiqbuvymgwwxcfqbqfrqtalanjkdqrwvtddqipwxuhzmdmljkxtemendhncwprvojgeadkhzsnmhftbgibfdydeihltrbeicvdinpplcwsgakgkwiyot"
+               data-component="body" hidden>
+    <br>
+<p>validation.max.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-code-update"
+               value="wzwvuarlnhyttkymxdueblojsobmnsboyvmnkyjrfgoydcmcfipzfpgobyxmryekodrlwqdrmaklgonouctgnhjbinqemkzmqwyxtxmoxtqflvqngfkxbksyhxlylkeqplxrhmlugsgzekz"
+               data-component="body" hidden>
+    <br>
+<p>validation.max.</p>
+        </p>
+                <p>
+            <b><code>code</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="code"
+               data-endpoint="POSTapi-code-update"
+               value="9800"
+               data-component="body" hidden>
+    <br>
+<p>validation.min validation.max.</p>
+        </p>
+        </form>
+
+            <h2 id="endpoints-GETapi-driver-get--skip---take-">GET api/driver/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-driver-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/driver/get/debitis/sint" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/driver/get/debitis/sint"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/driver/get/debitis/sint',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/driver/get/debitis/sint'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-driver-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;count&quot;: 0,
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-driver-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-driver-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-driver-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-driver-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-driver-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-driver-get--skip---take-" data-method="GET"
+      data-path="api/driver/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-driver-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-driver-get--skip---take-"
+                    onclick="tryItOut('GETapi-driver-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-driver-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-driver-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-driver-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/driver/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-driver-get--skip---take-"
+               value="debitis"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-driver-get--skip---take-"
+               value="sint"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-driver-getById--id-">GET api/driver/getById/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-driver-getById--id-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/driver/getById/unde" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/driver/getById/unde"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/driver/getById/unde',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/driver/getById/unde'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-driver-getById--id-">
+            <blockquote>
+            <p>Пример запроса (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;not found&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-driver-getById--id-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-driver-getById--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-driver-getById--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-driver-getById--id-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-driver-getById--id-"></code></pre>
+</span>
+<form id="form-GETapi-driver-getById--id-" data-method="GET"
+      data-path="api/driver/getById/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-driver-getById--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-driver-getById--id-"
+                    onclick="tryItOut('GETapi-driver-getById--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-driver-getById--id-"
+                    onclick="cancelTryOut('GETapi-driver-getById--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-driver-getById--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/driver/getById/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="GETapi-driver-getById--id-"
+               value="unde"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the getById.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-gift-get--skip---take-">GET api/gift/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-gift-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/gift/get/odio/vero" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/gift/get/odio/vero"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/gift/get/odio/vero',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/gift/get/odio/vero'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-gift-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;count&quot;: 0,
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-gift-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-gift-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-gift-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-gift-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-gift-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-gift-get--skip---take-" data-method="GET"
+      data-path="api/gift/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-gift-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-gift-get--skip---take-"
+                    onclick="tryItOut('GETapi-gift-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-gift-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-gift-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-gift-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/gift/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-gift-get--skip---take-"
+               value="odio"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-gift-get--skip---take-"
+               value="vero"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-gift-getByUserId--userId---skip---take-">GET api/gift/getByUserId/{userId}/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-gift-getByUserId--userId---skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/gift/getByUserId/quia/rem/voluptate" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/gift/getByUserId/quia/rem/voluptate"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/gift/getByUserId/quia/rem/voluptate',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/gift/getByUserId/quia/rem/voluptate'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-gift-getByUserId--userId---skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;count&quot;: 0,
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-gift-getByUserId--userId---skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-gift-getByUserId--userId---skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-gift-getByUserId--userId---skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-gift-getByUserId--userId---skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-gift-getByUserId--userId---skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-gift-getByUserId--userId---skip---take-" data-method="GET"
+      data-path="api/gift/getByUserId/{userId}/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-gift-getByUserId--userId---skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-gift-getByUserId--userId---skip---take-"
+                    onclick="tryItOut('GETapi-gift-getByUserId--userId---skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-gift-getByUserId--userId---skip---take-"
+                    onclick="cancelTryOut('GETapi-gift-getByUserId--userId---skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-gift-getByUserId--userId---skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/gift/getByUserId/{userId}/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>userId</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="userId"
+               data-endpoint="GETapi-gift-getByUserId--userId---skip---take-"
+               value="quia"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-gift-getByUserId--userId---skip---take-"
+               value="rem"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-gift-getByUserId--userId---skip---take-"
+               value="voluptate"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-gift-getByCardId--cardId---skip---take-">GET api/gift/getByCardId/{cardId}/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-gift-getByCardId--cardId---skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/gift/getByCardId/quis/repudiandae/pariatur" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/gift/getByCardId/quis/repudiandae/pariatur"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/gift/getByCardId/quis/repudiandae/pariatur',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/gift/getByCardId/quis/repudiandae/pariatur'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-gift-getByCardId--cardId---skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;count&quot;: 0,
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-gift-getByCardId--cardId---skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-gift-getByCardId--cardId---skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-gift-getByCardId--cardId---skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-gift-getByCardId--cardId---skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-gift-getByCardId--cardId---skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-gift-getByCardId--cardId---skip---take-" data-method="GET"
+      data-path="api/gift/getByCardId/{cardId}/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-gift-getByCardId--cardId---skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-gift-getByCardId--cardId---skip---take-"
+                    onclick="tryItOut('GETapi-gift-getByCardId--cardId---skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-gift-getByCardId--cardId---skip---take-"
+                    onclick="cancelTryOut('GETapi-gift-getByCardId--cardId---skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-gift-getByCardId--cardId---skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/gift/getByCardId/{cardId}/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>cardId</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="cardId"
+               data-endpoint="GETapi-gift-getByCardId--cardId---skip---take-"
+               value="quis"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-gift-getByCardId--cardId---skip---take-"
+               value="repudiandae"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-gift-getByCardId--cardId---skip---take-"
+               value="pariatur"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-gift-getById--id-">GET api/gift/getById/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-gift-getById--id-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/gift/getById/molestias" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/gift/getById/molestias"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/gift/getById/molestias',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/gift/getById/molestias'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-gift-getById--id-">
+            <blockquote>
+            <p>Пример запроса (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;not found&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-gift-getById--id-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-gift-getById--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-gift-getById--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-gift-getById--id-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-gift-getById--id-"></code></pre>
+</span>
+<form id="form-GETapi-gift-getById--id-" data-method="GET"
+      data-path="api/gift/getById/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-gift-getById--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-gift-getById--id-"
+                    onclick="tryItOut('GETapi-gift-getById--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-gift-getById--id-"
+                    onclick="cancelTryOut('GETapi-gift-getById--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-gift-getById--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/gift/getById/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="GETapi-gift-getById--id-"
+               value="molestias"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the getById.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-ecoService-get--skip---take-">GET api/ecoService/get/{skip}/{take}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-ecoService-get--skip---take-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/ecoService/get/molestiae/est" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/ecoService/get/molestiae/est"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/ecoService/get/molestiae/est',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/ecoService/get/molestiae/est'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-ecoService-get--skip---take-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;count&quot;: 0,
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-ecoService-get--skip---take-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-ecoService-get--skip---take-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-ecoService-get--skip---take-"></code></pre>
+</span>
+<span id="execution-error-GETapi-ecoService-get--skip---take-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-ecoService-get--skip---take-"></code></pre>
+</span>
+<form id="form-GETapi-ecoService-get--skip---take-" data-method="GET"
+      data-path="api/ecoService/get/{skip}/{take}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-ecoService-get--skip---take-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-ecoService-get--skip---take-"
+                    onclick="tryItOut('GETapi-ecoService-get--skip---take-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-ecoService-get--skip---take-"
+                    onclick="cancelTryOut('GETapi-ecoService-get--skip---take-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-ecoService-get--skip---take-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/ecoService/get/{skip}/{take}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>skip</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="skip"
+               data-endpoint="GETapi-ecoService-get--skip---take-"
+               value="molestiae"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    <p>
+                <b><code>take</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="take"
+               data-endpoint="GETapi-ecoService-get--skip---take-"
+               value="est"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-ecoService-getById--id-">GET api/ecoService/getById/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-ecoService-getById--id-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/ecoService/getById/est" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/ecoService/getById/est"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/ecoService/getById/est',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/ecoService/getById/est'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-ecoService-getById--id-">
+            <blockquote>
+            <p>Пример запроса (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;not found&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-ecoService-getById--id-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-ecoService-getById--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-ecoService-getById--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-ecoService-getById--id-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-ecoService-getById--id-"></code></pre>
+</span>
+<form id="form-GETapi-ecoService-getById--id-" data-method="GET"
+      data-path="api/ecoService/getById/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-ecoService-getById--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-ecoService-getById--id-"
+                    onclick="tryItOut('GETapi-ecoService-getById--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-ecoService-getById--id-"
+                    onclick="cancelTryOut('GETapi-ecoService-getById--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-ecoService-getById--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/ecoService/getById/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="GETapi-ecoService-getById--id-"
+               value="est"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the getById.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-driver-getByOrderCardId--orderCardId-">GET api/driver/getByOrderCardId/{orderCardId}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-driver-getByOrderCardId--orderCardId-">
+<blockquote>Пример запроса:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/driver/getByOrderCardId/nostrum" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/driver/getByOrderCardId/nostrum"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/driver/getByOrderCardId/nostrum',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/driver/getByOrderCardId/nostrum'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-driver-getByOrderCardId--orderCardId-">
+            <blockquote>
+            <p>Пример запроса (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;count&quot;: 0,
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-driver-getByOrderCardId--orderCardId-" hidden>
+    <blockquote>HTTP ответ<span
+                id="execution-response-status-GETapi-driver-getByOrderCardId--orderCardId-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-driver-getByOrderCardId--orderCardId-"></code></pre>
+</span>
+<span id="execution-error-GETapi-driver-getByOrderCardId--orderCardId-" hidden>
+    <blockquote>HTTP ответ ошибка:</blockquote>
+    <pre><code id="execution-error-message-GETapi-driver-getByOrderCardId--orderCardId-"></code></pre>
+</span>
+<form id="form-GETapi-driver-getByOrderCardId--orderCardId-" data-method="GET"
+      data-path="api/driver/getByOrderCardId/{orderCardId}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-driver-getByOrderCardId--orderCardId-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-driver-getByOrderCardId--orderCardId-"
+                    onclick="tryItOut('GETapi-driver-getByOrderCardId--orderCardId-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-driver-getByOrderCardId--orderCardId-"
+                    onclick="cancelTryOut('GETapi-driver-getByOrderCardId--orderCardId-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-driver-getByOrderCardId--orderCardId-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/driver/getByOrderCardId/{orderCardId}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Параметры запроса</b></h4>
+                    <p>
+                <b><code>orderCardId</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="orderCardId"
+               data-endpoint="GETapi-driver-getByOrderCardId--orderCardId-"
+               value="nostrum"
+               data-component="url" hidden>
+    <br>
+
             </p>
                     </form>
 

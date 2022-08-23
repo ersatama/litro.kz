@@ -11,6 +11,7 @@ class AutoPartResource extends JsonResource
     {
         return [
             MainContract::ID    =>  $this->{MainContract::ID},
+            MainContract::IMAGE_ID  =>  $this->{MainContract::IMAGE_ID},
             MainContract::AUTO_PART_CATEGORY_ID =>  $this->{MainContract::AUTO_PART_CATEGORY_ID},
             MainContract::SUPPLIER_ID   =>  $this->{MainContract::SUPPLIER_ID},
             MainContract::PRICE =>  $this->{MainContract::PRICE},

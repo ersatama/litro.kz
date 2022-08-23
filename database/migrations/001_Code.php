@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\AutoPartContract;
+use App\Domain\Contracts\CodeContract;
 use App\Domain\Contracts\MainContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,13 +15,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create(AutoPartContract::TABLE, function (Blueprint $table) {
+        Schema::create(CodeContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::IMAGE_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::AUTO_PART_CATEGORY_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::SUPPLIER_ID)->nullable();
-            $table->string(MainContract::PRICE)->nullable();
-            $table->string(MainContract::UNIVERSAL)->nullable();
+            $table->string(MainContract::PHONE)->nullable()->unique();
+            $table->string(MainContract::EMAIL)->nullable()->unique();
+            $table->char(MainContract::CODE,4)->nullable();
+            $table->boolean(MainContract::STATUS)->default(false);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists(AutoPartContract::TABLE);
+        Schema::dropIfExists(CodeContract::TABLE);
     }
 };

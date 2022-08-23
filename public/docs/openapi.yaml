@@ -47,7 +47,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: laboriosam
+        example: est
         required: true
         schema:
           type: string
@@ -91,7 +91,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: tempora
+        example: molestiae
         required: true
         schema:
           type: string
@@ -135,7 +135,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quo
+        example: laborum
         required: true
         schema:
           type: string
@@ -179,7 +179,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: aperiam
+        example: dolores
         required: true
         schema:
           type: string
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: alias
+        example: sint
         required: true
         schema:
           type: string
@@ -271,7 +271,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: rerum
+        example: quas
         required: true
         schema:
           type: string
@@ -279,7 +279,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: incidunt
         required: true
         schema:
           type: string
@@ -327,7 +327,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: iusto
+        example: praesentium
         required: true
         schema:
           type: string
@@ -335,7 +335,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quos
+        example: modi
         required: true
         schema:
           type: string
@@ -383,7 +383,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nihil
+        example: fuga
         required: true
         schema:
           type: string
@@ -391,7 +391,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: tenetur
+        example: aut
         required: true
         schema:
           type: string
@@ -439,7 +439,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quaerat
+        example: sed
         required: true
         schema:
           type: string
@@ -447,7 +447,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: neque
+        example: qui
         required: true
         schema:
           type: string
@@ -495,7 +495,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ut
+        example: nemo
         required: true
         schema:
           type: string
@@ -503,7 +503,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: repellat
+        example: sit
         required: true
         schema:
           type: string
@@ -551,7 +551,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: amet
+        example: sit
         required: true
         schema:
           type: string
@@ -559,571 +559,11 @@ paths:
         in: path
         name: take
         description: ''
-        example: porro
+        example: ullam
         required: true
         schema:
           type: string
   '/api/currency/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: et
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: in
-        required: true
-        schema:
-          type: string
-  '/api/city/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: atque
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: error
-        required: true
-        schema:
-          type: string
-  '/api/carModel/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: vitae
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: eum
-        required: true
-        schema:
-          type: string
-  '/api/carBrand/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: non
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: in
-        required: true
-        schema:
-          type: string
-  '/api/carCategory/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: est
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: temporibus
-        required: true
-        schema:
-          type: string
-  '/api/autoPartParamOption/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: cupiditate
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: animi
-        required: true
-        schema:
-          type: string
-  '/api/autoPartType/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: delectus
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: qui
-        required: true
-        schema:
-          type: string
-  '/api/autoPartParam/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: quis
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: enim
-        required: true
-        schema:
-          type: string
-  '/api/autoPartCategory/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: sunt
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: laborum
-        required: true
-        schema:
-          type: string
-  '/api/news/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: rerum
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: quia
-        required: true
-        schema:
-          type: string
-  '/api/newsCategory/get/{skip}/{take}':
     get:
       summary: ''
       description: ''
@@ -1175,11 +615,403 @@ paths:
         in: path
         name: take
         description: ''
-        example: sunt
+        example: eaque
         required: true
         schema:
           type: string
-  '/api/moneyOperation/get/{skip}/{take}':
+  '/api/city/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: enim
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: assumenda
+        required: true
+        schema:
+          type: string
+  '/api/carModel/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: exercitationem
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: expedita
+        required: true
+        schema:
+          type: string
+  '/api/carBrand/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: recusandae
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: molestias
+        required: true
+        schema:
+          type: string
+  '/api/carCategory/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: aut
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: minus
+        required: true
+        schema:
+          type: string
+  '/api/autoPartParamOption/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: sequi
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: et
+        required: true
+        schema:
+          type: string
+  '/api/autoPartType/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: molestias
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: voluptatem
+        required: true
+        schema:
+          type: string
+  '/api/autoPartParam/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: ex
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: itaque
+        required: true
+        schema:
+          type: string
+  '/api/autoPartCategory/get/{skip}/{take}':
     get:
       summary: ''
       description: ''
@@ -1231,7 +1063,175 @@ paths:
         in: path
         name: take
         description: ''
-        example: dolor
+        example: nihil
+        required: true
+        schema:
+          type: string
+  '/api/news/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: expedita
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: incidunt
+        required: true
+        schema:
+          type: string
+  '/api/newsCategory/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: iure
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: ab
+        required: true
+        schema:
+          type: string
+  '/api/moneyOperation/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: autem
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: unde
         required: true
         schema:
           type: string
@@ -1275,7 +1275,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: exercitationem
+        example: ea
         required: true
         schema:
           type: string
@@ -1323,7 +1323,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolor
+        example: velit
         required: true
         schema:
           type: string
@@ -1331,7 +1331,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: beatae
+        example: in
         required: true
         schema:
           type: string
@@ -1375,7 +1375,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: ad
+        example: id
         required: true
         schema:
           type: string
@@ -1423,7 +1423,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: reprehenderit
+        example: enim
         required: true
         schema:
           type: string
@@ -1431,7 +1431,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: saepe
+        example: earum
         required: true
         schema:
           type: string
@@ -1475,11 +1475,211 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: ea
+        example: sequi
         required: true
         schema:
           type: string
   '/api/category/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: laudantium
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: ducimus
+        required: true
+        schema:
+          type: string
+  '/api/category/getById/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: velit
+        required: true
+        schema:
+          type: string
+  '/api/autoPart/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: quisquam
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: cum
+        required: true
+        schema:
+          type: string
+  '/api/autoPart/getById/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: fugiat
+        required: true
+        schema:
+          type: string
+  '/api/image/get/{skip}/{take}':
     get:
       summary: ''
       description: ''
@@ -1531,207 +1731,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: commodi
-        required: true
-        schema:
-          type: string
-  '/api/category/getById/{id}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'not found'
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the getById.'
-        example: veritatis
-        required: true
-        schema:
-          type: string
-  '/api/autoPart/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: distinctio
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: asperiores
-        required: true
-        schema:
-          type: string
-  '/api/autoPart/getById/{id}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'not found'
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the getById.'
-        example: ut
-        required: true
-        schema:
-          type: string
-  '/api/image/get/{skip}/{take}':
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: dolores
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: earum
+        example: pariatur
         required: true
         schema:
           type: string
@@ -1779,7 +1779,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: corporis
+        example: impedit
         required: true
         schema:
           type: string
@@ -1787,7 +1787,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: deserunt
+        example: neque
         required: true
         schema:
           type: string
@@ -1795,7 +1795,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ratione
+        example: similique
         required: true
         schema:
           type: string
@@ -1839,7 +1839,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: rerum
+        example: quo
         required: true
         schema:
           type: string
@@ -1887,7 +1887,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: laudantium
+        example: reiciendis
         required: true
         schema:
           type: string
@@ -1895,7 +1895,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: qui
+        example: ut
         required: true
         schema:
           type: string
@@ -1939,7 +1939,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: rerum
+        example: delectus
         required: true
         schema:
           type: string
@@ -1987,7 +1987,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: sed
         required: true
         schema:
           type: string
@@ -1995,7 +1995,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: magnam
+        example: quae
         required: true
         schema:
           type: string
@@ -2043,7 +2043,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: molestias
+        example: et
         required: true
         schema:
           type: string
@@ -2051,7 +2051,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: non
+        example: ut
         required: true
         schema:
           type: string
@@ -2059,7 +2059,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: dolorem
+        example: maxime
         required: true
         schema:
           type: string
@@ -2103,7 +2103,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: veniam
+        example: repellat
         required: true
         schema:
           type: string
@@ -2151,7 +2151,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: in
+        example: eaque
         required: true
         schema:
           type: string
@@ -2159,7 +2159,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: dolorum
+        example: tempore
         required: true
         schema:
           type: string
@@ -2207,7 +2207,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: pariatur
+        example: dolorum
         required: true
         schema:
           type: string
@@ -2215,7 +2215,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ab
+        example: quos
         required: true
         schema:
           type: string
@@ -2223,7 +2223,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: consequatur
+        example: odio
         required: true
         schema:
           type: string
@@ -2271,7 +2271,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: et
+        example: asperiores
         required: true
         schema:
           type: string
@@ -2279,7 +2279,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nihil
+        example: qui
         required: true
         schema:
           type: string
@@ -2287,7 +2287,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: in
+        example: illo
         required: true
         schema:
           type: string
@@ -2331,7 +2331,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: ab
+        example: id
         required: true
         schema:
           type: string
@@ -2379,7 +2379,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: non
+        example: sunt
         required: true
         schema:
           type: string
@@ -2387,7 +2387,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sit
+        example: exercitationem
         required: true
         schema:
           type: string
@@ -2435,7 +2435,7 @@ paths:
         in: path
         name: carModelId
         description: ''
-        example: velit
+        example: consequatur
         required: true
         schema:
           type: string
@@ -2443,7 +2443,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quisquam
+        example: sed
         required: true
         schema:
           type: string
@@ -2451,7 +2451,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: laboriosam
+        example: eligendi
         required: true
         schema:
           type: string
@@ -2495,7 +2495,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: vel
+        example: consequatur
         required: true
         schema:
           type: string
@@ -2543,7 +2543,7 @@ paths:
         in: path
         name: carBrandId
         description: ''
-        example: sunt
+        example: itaque
         required: true
         schema:
           type: string
@@ -2551,7 +2551,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quasi
+        example: dicta
         required: true
         schema:
           type: string
@@ -2559,7 +2559,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: occaecati
+        example: qui
         required: true
         schema:
           type: string
@@ -2607,7 +2607,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: illum
+        example: iste
         required: true
         schema:
           type: string
@@ -2615,7 +2615,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: laudantium
+        example: culpa
         required: true
         schema:
           type: string
@@ -2623,7 +2623,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: unde
+        example: voluptas
         required: true
         schema:
           type: string
@@ -2671,7 +2671,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quaerat
+        example: facere
         required: true
         schema:
           type: string
@@ -2679,7 +2679,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: molestias
         required: true
         schema:
           type: string
@@ -2727,7 +2727,7 @@ paths:
         in: path
         name: serviceId
         description: ''
-        example: enim
+        example: quod
         required: true
         schema:
           type: string
@@ -2735,7 +2735,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: reprehenderit
+        example: sit
         required: true
         schema:
           type: string
@@ -2743,7 +2743,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ducimus
+        example: distinctio
         required: true
         schema:
           type: string
@@ -2791,7 +2791,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: quaerat
+        example: enim
         required: true
         schema:
           type: string
@@ -2799,7 +2799,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: id
+        example: aspernatur
         required: true
         schema:
           type: string
@@ -2807,7 +2807,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sint
+        example: et
         required: true
         schema:
           type: string
@@ -2851,7 +2851,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: veniam
+        example: ut
         required: true
         schema:
           type: string
@@ -2899,7 +2899,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nesciunt
+        example: saepe
         required: true
         schema:
           type: string
@@ -2907,7 +2907,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quo
+        example: laboriosam
         required: true
         schema:
           type: string
@@ -2955,7 +2955,7 @@ paths:
         in: path
         name: orderCardId
         description: ''
-        example: est
+        example: eveniet
         required: true
         schema:
           type: string
@@ -2999,7 +2999,753 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: doloribus
+        example: aut
+        required: true
+        schema:
+          type: string
+  /api/code/create:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  description: validation.max.
+                  example: htyxszesdousgalmjfmzlywijboczkkflhhmbofyykpepxxmhlmbkuzfbzhvqaumszrfvybdqrtecqsjscxbcugqcwghotezibtshuguifrgrrcewwaciyqnvaticsxezyztvtflaapyaxrik
+                email:
+                  type: string
+                  description: validation.max.
+                  example: dncvsaacqcueseqwyyupyqmjoa
+      security: []
+  '/api/code/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: quasi
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: corporis
+        required: true
+        schema:
+          type: string
+  '/api/code/getByPhone/{phone}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: phone
+        description: ''
+        example: odit
+        required: true
+        schema:
+          type: string
+  '/api/code/getByEmail/{email}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: email
+        description: ''
+        example: eaque
+        required: true
+        schema:
+          type: string
+  '/api/code/getById/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: cumque
+        required: true
+        schema:
+          type: string
+  /api/code/update:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  description: validation.max.
+                  example: oerhtzzjsxlimekncucfiuuvbtccuftxcsoufrmorhwsrnnpdprotfgtqsqirhiaczniueexgfaxrazzfulppqhxuiqbuvymgwwxcfqbqfrqtalanjkdqrwvtddqipwxuhzmdmljkxtemendhncwprvojgeadkhzsnmhftbgibfdydeihltrbeicvdinpplcwsgakgkwiyot
+                email:
+                  type: string
+                  description: validation.max.
+                  example: wzwvuarlnhyttkymxdueblojsobmnsboyvmnkyjrfgoydcmcfipzfpgobyxmryekodrlwqdrmaklgonouctgnhjbinqemkzmqwyxtxmoxtqflvqngfkxbksyhxlylkeqplxrhmlugsgzekz
+                code:
+                  type: integer
+                  description: 'validation.min validation.max.'
+                  example: 9800
+              required:
+                - code
+      security: []
+  '/api/driver/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: debitis
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: sint
+        required: true
+        schema:
+          type: string
+  '/api/driver/getById/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: unde
+        required: true
+        schema:
+          type: string
+  '/api/gift/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: odio
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: vero
+        required: true
+        schema:
+          type: string
+  '/api/gift/getByUserId/{userId}/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: quia
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: rem
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: voluptate
+        required: true
+        schema:
+          type: string
+  '/api/gift/getByCardId/{cardId}/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: cardId
+        description: ''
+        example: quis
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: repudiandae
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: pariatur
+        required: true
+        schema:
+          type: string
+  '/api/gift/getById/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: molestias
+        required: true
+        schema:
+          type: string
+  '/api/ecoService/get/{skip}/{take}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: molestiae
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: est
+        required: true
+        schema:
+          type: string
+  '/api/ecoService/getById/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: est
+        required: true
+        schema:
+          type: string
+  '/api/driver/getByOrderCardId/{orderCardId}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: orderCardId
+        description: ''
+        example: nostrum
         required: true
         schema:
           type: string

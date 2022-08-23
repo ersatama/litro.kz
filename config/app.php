@@ -225,6 +225,10 @@ return [
         App\Providers\Repositories\CardServiceRepositoryProvider::class,
         App\Providers\Repositories\CarRepositoryProvider::class,
         App\Providers\Repositories\CityServiceRepositoryProvider::class,
+        App\Providers\Repositories\CodeRepositoryProvider::class,
+        App\Providers\Repositories\DriverRepositoryProvider::class,
+        App\Providers\Repositories\EcoServiceRepositoryProvider::class,
+        App\Providers\Repositories\GiftRepositoryProvider::class,
     ],
 
     /*

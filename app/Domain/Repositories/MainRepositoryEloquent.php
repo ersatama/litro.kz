@@ -73,4 +73,20 @@ trait MainRepositoryEloquent
             ->take($take)
             ->get();
     }
+
+    public function getByEmail($email)
+    {
+        return $this->model::where(MainContract::EMAIL,$email)->first();
+    }
+
+    public function getByPhone($phone)
+    {
+        return $this->model::where(MainContract::EMAIL,$phone)->first();
+    }
+
+    public function create($data)
+    {
+        return $this->model::create($data);
+    }
+
 }

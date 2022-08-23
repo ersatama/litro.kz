@@ -17,8 +17,12 @@ use App\Http\Controllers\Api\CarModelController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\CityServiceController;
+use App\Http\Controllers\Api\CodeController;
 use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\CurrencyController;
+use App\Http\Controllers\Api\DriverController;
+use App\Http\Controllers\Api\EcoServiceController;
+use App\Http\Controllers\Api\GiftController;
 use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\MoneyOperationController;
 use App\Http\Controllers\Api\MoneyOperationTypeController;
@@ -38,6 +42,41 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(GiftController::class)->group(function() {
+    Route::prefix('gift')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('gift.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('gift.getByUserId');
+        Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('gift.getByCardId');
+        Route::get('getById/{id}','getById')->name('gift.getById');
+    });
+});
+
+Route::controller(EcoServiceController::class)->group(function() {
+    Route::prefix('ecoService')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('ecoService.get');
+        Route::get('getById/{id}','getById')->name('ecoService.getById');
+    });
+});
+
+Route::controller(DriverController::class)->group(function() {
+    Route::prefix('driver')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('driver.get');
+        Route::get('getByOrderCardId/{orderCardId}','getByOrderCardId')->name('driver.getByOrderCardId');
+        Route::get('getById/{id}','getById')->name('driver.getById');
+    });
+});
+
+Route::controller(CodeController::class)->group(function() {
+    Route::prefix('code')->group(function() {
+        Route::post('create','create')->name('code.create');
+        Route::post('update','update')->name('code.update');
+        Route::get('get/{skip}/{take}','get')->name('code.get');
+        Route::get('getByPhone/{phone}','getByPhone')->name('code.getByPhone');
+        Route::get('getByEmail/{email}','getByEmail')->name('code.getByEmail');
+        Route::get('getById/{id}','getById')->name('code.getById');
+    });
 });
 
 Route::controller(CityServiceController::class)->group(function() {

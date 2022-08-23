@@ -4,6 +4,20 @@ namespace App\Domain\Contracts;
 
 abstract class MainContract
 {
+    const PROMO_CODE    =   'promo_code';
+    const ACTIVATED_BY  =   'activated_by';
+    const PAYBOX_ORDER_DATE =   'paybox_order_date';
+    const PAYBOX_ORDER_ID   =   'paybox_order_id';
+    const IS_PAYED  =   'is_payed';
+    const NUMBER    =   'number';
+    const REFERRAL_CODE =   'referral_code';
+    const PATRONYMIC    =   'patronymic';
+    const LAST_NAME =   'last_name';
+    const FIRST_NAME    =   'first_name';
+    const CODE_DOES_NOT_MATCH   =   'code does not match';
+    const CODE  =   'code';
+    const EMAIL =   'email';
+    const PHONE =   'phone';
     const VIN   =   'vin';
     const ORDER_CARD_ID =   'order_card_id';
     const CAR_NUMBER    =   'car_number';
