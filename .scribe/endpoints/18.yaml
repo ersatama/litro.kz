@@ -1,12 +1,12 @@
-name: 'Currency - Валюта'
+name: 'Country - Страна'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/currency/get/{skip}/{take}'
+    uri: 'api/country/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - Currency'
+      title: 'Получить список - Country'
       description: ''
       authenticated: false
       custom: []
@@ -25,7 +25,7 @@ endpoints:
         name: take
         description: ''
         required: true
-        example: delectus
+        example: quam
         type: string
         custom: []
     queryParameters: []

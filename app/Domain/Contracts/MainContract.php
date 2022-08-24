@@ -4,6 +4,21 @@ namespace App\Domain\Contracts;
 
 abstract class MainContract
 {
+    const CURRENT_TIMESTAMP =   'CURRENT_TIMESTAMP';
+    const IMPORT_ID =   'import_id';
+    const IS_FROM_EXCEL =   'is_from_excel';
+    const UTM_CAMPAIGN  =   'utm_campaign';
+    const PAYMENT_METHOD    =   'payment_method';
+    const ACTIVATE_DATE =   'activate_date';
+    const RECURRENT_ENABLED =   'recurrent_enabled';
+    const MONTHLY   =   'monthly';
+    const SYNCED    =   'synced';
+    const BITRIX_ID =   'bitrix_id';
+    const REFERRAL  =   'referral';
+    const IS_CANCELED   =   'is_canceled';
+    const PAYMENT_TYPE  =   'payment_type';
+    const END_DATE  =   'end_date';
+    const START_DATE    =   'start_date';
     const PROMO_CODE    =   'promo_code';
     const ACTIVATED_BY  =   'activated_by';
     const PAYBOX_ORDER_DATE =   'paybox_order_date';

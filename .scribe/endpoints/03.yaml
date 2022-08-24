@@ -1,12 +1,12 @@
-name: 'AutoPartType - АвтомобильЗапчастиТип'
+name: 'AutoPartParamOption - АвтомобильЗапчастиПараметрыОпции'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/autoPartType/get/{skip}/{take}'
+    uri: 'api/autoPartParamOption/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - AutoPartType'
+      title: 'Получить список - AutoPartParamOption'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: alias
+        example: iure
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ullam
+        example: et
         type: string
         custom: []
     queryParameters: []

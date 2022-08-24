@@ -1,12 +1,81 @@
-name: 'Country - Страна'
+name: 'Code - Код'
 description: ''
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: 'api/country/get/{skip}/{take}'
+      - POST
+    uri: api/code/create
     metadata:
-      title: 'Получить список - Country'
+      title: 'Создать - Code'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: validation.max.
+        required: false
+        example: vnegubujbljpdeaqksameswvgksjoyehxiylhzkrqwceyhtwyiukhequvaihwmfxwbhmhfkjrbcanvkwitlbggusnfbkvsslevozzhbytorcvznundzkeugkvcftcufgotwrlnfoian
+        type: string
+        custom: []
+      email:
+        name: email
+        description: validation.max.
+        required: false
+        example: gycrfivftyiditcscxknlnsvhnziswoxzmltkabbpobymyiuydzmkauchnzederfpfsunsalkixoiuqeffwaxyllgwifsohkvxfrrunihuh
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/code/update
+    metadata:
+      title: 'Обновить - Code'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: validation.max.
+        required: false
+        example: ib
+        type: string
+        custom: []
+      email:
+        name: email
+        description: validation.max.
+        required: false
+        example: erqcmqovhqfeb
+        type: string
+        custom: []
+      code:
+        name: code
+        description: 'validation.min validation.max.'
+        required: true
+        example: 695
+        type: integer
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/code/get/{skip}/{take}'
+    metadata:
+      title: 'Получить список - Code'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +87,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: incidunt
+        example: dicta
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: et
+        example: in
         type: string
         custom: []
     queryParameters: []
@@ -34,6 +103,102 @@ endpoints:
       -
         status: 200
         content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/code/getByPhone/{phone}'
+    metadata:
+      title: 'Получить данные через Phone - Code'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: ullam
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/code/getByEmail/{email}'
+    metadata:
+      title: 'Получить данные через Email - Code'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: id
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/code/getById/{id}'
+    metadata:
+      title: 'Получить данные через ID - Code'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the getById.'
+        required: true
+        example: libero
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

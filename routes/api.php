@@ -28,6 +28,7 @@ use App\Http\Controllers\Api\MoneyOperationController;
 use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\OrderCardController;
 use App\Http\Controllers\Api\RegionController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\ServiceLimitController;
@@ -42,6 +43,15 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(OrderCardController::class)->group(function() {
+    Route::prefix('orderCard')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('orderCard.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('orderCard.getByUserId');
+        Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('orderCard.getByCardId');
+        Route::get('getById/{id}','getById')->name('orderCard.getById');
+    });
 });
 
 Route::controller(GiftController::class)->group(function() {

@@ -1,12 +1,12 @@
-name: 'CardCategory - КарточкаКатегория'
+name: 'Card - Карточка'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/cardCategory/get/{skip}/{take}'
+    uri: 'api/card/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - CardCategory'
+      title: 'Получить список - Card'
       description: ''
       authenticated: false
       custom: []
@@ -18,7 +18,7 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: mollitia
+        example: nihil
         type: string
         custom: []
       take:
@@ -34,6 +34,38 @@ endpoints:
       -
         status: 200
         content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/card/getById/{id}'
+    metadata:
+      title: 'Получить данные через ID - Card'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the getById.'
+        required: true
+        example: labore
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

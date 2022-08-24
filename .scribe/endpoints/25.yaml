@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: autem
+        example: reiciendis
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: nihil
+        example: explicabo
         type: string
         custom: []
     queryParameters: []
@@ -57,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: fuga
+        example: voluptatibus
         type: string
         custom: []
     queryParameters: []

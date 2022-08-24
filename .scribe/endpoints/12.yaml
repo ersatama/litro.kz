@@ -1,12 +1,12 @@
-name: 'CardService - КарточкаСервис'
+name: 'CardRange - КарточкаДиапазон'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/cardService/get/{skip}/{take}'
+    uri: 'api/cardRange/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - CardService'
+      title: 'Получить список - CardRange'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: ipsum
+        example: qui
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: et
+        example: velit
         type: string
         custom: []
     queryParameters: []
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/cardService/getByCardId/{cardId}/{skip}/{take}'
+    uri: 'api/cardRange/getByCardId/{cardId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через CardID - CardService'
+      title: 'Получить данные через CardID - CardRange'
       description: ''
       authenticated: false
       custom: []
@@ -57,21 +57,21 @@ endpoints:
         name: cardId
         description: ''
         required: true
-        example: quam
+        example: occaecati
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: tempore
+        example: velit
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ea
+        example: corporis
         type: string
         custom: []
     queryParameters: []
@@ -89,9 +89,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/cardService/getByServiceId/{cityId}/{skip}/{take}'
+    uri: 'api/cardRange/getByCityId/{cityId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через ServiceID - CardService'
+      title: 'Получить данные через CityID - CardRange'
       description: ''
       authenticated: false
       custom: []
@@ -103,21 +103,21 @@ endpoints:
         name: cityId
         description: ''
         required: true
-        example: quibusdam
+        example: nemo
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: earum
+        example: nostrum
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quia
+        example: quos
         type: string
         custom: []
     queryParameters: []
@@ -135,9 +135,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/cardService/getById/{id}'
+    uri: 'api/cardRange/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - CardService'
+      title: 'Получить данные через ID - CardRange'
       description: ''
       authenticated: false
       custom: []
@@ -149,7 +149,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: neque
+        example: qui
         type: string
         custom: []
     queryParameters: []

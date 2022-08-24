@@ -10,79 +10,11 @@
     ],
     "info": {
         "name": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f",
-        "_postman_id": "b9914ace-d3c7-4f0d-8bbf-938308145404",
+        "_postman_id": "a75a1458-8b96-4c88-a4a7-09e15aab4ef1",
         "description": "API \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f \u0434\u043b\u044f litro.kz",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
-        {
-            "name": "AutoPartCategory - \u0410\u0432\u0442\u043e\u043c\u043e\u0431\u0438\u043b\u044c\u0417\u0430\u043f\u0447\u0430\u0441\u0442\u0438\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f",
-            "description": "",
-            "item": [
-                {
-                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a - AutoPartCategory",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/autoPartCategory\/get\/:skip\/:take",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/autoPartCategory\/get\/:skip\/:take",
-                            "variable": [
-                                {
-                                    "id": "skip",
-                                    "key": "skip",
-                                    "value": "aut",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "take",
-                                    "key": "take",
-                                    "value": "molestias",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"count\":0,\"data\":[]}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
         {
             "name": "AutoPart - \u0410\u0432\u0442\u043e\u043c\u043e\u0431\u0438\u043b\u044c\u0417\u0430\u043f\u0447\u0430\u0441\u0442\u0438",
             "description": "",
@@ -99,13 +31,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ducimus",
+                                    "value": "magnam",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "architecto",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -161,7 +93,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "qui",
+                                    "value": "animi",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -208,6 +140,74 @@
             ]
         },
         {
+            "name": "AutoPartCategory - \u0410\u0432\u0442\u043e\u043c\u043e\u0431\u0438\u043b\u044c\u0417\u0430\u043f\u0447\u0430\u0441\u0442\u0438\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a - AutoPartCategory",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/autoPartCategory\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/autoPartCategory\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "aliquid",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "veniam",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "AutoPartParam - \u0410\u0432\u0442\u043e\u043c\u043e\u0431\u0438\u043b\u044c\u0417\u0430\u043f\u0447\u0430\u0441\u0442\u0438\u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b",
             "description": "",
             "item": [
@@ -223,13 +223,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "sequi",
+                                    "value": "sed",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "a",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -291,13 +291,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "beatae",
+                                    "value": "iure",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "rem",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -359,13 +359,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "alias",
+                                    "value": "officiis",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ullam",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -427,13 +427,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "nobis",
+                                    "value": "doloribus",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "soluta",
+                                    "value": "maiores",
                                     "description": ""
                                 }
                             ]
@@ -489,7 +489,7 @@
                                 {
                                     "id": "orderCardId",
                                     "key": "orderCardId",
-                                    "value": "consequatur",
+                                    "value": "voluptas",
                                     "description": ""
                                 }
                             ]
@@ -545,7 +545,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "molestias",
+                                    "value": "ab",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -607,13 +607,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "labore",
+                                    "value": "officia",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "delectus",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -675,13 +675,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ipsam",
+                                    "value": "hic",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "nisi",
+                                    "value": "similique",
                                     "description": ""
                                 }
                             ]
@@ -743,13 +743,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "aut",
+                                    "value": "sunt",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "reprehenderit",
+                                    "value": "incidunt",
                                     "description": ""
                                 }
                             ]
@@ -805,19 +805,19 @@
                                 {
                                     "id": "carBrandId",
                                     "key": "carBrandId",
-                                    "value": "tempora",
+                                    "value": "culpa",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "accusamus",
+                                    "value": "vel",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "rerum",
+                                    "value": "nulla",
                                     "description": ""
                                 }
                             ]
@@ -873,7 +873,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "maxime",
+                                    "value": "quo",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -935,13 +935,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "nostrum",
+                                    "value": "qui",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "laboriosam",
+                                    "value": "quibusdam",
                                     "description": ""
                                 }
                             ]
@@ -997,19 +997,19 @@
                                 {
                                     "id": "carModelId",
                                     "key": "carModelId",
-                                    "value": "impedit",
+                                    "value": "est",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "expedita",
+                                    "value": "enim",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "voluptas",
+                                    "value": "porro",
                                     "description": ""
                                 }
                             ]
@@ -1065,7 +1065,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sit",
+                                    "value": "accusamus",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1127,13 +1127,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "impedit",
+                                    "value": "nihil",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "labore",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -1189,7 +1189,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "dolorum",
+                                    "value": "labore",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1251,13 +1251,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "mollitia",
+                                    "value": "velit",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "velit",
+                                    "value": "similique",
                                     "description": ""
                                 }
                             ]
@@ -1319,13 +1319,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "repellat",
+                                    "value": "qui",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "sed",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -1381,19 +1381,19 @@
                                 {
                                     "id": "cardId",
                                     "key": "cardId",
-                                    "value": "repudiandae",
+                                    "value": "occaecati",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "asperiores",
+                                    "value": "velit",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "vero",
+                                    "value": "corporis",
                                     "description": ""
                                 }
                             ]
@@ -1449,19 +1449,19 @@
                                 {
                                     "id": "cityId",
                                     "key": "cityId",
-                                    "value": "qui",
+                                    "value": "nemo",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "porro",
+                                    "value": "nostrum",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ipsam",
+                                    "value": "quos",
                                     "description": ""
                                 }
                             ]
@@ -1517,7 +1517,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "pariatur",
+                                    "value": "qui",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1579,13 +1579,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ipsum",
+                                    "value": "culpa",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "et",
+                                    "value": "labore",
                                     "description": ""
                                 }
                             ]
@@ -1641,19 +1641,19 @@
                                 {
                                     "id": "cardId",
                                     "key": "cardId",
-                                    "value": "quam",
+                                    "value": "voluptatem",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "tempore",
+                                    "value": "ut",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "ea",
+                                    "value": "consequatur",
                                     "description": ""
                                 }
                             ]
@@ -1709,19 +1709,19 @@
                                 {
                                     "id": "cityId",
                                     "key": "cityId",
-                                    "value": "quibusdam",
+                                    "value": "corporis",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "earum",
+                                    "value": "magni",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "quia",
+                                    "value": "deleniti",
                                     "description": ""
                                 }
                             ]
@@ -1777,7 +1777,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "neque",
+                                    "value": "tenetur",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1839,13 +1839,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "odit",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "a",
+                                    "value": "eaque",
                                     "description": ""
                                 }
                             ]
@@ -1901,7 +1901,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "id",
+                                    "value": "occaecati",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -1963,13 +1963,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "minus",
+                                    "value": "quo",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "vel",
+                                    "value": "soluta",
                                     "description": ""
                                 }
                             ]
@@ -2031,13 +2031,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "delectus",
+                                    "value": "consequatur",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "illum",
+                                    "value": "sunt",
                                     "description": ""
                                 }
                             ]
@@ -2093,19 +2093,19 @@
                                 {
                                     "id": "serviceId",
                                     "key": "serviceId",
-                                    "value": "deleniti",
+                                    "value": "non",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "quo",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "vel",
+                                    "value": "tenetur",
                                     "description": ""
                                 }
                             ]
@@ -2161,19 +2161,19 @@
                                 {
                                     "id": "cityId",
                                     "key": "cityId",
-                                    "value": "eum",
+                                    "value": "iure",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "voluptate",
+                                    "value": "dolor",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "est",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -2229,7 +2229,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "eaque",
+                                    "value": "sit",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2301,7 +2301,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"rooybzfzlzzclhcdtienfavfmixzqcmrhzzsbvdtbsybhbtuuautrlmupwalkhvhipvdekcdegybipjbfxjesgklynnqnbsuvynlzhbgftucrlqjpzqiggzakgxouagangqiqvcabpilaylfcxgvekvulonfnjuukyytvrxnpkgxcnwrtgfehuzdubaradancaygapyozccrzgukj\",\"email\":\"qhnfxtllqqucfnzmvhxxqamifigncqirnvpksmyvtjcwfgpxrbl\"}"
+                            "raw": "{\"phone\":\"vnegubujbljpdeaqksameswvgksjoyehxiylhzkrqwceyhtwyiukhequvaihwmfxwbhmhfkjrbcanvkwitlbggusnfbkvsslevozzhbytorcvznundzkeugkvcftcufgotwrlnfoian\",\"email\":\"gycrfivftyiditcscxknlnsvhnziswoxzmltkabbpobymyiuydzmkauchnzederfpfsunsalkixoiuqeffwaxyllgwifsohkvxfrrunihuh\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2332,7 +2332,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"llbrvnqzrkpxkqeqgpsgvznwnuxaoonbjspjqllgddnvlbhwcrwc\",\"email\":\"sjghhcauurhuxgvyubuhkdpezhykxqefxgsudzmwefksqzgobhyuujeglordxuiunubdcccitgqbmuetzddstddwoztieotmokgivuudggczalbfklwhaprbquwhgzpthsncxpfinlhbtgxzrxubvveeyhfacpgqocycsxasbphngrtjtfugalekyqxjzeoduzogoxlwxhiydvhuxekepnovalmbsvtlesqtuivtriegvkyamtczxk\",\"code\":6299}"
+                            "raw": "{\"phone\":\"ib\",\"email\":\"erqcmqovhqfeb\",\"code\":695}"
                         },
                         "description": "",
                         "auth": {
@@ -2353,13 +2353,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "enim",
+                                    "value": "dicta",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "aut",
+                                    "value": "in",
                                     "description": ""
                                 }
                             ]
@@ -2415,7 +2415,7 @@
                                 {
                                     "id": "phone",
                                     "key": "phone",
-                                    "value": "eius",
+                                    "value": "ullam",
                                     "description": ""
                                 }
                             ]
@@ -2471,7 +2471,7 @@
                                 {
                                     "id": "email",
                                     "key": "email",
-                                    "value": "cum",
+                                    "value": "id",
                                     "description": ""
                                 }
                             ]
@@ -2527,7 +2527,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "officia",
+                                    "value": "libero",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2589,13 +2589,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "incidunt",
+                                    "value": "est",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "et",
+                                    "value": "quam",
                                     "description": ""
                                 }
                             ]
@@ -2657,13 +2657,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "est",
+                                    "value": "asperiores",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "delectus",
+                                    "value": "unde",
                                     "description": ""
                                 }
                             ]
@@ -2725,13 +2725,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "saepe",
+                                    "value": "inventore",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "asperiores",
+                                    "value": "vel",
                                     "description": ""
                                 }
                             ]
@@ -2787,7 +2787,7 @@
                                 {
                                     "id": "orderCardId",
                                     "key": "orderCardId",
-                                    "value": "corporis",
+                                    "value": "fuga",
                                     "description": ""
                                 }
                             ]
@@ -2843,7 +2843,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quia",
+                                    "value": "exercitationem",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -2905,13 +2905,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "nemo",
+                                    "value": "dolore",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "veritatis",
+                                    "value": "tempore",
                                     "description": ""
                                 }
                             ]
@@ -2967,7 +2967,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "rerum",
+                                    "value": "et",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -3029,13 +3029,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "vel",
+                                    "value": "omnis",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "dolorem",
+                                    "value": "voluptas",
                                     "description": ""
                                 }
                             ]
@@ -3091,19 +3091,19 @@
                                 {
                                     "id": "userId",
                                     "key": "userId",
-                                    "value": "similique",
+                                    "value": "ut",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "aspernatur",
+                                    "value": "inventore",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "rerum",
+                                    "value": "cupiditate",
                                     "description": ""
                                 }
                             ]
@@ -3159,19 +3159,19 @@
                                 {
                                     "id": "cardId",
                                     "key": "cardId",
-                                    "value": "consequatur",
+                                    "value": "quasi",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "eum",
+                                    "value": "sint",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "adipisci",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -3227,7 +3227,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptas",
+                                    "value": "voluptatem",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -3289,13 +3289,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "et",
+                                    "value": "autem",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "laborum",
+                                    "value": "voluptatem",
                                     "description": ""
                                 }
                             ]
@@ -3351,19 +3351,19 @@
                                 {
                                     "id": "userId",
                                     "key": "userId",
-                                    "value": "qui",
+                                    "value": "enim",
                                     "description": ""
                                 },
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "tenetur",
+                                    "value": "non",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "dolores",
+                                    "value": "iste",
                                     "description": ""
                                 }
                             ]
@@ -3419,7 +3419,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "dolores",
+                                    "value": "iste",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -3481,13 +3481,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "nostrum",
+                                    "value": "enim",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "quas",
+                                    "value": "rem",
                                     "description": ""
                                 }
                             ]
@@ -3543,7 +3543,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "odio",
+                                    "value": "eligendi",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -3605,13 +3605,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "autem",
+                                    "value": "reiciendis",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "nihil",
+                                    "value": "explicabo",
                                     "description": ""
                                 }
                             ]
@@ -3667,7 +3667,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "fuga",
+                                    "value": "voluptatibus",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -3729,13 +3729,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "exercitationem",
+                                    "value": "sunt",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "quibusdam",
+                                    "value": "nulla",
                                     "description": ""
                                 }
                             ]
@@ -3791,7 +3791,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "dolor",
+                                    "value": "aspernatur",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -3853,13 +3853,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "qui",
+                                    "value": "temporibus",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "doloremque",
+                                    "value": "beatae",
                                     "description": ""
                                 }
                             ]
@@ -3906,6 +3906,266 @@
             ]
         },
         {
+            "name": "OrderCard - \u0417\u0430\u043a\u0430\u0437\u041a\u0430\u0440\u0442\u043e\u0447\u043a\u0430",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a - OrderCard",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/orderCard\/get\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/orderCard\/get\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "deserunt",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "totam",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435 \u0447\u0435\u0440\u0435\u0437 UserID - OrderCard",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/orderCard\/getByUserId\/:userId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/orderCard\/getByUserId\/:userId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "userId",
+                                    "key": "userId",
+                                    "value": "ut",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "et",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "eveniet",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435 \u0447\u0435\u0440\u0435\u0437 CardID - OrderCard",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/orderCard\/getByCardId\/:cardId\/:skip\/:take",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/orderCard\/getByCardId\/:cardId\/:skip\/:take",
+                            "variable": [
+                                {
+                                    "id": "cardId",
+                                    "key": "cardId",
+                                    "value": "quos",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "skip",
+                                    "key": "skip",
+                                    "value": "sequi",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "take",
+                                    "key": "take",
+                                    "value": "id",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"count\":0,\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435 \u0447\u0435\u0440\u0435\u0437 ID - OrderCard",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/orderCard\/getById\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/orderCard\/getById\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the getById."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"message\":\"not found\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Region - \u0420\u0435\u0433\u0438\u043e\u043d",
             "description": "",
             "item": [
@@ -3921,13 +4181,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "explicabo",
+                                    "value": "commodi",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "maiores",
+                                    "value": "modi",
                                     "description": ""
                                 }
                             ]
@@ -3989,13 +4249,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "commodi",
+                                    "value": "libero",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "earum",
+                                    "value": "eligendi",
                                     "description": ""
                                 }
                             ]
@@ -4051,7 +4311,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quas",
+                                    "value": "culpa",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -4113,13 +4373,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "nostrum",
+                                    "value": "sapiente",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "sint",
+                                    "value": "rerum",
                                     "description": ""
                                 }
                             ]
@@ -4175,7 +4435,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "natus",
+                                    "value": "rerum",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -4237,13 +4497,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "sed",
+                                    "value": "est",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "eveniet",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -4299,7 +4559,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "in",
+                                    "value": "eveniet",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -4361,7 +4621,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "et",
+                                    "value": "praesentium",
                                     "description": "The ID of the getById."
                                 }
                             ]
@@ -4417,13 +4677,13 @@
                                 {
                                     "id": "skip",
                                     "key": "skip",
-                                    "value": "ad",
+                                    "value": "neque",
                                     "description": ""
                                 },
                                 {
                                     "id": "take",
                                     "key": "take",
-                                    "value": "pariatur",
+                                    "value": "natus",
                                     "description": ""
                                 }
                             ]
