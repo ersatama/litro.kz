@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: officia
+        example: ab
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: qui
+        example: sint
         type: string
         custom: []
     queryParameters: []

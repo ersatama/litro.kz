@@ -4,6 +4,12 @@ namespace App\Domain\Contracts;
 
 abstract class MainContract
 {
+    const IS_CARD   =   'is_card';
+    const REVIEW    =   'review';
+    const ADDRESS   =   'address';
+    const OLD_PRICE =   'old_price';
+    const PLACE_ID  =   'place_id';
+    const MASTER_ID =   'master_id';
     const CURRENT_TIMESTAMP =   'CURRENT_TIMESTAMP';
     const IMPORT_ID =   'import_id';
     const IS_FROM_EXCEL =   'is_from_excel';

@@ -20,14 +20,14 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: vnegubujbljpdeaqksameswvgksjoyehxiylhzkrqwceyhtwyiukhequvaihwmfxwbhmhfkjrbcanvkwitlbggusnfbkvsslevozzhbytorcvznundzkeugkvcftcufgotwrlnfoian
+        example: uoderqlvyvtvrdcnykgvuytkoieuvjlelkebbtzimkozmaiqcsgtswbkjgmmvwdfjundfdnclyrecoawubsfgomgwxdrasonfhuzboewozskuwebootjcobqepxthyhwbbquytlerotyekyvgdsvnkfmwhcvldjpmwhr
         type: string
         custom: []
       email:
         name: email
         description: validation.max.
         required: false
-        example: gycrfivftyiditcscxknlnsvhnziswoxzmltkabbpobymyiuydzmkauchnzederfpfsunsalkixoiuqeffwaxyllgwifsohkvxfrrunihuh
+        example: tudgtgxavyhnvblwietsrhnubqhzasnddnictojgsbfcjcemcqbpanoynxpofmphtszqvqoywebcynbxuocjwgodgcyqydsycjitxucjawvoljjjerrmvfkwweazqvlchjbtwakpmskfjhhoeaiyzivnsrcqugqawddbxg
         type: string
         custom: []
     responses: []
@@ -51,21 +51,21 @@ endpoints:
         name: phone
         description: validation.max.
         required: false
-        example: ib
+        example: lusxolhfzouwxzzytwskzkeqosvbzvbjcxwjiprhlsvhqubvhmkvlzzyxlalbxu
         type: string
         custom: []
       email:
         name: email
         description: validation.max.
         required: false
-        example: erqcmqovhqfeb
+        example: yauhqjmeacyefjokywxzummrnchjbhbznggvmcr
         type: string
         custom: []
       code:
         name: code
         description: 'validation.min validation.max.'
         required: true
-        example: 695
+        example: 5722
         type: integer
         custom: []
     responses: []
@@ -87,14 +87,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: dicta
+        example: pariatur
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: in
+        example: dolore
         type: string
         custom: []
     queryParameters: []
@@ -126,7 +126,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: ullam
+        example: perspiciatis
         type: string
         custom: []
     queryParameters: []
@@ -158,7 +158,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: id
+        example: accusantium
         type: string
         custom: []
     queryParameters: []
@@ -190,7 +190,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: libero
+        example: ipsum
         type: string
         custom: []
     queryParameters: []

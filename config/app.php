@@ -230,6 +230,7 @@ return [
         App\Providers\Repositories\EcoServiceRepositoryProvider::class,
         App\Providers\Repositories\GiftRepositoryProvider::class,
         App\Providers\Repositories\OrderCardRepositoryProvider::class,
+        App\Providers\Repositories\OrderServiceRepositoryProvider::class,
     ],
 
     /*

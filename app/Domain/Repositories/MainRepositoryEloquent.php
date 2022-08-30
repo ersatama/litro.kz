@@ -29,6 +29,14 @@ trait MainRepositoryEloquent
             ->get();
     }
 
+    public function getByPlaceId($placeId,$skip,$take)
+    {
+        return $this->model::where(MainContract::PLACE_ID,$placeId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
     public function getByUserId($userId,$skip,$take)
     {
         return $this->model::where(MainContract::USER_ID,$userId)

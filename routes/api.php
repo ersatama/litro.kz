@@ -29,6 +29,7 @@ use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\OrderCardController;
+use App\Http\Controllers\Api\OrderServiceController;
 use App\Http\Controllers\Api\RegionController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\ServiceLimitController;
@@ -43,6 +44,17 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(OrderServiceController::class)->group(function() {
+    Route::prefix('orderService')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('orderService.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('orderService.getByUserId');
+        Route::get('getByCityId/{cityId}/{skip}/{take}','getByCityId')->name('orderService.getByCityId');
+        Route::get('getByPlaceId/{placeId}/{skip}/{take}','getByPlaceId')->name('orderService.getByPlaceId');
+        Route::get('getByOrderCardId/{orderCardId}/{skip}/{take}','getByOrderCardId')->name('orderService.getByOrderCardId');
+        Route::get('getById/{id}','getById')->name('orderService.getById');
+    });
 });
 
 Route::controller(OrderCardController::class)->group(function() {
