@@ -4,7 +4,7 @@ namespace App\Domain\Contracts;
 
 class CategoryContract extends MainContract
 {
-    const TABLE =   'categories';
+    const TABLE =   'global_categories';
     const FILLABLE  =   [
         self::IMAGE_ID,
         self::TITLE,
