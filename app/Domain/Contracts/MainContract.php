@@ -4,6 +4,20 @@ namespace App\Domain\Contracts;
 
 abstract class MainContract
 {
+    const ORDER_ID  =   'order_id';
+    const SALT  =   'salt';
+    const RESULT    =   'result';
+    const NEXT_PAYMENT  =   'next_payment';
+    const RECURRING_PROFILE_ID  =   'recurring_profile_id';
+    const CARD_PAN  =   'card_pan';
+    const PAYMENT_DATE  =   'payment_date';
+    const AMOUNT    =   'amount';
+    const PAYMENT_KEY   =   'payment_key';
+    const PAYMENT_SYSTEM_INFO   =   'payment_system_info';
+    const PAYMENT_SYSTEM_ID =   'payment_system_id';
+    const CURRENCY_ID   =   'currency_id';
+    const SUM   =   'sum';
+    const TOKEN =   'token';
     const IS_CARD   =   'is_card';
     const REVIEW    =   'review';
     const ADDRESS   =   'address';

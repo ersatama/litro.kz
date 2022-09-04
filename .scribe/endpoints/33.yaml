@@ -1,12 +1,12 @@
-name: 'ServicePrice - СервисЦена'
+name: 'PaymentSystem - ПлатежСистема'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/servicePrice/get/{skip}/{take}'
+    uri: 'api/paymentSystem/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - ServicePrice'
+      title: 'Получить список - PaymentSystem'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: labore
+        example: ut
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: sit
+        example: perferendis
         type: string
         custom: []
     queryParameters: []
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/servicePrice/getById/{id}'
+    uri: 'api/paymentSystem/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - ServicePrice'
+      title: 'Получить данные через ID - PaymentSystem'
       description: ''
       authenticated: false
       custom: []
@@ -57,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: exercitationem
+        example: animi
         type: string
         custom: []
     queryParameters: []

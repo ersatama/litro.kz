@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: quae
+        example: autem
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: dolorum
+        example: veritatis
         type: string
         custom: []
     queryParameters: []

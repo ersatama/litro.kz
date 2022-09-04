@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: atque
+        example: velit
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: exercitationem
+        example: quos
         type: string
         custom: []
     queryParameters: []
@@ -57,21 +57,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: laborum
+        example: omnis
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: aut
+        example: fugit
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quos
+        example: ut
         type: string
         custom: []
     queryParameters: []
@@ -103,7 +103,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: voluptas
+        example: accusantium
         type: string
         custom: []
     queryParameters: []

@@ -1,12 +1,12 @@
-name: 'OrderService - ЗаказСервис'
+name: 'OrderCardImport - ЗаказКартыИмпорт'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderService/get/{skip}/{take}'
+    uri: 'api/orderCardImport/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - OrderService'
+      title: 'Получить список - OrderCardImport'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: quo
+        example: reiciendis
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: occaecati
+        example: quasi
         type: string
         custom: []
     queryParameters: []
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderService/getByUserId/{userId}/{skip}/{take}'
+    uri: 'api/orderCardImport/getByUserId/{userId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через UserID - OrderService'
+      title: 'Получить данные через UserID - OrderCardImport'
       description: ''
       authenticated: false
       custom: []
@@ -57,60 +57,14 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: inventore
+        example: provident
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: porro
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: maiores
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/orderService/getByCityId/{cityId}/{skip}/{take}'
-    metadata:
-      title: 'Получить данные через CityID - OrderService'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      cityId:
-        name: cityId
-        description: ''
-        required: true
-        example: quia
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: aperiam
+        example: perferendis
         type: string
         custom: []
       take:
@@ -135,101 +89,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderService/getByPlaceId/{placeId}/{skip}/{take}'
+    uri: 'api/orderCardImport/getById/{id}'
     metadata:
-      title: 'Получить данные через PlaceID - OrderService'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      placeId:
-        name: placeId
-        description: ''
-        required: true
-        example: provident
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: consequatur
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: quam
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/orderService/getByOrderCardId/{orderCardId}/{skip}/{take}'
-    metadata:
-      title: 'Получить данные через OrderCardID - OrderService'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      orderCardId:
-        name: orderCardId
-        description: ''
-        required: true
-        example: atque
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: dolores
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: molestias
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/orderService/getById/{id}'
-    metadata:
-      title: 'Получить данные через ID - OrderService'
+      title: 'Получить данные через ID - OrderCardImport'
       description: ''
       authenticated: false
       custom: []
@@ -241,7 +103,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: sint
+        example: veniam
         type: string
         custom: []
     queryParameters: []

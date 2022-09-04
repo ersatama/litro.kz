@@ -231,6 +231,12 @@ return [
         App\Providers\Repositories\GiftRepositoryProvider::class,
         App\Providers\Repositories\OrderCardRepositoryProvider::class,
         App\Providers\Repositories\OrderServiceRepositoryProvider::class,
+        App\Providers\Repositories\OrderCardImportRepositoryProvider::class,
+        App\Providers\Repositories\PartnerRepositoryProvider::class,
+        App\Providers\Repositories\PaymentRepositoryProvider::class,
+        App\Providers\Repositories\PaymentSystemRepositoryProvider::class,
+        App\Providers\Repositories\PlaceRepositoryProvider::class,
+        App\Providers\Repositories\RecurrentRepositoryProvider::class,
     ],
 
     /*

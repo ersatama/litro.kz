@@ -1,44 +1,12 @@
-name: 'ServiceType - СервисТип'
+name: 'Place - Места'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/serviceType/getById/{id}'
+    uri: 'api/place/get/{skip}/{take}'
     metadata:
-      title: 'Получить данные через ID - ServiceType'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the getById.'
-        required: true
-        example: quam
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 404
-        content: '{"message":"not found"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/serviceType/get/{skip}/{take}'
-    metadata:
-      title: 'Получить список - ServiceType'
+      title: 'Получить список - Place'
       description: ''
       authenticated: false
       custom: []
@@ -50,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: a
+        example: quae
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quae
+        example: facere
         type: string
         custom: []
     queryParameters: []
@@ -66,6 +34,130 @@ endpoints:
       -
         status: 200
         content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/place/getByServiceId/{serviceId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через ServiceID - Place'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      serviceId:
+        name: serviceId
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: earum
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: aliquam
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/place/getByCityId/{cityId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через CityID - Place'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: quaerat
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: harum
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: sapiente
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/place/getById/{id}'
+    metadata:
+      title: 'Получить данные через ID - Place'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the getById.'
+        required: true
+        example: aut
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

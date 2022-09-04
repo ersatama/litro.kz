@@ -29,7 +29,13 @@ use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\OrderCardController;
+use App\Http\Controllers\Api\OrderCardImportController;
 use App\Http\Controllers\Api\OrderServiceController;
+use App\Http\Controllers\Api\PartnerController;
+use App\Http\Controllers\Api\PaymentController;
+use App\Http\Controllers\Api\PaymentSystemController;
+use App\Http\Controllers\Api\PlaceController;
+use App\Http\Controllers\Api\RecurrentController;
 use App\Http\Controllers\Api\RegionController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\ServiceLimitController;
@@ -44,6 +50,52 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(RecurrentController::class)->group(function() {
+    Route::prefix('recurrent')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('recurrent.get');
+        Route::get('getById/{id}','getById')->name('recurrent.getById');
+    });
+});
+
+Route::controller(PlaceController::class)->group(function() {
+    Route::prefix('place')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('place.get');
+        Route::get('getByServiceId/{serviceId}/{skip}/{take}','getByServiceId')->name('place.getByServiceId');
+        Route::get('getByCityId/{cityId}/{skip}/{take}','getByCityId')->name('place.getByCityId');
+        Route::get('getById/{id}','getById')->name('place.getById');
+    });
+});
+
+Route::controller(PaymentSystemController::class)->group(function() {
+    Route::prefix('paymentSystem')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('paymentSystem.get');
+        Route::get('getById/{id}','getById')->name('paymentSystem.getById');
+    });
+});
+
+Route::controller(PaymentController::class)->group(function() {
+    Route::prefix('payment')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('payment.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('payment.getByUserId');
+        Route::get('getById/{id}','getById')->name('payment.getById');
+    });
+});
+
+Route::controller(PartnerController::class)->group(function() {
+    Route::prefix('partner')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('partner.get');
+        Route::get('getById/{id}','getById')->name('partner.getById');
+    });
+});
+
+Route::controller(OrderCardImportController::class)->group(function() {
+    Route::prefix('orderCardImport')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('orderCardImport.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('orderCardImport.getByUserId');
+        Route::get('getById/{id}','getById')->name('orderService.getById');
+    });
 });
 
 Route::controller(OrderServiceController::class)->group(function() {

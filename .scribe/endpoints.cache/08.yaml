@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: enim
+        example: quos
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: officiis
+        example: asperiores
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: carBrandId
         description: ''
         required: true
-        example: sed
+        example: molestiae
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: ab
+        example: enim
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: reiciendis
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -105,7 +105,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: quis
+        example: porro
         type: string
         custom: []
     queryParameters: []
