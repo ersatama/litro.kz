@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: minus
+        example: fugiat
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: maxime
+        example: id
         type: string
         custom: []
     queryParameters: []

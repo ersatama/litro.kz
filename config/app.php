@@ -195,7 +195,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-
         App\Providers\Repositories\NewsCategoryRepositoryProvider::class,
         App\Providers\Repositories\NewsRepositoryProvider::class,
         App\Providers\Repositories\AutoPartCategoryRepositoryProvider::class,
@@ -237,6 +236,11 @@ return [
         App\Providers\Repositories\PaymentSystemRepositoryProvider::class,
         App\Providers\Repositories\PlaceRepositoryProvider::class,
         App\Providers\Repositories\RecurrentRepositoryProvider::class,
+        App\Providers\Repositories\StockRepositoryProvider::class,
+        App\Providers\Repositories\ThirdPartyAppRepositoryProvider::class,
+        App\Providers\Repositories\TransactionRepositoryProvider::class,
+        App\Providers\Repositories\TransactionToNonExistingUserRepositoryProvider::class,
+        App\Providers\Repositories\UserCarRepositoryProvider::class,
     ],
 
     /*

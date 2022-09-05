@@ -7,9 +7,9 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
-  '/api/partner/get/{skip}/{take}':
+  '/api/stock/get/{skip}/{take}':
     get:
-      summary: 'Получить список - Partner'
+      summary: 'Получить список - Stock'
       description: ''
       parameters:
         -
@@ -44,14 +44,14 @@ paths:
                     type: array
                     example: []
       tags:
-        - 'Partner - Партнер'
+        - 'Stock - Запас'
       security: []
     parameters:
       -
         in: path
         name: skip
         description: ''
-        example: aliquam
+        example: non
         required: true
         schema:
           type: string
@@ -59,13 +59,13 @@ paths:
         in: path
         name: take
         description: ''
-        example: non
+        example: ipsum
         required: true
         schema:
           type: string
-  '/api/partner/getById/{id}':
+  '/api/stock/getById/{id}':
     get:
-      summary: 'Получить данные через ID - Partner'
+      summary: 'Получить данные через ID - Stock'
       description: ''
       parameters:
         -
@@ -96,20 +96,20 @@ paths:
                     type: string
                     example: 'not found'
       tags:
-        - 'Partner - Партнер'
+        - 'Stock - Запас'
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: et
+        example: qui
         required: true
         schema:
           type: string
-  '/api/payment/get/{skip}/{take}':
+  '/api/thirdPartyApp/get/{skip}/{take}':
     get:
-      summary: 'Получить список - Payment'
+      summary: 'Получить список - ThirdPartyApp'
       description: ''
       parameters:
         -
@@ -144,14 +144,14 @@ paths:
                     type: array
                     example: []
       tags:
-        - 'Payment - Платеж'
+        - 'ThirdPartyApp - Стороннее приложение'
       security: []
     parameters:
       -
         in: path
         name: skip
         description: ''
-        example: harum
+        example: quia
         required: true
         schema:
           type: string
@@ -159,13 +159,57 @@ paths:
         in: path
         name: take
         description: ''
-        example: nihil
+        example: reprehenderit
         required: true
         schema:
           type: string
-  '/api/payment/getByUserId/{userId}/{skip}/{take}':
+  '/api/thirdPartyApp/getById/{id}':
     get:
-      summary: 'Получить данные через UserID - Payment'
+      summary: 'Получить данные через ID - ThirdPartyApp'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - 'ThirdPartyApp - Стороннее приложение'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: esse
+        required: true
+        schema:
+          type: string
+  '/api/transaction/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - Transaction'
       description: ''
       parameters:
         -
@@ -200,14 +244,270 @@ paths:
                     type: array
                     example: []
       tags:
-        - 'Payment - Платеж'
+        - 'Transaction - Транзакции'
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: nemo
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: rerum
+        required: true
+        schema:
+          type: string
+  '/api/transaction/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - Transaction'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - 'Transaction - Транзакции'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: consectetur
+        required: true
+        schema:
+          type: string
+  '/api/transactionToNonExistingUser/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - Transaction'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Transaction - Транзакция для несуществующего пользователя'
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: ad
+        required: true
+        schema:
+          type: string
+  '/api/transactionToNonExistingUser/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - TransactionToNonExistingUser'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - 'TransactionToNonExistingUser - Транзакция для несуществующего пользователя'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: rerum
+        required: true
+        schema:
+          type: string
+  '/api/userCar/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - UserCar'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'UserCar - ПользовательАвтомобиль'
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: quia
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: dolorem
+        required: true
+        schema:
+          type: string
+  '/api/userCar/getByUserId/{userId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через UserID - UserCar'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'UserCar - ПользовательАвтомобиль'
       security: []
     parameters:
       -
         in: path
         name: userId
         description: ''
-        example: deleniti
+        example: asperiores
         required: true
         schema:
           type: string
@@ -215,7 +515,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: debitis
+        example: eos
         required: true
         schema:
           type: string
@@ -223,13 +523,77 @@ paths:
         in: path
         name: take
         description: ''
-        example: at
+        example: in
         required: true
         schema:
           type: string
-  '/api/payment/getById/{id}':
+  '/api/userCar/getByCarModelId/{carModelId}/{skip}/{take}':
     get:
-      summary: 'Получить данные через ID - Payment'
+      summary: 'Получить данные через CarModelID - UserCar'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'UserCar - ПользовательАвтомобиль'
+      security: []
+    parameters:
+      -
+        in: path
+        name: carModelId
+        description: ''
+        example: laudantium
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: expedita
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: quisquam
+        required: true
+        schema:
+          type: string
+  '/api/userCar/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - UserCar'
       description: ''
       parameters:
         -
@@ -260,442 +624,14 @@ paths:
                     type: string
                     example: 'not found'
       tags:
-        - 'Payment - Платеж'
+        - 'UserCar - ПользовательАвтомобиль'
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quis
-        required: true
-        schema:
-          type: string
-  '/api/paymentSystem/get/{skip}/{take}':
-    get:
-      summary: 'Получить список - PaymentSystem'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - 'PaymentSystem - ПлатежСистема'
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: ut
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: perferendis
-        required: true
-        schema:
-          type: string
-  '/api/paymentSystem/getById/{id}':
-    get:
-      summary: 'Получить данные через ID - PaymentSystem'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'not found'
-      tags:
-        - 'PaymentSystem - ПлатежСистема'
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the getById.'
-        example: animi
-        required: true
-        schema:
-          type: string
-  '/api/place/get/{skip}/{take}':
-    get:
-      summary: 'Получить список - Place'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - 'Place - Места'
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: quae
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: facere
-        required: true
-        schema:
-          type: string
-  '/api/place/getByServiceId/{serviceId}/{skip}/{take}':
-    get:
-      summary: 'Получить данные через ServiceID - Place'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - 'Place - Места'
-      security: []
-    parameters:
-      -
-        in: path
-        name: serviceId
-        description: ''
-        example: et
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: skip
-        description: ''
-        example: earum
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: aliquam
-        required: true
-        schema:
-          type: string
-  '/api/place/getByCityId/{cityId}/{skip}/{take}':
-    get:
-      summary: 'Получить данные через CityID - Place'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - 'Place - Места'
-      security: []
-    parameters:
-      -
-        in: path
-        name: cityId
-        description: ''
-        example: quaerat
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: skip
-        description: ''
-        example: harum
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: sapiente
-        required: true
-        schema:
-          type: string
-  '/api/place/getById/{id}':
-    get:
-      summary: 'Получить данные через ID - Place'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'not found'
-      tags:
-        - 'Place - Места'
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the getById.'
-        example: aut
-        required: true
-        schema:
-          type: string
-  '/api/recurrent/get/{skip}/{take}':
-    get:
-      summary: 'Получить список - Recurrent'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - 'Recurrent - Повторяющийся'
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: reprehenderit
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: cupiditate
-        required: true
-        schema:
-          type: string
-  '/api/recurrent/getById/{id}':
-    get:
-      summary: 'Получить данные через ID - Recurrent'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'not found'
-      tags:
-        - 'Recurrent - Повторяющийся'
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the getById.'
-        example: velit
+        example: fugit
         required: true
         schema:
           type: string
@@ -743,7 +679,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quam
+        example: numquam
         required: true
         schema:
           type: string
@@ -751,7 +687,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: vitae
         required: true
         schema:
           type: string
@@ -795,7 +731,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: voluptate
+        example: facere
         required: true
         schema:
           type: string
@@ -843,7 +779,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: expedita
+        example: eos
         required: true
         schema:
           type: string
@@ -851,7 +787,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptas
+        example: natus
         required: true
         schema:
           type: string
@@ -899,7 +835,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nihil
+        example: tenetur
         required: true
         schema:
           type: string
@@ -907,7 +843,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: alias
+        example: non
         required: true
         schema:
           type: string
@@ -955,7 +891,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: eaque
+        example: quis
         required: true
         schema:
           type: string
@@ -963,7 +899,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: est
         required: true
         schema:
           type: string
@@ -1011,7 +947,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nam
+        example: doloribus
         required: true
         schema:
           type: string
@@ -1019,7 +955,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: recusandae
         required: true
         schema:
           type: string
@@ -1067,7 +1003,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: eaque
+        example: omnis
         required: true
         schema:
           type: string
@@ -1075,7 +1011,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ipsa
+        example: et
         required: true
         schema:
           type: string
@@ -1123,7 +1059,7 @@ paths:
         in: path
         name: orderCardId
         description: ''
-        example: dolorem
+        example: ex
         required: true
         schema:
           type: string
@@ -1167,7 +1103,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: inventore
+        example: ex
         required: true
         schema:
           type: string
@@ -1215,7 +1151,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: vel
+        example: quo
         required: true
         schema:
           type: string
@@ -1223,7 +1159,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ipsam
+        example: et
         required: true
         schema:
           type: string
@@ -1271,7 +1207,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: id
+        example: omnis
         required: true
         schema:
           type: string
@@ -1279,7 +1215,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: repudiandae
+        example: eligendi
         required: true
         schema:
           type: string
@@ -1327,7 +1263,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quos
+        example: et
         required: true
         schema:
           type: string
@@ -1335,7 +1271,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: asperiores
+        example: quis
         required: true
         schema:
           type: string
@@ -1383,7 +1319,7 @@ paths:
         in: path
         name: carBrandId
         description: ''
-        example: molestiae
+        example: officiis
         required: true
         schema:
           type: string
@@ -1391,7 +1327,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: enim
+        example: blanditiis
         required: true
         schema:
           type: string
@@ -1399,7 +1335,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: est
         required: true
         schema:
           type: string
@@ -1443,7 +1379,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: porro
+        example: consequatur
         required: true
         schema:
           type: string
@@ -1491,7 +1427,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: suscipit
+        example: rerum
         required: true
         schema:
           type: string
@@ -1499,7 +1435,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: officia
+        example: vel
         required: true
         schema:
           type: string
@@ -1547,7 +1483,7 @@ paths:
         in: path
         name: carModelId
         description: ''
-        example: repudiandae
+        example: aut
         required: true
         schema:
           type: string
@@ -1555,7 +1491,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sunt
+        example: ut
         required: true
         schema:
           type: string
@@ -1563,7 +1499,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: tenetur
+        example: fugit
         required: true
         schema:
           type: string
@@ -1607,7 +1543,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: rerum
+        example: nisi
         required: true
         schema:
           type: string
@@ -1655,7 +1591,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: enim
+        example: at
         required: true
         schema:
           type: string
@@ -1663,7 +1599,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: id
+        example: eum
         required: true
         schema:
           type: string
@@ -1707,7 +1643,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: officiis
+        example: illo
         required: true
         schema:
           type: string
@@ -1755,7 +1691,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: autem
+        example: omnis
         required: true
         schema:
           type: string
@@ -1763,7 +1699,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: veritatis
+        example: nemo
         required: true
         schema:
           type: string
@@ -1811,7 +1747,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quidem
+        example: ut
         required: true
         schema:
           type: string
@@ -1819,7 +1755,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: molestiae
+        example: perferendis
         required: true
         schema:
           type: string
@@ -1867,7 +1803,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: rerum
+        example: debitis
         required: true
         schema:
           type: string
@@ -1875,7 +1811,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: porro
+        example: fuga
         required: true
         schema:
           type: string
@@ -1883,7 +1819,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ea
+        example: earum
         required: true
         schema:
           type: string
@@ -1931,7 +1867,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: optio
+        example: a
         required: true
         schema:
           type: string
@@ -1939,7 +1875,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: labore
+        example: enim
         required: true
         schema:
           type: string
@@ -1947,7 +1883,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: maxime
+        example: ad
         required: true
         schema:
           type: string
@@ -1991,7 +1927,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: est
+        example: sint
         required: true
         schema:
           type: string
@@ -2039,7 +1975,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sed
+        example: ut
         required: true
         schema:
           type: string
@@ -2047,7 +1983,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eum
+        example: unde
         required: true
         schema:
           type: string
@@ -2095,7 +2031,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: aut
+        example: minima
         required: true
         schema:
           type: string
@@ -2103,7 +2039,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: non
+        example: itaque
         required: true
         schema:
           type: string
@@ -2111,7 +2047,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: optio
+        example: debitis
         required: true
         schema:
           type: string
@@ -2159,7 +2095,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: sapiente
+        example: sunt
         required: true
         schema:
           type: string
@@ -2167,7 +2103,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: facere
+        example: fugit
         required: true
         schema:
           type: string
@@ -2175,7 +2111,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -2219,7 +2155,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: aut
+        example: consequatur
         required: true
         schema:
           type: string
@@ -2267,7 +2203,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: repudiandae
+        example: ut
         required: true
         schema:
           type: string
@@ -2275,7 +2211,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: enim
+        example: non
         required: true
         schema:
           type: string
@@ -2319,7 +2255,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: dolorum
+        example: commodi
         required: true
         schema:
           type: string
@@ -2367,7 +2303,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: voluptas
+        example: neque
         required: true
         schema:
           type: string
@@ -2375,7 +2311,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: perspiciatis
+        example: ducimus
         required: true
         schema:
           type: string
@@ -2423,7 +2359,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: repellendus
+        example: enim
         required: true
         schema:
           type: string
@@ -2431,7 +2367,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptatem
+        example: voluptatibus
         required: true
         schema:
           type: string
@@ -2479,7 +2415,7 @@ paths:
         in: path
         name: serviceId
         description: ''
-        example: deleniti
+        example: nam
         required: true
         schema:
           type: string
@@ -2487,7 +2423,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: reiciendis
+        example: quia
         required: true
         schema:
           type: string
@@ -2495,7 +2431,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: consequatur
+        example: esse
         required: true
         schema:
           type: string
@@ -2543,7 +2479,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: ipsam
+        example: voluptas
         required: true
         schema:
           type: string
@@ -2551,7 +2487,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ut
+        example: quae
         required: true
         schema:
           type: string
@@ -2559,7 +2495,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: porro
+        example: vitae
         required: true
         schema:
           type: string
@@ -2603,7 +2539,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: eaque
+        example: commodi
         required: true
         schema:
           type: string
@@ -2639,11 +2575,11 @@ paths:
                 phone:
                   type: string
                   description: validation.max.
-                  example: bvuaogpxxsnwlosaherzxgbdmxxznjpngiaztrdnhkgecvisnclpxljzohioiaoubjdkqlxstjhiclqnxntvuhvniyidnomavpsknesfxnfsjqstprahwiaedhxwibazgijgpxbnmzsvbcldjccrexwppeftbddlrqklfstfwdedlifksyghgpobjbcfvuhtrngupqfavoyldupphgtxfsawbrjscnzstkheuxfnmpgwu
+                  example: rricsedaooxeifkyzpknuvtodcphsxspbopbywljjdkzbzuqpujcmychgpvikiegzspydxlzmpqpiytpfgrzhwlmszmnkfoyklaphdicoukh
                 email:
                   type: string
                   description: validation.max.
-                  example: luxdrcveraiclygejvytvadsyscnhtnzrmsvhtuumhglmiaepssklfifaggtjxekscxvyyjfwnguamgwhjevfbpkebgwscdvnnwfldykgnmchsmacqkceypfzijcunlyufjxmmjmazjsvzocbpftytwwqtggjnejlyhtuhluabzjubllnnsetwmwihyrktfbulpbqplflortizpwajvkwddhmvygzevffxaay
+                  example: hhbqyyzzabizvs
       security: []
   /api/code/update:
     post:
@@ -2677,15 +2613,15 @@ paths:
                 phone:
                   type: string
                   description: validation.max.
-                  example: zjczldkdqpjosfpbsxyermcacgyeisgvsrjqkmhfzxwgqdrnnqyemlntriykxdgkwubxmtwyxonsgignbkbubvegdjoxlhxhatqwsgksorbnetaigntyfoizkcwxyivewxtagqggicldtlbfbetgaamxppjrunmmzgsmcnplkvvghpcmydmomiylkegzrsbibnlxwgdjewedmlwrkmrhwioglixcddhptkryfjzwrigi
+                  example: mhodqjbxqiuenvtwcrwhnngcsxgwungxkxwmymyvjdjegmlwsccjwqiz
                 email:
                   type: string
                   description: validation.max.
-                  example: fvybuqdfqqyfdrolhzpehqssojchiayhjswlpdkppxlwgroybxqyncgfctrlcabyiypoafsemmpdyvygnawwznicxttrwd
+                  example: kgjdeporblpwpvqcthgexuzfmpgzrhhhkxadgrlhoneglyuecuhtldsclzitkxjlxvxtczlpoikvhnlcupcdytkvmffmtfmdqzvrjjj
                 code:
                   type: integer
                   description: 'validation.min validation.max.'
-                  example: 4748
+                  example: 3021
               required:
                 - code
       security: []
@@ -2733,7 +2669,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: libero
+        example: voluptatibus
         required: true
         schema:
           type: string
@@ -2741,7 +2677,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: omnis
         required: true
         schema:
           type: string
@@ -2785,7 +2721,7 @@ paths:
         in: path
         name: phone
         description: ''
-        example: optio
+        example: consequatur
         required: true
         schema:
           type: string
@@ -2829,7 +2765,7 @@ paths:
         in: path
         name: email
         description: ''
-        example: maxime
+        example: enim
         required: true
         schema:
           type: string
@@ -2873,7 +2809,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: adipisci
+        example: tempore
         required: true
         schema:
           type: string
@@ -2921,7 +2857,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: facilis
+        example: ipsum
         required: true
         schema:
           type: string
@@ -2929,7 +2865,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: facere
+        example: consequatur
         required: true
         schema:
           type: string
@@ -2977,7 +2913,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nostrum
+        example: veritatis
         required: true
         schema:
           type: string
@@ -2985,7 +2921,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: qui
         required: true
         schema:
           type: string
@@ -3033,7 +2969,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dicta
+        example: saepe
         required: true
         schema:
           type: string
@@ -3041,7 +2977,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptatum
+        example: illum
         required: true
         schema:
           type: string
@@ -3089,7 +3025,7 @@ paths:
         in: path
         name: orderCardId
         description: ''
-        example: unde
+        example: ratione
         required: true
         schema:
           type: string
@@ -3181,7 +3117,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: deserunt
+        example: nostrum
         required: true
         schema:
           type: string
@@ -3189,7 +3125,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: velit
+        example: cumque
         required: true
         schema:
           type: string
@@ -3233,7 +3169,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: molestiae
+        example: accusamus
         required: true
         schema:
           type: string
@@ -3281,7 +3217,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: iure
+        example: tenetur
         required: true
         schema:
           type: string
@@ -3289,7 +3225,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quod
+        example: et
         required: true
         schema:
           type: string
@@ -3337,7 +3273,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: enim
+        example: et
         required: true
         schema:
           type: string
@@ -3345,7 +3281,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: corrupti
+        example: aut
         required: true
         schema:
           type: string
@@ -3353,7 +3289,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: nostrum
+        example: sit
         required: true
         schema:
           type: string
@@ -3401,7 +3337,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: delectus
+        example: fuga
         required: true
         schema:
           type: string
@@ -3409,7 +3345,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: adipisci
+        example: labore
         required: true
         schema:
           type: string
@@ -3417,7 +3353,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: facilis
+        example: qui
         required: true
         schema:
           type: string
@@ -3461,7 +3397,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: voluptatem
+        example: sunt
         required: true
         schema:
           type: string
@@ -3509,7 +3445,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: velit
+        example: adipisci
         required: true
         schema:
           type: string
@@ -3517,7 +3453,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quos
+        example: et
         required: true
         schema:
           type: string
@@ -3565,7 +3501,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: omnis
+        example: repellendus
         required: true
         schema:
           type: string
@@ -3573,7 +3509,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: fugit
+        example: est
         required: true
         schema:
           type: string
@@ -3581,7 +3517,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: recusandae
         required: true
         schema:
           type: string
@@ -3625,7 +3561,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: accusantium
+        example: non
         required: true
         schema:
           type: string
@@ -3673,7 +3609,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: amet
+        example: necessitatibus
         required: true
         schema:
           type: string
@@ -3681,7 +3617,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: vitae
+        example: vel
         required: true
         schema:
           type: string
@@ -3725,7 +3661,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: vitae
+        example: veniam
         required: true
         schema:
           type: string
@@ -3773,7 +3709,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: magnam
+        example: facilis
         required: true
         schema:
           type: string
@@ -3781,7 +3717,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: commodi
+        example: beatae
         required: true
         schema:
           type: string
@@ -3825,7 +3761,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: mollitia
+        example: sequi
         required: true
         schema:
           type: string
@@ -3873,7 +3809,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: laboriosam
+        example: excepturi
         required: true
         schema:
           type: string
@@ -3881,7 +3817,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: consequatur
+        example: sint
         required: true
         schema:
           type: string
@@ -3925,7 +3861,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quia
+        example: dolore
         required: true
         schema:
           type: string
@@ -3973,7 +3909,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: est
+        example: minima
         required: true
         schema:
           type: string
@@ -3981,7 +3917,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: autem
+        example: vel
         required: true
         schema:
           type: string
@@ -4029,7 +3965,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: vel
+        example: provident
         required: true
         schema:
           type: string
@@ -4037,7 +3973,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ratione
+        example: nesciunt
         required: true
         schema:
           type: string
@@ -4085,7 +4021,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: et
+        example: numquam
         required: true
         schema:
           type: string
@@ -4093,7 +4029,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: accusamus
+        example: iste
         required: true
         schema:
           type: string
@@ -4101,7 +4037,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sed
+        example: tempore
         required: true
         schema:
           type: string
@@ -4149,7 +4085,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: enim
+        example: modi
         required: true
         schema:
           type: string
@@ -4157,7 +4093,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: rerum
+        example: quia
         required: true
         schema:
           type: string
@@ -4165,7 +4101,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: iure
+        example: odit
         required: true
         schema:
           type: string
@@ -4209,7 +4145,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: voluptatem
+        example: debitis
         required: true
         schema:
           type: string
@@ -4257,7 +4193,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: reiciendis
+        example: numquam
         required: true
         schema:
           type: string
@@ -4265,7 +4201,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quasi
+        example: officia
         required: true
         schema:
           type: string
@@ -4313,7 +4249,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: provident
+        example: ab
         required: true
         schema:
           type: string
@@ -4329,7 +4265,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: atque
         required: true
         schema:
           type: string
@@ -4373,7 +4309,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: veniam
+        example: dolores
         required: true
         schema:
           type: string
@@ -4421,7 +4357,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sapiente
+        example: ab
         required: true
         schema:
           type: string
@@ -4429,7 +4365,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: asperiores
+        example: esse
         required: true
         schema:
           type: string
@@ -4477,7 +4413,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: quam
+        example: voluptate
         required: true
         schema:
           type: string
@@ -4485,7 +4421,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: qui
         required: true
         schema:
           type: string
@@ -4493,7 +4429,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: enim
+        example: facilis
         required: true
         schema:
           type: string
@@ -4541,7 +4477,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: quasi
+        example: et
         required: true
         schema:
           type: string
@@ -4549,7 +4485,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: consectetur
+        example: at
         required: true
         schema:
           type: string
@@ -4557,7 +4493,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eius
+        example: maxime
         required: true
         schema:
           type: string
@@ -4605,7 +4541,7 @@ paths:
         in: path
         name: placeId
         description: ''
-        example: animi
+        example: veritatis
         required: true
         schema:
           type: string
@@ -4613,7 +4549,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: eum
+        example: quas
         required: true
         schema:
           type: string
@@ -4621,7 +4557,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aut
+        example: iste
         required: true
         schema:
           type: string
@@ -4669,7 +4605,7 @@ paths:
         in: path
         name: orderCardId
         description: ''
-        example: iure
+        example: commodi
         required: true
         schema:
           type: string
@@ -4677,7 +4613,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: modi
+        example: magni
         required: true
         schema:
           type: string
@@ -4685,7 +4621,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: qui
+        example: aliquid
         required: true
         schema:
           type: string
@@ -4729,7 +4665,699 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: hic
+        example: minus
+        required: true
+        schema:
+          type: string
+  '/api/partner/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - Partner'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Partner - Партнер'
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: vel
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: maxime
+        required: true
+        schema:
+          type: string
+  '/api/partner/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - Partner'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - 'Partner - Партнер'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: illum
+        required: true
+        schema:
+          type: string
+  '/api/payment/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - Payment'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Payment - Платеж'
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: et
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: sit
+        required: true
+        schema:
+          type: string
+  '/api/payment/getByUserId/{userId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через UserID - Payment'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Payment - Платеж'
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: similique
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: dignissimos
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: dolores
+        required: true
+        schema:
+          type: string
+  '/api/payment/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - Payment'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - 'Payment - Платеж'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: animi
+        required: true
+        schema:
+          type: string
+  '/api/paymentSystem/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - PaymentSystem'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'PaymentSystem - ПлатежСистема'
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: enim
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: quas
+        required: true
+        schema:
+          type: string
+  '/api/paymentSystem/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - PaymentSystem'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - 'PaymentSystem - ПлатежСистема'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: occaecati
+        required: true
+        schema:
+          type: string
+  '/api/place/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - Place'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Place - Места'
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: minus
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: dolore
+        required: true
+        schema:
+          type: string
+  '/api/place/getByServiceId/{serviceId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через ServiceID - Place'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Place - Места'
+      security: []
+    parameters:
+      -
+        in: path
+        name: serviceId
+        description: ''
+        example: at
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: quam
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: quo
+        required: true
+        schema:
+          type: string
+  '/api/place/getByCityId/{cityId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через CityID - Place'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Place - Места'
+      security: []
+    parameters:
+      -
+        in: path
+        name: cityId
+        description: ''
+        example: rerum
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: laudantium
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: eos
+        required: true
+        schema:
+          type: string
+  '/api/place/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - Place'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - 'Place - Места'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: iure
+        required: true
+        schema:
+          type: string
+  '/api/recurrent/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - Recurrent'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - 'Recurrent - Повторяющийся'
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: ea
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: dolorem
+        required: true
+        schema:
+          type: string
+  '/api/recurrent/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - Recurrent'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - 'Recurrent - Повторяющийся'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: distinctio
         required: true
         schema:
           type: string
@@ -4777,7 +5405,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: minus
+        example: fugiat
         required: true
         schema:
           type: string
@@ -4785,7 +5413,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: maxime
+        example: id
         required: true
         schema:
           type: string
@@ -4833,7 +5461,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: fugiat
+        example: aliquam
         required: true
         schema:
           type: string
@@ -4841,7 +5469,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aut
+        example: eligendi
         required: true
         schema:
           type: string
@@ -4885,7 +5513,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: tempore
+        example: provident
         required: true
         schema:
           type: string
@@ -4933,7 +5561,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: fugit
+        example: ut
         required: true
         schema:
           type: string
@@ -4941,7 +5569,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: rem
+        example: impedit
         required: true
         schema:
           type: string
@@ -4985,7 +5613,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: praesentium
+        example: culpa
         required: true
         schema:
           type: string
@@ -5033,7 +5661,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: voluptatem
+        example: nisi
         required: true
         schema:
           type: string
@@ -5041,7 +5669,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: id
         required: true
         schema:
           type: string
@@ -5085,7 +5713,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: cumque
+        example: consequatur
         required: true
         schema:
           type: string
@@ -5129,7 +5757,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: iusto
+        example: rerum
         required: true
         schema:
           type: string
@@ -5177,7 +5805,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quis
+        example: quia
         required: true
         schema:
           type: string
@@ -5185,25 +5813,28 @@ paths:
         in: path
         name: take
         description: ''
-        example: tempora
+        example: cupiditate
         required: true
         schema:
           type: string
 tags:
   -
-    name: 'Partner - Партнер'
+    name: 'Stock - Запас'
     description: ''
   -
-    name: 'Payment - Платеж'
+    name: 'ThirdPartyApp - Стороннее приложение'
     description: ''
   -
-    name: 'PaymentSystem - ПлатежСистема'
+    name: 'Transaction - Транзакции'
     description: ''
   -
-    name: 'Place - Места'
+    name: 'Transaction - Транзакция для несуществующего пользователя'
     description: ''
   -
-    name: 'Recurrent - Повторяющийся'
+    name: 'TransactionToNonExistingUser - Транзакция для несуществующего пользователя'
+    description: ''
+  -
+    name: 'UserCar - ПользовательАвтомобиль'
     description: ''
   -
     name: 'AutoPart - АвтомобильЗапчасти'
@@ -5297,6 +5928,21 @@ tags:
     description: ''
   -
     name: 'OrderService - ЗаказСервис'
+    description: ''
+  -
+    name: 'Partner - Партнер'
+    description: ''
+  -
+    name: 'Payment - Платеж'
+    description: ''
+  -
+    name: 'PaymentSystem - ПлатежСистема'
+    description: ''
+  -
+    name: 'Place - Места'
+    description: ''
+  -
+    name: 'Recurrent - Повторяющийся'
     description: ''
   -
     name: 'Region - Регион'

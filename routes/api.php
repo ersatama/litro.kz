@@ -41,6 +41,11 @@ use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\ServiceLimitController;
 use App\Http\Controllers\Api\ServicePriceController;
 use App\Http\Controllers\Api\ServiceTypeController;
+use App\Http\Controllers\Api\StockController;
+use App\Http\Controllers\Api\ThirdPartyAppController;
+use App\Http\Controllers\Api\TransactionController;
+use App\Http\Controllers\Api\TransactionToNonExistingUserController;
+use App\Http\Controllers\Api\UserCarController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -50,6 +55,50 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(UserCarController::class)->group(function() {
+    Route::prefix('userCar')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('userCar.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('userCar.getByUserId');
+        Route::get('getByCarModelId/{carModelId}/{skip}/{take}','getByCarModelId')->name('userCar.getByCarModelId');
+        Route::get('getById/{id}','getById')->name('userCar.getById');
+    });
+});
+
+Route::controller(TransactionToNonExistingUserController::class)->group(function() {
+    Route::prefix('transactionToNonExistingUser')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('transactionToNonExistingUser.get');
+        Route::get('getById/{id}','getById')->name('transactionToNonExistingUser.getById');
+    });
+});
+
+Route::controller(TransactionController::class)->group(function() {
+    Route::prefix('transaction')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('transaction.get');
+        Route::get('getById/{id}','getById')->name('transaction.getById');
+    });
+});
+
+Route::controller(ThirdPartyAppController::class)->group(function() {
+    Route::prefix('thirdPartyApp')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('thirdPartyApp.get');
+        Route::get('getById/{id}','getById')->name('thirdPartyApp.getById');
+    });
+});
+
+Route::controller(StockController::class)->group(function() {
+    Route::prefix('stock')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('stock.get');
+        Route::get('getById/{id}','getById')->name('stock.getById');
+    });
+});
+
+Route::controller(StockController::class)->group(function() {
+    Route::prefix('stock')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('stock.get');
+        Route::get('getById/{id}','getById')->name('stock.getById');
+    });
 });
 
 Route::controller(RecurrentController::class)->group(function() {

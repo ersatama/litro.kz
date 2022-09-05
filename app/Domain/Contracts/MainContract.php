@@ -4,6 +4,15 @@ namespace App\Domain\Contracts;
 
 abstract class MainContract
 {
+    const REGISTRATION_CERTIFICATE  =   'registration_certificate';
+    const COMMENT   =   'comment';
+    const DELTA_BALANCE =   'delta_balance';
+    const BALANCE   =   'balance';
+    const USER_TO   =   'user_to';
+    const USER_FROM =   'user_from';
+    const PASSWORD  =   'password';
+    const KEY   =   'key';
+    const CATEGORY  =   'category';
     const ORDER_ID  =   'order_id';
     const SALT  =   'salt';
     const RESULT    =   'result';
