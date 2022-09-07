@@ -13,7 +13,7 @@ class CreatePostsTable extends Migration
     public function up()
     {
         // Create table for storing roles
-        Schema::create('posts', function (Blueprint $table) {
+        /*Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('author_id');
             $table->integer('category_id')->nullable();
@@ -30,7 +30,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
 
             //$table->foreign('author_id')->references('id')->on('users');
-        });
+        });*/
     }
 
     /**

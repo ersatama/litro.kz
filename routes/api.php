@@ -24,6 +24,7 @@ use App\Http\Controllers\Api\DriverController;
 use App\Http\Controllers\Api\EcoServiceController;
 use App\Http\Controllers\Api\GiftController;
 use App\Http\Controllers\Api\ImageController;
+use App\Http\Controllers\Api\InsuranceCompanyController;
 use App\Http\Controllers\Api\MoneyOperationController;
 use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
@@ -46,6 +47,9 @@ use App\Http\Controllers\Api\ThirdPartyAppController;
 use App\Http\Controllers\Api\TransactionController;
 use App\Http\Controllers\Api\TransactionToNonExistingUserController;
 use App\Http\Controllers\Api\UserCarController;
+use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\WalletController;
+use App\Http\Controllers\Api\WalletRecordController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -55,6 +59,39 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(InsuranceCompanyController::class)->group(function() {
+    Route::prefix('insuranceCompany')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceCompany.get');
+        Route::get('getById/{id}','getById')->name('insuranceCompany.getById');
+    });
+});
+
+Route::controller(WalletRecordController::class)->group(function() {
+    Route::prefix('walletRecord')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('walletRecord.get');
+        Route::get('getByPaymentId/{paymentId}/{skip}/{take}','getByPaymentId')->name('walletRecord.getByPaymentId');
+        Route::get('getByWalletId/{walletId}/{skip}/{take}','getByWalletId')->name('walletRecord.getByUserId');
+        Route::get('getById/{id}','getById')->name('walletRecord.getById');
+    });
+});
+
+Route::controller(WalletController::class)->group(function() {
+    Route::prefix('wallet')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('wallet.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('wallet.getByUserId');
+        Route::get('getById/{id}','getById')->name('wallet.getById');
+    });
+});
+
+Route::controller(UserController::class)->group(function() {
+    Route::prefix('user')->group(function() {
+        Route::get('getByPhoneAndPassword/{phone}/{password}','getByPhoneAndPassword')
+            ->name('user.getByPhoneAndPassword');
+        Route::get('get/{skip}/{take}','get')->name('user.get');
+        Route::get('getById/{id}','getById')->name('user.getById');
+    });
 });
 
 Route::controller(UserCarController::class)->group(function() {

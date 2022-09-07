@@ -241,6 +241,10 @@ return [
         App\Providers\Repositories\TransactionRepositoryProvider::class,
         App\Providers\Repositories\TransactionToNonExistingUserRepositoryProvider::class,
         App\Providers\Repositories\UserCarRepositoryProvider::class,
+        App\Providers\Repositories\UserRepositoryProvider::class,
+        App\Providers\Repositories\WalletRepositoryProvider::class,
+        App\Providers\Repositories\WalletRecordRepositoryProvider::class,
+        App\Providers\Repositories\InsuranceCompanyRepositoryProvider::class,
     ],
 
     /*

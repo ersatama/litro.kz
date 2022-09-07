@@ -15,6 +15,7 @@ return [
         'default_role'                 => 'user',
         'default_avatar'               => 'users/default.png',
         'redirect'                     => '/admin',
+        'namespace'                    => App\Models\User::class,
     ],
 
     /*
@@ -79,7 +80,7 @@ return [
 
     'database' => [
         'tables' => [
-            'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'personal_access_tokens', 'settings'],
+            'hidden' => [],
         ],
         'autoload_migrations' => true,
     ],

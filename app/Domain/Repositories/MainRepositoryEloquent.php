@@ -6,6 +6,28 @@ use App\Domain\Contracts\MainContract;
 
 trait MainRepositoryEloquent
 {
+
+    public function getByPaymentId($paymentId,$skip,$take)
+    {
+        return $this->model::where(MainContract::PAYMENT_ID, $paymentId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
+    public function getByWalletId($walletId,$skip,$take)
+    {
+        return $this->model::where(MainContract::WALLET_ID, $walletId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
+    public function getByPhone($phone)
+    {
+        return $this->model::where(MainContract::PHONE,$phone)->first();
+    }
+
     public function get($skip,$take)
     {
         return $this->model::skip($skip)->take($take)->get();
@@ -85,11 +107,6 @@ trait MainRepositoryEloquent
     public function getByEmail($email)
     {
         return $this->model::where(MainContract::EMAIL,$email)->first();
-    }
-
-    public function getByPhone($phone)
-    {
-        return $this->model::where(MainContract::EMAIL,$phone)->first();
     }
 
     public function create($data)

@@ -4,6 +4,28 @@ namespace App\Domain\Contracts;
 
 abstract class MainContract
 {
+    const API_TOKEN =   'api_token';
+    const KASKO_LINK    =   'kasko_link';
+    const ADDITIONAL_INSURANCE_BONUS    =   'additional_insurance_bonus';
+    const REQUIRED_INSURANCE_BONUS  =   'required_insurance_bonus';
+    const PROVIDES_ADDITIONAL_INSURANCE =   'provides_additional_insurance';
+    const PROVIDES_REQUIRED_INSURANCE   =   'provides_required_insurance';
+    const BONUS_PERCENT =   'bonus_percent';
+    const SITE  =   'site';
+    const OGPO_LINK =   'opgo_link';
+    const PREVIOUS_BALANCE  =   'previous_balance';
+    const WALLET_ID =   'wallet_id';
+    const INCORRECT_PHONE_OR_PASSWORD   =   'incorrect_phone_or_password';
+    const FEMALE    =   'female';
+    const MALE  =   'male';
+    const BONUS =   'bonus';
+    const VLIFE_USER_ID =   'vlife_user_id';
+    const IS_VLIFE_USER =   'is_vlife_user';
+    const GENDER    =   'gender';
+    const IIN   =   'iin';
+    const ROLE_ID   =   'role_id';
+    const IS_BLOCKED    =   'is_blocked';
+    const BIRTHDATE =   'birthdate';
     const REGISTRATION_CERTIFICATE  =   'registration_certificate';
     const COMMENT   =   'comment';
     const DELTA_BALANCE =   'delta_balance';
@@ -156,6 +178,7 @@ abstract class MainContract
     const IS_ACTIVE =   'is_active';
     const IMAGE_ID  =   'image_id';
     const NAME  =   'name';
+    const FILTER_NAME   =   'filter_name';
     const AUTO_PART_CATEGORY_ID =   'auto_part_category_id';
     const DELETED_AT    =   'deleted_at';
     const UPDATED_AT    =   'updated_at';

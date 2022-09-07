@@ -26,6 +26,9 @@ return new class extends Migration
             $table->string(MainContract::VIN)->nullable();
             $table->timestamps();
             $table->softDeletes();
+            $table->index(MainContract::USER_ID);
+            $table->index(MainContract::CAR_BRAND_ID);
+            $table->index(MainContract::CAR_MODEL_ID);
         });
     }
 
