@@ -82,7 +82,7 @@ return [
         'tables' => [
             'hidden' => [],
         ],
-        'autoload_migrations' => true,
+        'autoload_migrations' => false,
     ],
 
     /*
