@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger(MainContract::CARD_ID)->nullable();
             $table->unsignedBigInteger(MainContract::ACTIVATED_BY)->nullable();
             $table->string(MainContract::NUMBER)->nullable();
-            $table->boolean(MainContract::IS_PAYED)->default(false);
+            $table->boolean(MainContract::IS_PAID)->default(false);
             $table->string(MainContract::PAYBOX_ORDER_ID)->nullable();
             $table->string(MainContract::PAYBOX_ORDER_DATE)->nullable();
             $table->unsignedInteger(MainContract::PRICE)->default(0);

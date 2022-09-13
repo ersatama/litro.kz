@@ -25,7 +25,7 @@ class InsuranceCompanyController extends Controller
     /**
      * Получить список - InsuranceCompany
      *
-     * @group InsuranceCompany - СтраховаяКомпания
+     * @group InsuranceCompany - СтрахованияКомпания
      */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
@@ -38,7 +38,7 @@ class InsuranceCompanyController extends Controller
     /**
      * Получить данные через ID - InsuranceCompany
      *
-     * @group InsuranceCompany - СтраховаяКомпания
+     * @group InsuranceCompany - СтрахованияКомпания
      */
     public function getById($id): Response|InsuranceCompanyResource|Application|ResponseFactory
     {

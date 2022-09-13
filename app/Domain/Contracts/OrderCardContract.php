@@ -20,7 +20,7 @@ class OrderCardContract extends MainContract
         self::STATUS,
         self::REFERRAL,
         self::RECURRENT_ENABLED,
-        self::IS_PAYED,
+        self::IS_PAID,
         self::IS_CANCELED,
         self::MONTHLY,
         self::IS_FROM_EXCEL,

@@ -7,6 +7,46 @@ use App\Domain\Contracts\MainContract;
 trait MainRepositoryEloquent
 {
 
+    public function getBySPartnerPointWalletId($sPartnerPointWalletId,$skip,$take)
+    {
+        return $this->model::where(MainContract::S_PARTNER_POINT_WALLET_ID,$sPartnerPointWalletId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
+    public function getBySPartnerPointId($sPartnerPoint,$skip,$take)
+    {
+        return $this->model::where(MainContract::S_PARTNER_POINT_ID,$sPartnerPoint)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
+    public function getByLawyerId($lawyerId,$skip,$take)
+    {
+        return $this->model::where(MainContract::LAWYER_ID,$lawyerId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
+    public function getByUserCarId($userCarId,$skip,$take)
+    {
+        return $this->model::where(MainContract::USER_CAR_ID,$userCarId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
+    public function getByInsuranceCompanyId($insuranceCompanyId,$skip,$take)
+    {
+        return $this->model::where(MainContract::INSURANCE_COMPANY_ID, $insuranceCompanyId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
     public function getByPaymentId($paymentId,$skip,$take)
     {
         return $this->model::where(MainContract::PAYMENT_ID, $paymentId)

@@ -8,7 +8,7 @@ class GiftContract extends MainContract
     const FILLABLE  =   [
         self::USER_ID,
         self::NUMBER,
-        self::IS_PAYED,
+        self::IS_PAID,
         self::PAYBOX_ORDER_ID,
         self::PAYBOX_ORDER_DATE,
         self::ACTIVATED_BY,

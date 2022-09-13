@@ -38,7 +38,7 @@ return new class extends Migration
             $table->string(MainContract::LONG)->nullable();
             $table->string(MainContract::UTM_CAMPAIGN)->nullable();
             $table->text(MainContract::REVIEW)->nullable();
-            $table->boolean(MainContract::IS_PAYED)->default(false);
+            $table->boolean(MainContract::IS_PAID)->default(false);
             $table->boolean(MainContract::IS_CARD)->nullable();
             $table->boolean(MainContract::IS_CANCELED)->default(false);
             $table->unsignedTinyInteger(MainContract::RANK)->nullable();

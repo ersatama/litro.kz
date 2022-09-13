@@ -26,7 +26,7 @@ class OrderServiceContract extends MainContract
         self::NAME,
         self::PHONE,
         self::STATUS,
-        self::IS_PAYED,
+        self::IS_PAID,
         self::IS_CARD,
         self::IS_CANCELED,
         self::UTM_CAMPAIGN,

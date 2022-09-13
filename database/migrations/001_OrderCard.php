@@ -35,7 +35,7 @@ return new class extends Migration
             $table->string(MainContract::UTM_CAMPAIGN)->nullable();
             $table->string(MainContract::IMPORT_ID)->nullable();
             $table->boolean(MainContract::RECURRENT_ENABLED)->default(false);
-            $table->boolean(MainContract::IS_PAYED)->default(false);
+            $table->boolean(MainContract::IS_PAID)->default(false);
             $table->boolean(MainContract::IS_CANCELED)->default(false);
             $table->boolean(MainContract::MONTHLY)->default(false);
             $table->boolean(MainContract::IS_FROM_EXCEL)->nullable();

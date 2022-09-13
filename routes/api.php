@@ -24,7 +24,21 @@ use App\Http\Controllers\Api\DriverController;
 use App\Http\Controllers\Api\EcoServiceController;
 use App\Http\Controllers\Api\GiftController;
 use App\Http\Controllers\Api\ImageController;
+use App\Http\Controllers\Api\InsuranceCategoryController;
 use App\Http\Controllers\Api\InsuranceCompanyController;
+use App\Http\Controllers\Api\InsuranceCompanyProductController;
+use App\Http\Controllers\Api\InsuranceCompanyRequestLogController;
+use App\Http\Controllers\Api\InsuranceImageController;
+use App\Http\Controllers\Api\InsuranceKaskoPolicyController;
+use App\Http\Controllers\Api\InsuranceLinkReferRecordController;
+use App\Http\Controllers\Api\InsuranceSelectController;
+use App\Http\Controllers\Api\InsuranceSelectOptionController;
+use App\Http\Controllers\Api\LawyerCityController;
+use App\Http\Controllers\Api\LawyerContactAccessController;
+use App\Http\Controllers\Api\LawyerContactController;
+use App\Http\Controllers\Api\LawyerController;
+use App\Http\Controllers\Api\LawyerServiceController;
+use App\Http\Controllers\Api\LawyerServicePivotController;
 use App\Http\Controllers\Api\MoneyOperationController;
 use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
@@ -42,6 +56,13 @@ use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\ServiceLimitController;
 use App\Http\Controllers\Api\ServicePriceController;
 use App\Http\Controllers\Api\ServiceTypeController;
+use App\Http\Controllers\Api\SPartnerPointCategoryController;
+use App\Http\Controllers\Api\SPartnerPointController;
+use App\Http\Controllers\Api\SPartnerPointRequisiteController;
+use App\Http\Controllers\Api\SPartnerPointWalletController;
+use App\Http\Controllers\Api\SPartnerPointWalletRecordController;
+use App\Http\Controllers\Api\SPartnerReceivedServiceController;
+use App\Http\Controllers\Api\SPartnerServiceCategoryController;
 use App\Http\Controllers\Api\StockController;
 use App\Http\Controllers\Api\ThirdPartyAppController;
 use App\Http\Controllers\Api\TransactionController;
@@ -59,6 +80,178 @@ header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Author
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(SPartnerPointRequisiteController::class)->group(function() {
+    Route::prefix('sPartnerPointRequisite')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('sPartnerPointRequisite.get');
+        Route::get('getBySPartnerPointId/{sPartnerPointId}/{skip}/{take}','getBySPartnerPointId')->name('sPartnerPointRequisite.getBySPartnerPointId');
+        Route::get('getById/{id}','getById')->name('sPartnerPointRequisite.getById');
+    });
+});
+
+Route::controller(SPartnerReceivedServiceController::class)->group(function() {
+    Route::prefix('sPartnerReceivedService')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('sPartnerReceivedService.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('insuranceImage.getByUserId');
+        Route::get('getById/{id}','getById')->name('sPartnerReceivedService.getById');
+    });
+});
+
+Route::controller(SPartnerPointWalletRecordController::class)->group(function() {
+    Route::prefix('sPartnerPointWalletRecord')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('sPartnerPointWalletRecord.get');
+        Route::get('getBySPartnerPointWalletId/{sPartnerPointWalletId}/{skip}/{take}','getBySPartnerPointWalletId')->name('sPartnerPointWalletRecord.getBySPartnerPointWalletId');
+        Route::get('getById/{id}','getById')->name('sPartnerPointWalletRecord.getById');
+    });
+});
+
+Route::controller(SPartnerPointWalletController::class)->group(function() {
+    Route::prefix('sPartnerPointWallet')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('sPartnerPointWallet.get');
+        Route::get('getBySPartnerPointId/{sPartnerPointId}/{skip}/{take}','getBySPartnerPointId')->name('sPartnerPointWallet.getBySPartnerPointId');
+        Route::get('getById/{id}','getById')->name('sPartnerPointWallet.getById');
+    });
+});
+
+Route::controller(SPartnerPointCategoryController::class)->group(function() {
+    Route::prefix('sPartnerPointCategory')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('sPartnerPointCategory.get');
+        Route::get('getBySPartnerPointId/{sPartnerPointId}/{skip}/{take}','getBySPartnerPointId')->name('sPartnerPointCategory.getBySPartnerPointId');
+        Route::get('getById/{id}','getById')->name('sPartnerPointCategory.getById');
+    });
+});
+
+Route::controller(SPartnerServiceCategoryController::class)->group(function() {
+    Route::prefix('sPartnerServiceCategory')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('sPartnerServiceCategory.get');
+        Route::get('getById/{id}','getById')->name('sPartnerServiceCategory.getById');
+    });
+});
+
+Route::controller(SPartnerPointController::class)->group(function() {
+    Route::prefix('sPartnerPoint')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('sPartnerPoint.get');
+        Route::get('getById/{id}','getById')->name('sPartnerPoint.getById');
+    });
+});
+
+Route::controller(LawyerContactAccessController::class)->group(function() {
+    Route::prefix('lawyerContactAccess')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('lawyerContactAccess.get');
+        Route::get('getByLawyerId/{lawyerId}/{skip}/{take}','getByLawyerId')->name('lawyerContactAccess.getByLawyerId');
+        Route::get('getById/{id}','getById')->name('lawyerContactAccess.getById');
+    });
+});
+
+Route::controller(LawyerContactController::class)->group(function() {
+    Route::prefix('lawyerContact')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('lawyerContact.get');
+        Route::get('getByLawyerId/{lawyerId}/{skip}/{take}','getByLawyerId')->name('lawyerContact.getByLawyerId');
+        Route::get('getById/{id}','getById')->name('lawyerContact.getById');
+    });
+});
+
+Route::controller(LawyerServicePivotController::class)->group(function() {
+    Route::prefix('lawyerServicePivot')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('lawyerServicePivot.get');
+        Route::get('getByLawyerId/{lawyerId}/{skip}/{take}','getByLawyerId')->name('lawyerServicePivot.getByLawyerId');
+        Route::get('getById/{id}','getById')->name('lawyerServicePivot.getById');
+    });
+});
+
+Route::controller(LawyerServiceController::class)->group(function() {
+    Route::prefix('lawyerService')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('lawyerService.get');
+        Route::get('getById/{id}','getById')->name('lawyerService.getById');
+    });
+});
+
+Route::controller(LawyerCityController::class)->group(function() {
+    Route::prefix('lawyerCity')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('lawyerCity.get');
+        Route::get('getByCityId/{cityId}/{skip}/{take}','getByCityId')->name('lawyerCity.getByCityId');
+        Route::get('getById/{id}','getById')->name('lawyerCity.getById');
+    });
+});
+
+Route::controller(LawyerController::class)->group(function() {
+    Route::prefix('lawyer')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('lawyer.get');
+        Route::get('getById/{id}','getById')->name('lawyer.getById');
+    });
+});
+
+Route::controller(InsuranceSelectOptionController::class)->group(function() {
+    Route::prefix('insuranceSelectOption')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceSelectOption.get');
+        Route::get('getById/{id}','getById')->name('insuranceSelectOption.getById');
+    });
+});
+
+Route::controller(InsuranceSelectController::class)->group(function() {
+    Route::prefix('insuranceSelect')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceSelect.get');
+        Route::get('getById/{id}','getById')->name('insuranceSelect.getById');
+    });
+});
+
+Route::controller(InsuranceImageController::class)->group(function() {
+    Route::prefix('insuranceImage')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceImage.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('insuranceImage.getByUserId');
+        Route::get('getByInsuranceCompanyId/{insuranceCompanyId}/{skip}/{take}','getByInsuranceCompanyId')->name('insuranceImage.getByInsuranceCompanyId');
+        Route::get('getById/{id}','getById')->name('insuranceImage.getById');
+    });
+});
+
+Route::controller(InsuranceLinkReferRecordController::class)->group(function() {
+    Route::prefix('insuranceLinkReferRecord')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceLinkReferRecord.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('insuranceLinkReferRecord.getByUserId');
+        Route::get('getByInsuranceCompanyId/{insuranceCompanyId}/{skip}/{take}','getByInsuranceCompanyId')->name('insuranceLinkReferRecord.getByInsuranceCompanyId');
+        Route::get('getById/{id}','getById')->name('insuranceLinkReferRecord.getById');
+    });
+});
+
+Route::controller(InsuranceKaskoPolicyController::class)->group(function() {
+    Route::prefix('insuranceKaskoPolicy')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceKaskoPolicy.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('insuranceKaskoPolicy.getByUserId');
+        Route::get('getByUserCarId/{userCarId}/{skip}/{take}','getByUserCarId')->name('insuranceKaskoPolicy.getByUserCarId');
+        Route::get('getById/{id}','getById')->name('insuranceKaskoPolicy.getById');
+    });
+});
+
+Route::controller(InsuranceCompanyRequestLogController::class)->group(function() {
+    Route::prefix('insuranceCompanyRequestLog')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceCompanyRequestLog.get');
+        Route::get('getByInsuranceCompanyId/{insuranceCompanyId}/{skip}/{take}','getByInsuranceCompanyId')->name('insuranceCompanyRequestLog.getByInsuranceCompanyId');
+        Route::get('getById/{id}','getById')->name('insuranceCompanyRequestLog.getById');
+    });
+});
+
+Route::controller(InsuranceCompanyRequestLogController::class)->group(function() {
+    Route::prefix('insuranceCompanyRequestLog')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceCompanyRequestLog.get');
+        Route::get('getByInsuranceCompanyId/{insuranceCompanyId}/{skip}/{take}','getByInsuranceCompanyId')->name('insuranceCompanyRequestLog.getByInsuranceCompanyId');
+        Route::get('getById/{id}','getById')->name('insuranceCompanyRequestLog.getById');
+    });
+});
+
+Route::controller(InsuranceCompanyProductController::class)->group(function() {
+    Route::prefix('insuranceCompanyProduct')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceCompanyProduct.get');
+        Route::get('getByInsuranceCompanyId/{insuranceCompanyId}/{skip}/{take}','getByInsuranceCompanyId')->name('insuranceCompanyProduct.getByInsuranceCompanyId');
+        Route::get('getById/{id}','getById')->name('insuranceCompanyProduct.getById');
+    });
+});
+
+Route::controller(InsuranceCategoryController::class)->group(function() {
+    Route::prefix('insuranceCategory')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('insuranceCategory.get');
+        Route::get('getById/{id}','getById')->name('insuranceCategory.getById');
+    });
 });
 
 Route::controller(InsuranceCompanyController::class)->group(function() {
