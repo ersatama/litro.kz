@@ -18,6 +18,6 @@ class RecurrentResource extends JsonResource
         foreach (RecurrentContract::FILLABLE as &$value) {
             $arr[$value]    =   $this->{$value};
         }
-        return $arr;
+        return Contract::CLEAR($arr);
     }
 }

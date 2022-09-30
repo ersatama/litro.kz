@@ -27,9 +27,9 @@ return new class extends Migration
             $table->string(Contract::VIEW)->nullable();
             $table->string(Contract::VIEW_KZ)->nullable();
             $table->string(Contract::VIEW_EN)->nullable();
-            $table->string(Contract::TAGLINE)->nullable();
-            $table->string(Contract::TAGLINE_KZ)->nullable();
-            $table->string(Contract::TAGLINE_EN)->nullable();
+            $table->text(Contract::TAGLINE)->nullable();
+            $table->text(Contract::TAGLINE_KZ)->nullable();
+            $table->text(Contract::TAGLINE_EN)->nullable();
             $table->text(Contract::DESCRIPTION)->nullable();
             $table->text(Contract::DESCRIPTION_KZ)->nullable();
             $table->text(Contract::DESCRIPTION_EN)->nullable();
@@ -41,10 +41,11 @@ return new class extends Migration
             $table->unsignedInteger(Contract::POSITION)->nullable();
             $table->unsignedInteger(Contract::PRICE)->nullable();
             $table->unsignedInteger(Contract::CARD_PRICE)->nullable();
-            $table->boolean(Contract::SELECTABLE)->default(true);
-            $table->boolean(Contract::WITHOUT_CARD)->default(true);
-            $table->boolean(Contract::WITH_CARD)->default(true);
-            $table->boolean(Contract::IS_CORPORATE)->default(true);
+            $table->boolean(Contract::SELECTABLE)->default(true)->nullable();
+            $table->boolean(Contract::WITHOUT_CARD)->default(true)->nullable();
+            $table->boolean(Contract::WITH_CARD)->default(true)->nullable();
+            $table->boolean(Contract::IS_CORPORATE)->default(true)->nullable();
+            $table->boolean(Contract::IS_ACTIVE)->default(true)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -26,6 +26,9 @@ return new class extends Migration
             $table->boolean(Contract::IS_NEGOTIABLE_PRICE)->default(true);
             $table->timestamps();
             $table->softDeletes();
+            $table->index(Contract::CITY_ID);
+            $table->index(Contract::SERVICE_ID);
+            $table->index(Contract::CAR_CATEGORY_ID);
         });
     }
 

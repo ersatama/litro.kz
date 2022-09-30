@@ -10,6 +10,6 @@ class ServiceTypeContract extends Contract
         self::TITLE_EN,
         self::TITLE_KZ,
         self::POSITION,
-        self::CATEGORY_ID
+        self::CARD_CATEGORY_ID
     ];
 }

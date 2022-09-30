@@ -38,11 +38,13 @@ use App\Http\Controllers\Api\LawyerContactController;
 use App\Http\Controllers\Api\LawyerController;
 use App\Http\Controllers\Api\LawyerServiceController;
 use App\Http\Controllers\Api\LawyerServicePivotController;
+use App\Http\Controllers\Api\MessageController;
 use App\Http\Controllers\Api\MoneyOperationController;
 use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\OrderCardController;
+use App\Http\Controllers\Api\OrderCardOldController;
 use App\Http\Controllers\Api\OrderServiceController;
 use App\Http\Controllers\Api\OrderServiceServiceController;
 use App\Http\Controllers\Api\PartnerCardController;
@@ -384,6 +386,20 @@ Route::controller(PartnerController::class)->group(function() {
     Route::prefix('partner')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('partner.get');
         Route::get('getById/{id}','getById')->name('partner.getById');
+    });
+});
+
+Route::controller(MessageController::class)->group(function() {
+    Route::prefix('message')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('message.get');
+        Route::get('getById/{id}','getById')->name('message.getById');
+    });
+});
+
+Route::controller(OrderCardOldController::class)->group(function() {
+    Route::prefix('orderCardOld')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('orderCardOld.get');
+        Route::get('getById/{id}','getById')->name('orderCardOld.getById');
     });
 });
 

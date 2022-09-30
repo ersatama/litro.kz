@@ -18,6 +18,6 @@ class PaymentSystemResource extends JsonResource
         foreach (PaymentSystemContract::FILLABLE as &$value) {
             $arr[$value]    =   $this->{$value};
         }
-        return $arr;
+        return Contract::CLEAR($arr);
     }
 }

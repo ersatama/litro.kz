@@ -267,6 +267,8 @@ return [
         App\Providers\Repositories\OrderServiceServiceRepositoryProvider::class,
         App\Providers\Repositories\PartnerCardRepositoryProvider::class,
         App\Providers\Repositories\PartnerPurchaseRepositoryProvider::class,
+        App\Providers\Repositories\OrderCardOldRepositoryProvider::class,
+        App\Providers\Repositories\MessageRepositoryProvider::class,
     ],
 
     /*

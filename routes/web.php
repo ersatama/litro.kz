@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/db', function () {
     set_time_limit(0);
     Artisan::call('migrate:fresh');
     function gDate($date) {
@@ -29,6 +33,20 @@ Route::get('/', function () {
             }
         }
         return '1970-01-01';
+    }
+    function does_url_exists($url) {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_NOBODY, true);
+        curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        if ($code == 200) {
+            $status = true;
+        } else {
+            $status = false;
+        }
+        curl_close($ch);
+        return $status;
     }
     function conv($time) {
         $datetime   =   explode('+',$time);
@@ -1540,12 +1558,310 @@ Route::get('/', function () {
             Contract::PURCHASE_ID   =>  $value->{Contract::PURCHASE_ID},
             Contract::PURCHASE_DATE   =>  $date[0],
             Contract::PARTNER_ID    =>  $value->{Contract::PARTNER_ID},
+            Contract::PHONE =>  $value->{Contract::PHONE},
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+        DB::table('partner_purchases')->insert($data_info);
+    }
+
+    $table  =   'payments';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::USER_ID   =>  $value->{Contract::USER_ID},
+            Contract::SUM   =>  $value->{Contract::SUM},
+            Contract::CURRENCY_ID    =>  $value->{Contract::CURRENCY_ID},
+            Contract::STATUS =>  $value->{Contract::STATUS},
+            Contract::PAYMENT_TYPE =>  $value->p_type,
+            Contract::PAYMENT_SYSTEM_ID =>  $value->pay_sys_id,
+            Contract::PAYMENT_SYSTEM_INFO =>  $value->pay_sys_info,
+            Contract::PAYMENT_ID =>  $value->pay_sys_payment_id,
+            Contract::PAYMENT_KEY =>  $value->{Contract::PAYMENT_KEY},
             Contract::CREATED_AT    =>  conv($value->created_at),
             Contract::UPDATED_AT    =>  conv($value->updated_at),
             Contract::DELETED_AT    =>  conv($value->deleted_at)
         ];
 
-        DB::table('partner_purchases')->insert($data_info);
+        DB::table('payments')->insert($data_info);
+    }
+
+    $table  =   'payment_systems';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::TITLE =>  $value->{Contract::NAME},
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('payment_systems')->insert($data_info);
+    }
+
+    $table  =   'places';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::SERVICE_ID =>  $value->{Contract::SERVICE_ID},
+            Contract::CITY_ID =>  $value->{Contract::CITY_ID},
+            Contract::LAT =>  $value->{Contract::LAT},
+            Contract::LONG =>  $value->{Contract::LONG},
+            Contract::ADDRESS =>  $value->{Contract::ADDRESS},
+            Contract::TITLE =>  $value->{Contract::TITLE},
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('places')->insert($data_info);
+    }
+
+    $table  =   'recurrents';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::AMOUNT =>  $value->{Contract::AMOUNT},
+            Contract::PAYMENT_DATE =>  conv($value->{Contract::PAYMENT_DATE}),
+            Contract::CARD_PAN =>  $value->{Contract::CARD_PAN},
+            Contract::ORDER_ID =>  $value->{Contract::ORDER_ID},
+            Contract::RECURRING_PROFILE_ID =>  $value->{Contract::RECURRING_PROFILE_ID},
+            Contract::NEXT_PAYMENT =>  conv($value->{Contract::NEXT_PAYMENT}),
+            Contract::RESULT =>  $value->{Contract::RESULT},
+            Contract::SALT =>  $value->{Contract::SALT},
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('recurrents')->insert($data_info);
+    }
+
+    $table  =   'services';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data   =   DB::connection('pgsql')->select('select * from service_nodes where service_id='.$value->id);
+        $title  =   '';
+        $title_kz   =   '';
+        $title_en   =   '';
+        $view  =   '';
+        $view_kz   =   '';
+        $view_en   =   '';
+        $tagline  =   '';
+        $tagline_kz   =   '';
+        $tagline_en   =   '';
+        $description    =   '';
+        $description_kz =   '';
+        $description_en =   '';
+        $annotation    =   '';
+        $annotation_kz =   '';
+        $annotation_en =   '';
+        foreach ($data as &$item) {
+            if ($item->lang === 'ru') {
+                $title  =   $item->name;
+                $description    =   $item->description;
+                $view    =   $item->view_title;
+                $tagline    =   $item->slogan;
+                $annotation =   $item->annotation;
+            } elseif ($item->lang === 'en') {
+                $title_en  =   $item->name;
+                $description_en    =   $item->description;
+                $view_en    =   $item->view_title;
+                $tagline_en    =   $item->slogan;
+                $annotation_en =   $item->annotation;
+            } elseif ($item->lang === 'kz') {
+                $title_kz  =   $item->name;
+                $description_kz    =   $item->description;
+                $view_kz    =   $item->view_title;
+                $tagline_kz    =   $item->slogan;
+                $annotation_kz =   $item->annotation;
+            }
+        }
+        $image_id   =   null;
+        if ($value->image_id) {
+            $img   =   DB::connection('pgsql')->select('select * from images where id='.$value->image_id);
+            $info   =   pathinfo($img[0]->path);
+            $image_id   =   img_convert($info['filename']);
+        }
+        $browser_image_id   =   null;
+        if ($value->browser_image_id) {
+            $img   =   DB::connection('pgsql')->select('select * from images where id='.$value->browser_image_id);
+            $info   =   pathinfo($img[0]->path);
+            $browser_image_id   =   img_convert($info['filename']);
+        }
+        $additional_image_id    =   null;
+        if ($value->additional_image_id) {
+            $img   =   DB::connection('pgsql')->select('select * from images where id='.$value->additional_image_id);
+            if (does_url_exists($img[0]->path)) {
+                $info   =   pathinfo($img[0]->path);
+                file_put_contents($info['basename'],file_get_contents($img[0]->path));
+                $additional_image_id   =   img_convert($info['filename']);
+            }
+        }
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::SERVICE_TYPE_ID    =>  $value->type_id,
+            Contract::POSITION  =>  $value->{Contract::POSITION},
+            Contract::IS_ACTIVE =>  $value->isactive,
+            Contract::URL   =>  $value->url,
+            Contract::PRICE =>  $value->price,
+            Contract::CARD_PRICE    =>  $value->price_card,
+            Contract::SELECTABLE    =>  $value->selectable,
+            Contract::WITHOUT_CARD  =>  $value->can_order_without_card,
+            Contract::WITH_CARD =>  $value->can_order_with_card,
+            Contract::NOTE_STARS    =>  $value->note_stars,
+            Contract::IS_CORPORATE  =>  $value->is_corporate,
+            Contract::TITLE =>  $title,
+            Contract::TITLE_KZ =>  $title_kz,
+            Contract::TITLE_EN =>  $title_en,
+            Contract::VIEW =>  $view,
+            Contract::VIEW_KZ =>  $view_kz,
+            Contract::VIEW_EN =>  $view_en,
+            Contract::TAGLINE =>  $tagline,
+            Contract::TAGLINE_KZ =>  $tagline_kz,
+            Contract::TAGLINE_EN =>  $tagline_en,
+            Contract::ANNOTATION =>  $annotation,
+            Contract::ANNOTATION_KZ =>  $annotation_kz,
+            Contract::ANNOTATION_EN =>  $annotation_en,
+            Contract::DESCRIPTION =>  $description,
+            Contract::DESCRIPTION_KZ => $description_kz,
+            Contract::DESCRIPTION_EN =>  $description_en,
+            Contract::IMAGE_ID  =>  $image_id,
+            Contract::BROWSER_IMAGE_ID  =>  $browser_image_id,
+            Contract::ADDITIONAL_IMAGE_ID   =>  $additional_image_id,
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('services')->insert($data_info);
+    }
+
+    $table  =   'service_types';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data   =   DB::connection('pgsql')->select('select * from service_type_nodes where service_type_id='.$value->id);
+        $title  =   '';
+        $title_kz   =   '';
+        $title_en   =   '';
+        foreach ($data as &$item) {
+            if ($item->lang === 'ru') {
+                $title  =   $item->name;
+            } elseif ($item->lang === 'en') {
+                $title_en  =   $item->name;
+            } elseif ($item->lang === 'kz') {
+                $title_kz  =   $item->name;
+            }
+        }
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::CARD_CATEGORY_ID  =>  $value->global_category_id,
+            Contract::POSITION  =>  $value->{Contract::POSITION},
+            Contract::TITLE =>  $title,
+            Contract::TITLE_KZ =>  $title_kz,
+            Contract::TITLE_EN =>  $title_en,
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('service_types')->insert($data_info);
+    }
+
+    $table  =   'service_limits';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::SERVICE_ID  =>  $value->service_id,
+            Contract::CARD_ID  =>  $value->card_id,
+            Contract::LIMIT =>  $value->limit,
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('service_limits')->insert($data_info);
+    }
+
+    $table  =   'service_prices';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::CITY_ID  =>  $value->city_id,
+            Contract::SERVICE_ID  =>  $value->service_id,
+            Contract::CAR_CATEGORY_ID   =>  $value->car_category_id,
+            Contract::PRICE =>  $value->price,
+            Contract::IS_FREE =>  $value->is_free,
+            Contract::IS_WITH_CHECK =>  $value->is_with_check,
+            Contract::IS_NEGOTIABLE_PRICE =>  $value->{Contract::IS_NEGOTIABLE_PRICE},
+        ];
+
+        DB::table('service_prices')->insert($data_info);
+    }
+
+    $table  =   'regions';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::COUNTRY_ID  =>  $value->country_id,
+            Contract::TITLE =>  $value->name,
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('regions')->insert($data_info);
+    }
+
+    $table  =   'old_order_cards';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::ORDER_CARD_ID  =>  $value->new_order_card_id,
+            Contract::ORDER_CARD_ID_OLD =>  $value->old_order_card_id,
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('order_card_olds')->insert($data_info);
+    }
+
+    $table  =   'messages';
+    echo $table.'<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($values as &$value) {
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::FULLNAME  =>  $value->fullname,
+            Contract::EMAIL =>  $value->email,
+            Contract::PHONE =>  $value->phone,
+            Contract::TEXT =>  $value->text,
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+
+        DB::table('messages')->insert($data_info);
     }
 
     exit;
@@ -1553,6 +1869,7 @@ Route::get('/', function () {
 });
 
 Route::get('/add', function() {
+    set_time_limit(0);
     function gDate($date) {
         $date   =   explode(' ',$date);
         if (sizeof($date) > 0) {
@@ -1603,22 +1920,37 @@ Route::get('/add', function() {
         return $image_id;
     }
 
-    $table  =   'partner_purchases';
+    function does_url_exists($url) {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_NOBODY, true);
+        curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        if ($code == 200) {
+            $status = true;
+        } else {
+            $status = false;
+        }
+        curl_close($ch);
+        return $status;
+    }
+
+    $table  =   'messages';
     echo $table.'<br><pre>';
     $values  =   DB::connection('pgsql')->select('select * from '.$table);
     foreach ($values as &$value) {
-        $date   =   explode('T',$value->{Contract::PURCHASE_DATE});
         $data_info  =   [
             Contract::ID    =>  $value->{Contract::ID},
-            Contract::PURCHASE_ID   =>  $value->{Contract::PURCHASE_ID},
-            Contract::PURCHASE_DATE   =>  $date[0],
-            Contract::PARTNER_ID    =>  $value->{Contract::PARTNER_ID},
+            Contract::FULLNAME  =>  $value->fullname,
+            Contract::EMAIL =>  $value->email,
+            Contract::PHONE =>  $value->phone,
+            Contract::TEXT =>  $value->text,
             Contract::CREATED_AT    =>  conv($value->created_at),
             Contract::UPDATED_AT    =>  conv($value->updated_at),
             Contract::DELETED_AT    =>  conv($value->deleted_at)
         ];
 
-        DB::table('partner_purchases')->insert($data_info);
+        DB::table('messages')->insert($data_info);
     }
 });
 

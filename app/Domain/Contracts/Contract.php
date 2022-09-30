@@ -150,8 +150,11 @@ abstract class Contract
     const CODE  =   'code';
     const EMAIL =   'email';
     const PHONE =   'phone';
+    const TEXT  =   'text';
+    const FULLNAME  =   'fullname';
     const VIN   =   'vin';
     const ORDER_CARD_ID =   'order_card_id';
+    const ORDER_CARD_ID_OLD =   'order_card_id_old';
     const CAR_NUMBER    =   'car_number';
     const VALUE =   'value';
     const IS_CHOOSEABLE =   'is_chooseable';
@@ -164,6 +167,8 @@ abstract class Contract
     const CAR_MODEL_ID  =   'car_model_id';
     const COLORS    =   'colors';
     const IMAGE =   'image';
+    const BROWSER_IMAGE =   'browser_image';
+    const ADDITIONAL_IMAGE  =   'additional_image';
     const NEWS_CATEGORY =   'news_category';
     const _IMG  =   '_img';
     const _ICON =   '_icon';
@@ -259,8 +264,11 @@ abstract class Contract
     const ORDER_SERVICE =   'order_service';
     const DELETED_AT    =   'deleted_at';
     const UPDATED_AT    =   'updated_at';
+    const SERVICE_TYPE  =   'service_type';
+    const PAYMENT_SYSTEM    =   'payment_system';
     const CREATED_AT    =   'created_at';
     const UNIVERSAL =   'universal';
+    const COUNTRY   =   'country';
     const PRICE =   'price';
     const SUPPLIER_ID   =   'supplier_id';
     const CATEGORY_ID   =   'category_id';
@@ -290,6 +298,10 @@ abstract class Contract
         self::ORDER_SERVICE_ID,
         self::SERVICE_ID,
         self::PARTNER_ID,
+        self::PAYMENT_SYSTEM_ID,
+        self::BROWSER_IMAGE_ID,
+        self::ADDITIONAL_IMAGE_ID,
+        self::COUNTRY_ID,
     ];
     public static function CLEAR(array $arr) :array
     {

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger(Contract::SERVICE_ID)->nullable();
             $table->unsignedBigInteger(Contract::CARD_ID)->nullable();
-            $table->tinyInteger(Contract::LIMIT)->default(-1);
+            $table->tinyInteger(Contract::LIMIT)->default(-1)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
