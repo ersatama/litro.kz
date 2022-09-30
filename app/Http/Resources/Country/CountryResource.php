@@ -2,20 +2,22 @@
 
 namespace App\Http\Resources\Country;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
+use App\Domain\Contracts\CountryContract;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CountryResource extends JsonResource
 {
     public function toArray($request):array
     {
-        return [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::TITLE =>  $this->{MainContract::TITLE},
-            MainContract::TITLE_KZ  =>  $this->{MainContract::TITLE_KZ},
-            MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+        $arr    =   [
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
         ];
+        foreach (CountryContract::FILLABLE as &$value) {
+            $arr[$value]    =   $this->{$value};
+        }
+        return Contract::CLEAR($arr);
     }
 }

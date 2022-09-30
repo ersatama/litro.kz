@@ -3,14 +3,14 @@
 namespace App\Domain\Repositories\LawyerContact;
 
 use App\Domain\Repositories\MainRepositoryEloquent;
-use App\Models\LawyerServicePivot;
+use App\Models\LawyerContact;
 
 class LawyerContactRepositoryEloquent implements LawyerContactRepositoryInterface
 {
     use MainRepositoryEloquent;
-    protected LawyerServicePivot $model;
-    public function __construct(LawyerServicePivot $lawyerServicePivot)
+    protected LawyerContact $model;
+    public function __construct(LawyerContact $lawyerContact)
     {
-        $this->model    =   $lawyerServicePivot;
+        $this->model    =   $lawyerContact;
     }
 }

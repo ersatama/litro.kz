@@ -2,7 +2,7 @@
 
 namespace App\Http\Resources\ServicePrice;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ServicePriceResource extends JsonResource
@@ -10,15 +10,15 @@ class ServicePriceResource extends JsonResource
     public function toArray($request): array
     {
         return [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::SERVICE_ID    =>  $this->{MainContract::SERVICE_ID},
-            MainContract::CAR_CATEGORY_ID   =>  $this->{MainContract::CAR_CATEGORY_ID},
-            MainContract::PRICE =>  $this->{MainContract::PRICE},
-            MainContract::IS_FREE   =>  $this->{MainContract::IS_FREE},
-            MainContract::IS_WITH_CHECK =>  $this->{MainContract::IS_WITH_CHECK},
-            MainContract::IS_NEGOTIABLE_PRICE   =>  $this->{MainContract::IS_NEGOTIABLE_PRICE},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::SERVICE_ID    =>  $this->{Contract::SERVICE_ID},
+            Contract::CAR_CATEGORY_ID   =>  $this->{Contract::CAR_CATEGORY_ID},
+            Contract::PRICE =>  $this->{Contract::PRICE},
+            Contract::IS_FREE   =>  $this->{Contract::IS_FREE},
+            Contract::IS_WITH_CHECK =>  $this->{Contract::IS_WITH_CHECK},
+            Contract::IS_NEGOTIABLE_PRICE   =>  $this->{Contract::IS_NEGOTIABLE_PRICE},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
         ];
     }
 }

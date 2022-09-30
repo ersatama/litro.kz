@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\CodeContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,10 +17,10 @@ return new class extends Migration
     {
         Schema::create(CodeContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->string(MainContract::PHONE)->nullable()->unique();
-            $table->string(MainContract::EMAIL)->nullable()->unique();
-            $table->char(MainContract::CODE,4)->nullable();
-            $table->boolean(MainContract::STATUS)->default(false);
+            $table->string(Contract::PHONE)->nullable();
+            $table->string(Contract::EMAIL)->nullable();
+            $table->string(Contract::CODE)->nullable();
+            $table->boolean(Contract::STATUS)->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

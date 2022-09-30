@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class ServiceTypeContract extends MainContract
+class ServiceTypeContract extends Contract
 {
     const TABLE =   'service_types';
     const FILLABLE  =   [

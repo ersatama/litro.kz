@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\RecurrentContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,14 +17,14 @@ return new class extends Migration
     {
         Schema::create(RecurrentContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::AMOUNT)->nullable();
-            $table->timestamp(MainContract::PAYMENT_DATE)->nullable();
-            $table->string(MainContract::CARD_PAN)->nullable();
-            $table->unsignedInteger(MainContract::ORDER_ID)->nullable();
-            $table->string(MainContract::RECURRING_PROFILE_ID)->nullable();
-            $table->timestamp(MainContract::NEXT_PAYMENT)->nullable();
-            $table->unsignedTinyInteger(MainContract::RESULT)->default(0);
-            $table->string(MainContract::SALT)->nullable();
+            $table->unsignedInteger(Contract::AMOUNT)->nullable();
+            $table->timestamp(Contract::PAYMENT_DATE)->nullable();
+            $table->string(Contract::CARD_PAN)->nullable();
+            $table->unsignedInteger(Contract::ORDER_ID)->nullable();
+            $table->string(Contract::RECURRING_PROFILE_ID)->nullable();
+            $table->timestamp(Contract::NEXT_PAYMENT)->nullable();
+            $table->unsignedTinyInteger(Contract::RESULT)->default(0);
+            $table->string(Contract::SALT)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

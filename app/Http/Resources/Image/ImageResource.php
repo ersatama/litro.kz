@@ -2,19 +2,22 @@
 
 namespace App\Http\Resources\Image;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\ImageContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ImageResource extends JsonResource
 {
     public function toArray($request) :array
     {
-        return [
-            MainContract::ID    =>  $this->{MainContract::USER_ID},
-            MainContract::USER_ID   =>  $this->{MainContract::USER_ID},
-            MainContract::PNG   =>  $this->{MainContract::PNG},
-            MainContract::JPG   =>  $this->{MainContract::JPG},
-            MainContract::WEBP  =>  $this->{MainContract::WEBP},
+        $arr    =   [
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
         ];
+        foreach (ImageContract::FILLABLE as &$value) {
+            $arr[$value]    =   $this->{$value};
+        }
+        return $arr;
     }
 }

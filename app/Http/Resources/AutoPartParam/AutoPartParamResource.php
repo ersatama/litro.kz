@@ -2,23 +2,26 @@
 
 namespace App\Http\Resources\AutoPartParam;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\AutoPartParamContract;
+use App\Domain\Contracts\Contract;
+use App\Http\Resources\AutoPartCategory\AutoPartCategoryResource;
+use App\Http\Resources\AutoPartType\AutoPartTypeResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class AutoPartParamResource extends JsonResource
 {
     public function toArray($request):array
     {
-        return [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::AUTO_PART_CATEGORY_ID =>  $this->{MainContract::AUTO_PART_CATEGORY_ID},
-            MainContract::AUTO_PART_TYPE_ID =>  $this->{MainContract::AUTO_PART_TYPE_ID},
-            MainContract::FILTER    =>  $this->{MainContract::FILTER},
-            MainContract::TITLE =>  $this->{MainContract::TITLE},
-            MainContract::TITLE_KZ  =>  $this->{MainContract::TITLE_KZ},
-            MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+        $arr    =   [
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
+            Contract::AUTO_PART_CATEGORY    =>  new AutoPartCategoryResource($this->{Contract::AUTO_PART_CATEGORY}),
+            Contract::AUTO_PART_TYPE    =>  new AutoPartTypeResource($this->{Contract::AUTO_PART_TYPE})
         ];
+        foreach (AutoPartParamContract::FILLABLE as &$value) {
+            $arr[$value]    =   $this->{$value};
+        }
+        return Contract::CLEAR($arr);
     }
 }

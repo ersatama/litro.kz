@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\MoneyOperationContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,16 +17,16 @@ return new class extends Migration
     {
         Schema::create(MoneyOperationContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::MONEY_OPERATION_TYPE_ID);
-            $table->unsignedBigInteger(MainContract::USER_ID);
-            $table->unsignedBigInteger(MainContract::WALLET_RECORD_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::PAYMENT_ID)->nullable();
-            $table->string(MainContract::STATUS)->nullable();
+            $table->unsignedInteger(Contract::MONEY_OPERATION_TYPE_ID);
+            $table->unsignedBigInteger(Contract::USER_ID);
+            $table->unsignedBigInteger(Contract::WALLET_RECORD_ID)->nullable();
+            $table->unsignedBigInteger(Contract::PAYMENT_ID)->nullable();
+            $table->string(Contract::STATUS)->nullable();
             $table->timestamps();
             $table->softDeletes();
-            $table->index(MainContract::USER_ID);
-            $table->index(MainContract::WALLET_RECORD_ID);
-            $table->index(MainContract::PAYMENT_ID);
+            $table->index(Contract::USER_ID);
+            $table->index(Contract::WALLET_RECORD_ID);
+            $table->index(Contract::PAYMENT_ID);
         });
     }
 

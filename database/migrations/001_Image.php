@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\ImageContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,10 +17,10 @@ return new class extends Migration
     {
         Schema::create(ImageContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::USER_ID)->nullable();
-            $table->string(MainContract::PNG)->nullable();
-            $table->string(MainContract::WEBP)->nullable();
-            $table->string(MainContract::JPG)->nullable();
+            $table->unsignedBigInteger(Contract::USER_ID)->nullable();
+            $table->string(Contract::PNG)->nullable();
+            $table->string(Contract::WEBP)->nullable();
+            $table->string(Contract::JPG)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

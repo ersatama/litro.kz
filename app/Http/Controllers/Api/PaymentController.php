@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\PaymentService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Payment\PaymentCollection;
@@ -29,8 +29,8 @@ class PaymentController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->paymentService->paymentRepository->count([]),
-            MainContract::DATA  =>  new PaymentCollection($this->paymentService->paymentRepository->get($skip,$take))
+            Contract::COUNT =>  $this->paymentService->paymentRepository->count([]),
+            Contract::DATA  =>  new PaymentCollection($this->paymentService->paymentRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class PaymentController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->paymentService->paymentRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->paymentService->paymentRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new PaymentCollection($this->paymentService->paymentRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new PaymentCollection($this->paymentService->paymentRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 

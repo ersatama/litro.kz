@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\WalletContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,9 +17,9 @@ return new class extends Migration
     {
         Schema::create(WalletContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::USER_ID);
-            $table->unsignedInteger(MainContract::CURRENCY_ID);
-            $table->float(MainContract::BALANCE)->nullable();
+            $table->unsignedBigInteger(Contract::USER_ID);
+            $table->unsignedInteger(Contract::CURRENCY_ID);
+            $table->float(Contract::BALANCE)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

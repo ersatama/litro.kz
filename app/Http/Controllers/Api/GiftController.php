@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\GiftService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Gift\GiftCollection;
@@ -29,8 +29,8 @@ class GiftController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->giftService->giftRepository->count([]),
-            MainContract::DATA  =>  new GiftCollection($this->giftService->giftRepository->get($skip,$take))
+            Contract::COUNT =>  $this->giftService->giftRepository->count([]),
+            Contract::DATA  =>  new GiftCollection($this->giftService->giftRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class GiftController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->giftService->giftRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->giftService->giftRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new GiftCollection($this->giftService->giftRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new GiftCollection($this->giftService->giftRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 
@@ -57,10 +57,10 @@ class GiftController extends Controller
     public function getByCardId($cardId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->giftService->giftRepository->count([
-                MainContract::CARD_ID   =>  $cardId
+            Contract::COUNT =>  $this->giftService->giftRepository->count([
+                Contract::CARD_ID   =>  $cardId
             ]),
-            MainContract::DATA  =>  new GiftCollection($this->giftService->giftRepository->getByCardId($cardId,$skip,$take))
+            Contract::DATA  =>  new GiftCollection($this->giftService->giftRepository->getByCardId($cardId,$skip,$take))
         ],200);
     }
 

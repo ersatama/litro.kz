@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\InsuranceLinkReferRecordService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\InsuranceLinkReferRecord\InsuranceLinkReferRecordCollection;
@@ -29,8 +29,8 @@ class InsuranceLinkReferRecordController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->count([]),
-            MainContract::DATA  =>  new InsuranceLinkReferRecordCollection($this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->get($skip,$take))
+            Contract::COUNT =>  $this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->count([]),
+            Contract::DATA  =>  new InsuranceLinkReferRecordCollection($this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class InsuranceLinkReferRecordController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new InsuranceLinkReferRecordCollection($this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new InsuranceLinkReferRecordCollection($this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 
@@ -57,10 +57,10 @@ class InsuranceLinkReferRecordController extends Controller
     public function getByInsuranceCompanyId($insuranceCompanyId,$skip,$take): Response|InsuranceLinkReferRecordCollection|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->count([
-                MainContract::INSURANCE_COMPANY_ID  =>  $insuranceCompanyId
+            Contract::COUNT =>  $this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->count([
+                Contract::INSURANCE_COMPANY_ID  =>  $insuranceCompanyId
             ]),
-            MainContract::DATA  =>  new InsuranceLinkReferRecordCollection($this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->getByInsuranceCompanyId($insuranceCompanyId,$skip,$take))
+            Contract::DATA  =>  new InsuranceLinkReferRecordCollection($this->insuranceLinkReferRecordService->insuranceLinkReferRecordRepository->getByInsuranceCompanyId($insuranceCompanyId,$skip,$take))
         ],200);
     }
 

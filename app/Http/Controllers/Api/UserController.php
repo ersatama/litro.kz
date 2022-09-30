@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\UserService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\User\UserCollection;
@@ -30,8 +30,8 @@ class UserController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->userService->userRepository->count([]),
-            MainContract::DATA  =>  new UserCollection($this->userService->userRepository->get($skip,$take))
+            Contract::COUNT =>  $this->userService->userRepository->count([]),
+            Contract::DATA  =>  new UserCollection($this->userService->userRepository->get($skip,$take))
         ],200);
     }
 
@@ -43,7 +43,7 @@ class UserController extends Controller
     public function getByPhoneAndPassword($phone,$password): Response|Application|ResponseFactory|UserResource
     {
         if ($model = $this->userService->userRepository->getByPhone($phone)) {
-            if (Hash::make($password,$model->{MainContract::PASSWORD})) {
+            if (Hash::make($password,$model->{Contract::PASSWORD})) {
                 return new UserResource($model);
             }
             return response(ErrorContract::FAILED_AUTH,401);

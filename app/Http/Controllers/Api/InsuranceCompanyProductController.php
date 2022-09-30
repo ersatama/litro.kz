@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\InsuranceCompanyProductService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\InsuranceCompanyProduct\InsuranceCompanyProductCollection;
@@ -29,8 +29,8 @@ class InsuranceCompanyProductController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceCompanyProductService->insuranceCompanyProductRepository->count([]),
-            MainContract::DATA  =>  new InsuranceCompanyProductCollection($this->insuranceCompanyProductService->insuranceCompanyProductRepository->get($skip,$take))
+            Contract::COUNT =>  $this->insuranceCompanyProductService->insuranceCompanyProductRepository->count([]),
+            Contract::DATA  =>  new InsuranceCompanyProductCollection($this->insuranceCompanyProductService->insuranceCompanyProductRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class InsuranceCompanyProductController extends Controller
     public function getByInsuranceCompanyId($insuranceCompanyId,$skip,$take): Response|InsuranceCompanyProductResource|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceCompanyProductService->insuranceCompanyProductRepository->count([
-                MainContract::INSURANCE_COMPANY_ID  =>  $insuranceCompanyId
+            Contract::COUNT =>  $this->insuranceCompanyProductService->insuranceCompanyProductRepository->count([
+                Contract::INSURANCE_COMPANY_ID  =>  $insuranceCompanyId
             ]),
-            MainContract::DATA  =>  new InsuranceCompanyProductCollection($this->insuranceCompanyProductService->insuranceCompanyProductRepository->getByInsuranceCompanyId($insuranceCompanyId,$skip,$take))
+            Contract::DATA  =>  new InsuranceCompanyProductCollection($this->insuranceCompanyProductService->insuranceCompanyProductRepository->getByInsuranceCompanyId($insuranceCompanyId,$skip,$take))
         ],200);
     }
 

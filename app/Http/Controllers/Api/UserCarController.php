@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\UserCarService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserCar\UserCarCollection;
@@ -29,8 +29,8 @@ class UserCarController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->userCarService->userCarRepository->count([]),
-            MainContract::DATA  =>  new UserCarCollection($this->userCarService->userCarRepository->get($skip,$take))
+            Contract::COUNT =>  $this->userCarService->userCarRepository->count([]),
+            Contract::DATA  =>  new UserCarCollection($this->userCarService->userCarRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class UserCarController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->userCarService->userCarRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->userCarService->userCarRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new UserCarCollection($this->userCarService->userCarRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new UserCarCollection($this->userCarService->userCarRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 
@@ -57,10 +57,10 @@ class UserCarController extends Controller
     public function getByCarModelId($carModelId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->userCarService->userCarRepository->count([
-                MainContract::CAR_MODEL_ID   =>  $carModelId
+            Contract::COUNT =>  $this->userCarService->userCarRepository->count([
+                Contract::CAR_MODEL_ID   =>  $carModelId
             ]),
-            MainContract::DATA  =>  new UserCarCollection($this->userCarService->userCarRepository->getByCarModelId($carModelId,$skip,$take))
+            Contract::DATA  =>  new UserCarCollection($this->userCarService->userCarRepository->getByCarModelId($carModelId,$skip,$take))
         ],200);
     }
 

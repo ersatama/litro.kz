@@ -2,24 +2,22 @@
 
 namespace App\Http\Resources\CardCategory;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\CardCategoryContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CardCategoryResource extends JsonResource
 {
     public function toArray($request): array
     {
-        return [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::IMAGE_ID  =>  $this->{MainContract::IMAGE_ID},
-            MainContract::TITLE =>  $this->{MainContract::TITLE},
-            MainContract::TITLE_KZ  =>  $this->{MainContract::TITLE_KZ},
-            MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN},
-            MainContract::DESCRIPTION   =>  $this->{MainContract::DESCRIPTION},
-            MainContract::DESCRIPTION_KZ    =>  $this->{MainContract::DESCRIPTION_KZ},
-            MainContract::DESCRIPTION_EN    =>  $this->{MainContract::DESCRIPTION_EN},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+        $arr    =   [
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
         ];
+        foreach (CardCategoryContract::FILLABLE as &$value) {
+            $arr[$value]    =   $this->{$value};
+        }
+        return Contract::CLEAR($arr);
     }
 }

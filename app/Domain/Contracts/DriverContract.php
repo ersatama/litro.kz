@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class DriverContract extends MainContract
+class DriverContract extends Contract
 {
     const TABLE =   'drivers';
     const FILLABLE  =   [

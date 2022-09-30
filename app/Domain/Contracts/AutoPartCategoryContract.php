@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class AutoPartCategoryContract extends MainContract
+class AutoPartCategoryContract extends Contract
 {
     const TABLE =   'auto_part_categories';
     const FILLABLE  =   [

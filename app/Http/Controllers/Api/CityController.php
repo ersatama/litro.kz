@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CityService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\City\CityCollection;
@@ -27,8 +27,8 @@ class CityController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cityService->cityRepository->count([]),
-            MainContract::DATA  =>  new CityCollection($this->cityService->cityRepository->get($skip,$take))
+            Contract::COUNT =>  $this->cityService->cityRepository->count([]),
+            Contract::DATA  =>  new CityCollection($this->cityService->cityRepository->get($skip,$take))
         ],200);
     }
 

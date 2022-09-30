@@ -2,7 +2,7 @@
 
 namespace App\Http\Resources\Region;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class RegionResource extends JsonResource
@@ -10,13 +10,13 @@ class RegionResource extends JsonResource
     public function toArray($request):array
     {
         return [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::TITLE =>  $this->{MainContract::TITLE},
-            MainContract::TITLE_KZ  =>  $this->{MainContract::TITLE_KZ},
-            MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN},
-            MainContract::COUNTRY_ID    =>  $this->{MainContract::COUNTRY_ID},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::TITLE =>  $this->{Contract::TITLE},
+            Contract::TITLE_KZ  =>  $this->{Contract::TITLE_KZ},
+            Contract::TITLE_EN  =>  $this->{Contract::TITLE_EN},
+            Contract::COUNTRY_ID    =>  $this->{Contract::COUNTRY_ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
         ];
     }
 }

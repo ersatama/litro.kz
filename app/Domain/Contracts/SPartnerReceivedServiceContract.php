@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class SPartnerReceivedServiceContract extends MainContract
+class SPartnerReceivedServiceContract extends Contract
 {
     const TABLE =   's_partner_received_services';
     const FILLABLE  =   [

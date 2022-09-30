@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\CardRangeContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,13 +17,13 @@ return new class extends Migration
     {
         Schema::create(CardRangeContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::CITY_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::CARD_ID);
-            $table->unsignedBigInteger(MainContract::CURRENT_SYNCED)->default(0);
-            $table->text(MainContract::LEGAL_PERSON)->nullable();
-            $table->string(MainContract::C_FROM);
-            $table->string(MainContract::C_TO);
-            $table->boolean(MainContract::STATUS)->default(true);
+            $table->unsignedInteger(Contract::CITY_ID)->nullable();
+            $table->unsignedBigInteger(Contract::CARD_ID);
+            $table->unsignedBigInteger(Contract::CURRENT_SYNCED)->default(0);
+            $table->text(Contract::LEGAL_PERSON)->nullable();
+            $table->string(Contract::C_FROM);
+            $table->string(Contract::C_TO);
+            $table->boolean(Contract::STATUS)->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

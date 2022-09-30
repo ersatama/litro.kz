@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\ThirdPartyAppService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ThirdPartyApp\ThirdPartyAppCollection;
@@ -29,8 +29,8 @@ class ThirdPartyAppController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->thirdPartyAppService->thirdPartyAppRepository->count([]),
-            MainContract::DATA  =>  new ThirdPartyAppCollection($this->thirdPartyAppService->thirdPartyAppRepository->get($skip,$take))
+            Contract::COUNT =>  $this->thirdPartyAppService->thirdPartyAppRepository->count([]),
+            Contract::DATA  =>  new ThirdPartyAppCollection($this->thirdPartyAppService->thirdPartyAppRepository->get($skip,$take))
         ],200);
     }
 

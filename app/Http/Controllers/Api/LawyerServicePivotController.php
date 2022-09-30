@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\LawyerServicePivotService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\LawyerServicePivot\LawyerServicePivotCollection;
@@ -29,8 +29,8 @@ class LawyerServicePivotController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->lawyerServicePivotService->lawyerServicePivotRepository->count([]),
-            MainContract::DATA  =>  new LawyerServicePivotCollection($this->lawyerServicePivotService->lawyerServicePivotRepository->get($skip,$take))
+            Contract::COUNT =>  $this->lawyerServicePivotService->lawyerServicePivotRepository->count([]),
+            Contract::DATA  =>  new LawyerServicePivotCollection($this->lawyerServicePivotService->lawyerServicePivotRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class LawyerServicePivotController extends Controller
     public function getByLawyerId($lawyerId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->lawyerServicePivotService->lawyerServicePivotRepository->count([
-                MainContract::LAWYER_ID =>  $lawyerId
+            Contract::COUNT =>  $this->lawyerServicePivotService->lawyerServicePivotRepository->count([
+                Contract::LAWYER_ID =>  $lawyerId
             ]),
-            MainContract::DATA  =>  new LawyerServicePivotCollection($this->lawyerServicePivotService->lawyerServicePivotRepository->getByLawyerId($lawyerId,$skip,$take))
+            Contract::DATA  =>  new LawyerServicePivotCollection($this->lawyerServicePivotService->lawyerServicePivotRepository->getByLawyerId($lawyerId,$skip,$take))
         ],200);
     }
 

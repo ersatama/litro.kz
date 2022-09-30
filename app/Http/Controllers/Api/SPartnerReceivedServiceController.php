@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\SPartnerReceivedServiceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SPartnerReceivedService\SPartnerReceivedServiceCollection;
@@ -29,8 +29,8 @@ class SPartnerReceivedServiceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerReceivedServiceService->SPartnerReceivedServiceRepository->count([]),
-            MainContract::DATA  =>  new SPartnerReceivedServiceCollection($this->SPartnerReceivedServiceService->SPartnerReceivedServiceRepository->get($skip,$take))
+            Contract::COUNT =>  $this->SPartnerReceivedServiceService->SPartnerReceivedServiceRepository->count([]),
+            Contract::DATA  =>  new SPartnerReceivedServiceCollection($this->SPartnerReceivedServiceService->SPartnerReceivedServiceRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class SPartnerReceivedServiceController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerReceivedServiceService->SPartnerReceivedServiceRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->SPartnerReceivedServiceService->SPartnerReceivedServiceRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new SPartnerReceivedServiceCollection($this->SPartnerReceivedServiceService->SPartnerReceivedServiceRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new SPartnerReceivedServiceCollection($this->SPartnerReceivedServiceService->SPartnerReceivedServiceRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 

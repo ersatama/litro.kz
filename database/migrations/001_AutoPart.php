@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\AutoPartContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,11 +17,11 @@ return new class extends Migration
     {
         Schema::create(AutoPartContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::IMAGE_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::AUTO_PART_CATEGORY_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::SUPPLIER_ID)->nullable();
-            $table->string(MainContract::PRICE)->nullable();
-            $table->string(MainContract::UNIVERSAL)->nullable();
+            $table->unsignedBigInteger(Contract::IMAGE_ID)->nullable();
+            $table->unsignedBigInteger(Contract::AUTO_PART_CATEGORY_ID)->nullable();
+            $table->unsignedBigInteger(Contract::SUPPLIER_ID)->nullable();
+            $table->string(Contract::PRICE)->nullable();
+            $table->string(Contract::UNIVERSAL)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

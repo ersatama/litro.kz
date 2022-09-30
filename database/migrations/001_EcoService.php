@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\EcoServiceContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,15 +17,15 @@ return new class extends Migration
     {
         Schema::create(EcoServiceContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::POSITION)->default(1);
-            $table->boolean(MainContract::STATUS)->default(true);
-            $table->string(MainContract::TYPE)->nullable();
-            $table->string(MainContract::TITLE)->nullable();
-            $table->string(MainContract::TITLE_KZ)->nullable();
-            $table->string(MainContract::TITLE_EN)->nullable();
-            $table->string(MainContract::DESCRIPTION)->nullable();
-            $table->string(MainContract::DESCRIPTION_KZ)->nullable();
-            $table->string(MainContract::DESCRIPTION_EN)->nullable();
+            $table->unsignedInteger(Contract::POSITION)->default(1);
+            $table->string(Contract::STATUS)->nullable();
+            $table->string(Contract::TYPE)->nullable();
+            $table->string(Contract::TITLE)->nullable();
+            $table->string(Contract::TITLE_KZ)->nullable();
+            $table->string(Contract::TITLE_EN)->nullable();
+            $table->string(Contract::DESCRIPTION)->nullable();
+            $table->string(Contract::DESCRIPTION_KZ)->nullable();
+            $table->string(Contract::DESCRIPTION_EN)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

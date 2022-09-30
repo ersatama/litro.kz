@@ -14,7 +14,6 @@ use App\Http\Controllers\Api\CardRangeController;
 use App\Http\Controllers\Api\CardServiceController;
 use App\Http\Controllers\Api\CarModelAveragePriceController;
 use App\Http\Controllers\Api\CarModelController;
-use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\CityServiceController;
 use App\Http\Controllers\Api\CodeController;
@@ -44,9 +43,11 @@ use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\OrderCardController;
-use App\Http\Controllers\Api\OrderCardImportController;
 use App\Http\Controllers\Api\OrderServiceController;
+use App\Http\Controllers\Api\OrderServiceServiceController;
+use App\Http\Controllers\Api\PartnerCardController;
 use App\Http\Controllers\Api\PartnerController;
+use App\Http\Controllers\Api\PartnerPurchaseController;
 use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\PaymentSystemController;
 use App\Http\Controllers\Api\PlaceController;
@@ -362,18 +363,27 @@ Route::controller(PaymentController::class)->group(function() {
     });
 });
 
+Route::controller(PartnerPurchaseController::class)->group(function() {
+    Route::prefix('partnerPurchase')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('partnerPurchase.get');
+        Route::get('getByPartnerId/{partnerId}/{skip}/{take}','getByPartnerId')->name('partnerPurchase.getByPartnerId');
+        Route::get('getById/{id}','getById')->name('partnerPurchase.getById');
+    });
+});
+
+Route::controller(PartnerCardController::class)->group(function() {
+    Route::prefix('partnerCard')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('partnerCard.get');
+        Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('partnerCard.getByCardId');
+        Route::get('getByPartnerId/{partnerId}/{skip}/{take}','getByPartnerId')->name('partnerCard.getByPartnerId');
+        Route::get('getById/{id}','getById')->name('partnerCard.getById');
+    });
+});
+
 Route::controller(PartnerController::class)->group(function() {
     Route::prefix('partner')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('partner.get');
         Route::get('getById/{id}','getById')->name('partner.getById');
-    });
-});
-
-Route::controller(OrderCardImportController::class)->group(function() {
-    Route::prefix('orderCardImport')->group(function() {
-        Route::get('get/{skip}/{take}','get')->name('orderCardImport.get');
-        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('orderCardImport.getByUserId');
-        Route::get('getById/{id}','getById')->name('orderService.getById');
     });
 });
 
@@ -432,6 +442,15 @@ Route::controller(CodeController::class)->group(function() {
     });
 });
 
+Route::controller(OrderServiceServiceController::class)->group(function() {
+    Route::prefix('orderServiceService')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('cityService.get');
+        Route::get('getByOrderServiceId/{orderServiceId}/{skip}/{take}','getByOrderServiceId')->name('cityService.getByOrderServiceId');
+        Route::get('getByServiceId/{serviceId}/{skip}/{take}','getByServiceId')->name('cityService.getByServiceId');
+        Route::get('getById/{id}','getById')->name('cityService.getById');
+    });
+});
+
 Route::controller(CityServiceController::class)->group(function() {
     Route::prefix('cityService')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('cityService.get');
@@ -487,13 +506,6 @@ Route::controller(ImageController::class)->group(function() {
         Route::get('get/{skip}/{take}','get')->name('image.get');
         Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('image.getByUserId');
         Route::get('getById/{id}','getById')->name('image.getById');
-    });
-});
-
-Route::controller(CategoryController::class)->group(function() {
-    Route::prefix('category')->group(function() {
-        Route::get('get/{skip}/{take}','get')->name('category.get');
-        Route::get('getById/{id}','getById')->name('category.getById');
     });
 });
 
@@ -611,12 +623,14 @@ Route::controller(AutoPartTypeController::class)->group(function() {
 Route::controller(AutoPartParamController::class)->group(function() {
     Route::prefix('autoPartParam')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('autoPartParam.get');
+        Route::get('getById/{id}','getById')->name('autoPartParam.getById');
     });
 });
 
 Route::controller(AutoPartCategoryController::class)->group(function() {
     Route::prefix('autoPartCategory')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('autoPartCategory.get');
+        Route::get('getById/{id}','getById')->name('autoPartCategory.getById');
     });
 });
 

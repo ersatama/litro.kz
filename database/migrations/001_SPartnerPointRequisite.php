@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\SPartnerPointRequisiteContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,14 +17,14 @@ return new class extends Migration
     {
         Schema::create(SPartnerPointRequisiteContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::S_PARTNER_POINT_ID)->nullable();
-            $table->text(MainContract::ADDRESS)->nullable();
-            $table->string(MainContract::TITLE)->nullable();
-            $table->string(MainContract::BIN)->nullable();
-            $table->string(MainContract::IIK)->nullable();
-            $table->string(MainContract::BIK)->nullable();
-            $table->string(MainContract::BANK)->nullable();
-            $table->string(MainContract::INFO)->nullable();
+            $table->unsignedInteger(Contract::S_PARTNER_POINT_ID)->nullable();
+            $table->text(Contract::ADDRESS)->nullable();
+            $table->string(Contract::TITLE)->nullable();
+            $table->string(Contract::BIN)->nullable();
+            $table->string(Contract::IIK)->nullable();
+            $table->string(Contract::BIK)->nullable();
+            $table->string(Contract::BANK)->nullable();
+            $table->string(Contract::INFO)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

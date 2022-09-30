@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class CarCategoryContract extends MainContract
+class CarCategoryContract extends Contract
 {
     const TABLE =   'car_categories';
     const FILLABLE  =   [

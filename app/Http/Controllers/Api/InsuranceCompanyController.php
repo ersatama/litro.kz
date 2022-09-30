@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\InsuranceCompanyService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\InsuranceCompany\InsuranceCompanyCollection;
@@ -30,8 +30,8 @@ class InsuranceCompanyController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceCompanyService->insuranceCompanyRepository->count([]),
-            MainContract::DATA  =>  new InsuranceCompanyCollection($this->insuranceCompanyService->insuranceCompanyRepository->get($skip,$take))
+            Contract::COUNT =>  $this->insuranceCompanyService->insuranceCompanyRepository->count([]),
+            Contract::DATA  =>  new InsuranceCompanyCollection($this->insuranceCompanyService->insuranceCompanyRepository->get($skip,$take))
         ],200);
     }
 

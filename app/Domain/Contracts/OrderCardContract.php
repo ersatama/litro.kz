@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class OrderCardContract extends MainContract
+class OrderCardContract extends Contract
 {
     const TABLE =   'order_cards';
     const FILLABLE  =   [

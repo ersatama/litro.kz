@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class InsuranceCompanyContract extends MainContract
+class InsuranceCompanyContract extends Contract
 {
     const TABLE =   'insurance_companies';
     const FILLABLE  =   [

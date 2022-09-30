@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\WalletService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Wallet\WalletCollection;
@@ -29,8 +29,8 @@ class WalletController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->walletService->walletRepository->count([]),
-            MainContract::DATA  =>  new WalletCollection($this->walletService->walletRepository->get($skip,$take))
+            Contract::COUNT =>  $this->walletService->walletRepository->count([]),
+            Contract::DATA  =>  new WalletCollection($this->walletService->walletRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class WalletController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->walletService->walletRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->walletService->walletRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new WalletCollection($this->walletService->walletRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new WalletCollection($this->walletService->walletRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 

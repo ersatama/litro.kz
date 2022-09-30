@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\MoneyOperationService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\MoneyOperation\MoneyOperationCollection;
@@ -29,8 +29,8 @@ class MoneyOperationController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->moneyOperationService->moneyOperationRepository->count([]),
-            MainContract::DATA  =>  new MoneyOperationCollection($this->moneyOperationService->moneyOperationRepository->get($skip,$take))
+            Contract::COUNT =>  $this->moneyOperationService->moneyOperationRepository->count([]),
+            Contract::DATA  =>  new MoneyOperationCollection($this->moneyOperationService->moneyOperationRepository->get($skip,$take))
         ],200);
     }
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\LawyerServiceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\LawyerService\LawyerServiceCollection;
@@ -29,8 +29,8 @@ class LawyerServiceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->lawyerServiceService->lawyerServiceRepository->count([]),
-            MainContract::DATA  =>  new LawyerServiceCollection($this->lawyerServiceService->lawyerServiceRepository->get($skip,$take))
+            Contract::COUNT =>  $this->lawyerServiceService->lawyerServiceRepository->count([]),
+            Contract::DATA  =>  new LawyerServiceCollection($this->lawyerServiceService->lawyerServiceRepository->get($skip,$take))
         ],200);
     }
 

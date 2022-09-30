@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\NewsCategoryService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\NewsCategory\NewsCategoryCollection;
@@ -26,8 +26,8 @@ class NewsCategoryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->newsCategoryService->newsCategoryRepository->count([]),
-            MainContract::DATA  =>  new NewsCategoryCollection($this->newsCategoryService->newsCategoryRepository->get($skip,$take))
+            Contract::COUNT =>  $this->newsCategoryService->newsCategoryRepository->count([]),
+            Contract::DATA  =>  new NewsCategoryCollection($this->newsCategoryService->newsCategoryRepository->get($skip,$take))
         ],200);
     }
 }

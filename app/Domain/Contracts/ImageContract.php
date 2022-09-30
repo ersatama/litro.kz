@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class ImageContract extends MainContract
+class ImageContract extends Contract
 {
     const TABLE =   'images';
     const FILLABLE  =   [

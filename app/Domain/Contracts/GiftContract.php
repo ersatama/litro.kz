@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class GiftContract extends MainContract
+class GiftContract extends Contract
 {
     const TABLE =   'gifts';
     const FILLABLE  =   [

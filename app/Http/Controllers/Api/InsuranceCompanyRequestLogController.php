@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\InsuranceCompanyRequestLogService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\InsuranceCompanyRequestLog\InsuranceCompanyRequestLogCollection;
@@ -29,8 +29,8 @@ class InsuranceCompanyRequestLogController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceCompanyRequestLogService->insuranceCompanyRequestLogRepository->count([]),
-            MainContract::DATA  =>  new InsuranceCompanyRequestLogCollection($this->insuranceCompanyRequestLogService->insuranceCompanyRequestLogRepository->get($skip,$take))
+            Contract::COUNT =>  $this->insuranceCompanyRequestLogService->insuranceCompanyRequestLogRepository->count([]),
+            Contract::DATA  =>  new InsuranceCompanyRequestLogCollection($this->insuranceCompanyRequestLogService->insuranceCompanyRequestLogRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class InsuranceCompanyRequestLogController extends Controller
     public function getByInsuranceCompanyId($insuranceCompanyId,$skip,$take): Response|InsuranceCompanyRequestLogCollection|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceCompanyRequestLogService->insuranceCompanyRequestLogRepository->count([
-                MainContract::INSURANCE_COMPANY_ID  =>  $insuranceCompanyId
+            Contract::COUNT =>  $this->insuranceCompanyRequestLogService->insuranceCompanyRequestLogRepository->count([
+                Contract::INSURANCE_COMPANY_ID  =>  $insuranceCompanyId
             ]),
-            MainContract::DATA  =>  new InsuranceCompanyRequestLogCollection($this->insuranceCompanyRequestLogService->insuranceCompanyRequestLogRepository->getByInsuranceCompanyId($insuranceCompanyId,$skip,$take))
+            Contract::DATA  =>  new InsuranceCompanyRequestLogCollection($this->insuranceCompanyRequestLogService->insuranceCompanyRequestLogRepository->getByInsuranceCompanyId($insuranceCompanyId,$skip,$take))
         ],200);
     }
 

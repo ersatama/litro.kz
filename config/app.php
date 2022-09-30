@@ -216,7 +216,6 @@ return [
         App\Providers\Repositories\MoneyOperationTypeRepositoryProvider::class,
         App\Providers\Repositories\ServiceLimitRepositoryProvider::class,
         App\Providers\Repositories\AutoPartRepositoryProvider::class,
-        App\Providers\Repositories\CategoryRepositoryProvider::class,
         App\Providers\Repositories\ImageRepositoryProvider::class,
         App\Providers\Repositories\CardRepositoryProvider::class,
         App\Providers\Repositories\CarModelAveragePriceRepositoryProvider::class,
@@ -230,7 +229,6 @@ return [
         App\Providers\Repositories\GiftRepositoryProvider::class,
         App\Providers\Repositories\OrderCardRepositoryProvider::class,
         App\Providers\Repositories\OrderServiceRepositoryProvider::class,
-        App\Providers\Repositories\OrderCardImportRepositoryProvider::class,
         App\Providers\Repositories\PartnerRepositoryProvider::class,
         App\Providers\Repositories\PaymentRepositoryProvider::class,
         App\Providers\Repositories\PaymentSystemRepositoryProvider::class,
@@ -266,6 +264,9 @@ return [
         App\Providers\Repositories\SPartnerPointWalletRecordRepositoryProvider::class,
         App\Providers\Repositories\SPartnerReceivedServiceRepositoryProvider::class,
         App\Providers\Repositories\SPartnerPointRequisiteRepositoryProvider::class,
+        App\Providers\Repositories\OrderServiceServiceRepositoryProvider::class,
+        App\Providers\Repositories\PartnerCardRepositoryProvider::class,
+        App\Providers\Repositories\PartnerPurchaseRepositoryProvider::class,
     ],
 
     /*

@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class PaymentSystemContract extends MainContract
+class PaymentSystemContract extends Contract
 {
     const TABLE =   'payment_systems';
     const FILLABLE  =   [

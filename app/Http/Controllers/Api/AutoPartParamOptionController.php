@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\AutoPartParamOptionService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AutoPartParamOption\AutoPartParamOptionCollection;
@@ -27,8 +27,8 @@ class AutoPartParamOptionController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->autoPartParamOptionService->autoPartParamOptionRepository->count([]),
-            MainContract::DATA  =>  new AutoPartParamOptionCollection($this->autoPartParamOptionService->autoPartParamOptionRepository->get($skip,$take))
+            Contract::COUNT =>  $this->autoPartParamOptionService->autoPartParamOptionRepository->count([]),
+            Contract::DATA  =>  new AutoPartParamOptionCollection($this->autoPartParamOptionService->autoPartParamOptionRepository->get($skip,$take))
         ],200);
     }
 

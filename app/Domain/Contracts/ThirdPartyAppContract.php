@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class ThirdPartyAppContract extends MainContract
+class ThirdPartyAppContract extends Contract
 {
     const TABLE =   'third_party_apps';
     const FILLABLE  =   [

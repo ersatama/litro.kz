@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CardCategoryService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CardCategory\CardCategoryCollection;
@@ -27,8 +27,8 @@ class CardCategoryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cardCategoryService->cardCategoryRepository->count([]),
-            MainContract::DATA  =>  new CardCategoryCollection($this->cardCategoryService->cardCategoryRepository->get($skip,$take))
+            Contract::COUNT =>  $this->cardCategoryService->cardCategoryRepository->count([]),
+            Contract::DATA  =>  new CardCategoryCollection($this->cardCategoryService->cardCategoryRepository->get($skip,$take))
         ],200);
     }
 }

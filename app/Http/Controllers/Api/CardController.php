@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CardService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Card\CardCollection;
@@ -29,8 +29,8 @@ class CardController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cardService->cardRepository->count([]),
-            MainContract::DATA  =>  new CardCollection($this->cardService->cardRepository->get($skip,$take))
+            Contract::COUNT =>  $this->cardService->cardRepository->count([]),
+            Contract::DATA  =>  new CardCollection($this->cardService->cardRepository->get($skip,$take))
         ],200);
     }
 

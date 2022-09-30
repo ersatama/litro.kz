@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CountryService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Country\CountryCollection;
@@ -27,8 +27,8 @@ class CountryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->countryService->countryRepository->count([]),
-            MainContract::DATA  =>  new CountryCollection($this->countryService->countryRepository->get($skip,$take))
+            Contract::COUNT =>  $this->countryService->countryRepository->count([]),
+            Contract::DATA  =>  new CountryCollection($this->countryService->countryRepository->get($skip,$take))
         ],200);
     }
 

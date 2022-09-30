@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class LawyerServicePivotContract extends MainContract
+class LawyerServicePivotContract extends Contract
 {
     const TABLE =   'lawyer_service_pivots';
     const FILLABLE  =   [

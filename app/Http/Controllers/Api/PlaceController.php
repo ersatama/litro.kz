@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\PlaceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Place\PlaceCollection;
@@ -29,8 +29,8 @@ class PlaceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->placeService->placeRepository->count([]),
-            MainContract::DATA  =>  new PlaceCollection($this->placeService->placeRepository->get($skip,$take))
+            Contract::COUNT =>  $this->placeService->placeRepository->count([]),
+            Contract::DATA  =>  new PlaceCollection($this->placeService->placeRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class PlaceController extends Controller
     public function getByCityId($cityId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->placeService->placeRepository->count([
-                MainContract::CITY_ID   =>  $cityId
+            Contract::COUNT =>  $this->placeService->placeRepository->count([
+                Contract::CITY_ID   =>  $cityId
             ]),
-            MainContract::DATA  =>  new PlaceCollection($this->placeService->placeRepository->getByCityId($cityId,$skip,$take))
+            Contract::DATA  =>  new PlaceCollection($this->placeService->placeRepository->getByCityId($cityId,$skip,$take))
         ],200);
     }
 
@@ -57,10 +57,10 @@ class PlaceController extends Controller
     public function getByServiceId($serviceId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->placeService->placeRepository->count([
-                MainContract::SERVICE_ID => $serviceId
+            Contract::COUNT =>  $this->placeService->placeRepository->count([
+                Contract::SERVICE_ID => $serviceId
             ]),
-            MainContract::DATA  =>  new PlaceCollection($this->placeService->placeRepository->getByServiceId($serviceId,$skip,$take))
+            Contract::DATA  =>  new PlaceCollection($this->placeService->placeRepository->getByServiceId($serviceId,$skip,$take))
         ],200);
     }
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\EcoServiceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EcoService\EcoServiceCollection;
@@ -29,8 +29,8 @@ class EcoServiceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->ecoServiceService->ecoServiceRepository->count([]),
-            MainContract::DATA  =>  new EcoServiceCollection($this->ecoServiceService->ecoServiceRepository->get($skip,$take))
+            Contract::COUNT =>  $this->ecoServiceService->ecoServiceRepository->count([]),
+            Contract::DATA  =>  new EcoServiceCollection($this->ecoServiceService->ecoServiceRepository->get($skip,$take))
         ],200);
     }
 

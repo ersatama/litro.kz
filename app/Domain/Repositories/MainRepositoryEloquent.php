@@ -2,14 +2,22 @@
 
 namespace App\Domain\Repositories;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 
 trait MainRepositoryEloquent
 {
 
+    public function getByOrderServiceId($orderServiceId,$skip,$take)
+    {
+        return $this->model::where(Contract::ORDER_SERVICE_ID,$orderServiceId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
     public function getBySPartnerPointWalletId($sPartnerPointWalletId,$skip,$take)
     {
-        return $this->model::where(MainContract::S_PARTNER_POINT_WALLET_ID,$sPartnerPointWalletId)
+        return $this->model::where(Contract::S_PARTNER_POINT_WALLET_ID,$sPartnerPointWalletId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -17,7 +25,7 @@ trait MainRepositoryEloquent
 
     public function getBySPartnerPointId($sPartnerPoint,$skip,$take)
     {
-        return $this->model::where(MainContract::S_PARTNER_POINT_ID,$sPartnerPoint)
+        return $this->model::where(Contract::S_PARTNER_POINT_ID,$sPartnerPoint)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -25,7 +33,7 @@ trait MainRepositoryEloquent
 
     public function getByLawyerId($lawyerId,$skip,$take)
     {
-        return $this->model::where(MainContract::LAWYER_ID,$lawyerId)
+        return $this->model::where(Contract::LAWYER_ID,$lawyerId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -33,7 +41,7 @@ trait MainRepositoryEloquent
 
     public function getByUserCarId($userCarId,$skip,$take)
     {
-        return $this->model::where(MainContract::USER_CAR_ID,$userCarId)
+        return $this->model::where(Contract::USER_CAR_ID,$userCarId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -41,7 +49,7 @@ trait MainRepositoryEloquent
 
     public function getByInsuranceCompanyId($insuranceCompanyId,$skip,$take)
     {
-        return $this->model::where(MainContract::INSURANCE_COMPANY_ID, $insuranceCompanyId)
+        return $this->model::where(Contract::INSURANCE_COMPANY_ID, $insuranceCompanyId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -49,7 +57,7 @@ trait MainRepositoryEloquent
 
     public function getByPaymentId($paymentId,$skip,$take)
     {
-        return $this->model::where(MainContract::PAYMENT_ID, $paymentId)
+        return $this->model::where(Contract::PAYMENT_ID, $paymentId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -57,7 +65,7 @@ trait MainRepositoryEloquent
 
     public function getByWalletId($walletId,$skip,$take)
     {
-        return $this->model::where(MainContract::WALLET_ID, $walletId)
+        return $this->model::where(Contract::WALLET_ID, $walletId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -65,7 +73,7 @@ trait MainRepositoryEloquent
 
     public function getByPhone($phone)
     {
-        return $this->model::where(MainContract::PHONE,$phone)->first();
+        return $this->model::where(Contract::PHONE,$phone)->first();
     }
 
     public function get($skip,$take)
@@ -75,7 +83,7 @@ trait MainRepositoryEloquent
 
     public function getById($id)
     {
-        return $this->model::where(MainContract::ID,$id)->first();
+        return $this->model::where(Contract::ID,$id)->first();
     }
 
     public function count($where)
@@ -85,7 +93,7 @@ trait MainRepositoryEloquent
 
     public function getByCardId($cardId,$skip,$take)
     {
-        return $this->model::where(MainContract::CARD_ID, $cardId)
+        return $this->model::where(Contract::CARD_ID, $cardId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -93,7 +101,7 @@ trait MainRepositoryEloquent
 
     public function getByPlaceId($placeId,$skip,$take)
     {
-        return $this->model::where(MainContract::PLACE_ID,$placeId)
+        return $this->model::where(Contract::PLACE_ID,$placeId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -101,7 +109,7 @@ trait MainRepositoryEloquent
 
     public function getByUserId($userId,$skip,$take)
     {
-        return $this->model::where(MainContract::USER_ID,$userId)
+        return $this->model::where(Contract::USER_ID,$userId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -109,12 +117,20 @@ trait MainRepositoryEloquent
 
     public function getByOrderCardId($orderCardId)
     {
-        return $this->model::where(MainContract::ORDER_CARD_ID,$orderCardId)->get();
+        return $this->model::where(Contract::ORDER_CARD_ID,$orderCardId)->get();
+    }
+
+    public function getByPartnerId($partnerId,$skip,$take)
+    {
+        return $this->model::where(Contract::PARTNER_ID, $partnerId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
     }
 
     public function getByServiceId($serviceId,$skip,$take)
     {
-        return $this->model::where(MainContract::SERVICE_ID, $serviceId)
+        return $this->model::where(Contract::SERVICE_ID, $serviceId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -122,7 +138,7 @@ trait MainRepositoryEloquent
 
     public function getByCityId($cityId,$skip,$take)
     {
-        return $this->model::where(MainContract::CITY_ID, $cityId)
+        return $this->model::where(Contract::CITY_ID, $cityId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -130,7 +146,7 @@ trait MainRepositoryEloquent
 
     public function getByCarModelId($carModelId,$skip,$take)
     {
-        return $this->model::where(MainContract::CAR_MODEL_ID,$carModelId)
+        return $this->model::where(Contract::CAR_MODEL_ID,$carModelId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -138,7 +154,7 @@ trait MainRepositoryEloquent
 
     public function getByCarBrandId($carBrandId,$skip,$take)
     {
-        return $this->model::where(MainContract::CAR_BRAND_ID,$carBrandId)
+        return $this->model::where(Contract::CAR_BRAND_ID,$carBrandId)
             ->skip($skip)
             ->take($take)
             ->get();
@@ -146,7 +162,7 @@ trait MainRepositoryEloquent
 
     public function getByEmail($email)
     {
-        return $this->model::where(MainContract::EMAIL,$email)->first();
+        return $this->model::where(Contract::EMAIL,$email)->first();
     }
 
     public function create($data)

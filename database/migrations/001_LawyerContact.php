@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\LawyerContactContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,8 +17,8 @@ return new class extends Migration
     {
         Schema::create(LawyerContactContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::LAWYER_ID)->nullable();
-            $table->string(MainContract::PHONE)->nullable();
+            $table->unsignedInteger(Contract::LAWYER_ID)->nullable();
+            $table->string(Contract::PHONE)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

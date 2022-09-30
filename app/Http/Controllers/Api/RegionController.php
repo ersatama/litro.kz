@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\RegionService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Region\RegionCollection;
@@ -27,8 +27,8 @@ class RegionController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->regionService->regionRepository->count([]),
-            MainContract::DATA  =>  new RegionCollection($this->regionService->regionRepository->get($skip,$take))
+            Contract::COUNT =>  $this->regionService->regionRepository->count([]),
+            Contract::DATA  =>  new RegionCollection($this->regionService->regionRepository->get($skip,$take))
         ]);
     }
 

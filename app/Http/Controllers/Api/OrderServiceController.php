@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\OrderServiceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderService\OrderServiceCollection;
@@ -29,8 +29,8 @@ class OrderServiceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([]),
-            MainContract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->get($skip,$take))
+            Contract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([]),
+            Contract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class OrderServiceController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 
@@ -57,10 +57,10 @@ class OrderServiceController extends Controller
     public function getByCityId($cityId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([
-                MainContract::CITY_ID   =>  $cityId
+            Contract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([
+                Contract::CITY_ID   =>  $cityId
             ]),
-            MainContract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->getByCityId($cityId,$skip,$take))
+            Contract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->getByCityId($cityId,$skip,$take))
         ],200);
     }
 
@@ -72,10 +72,10 @@ class OrderServiceController extends Controller
     public function getByPlaceId($placeId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([
-                MainContract::PLACE_ID  =>  $placeId
+            Contract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([
+                Contract::PLACE_ID  =>  $placeId
             ]),
-            MainContract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->getByPlaceId($placeId,$skip,$take))
+            Contract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->getByPlaceId($placeId,$skip,$take))
         ],200);
     }
 
@@ -87,10 +87,10 @@ class OrderServiceController extends Controller
     public function getByOrderCardId($orderCardId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([
-                MainContract::ORDER_CARD_ID =>  $orderCardId
+            Contract::COUNT =>  $this->orderServiceService->orderServiceRepository->count([
+                Contract::ORDER_CARD_ID =>  $orderCardId
             ]),
-            MainContract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->getByOrderCardId($orderCardId,$skip,$take))
+            Contract::DATA  =>  new OrderServiceCollection($this->orderServiceService->orderServiceRepository->getByOrderCardId($orderCardId,$skip,$take))
         ],200);
     }
 

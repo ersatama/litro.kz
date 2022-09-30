@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\TransactionToNonExistingUserService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TransactionToNonExistingUser\TransactionToNonExistingUserCollection;
@@ -22,15 +22,15 @@ class TransactionToNonExistingUserController extends Controller
     }
 
     /**
-     * Получить список - Transaction
+     * Получить список - TransactionToNonExistingUser
      *
-     * @group Transaction - Транзакция для несуществующего пользователя
+     * @group TransactionToNonExistingUser - Транзакция для несуществующего пользователя
      */
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->transactionToNonExistingUserService->transactionToNonExistingUserRepository->count([]),
-            MainContract::DATA  =>  new TransactionToNonExistingUserCollection($this->transactionToNonExistingUserService->transactionToNonExistingUserRepository->get($skip,$take))
+            Contract::COUNT =>  $this->transactionToNonExistingUserService->transactionToNonExistingUserRepository->count([]),
+            Contract::DATA  =>  new TransactionToNonExistingUserCollection($this->transactionToNonExistingUserService->transactionToNonExistingUserRepository->get($skip,$take))
         ],200);
     }
 

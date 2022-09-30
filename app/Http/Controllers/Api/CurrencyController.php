@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CurrencyService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Currency\CurrencyCollection;
@@ -27,8 +27,8 @@ class CurrencyController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->currencyService->currencyRepository->count([]),
-            MainContract::DATA  =>  new CurrencyCollection($this->currencyService->currencyRepository->get($skip,$take))
+            Contract::COUNT =>  $this->currencyService->currencyRepository->count([]),
+            Contract::DATA  =>  new CurrencyCollection($this->currencyService->currencyRepository->get($skip,$take))
         ],200);
     }
 

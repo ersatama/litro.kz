@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\InsuranceSelectOptionContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,11 +17,11 @@ return new class extends Migration
     {
         Schema::create(InsuranceSelectOptionContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::INSURANCE_SELECT_ID)->nullable();
-            $table->string(MainContract::FILTER_NAME)->nullable();
-            $table->string(MainContract::NAME)->nullable();
-            $table->string(MainContract::NAME_KZ)->nullable();
-            $table->string(MainContract::NAME_EN)->nullable();
+            $table->unsignedInteger(Contract::INSURANCE_SELECT_ID)->nullable();
+            $table->string(Contract::FILTER_NAME)->nullable();
+            $table->string(Contract::NAME)->nullable();
+            $table->string(Contract::NAME_KZ)->nullable();
+            $table->string(Contract::NAME_EN)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

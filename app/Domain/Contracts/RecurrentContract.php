@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class RecurrentContract extends MainContract
+class RecurrentContract extends Contract
 {
     const TABLE =   'recurrents';
     const FILLABLE  =   [

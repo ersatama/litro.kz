@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class EcoServiceContract extends MainContract
+class EcoServiceContract extends Contract
 {
     const TABLE =   'eco_services';
     const FILLABLE  =   [

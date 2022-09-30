@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\UserCarContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,18 +17,18 @@ return new class extends Migration
     {
         Schema::create(UserCarContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::USER_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::CAR_BRAND_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::CAR_MODEL_ID)->nullable();
-            $table->char(MainContract::YEAR,4)->nullable();
-            $table->text(MainContract::REGISTRATION_CERTIFICATE)->nullable();
-            $table->string(MainContract::CAR_NUMBER)->nullable();
-            $table->string(MainContract::VIN)->nullable();
+            $table->unsignedBigInteger(Contract::USER_ID)->nullable();
+            $table->unsignedBigInteger(Contract::CAR_BRAND_ID)->nullable();
+            $table->unsignedBigInteger(Contract::CAR_MODEL_ID)->nullable();
+            $table->char(Contract::YEAR,4)->nullable();
+            $table->text(Contract::REGISTRATION_CERTIFICATE)->nullable();
+            $table->string(Contract::CAR_NUMBER)->nullable();
+            $table->string(Contract::VIN)->nullable();
             $table->timestamps();
             $table->softDeletes();
-            $table->index(MainContract::USER_ID);
-            $table->index(MainContract::CAR_BRAND_ID);
-            $table->index(MainContract::CAR_MODEL_ID);
+            $table->index(Contract::USER_ID);
+            $table->index(Contract::CAR_BRAND_ID);
+            $table->index(Contract::CAR_MODEL_ID);
         });
     }
 

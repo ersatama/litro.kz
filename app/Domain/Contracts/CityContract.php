@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class CityContract extends MainContract
+class CityContract extends Contract
 {
     const TABLE =   'cities';
     const FILLABLE  =   [

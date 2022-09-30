@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class InsuranceLinkReferRecordContract extends MainContract
+class InsuranceLinkReferRecordContract extends Contract
 {
     const TABLE =   'insurance_link_refer_records';
     const FILLABLE  =   [

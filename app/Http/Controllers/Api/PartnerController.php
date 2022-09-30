@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\PartnerService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Partner\PartnerCollection;
@@ -29,8 +29,8 @@ class PartnerController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->partnerService->partnerRepository->count([]),
-            MainContract::DATA  =>  new PartnerCollection($this->partnerService->partnerRepository->get($skip,$take))
+            Contract::COUNT =>  $this->partnerService->partnerRepository->count([]),
+            Contract::DATA  =>  new PartnerCollection($this->partnerService->partnerRepository->get($skip,$take))
         ],200);
     }
 

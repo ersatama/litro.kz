@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\NewsService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\News\NewsCollection;
@@ -28,8 +28,8 @@ class NewsController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->newsService->newsRepository->count([]),
-            MainContract::DATA  =>  new NewsCollection($this->newsService->newsRepository->get($skip,$take))
+            Contract::COUNT =>  $this->newsService->newsRepository->count([]),
+            Contract::DATA  =>  new NewsCollection($this->newsService->newsRepository->get($skip,$take))
         ],200);
     }
 

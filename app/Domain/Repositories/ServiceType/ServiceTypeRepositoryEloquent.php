@@ -2,7 +2,7 @@
 
 namespace App\Domain\Repositories\ServiceType;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\ServiceType;
 

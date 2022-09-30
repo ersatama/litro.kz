@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\OrderCardContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,32 +18,32 @@ return new class extends Migration
     {
         Schema::create(OrderCardContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::CARD_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::USER_ID)->nullable();
-            $table->unsignedInteger(MainContract::BITRIX_ID)->nullable();
-            $table->unsignedInteger(MainContract::SYNCED)->default(0);
-            $table->integer(MainContract::PRICE)->nullable();
-            $table->timestamp(MainContract::START_DATE)->nullable();
-            $table->timestamp(MainContract::END_DATE)->nullable();
-            $table->string(MainContract::NUMBER)->nullable();
-            $table->string(MainContract::PAYMENT_TYPE)->nullable();
-            $table->string(MainContract::PAYBOX_ORDER_ID)->nullable();
-            $table->string(MainContract::PAYBOX_ORDER_DATE)->nullable();
-            $table->string(MainContract::STATUS)->nullable();
-            $table->string(MainContract::REFERRAL,20)->nullable();
-            $table->string(MainContract::PAYMENT_METHOD,50)->nullable();
-            $table->string(MainContract::UTM_CAMPAIGN)->nullable();
-            $table->string(MainContract::IMPORT_ID)->nullable();
-            $table->boolean(MainContract::RECURRENT_ENABLED)->default(false);
-            $table->boolean(MainContract::IS_PAID)->default(false);
-            $table->boolean(MainContract::IS_CANCELED)->default(false);
-            $table->boolean(MainContract::MONTHLY)->default(false);
-            $table->boolean(MainContract::IS_FROM_EXCEL)->nullable();
-            $table->timestamp(MainContract::ACTIVATE_DATE)->nullable();
+            $table->unsignedBigInteger(Contract::CARD_ID)->nullable();
+            $table->unsignedBigInteger(Contract::USER_ID)->nullable();
+            $table->unsignedInteger(Contract::BITRIX_ID)->nullable();
+            $table->unsignedInteger(Contract::SYNCED)->default(0);
+            $table->integer(Contract::PRICE)->nullable();
+            $table->timestamp(Contract::START_DATE)->nullable();
+            $table->timestamp(Contract::END_DATE)->nullable();
+            $table->string(Contract::NUMBER)->nullable();
+            $table->string(Contract::PAYMENT_TYPE)->nullable();
+            $table->string(Contract::PAYBOX_ORDER_ID)->nullable();
+            $table->string(Contract::PAYBOX_ORDER_DATE)->nullable();
+            $table->string(Contract::STATUS)->nullable();
+            $table->string(Contract::REFERRAL,20)->nullable();
+            $table->string(Contract::PAYMENT_METHOD,50)->nullable();
+            $table->string(Contract::UTM_CAMPAIGN)->nullable();
+            $table->string(Contract::IMPORT_ID)->nullable();
+            $table->boolean(Contract::RECURRENT_ENABLED)->default(false)->nullable();
+            $table->boolean(Contract::IS_PAID)->default(false)->nullable();
+            $table->boolean(Contract::IS_CANCELED)->default(false)->nullable();
+            $table->boolean(Contract::MONTHLY)->default(false)->nullable();
+            $table->boolean(Contract::IS_FROM_EXCEL)->nullable();
+            $table->timestamp(Contract::ACTIVATE_DATE)->nullable();
             $table->timestamps();
             $table->softDeletes();
-            $table->index(MainContract::CARD_ID);
-            $table->index(MainContract::USER_ID);
+            $table->index(Contract::CARD_ID);
+            $table->index(Contract::USER_ID);
         });
     }
 

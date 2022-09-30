@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\UserContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,25 +17,23 @@ return new class extends Migration
     {
         Schema::create(UserContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::ROLE_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::BITRIX_ID)->nullable();
-            $table->string(MainContract::PHONE)->unique()->nullable();
-            $table->string(MainContract::EMAIL)->unique()->nullable();
-            $table->string(MainContract::IIN)->nullable();
-            $table->string(MainContract::FIRST_NAME)->nullable();
-            $table->string(MainContract::LAST_NAME)->nullable();
-            $table->string(MainContract::PATRONYMIC)->nullable();
-            $table->timestamp(MainContract::BIRTHDATE)->nullable();
-            $table->string(MainContract::PASSWORD);
-            $table->boolean(MainContract::IS_BLOCKED)->default(false);
-            $table->enum(MainContract::GENDER,[
-                MainContract::MALE,
-                MainContract::FEMALE,
-            ])->nullable();
-            $table->boolean(MainContract::IS_VLIFE_USER)->default(false);
-            $table->string(MainContract::VLIFE_USER_ID)->nullable();
-            $table->string(MainContract::PROMO_CODE)->nullable();
-            $table->unsignedInteger(MainContract::BONUS)->nullable();
+            $table->unsignedInteger(Contract::ROLE_ID)->nullable();
+            $table->unsignedInteger(Contract::CITY_ID)->nullable();
+            $table->unsignedBigInteger(Contract::BITRIX_ID)->nullable();
+            $table->string(Contract::PHONE)->unique()->nullable();
+            $table->string(Contract::EMAIL)->nullable();
+            $table->string(Contract::IIN)->nullable();
+            $table->string(Contract::FIRST_NAME)->nullable();
+            $table->string(Contract::LAST_NAME)->nullable();
+            $table->string(Contract::PATRONYMIC)->nullable();
+            $table->date(Contract::BIRTHDATE)->nullable();
+            $table->string(Contract::PASSWORD)->nullable();
+            $table->boolean(Contract::IS_BLOCKED)->default(false)->nullable();
+            $table->string(Contract::GENDER)->nullable();
+            $table->boolean(Contract::IS_VLIFE_USER)->default(false);
+            $table->string(Contract::VLIFE_USER_ID)->nullable();
+            $table->string(Contract::PROMO_CODE)->nullable();
+            $table->unsignedInteger(Contract::BONUS)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

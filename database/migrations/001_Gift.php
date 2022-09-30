@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\GiftContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,20 +17,20 @@ return new class extends Migration
     {
         Schema::create(GiftContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::USER_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::CARD_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::ACTIVATED_BY)->nullable();
-            $table->string(MainContract::NUMBER)->nullable();
-            $table->boolean(MainContract::IS_PAID)->default(false);
-            $table->string(MainContract::PAYBOX_ORDER_ID)->nullable();
-            $table->string(MainContract::PAYBOX_ORDER_DATE)->nullable();
-            $table->unsignedInteger(MainContract::PRICE)->default(0);
-            $table->string(MainContract::PROMO_CODE)->nullable();
-            $table->string(MainContract::PHONE)->nullable();
+            $table->unsignedBigInteger(Contract::USER_ID)->nullable();
+            $table->unsignedBigInteger(Contract::CARD_ID)->nullable();
+            $table->unsignedBigInteger(Contract::ACTIVATED_BY)->nullable();
+            $table->string(Contract::NUMBER)->nullable();
+            $table->boolean(Contract::IS_PAID)->default(false);
+            $table->string(Contract::PAYBOX_ORDER_ID)->nullable();
+            $table->string(Contract::PAYBOX_ORDER_DATE)->nullable();
+            $table->unsignedInteger(Contract::PRICE)->default(0);
+            $table->string(Contract::PROMO_CODE)->nullable();
+            $table->string(Contract::PHONE)->nullable();
             $table->timestamps();
             $table->softDeletes();
-            $table->index(MainContract::USER_ID);
-            $table->index(MainContract::CARD_ID);
+            $table->index(Contract::USER_ID);
+            $table->index(Contract::CARD_ID);
         });
     }
 

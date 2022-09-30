@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\ServiceLimitContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,9 +17,9 @@ return new class extends Migration
     {
         Schema::create(ServiceLimitContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::SERVICE_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::CARD_ID)->nullable();
-            $table->tinyInteger(MainContract::LIMIT)->default(-1);
+            $table->unsignedBigInteger(Contract::SERVICE_ID)->nullable();
+            $table->unsignedBigInteger(Contract::CARD_ID)->nullable();
+            $table->tinyInteger(Contract::LIMIT)->default(-1);
             $table->timestamps();
             $table->softDeletes();
         });

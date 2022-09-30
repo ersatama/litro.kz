@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Requests\Code\CodeCreateRequest;
 use App\Domain\Requests\Code\CodeUpdateRequest;
 use App\Domain\Services\CodeService;
@@ -32,8 +32,8 @@ class CodeController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->codeService->codeRepository->count([]),
-            MainContract::DATA  =>  new CodeCollection($this->codeService->codeRepository->get($skip,$take))
+            Contract::COUNT =>  $this->codeService->codeRepository->count([]),
+            Contract::DATA  =>  new CodeCollection($this->codeService->codeRepository->get($skip,$take))
         ],200);
     }
 
@@ -57,14 +57,14 @@ class CodeController extends Controller
     public function update(CodeUpdateRequest $codeUpdateRequest): Response|Application|CodeResource|ResponseFactory
     {
         $data   =   $codeUpdateRequest->checked();
-        if (array_key_exists(MainContract::PHONE,$data)) {
-            $code   =   $this->codeService->codeRepository->getByPhone($data[MainContract::PHONE]);
+        if (array_key_exists(Contract::PHONE,$data)) {
+            $code   =   $this->codeService->codeRepository->getByPhone($data[Contract::PHONE]);
         } else {
-            $code   =   $this->codeService->codeRepository->getByEmail($data[MainContract::EMAIL]);
+            $code   =   $this->codeService->codeRepository->getByEmail($data[Contract::EMAIL]);
         }
-        if ($code && $code[MainContract::CODE] === $data[MainContract::CODE]) {
+        if ($code && $code[Contract::CODE] === $data[Contract::CODE]) {
             return new CodeResource($this->codeService->update($code,[
-                MainContract::STATUS    =>  true
+                Contract::STATUS    =>  true
             ]));
         }
         return response(ErrorContract::INCORRECT_CODE,400);

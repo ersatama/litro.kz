@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\RegionContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,10 +17,10 @@ return new class extends Migration
     {
         Schema::create(RegionContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::COUNTRY_ID);
-            $table->string(MainContract::TITLE)->nullable();
-            $table->string(MainContract::TITLE_KZ)->nullable();
-            $table->string(MainContract::TITLE_EN)->nullable();
+            $table->unsignedBigInteger(Contract::COUNTRY_ID);
+            $table->string(Contract::TITLE)->nullable();
+            $table->string(Contract::TITLE_KZ)->nullable();
+            $table->string(Contract::TITLE_EN)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

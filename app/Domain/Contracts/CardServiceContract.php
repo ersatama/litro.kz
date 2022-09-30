@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class CardServiceContract extends MainContract
+class CardServiceContract extends Contract
 {
     const TABLE =   'card_services';
     const FILLABLE  =   [
@@ -12,6 +12,7 @@ class CardServiceContract extends MainContract
         self::TITLE_KZ,
         self::TITLE_EN,
         self::POSITION,
-        self::VALUE
+        self::VALUE,
+        self::IS_CHOOSEABLE
     ];
 }

@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class SPartnerServiceCategoryContract extends MainContract
+class SPartnerServiceCategoryContract extends Contract
 {
     const TABLE =   's_partner_service_categories';
     const FILLABLE  =   [

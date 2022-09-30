@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class OrderServiceContract extends MainContract
+class OrderServiceContract extends Contract
 {
     const TABLE =   'order_services';
     const FILLABLE  =   [
@@ -12,6 +12,7 @@ class OrderServiceContract extends MainContract
         self::BITRIX_ID,
         self::PLACE_ID,
         self::CITY_ID,
+        self::CAR_CATEGORY_ID,
         self::PAYBOX_ORDER_ID,
         self::PAYBOX_ORDER_DATE,
         self::PRICE,

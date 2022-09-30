@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\InsuranceKaskoPolicyService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\InsuranceKaskoPolicy\InsuranceKaskoPolicyCollection;
@@ -29,8 +29,8 @@ class InsuranceKaskoPolicyController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->count([]),
-            MainContract::DATA  =>  new InsuranceKaskoPolicyCollection($this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->get($skip,$take))
+            Contract::COUNT =>  $this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->count([]),
+            Contract::DATA  =>  new InsuranceKaskoPolicyCollection($this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class InsuranceKaskoPolicyController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new InsuranceKaskoPolicyCollection($this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new InsuranceKaskoPolicyCollection($this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 
@@ -57,10 +57,10 @@ class InsuranceKaskoPolicyController extends Controller
     public function getByUserCarId($userCarId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->count([
-                MainContract::USER_CAR_ID   =>  $userCarId
+            Contract::COUNT =>  $this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->count([
+                Contract::USER_CAR_ID   =>  $userCarId
             ]),
-            MainContract::DATA  =>  new InsuranceKaskoPolicyCollection($this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->getByUserCarId($userCarId,$skip,$take))
+            Contract::DATA  =>  new InsuranceKaskoPolicyCollection($this->insuranceKaskoPolicyService->insuranceKaskoPolicyRepository->getByUserCarId($userCarId,$skip,$take))
         ],200);
     }
 

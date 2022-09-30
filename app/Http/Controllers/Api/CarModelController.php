@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CarModelService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CarModel\CarModelCollection;
@@ -28,8 +28,8 @@ class CarModelController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->carModelService->carModelRepository->count([]),
-            MainContract::DATA  =>  new CarModelCollection($this->carModelService->carModelRepository->get($skip,$take))
+            Contract::COUNT =>  $this->carModelService->carModelRepository->count([]),
+            Contract::DATA  =>  new CarModelCollection($this->carModelService->carModelRepository->get($skip,$take))
         ],200);
     }
 
@@ -41,8 +41,8 @@ class CarModelController extends Controller
     public function getByCarBrandId($carBrandId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->carModelService->carModelRepository->count([MainContract::CAR_BRAND_ID => $carBrandId]),
-            MainContract::DATA  =>  new CarModelCollection($this->carModelService->carModelRepository->getByCarBrandId($carBrandId,$skip,$take))
+            Contract::COUNT =>  $this->carModelService->carModelRepository->count([Contract::CAR_BRAND_ID => $carBrandId]),
+            Contract::DATA  =>  new CarModelCollection($this->carModelService->carModelRepository->getByCarBrandId($carBrandId,$skip,$take))
         ],200);
     }
 

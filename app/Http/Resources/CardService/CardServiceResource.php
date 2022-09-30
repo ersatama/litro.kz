@@ -2,18 +2,26 @@
 
 namespace App\Http\Resources\CardService;
 
+use App\Domain\Contracts\CardServiceContract;
+use App\Domain\Contracts\Contract;
+use App\Http\Resources\Card\CardResource;
+use App\Http\Resources\Service\ServiceResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CardServiceResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
-     */
-    public function toArray($request)
+    public function toArray($request):array
     {
-        return parent::toArray($request);
+        $arr    =   [
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
+            Contract::CARD  =>  new CardResource($this->{Contract::CARD}),
+            Contract::SERVICE   =>  new ServiceResource($this->{Contract::SERVICE}),
+        ];
+        foreach (CardServiceContract::FILLABLE as &$value) {
+            $arr[$value]    =   $this->{$value};
+        }
+        return Contract::CLEAR($arr);
     }
 }

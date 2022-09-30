@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\StockContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,15 +17,15 @@ return new class extends Migration
     {
         Schema::create(StockContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->string(MainContract::IMAGE_ID)->nullable();
-            $table->string(MainContract::TITLE)->nullable();
-            $table->string(MainContract::TITLE_EN)->nullable();
-            $table->string(MainContract::TITLE_KZ)->nullable();
-            $table->text(MainContract::DESCRIPTION)->nullable();
-            $table->text(MainContract::DESCRIPTION_EN)->nullable();
-            $table->text(MainContract::DESCRIPTION_KZ)->nullable();
-            $table->boolean(MainContract::IS_ACTIVE)->default(true);
-            $table->string(MainContract::CATEGORY)->nullable();
+            $table->string(Contract::IMAGE_ID)->nullable();
+            $table->string(Contract::TITLE)->nullable();
+            $table->string(Contract::TITLE_EN)->nullable();
+            $table->string(Contract::TITLE_KZ)->nullable();
+            $table->text(Contract::DESCRIPTION)->nullable();
+            $table->text(Contract::DESCRIPTION_EN)->nullable();
+            $table->text(Contract::DESCRIPTION_KZ)->nullable();
+            $table->boolean(Contract::IS_ACTIVE)->default(true)->nullable();
+            $table->string(Contract::CATEGORY)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\WalletRecordService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\WalletRecord\WalletRecordCollection;
@@ -29,8 +29,8 @@ class WalletRecordController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->walletRecordService->walletRecordRepository->count([]),
-            MainContract::DATA  =>  new WalletRecordCollection($this->walletRecordService->walletRecordRepository->get($skip,$take))
+            Contract::COUNT =>  $this->walletRecordService->walletRecordRepository->count([]),
+            Contract::DATA  =>  new WalletRecordCollection($this->walletRecordService->walletRecordRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class WalletRecordController extends Controller
     public function getByWalletId($walletId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->walletRecordService->walletRecordRepository->count([
-                MainContract::WALLET_ID   =>  $walletId
+            Contract::COUNT =>  $this->walletRecordService->walletRecordRepository->count([
+                Contract::WALLET_ID   =>  $walletId
             ]),
-            MainContract::DATA  =>  new WalletRecordCollection($this->walletRecordService->walletRecordRepository->getByWalletId($walletId,$skip,$take))
+            Contract::DATA  =>  new WalletRecordCollection($this->walletRecordService->walletRecordRepository->getByWalletId($walletId,$skip,$take))
         ],200);
     }
 
@@ -57,10 +57,10 @@ class WalletRecordController extends Controller
     public function getByPaymentId($paymentId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->walletRecordService->walletRecordRepository->count([
-                MainContract::PAYMENT_ID    =>  $paymentId
+            Contract::COUNT =>  $this->walletRecordService->walletRecordRepository->count([
+                Contract::PAYMENT_ID    =>  $paymentId
             ]),
-            MainContract::DATA  =>  new WalletRecordCollection($this->walletRecordService->walletRecordRepository->getByPaymentId($paymentId,$skip,$take))
+            Contract::DATA  =>  new WalletRecordCollection($this->walletRecordService->walletRecordRepository->getByPaymentId($paymentId,$skip,$take))
         ],200);
     }
 

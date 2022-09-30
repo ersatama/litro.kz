@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class SPartnerPointContract extends MainContract
+class SPartnerPointContract extends Contract
 {
     const TABLE =   's_partner_points';
     const FILLABLE  =   [

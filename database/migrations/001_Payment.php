@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\PaymentContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,15 +17,15 @@ return new class extends Migration
     {
         Schema::create(PaymentContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::USER_ID)->nullable();
-            $table->unsignedInteger(MainContract::PAYMENT_SYSTEM_ID)->nullable();
-            $table->unsignedInteger(MainContract::SUM)->nullable();
-            $table->unsignedInteger(MainContract::CURRENCY_ID)->nullable();
-            $table->string(MainContract::STATUS)->nullable();
-            $table->text(MainContract::PAYMENT_SYSTEM_INFO)->nullable();
-            $table->string(MainContract::PAYMENT_TYPE)->nullable();
-            $table->string(MainContract::PAYMENT_ID)->nullable();
-            $table->string(MainContract::PAYMENT_KEY)->nullable();
+            $table->unsignedBigInteger(Contract::USER_ID)->nullable();
+            $table->unsignedInteger(Contract::PAYMENT_SYSTEM_ID)->nullable();
+            $table->unsignedInteger(Contract::SUM)->nullable();
+            $table->unsignedInteger(Contract::CURRENCY_ID)->nullable();
+            $table->string(Contract::STATUS)->nullable();
+            $table->text(Contract::PAYMENT_SYSTEM_INFO)->nullable();
+            $table->string(Contract::PAYMENT_TYPE)->nullable();
+            $table->string(Contract::PAYMENT_ID)->nullable();
+            $table->string(Contract::PAYMENT_KEY)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

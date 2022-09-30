@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class TransactionToNonExistingUserContract extends MainContract
+class TransactionToNonExistingUserContract extends Contract
 {
     const TABLE =   'transaction_to_non_existing_users';
     const FILLABLE  =   [

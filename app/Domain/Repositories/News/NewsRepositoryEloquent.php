@@ -2,7 +2,7 @@
 
 namespace App\Domain\Repositories\News;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Repositories\MainRepositoryEloquent;
 use App\Models\News;
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\ServicePriceContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,13 +17,13 @@ return new class extends Migration
     {
         Schema::create(ServicePriceContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::CITY_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::SERVICE_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::CAR_CATEGORY_ID)->nullable();
-            $table->unsignedInteger(MainContract::PRICE)->nullable();
-            $table->boolean(MainContract::IS_FREE)->default(true);
-            $table->boolean(MainContract::IS_WITH_CHECK)->default(true);
-            $table->boolean(MainContract::IS_NEGOTIABLE_PRICE)->default(true);
+            $table->unsignedBigInteger(Contract::CITY_ID)->nullable();
+            $table->unsignedBigInteger(Contract::SERVICE_ID)->nullable();
+            $table->unsignedBigInteger(Contract::CAR_CATEGORY_ID)->nullable();
+            $table->unsignedInteger(Contract::PRICE)->nullable();
+            $table->boolean(Contract::IS_FREE)->default(true);
+            $table->boolean(Contract::IS_WITH_CHECK)->default(true);
+            $table->boolean(Contract::IS_NEGOTIABLE_PRICE)->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

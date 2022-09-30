@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\SPartnerPointContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,23 +17,23 @@ return new class extends Migration
     {
         Schema::create(SPartnerPointContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::IMAGE_ID)->nullable();
-            $table->unsignedInteger(MainContract::CITY_ID)->nullable();
-            $table->string(MainContract::TITLE)->nullable();
-            $table->string(MainContract::LEGAL_TITLE)->nullable();
-            $table->text(MainContract::DESCRIPTION)->nullable();
-            $table->string(MainContract::MANAGER_NAME)->nullable();
-            $table->text(MainContract::ADDRESS)->nullable();
-            $table->string(MainContract::LAT)->nullable();
-            $table->string(MainContract::LONG)->nullable();
-            $table->string(MainContract::INFO)->nullable();
-            $table->string(MainContract::PHONE)->nullable();
-            $table->string(MainContract::EMAIL)->nullable();
-            $table->string(MainContract::PASSWORD)->nullable();
-            $table->unsignedInteger(MainContract::BONUS_PERCENT)->nullable();
-            $table->unsignedInteger(MainContract::DISCOUNT)->nullable();
-            $table->boolean(MainContract::SELL_CARD)->default(false)->nullable();
-            $table->boolean(MainContract::ADS_AND_SELL)->default(false)->nullable();
+            $table->unsignedBigInteger(Contract::IMAGE_ID)->nullable();
+            $table->unsignedInteger(Contract::CITY_ID)->nullable();
+            $table->string(Contract::TITLE)->nullable();
+            $table->string(Contract::LEGAL_TITLE)->nullable();
+            $table->text(Contract::DESCRIPTION)->nullable();
+            $table->string(Contract::MANAGER_NAME)->nullable();
+            $table->text(Contract::ADDRESS)->nullable();
+            $table->string(Contract::LAT)->nullable();
+            $table->string(Contract::LONG)->nullable();
+            $table->string(Contract::INFO)->nullable();
+            $table->string(Contract::PHONE)->nullable();
+            $table->string(Contract::EMAIL)->nullable();
+            $table->string(Contract::PASSWORD)->nullable();
+            $table->unsignedInteger(Contract::BONUS_PERCENT)->nullable();
+            $table->unsignedInteger(Contract::DISCOUNT)->nullable();
+            $table->boolean(Contract::SELL_CARD)->default(false)->nullable();
+            $table->boolean(Contract::ADS_AND_SELL)->default(false)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

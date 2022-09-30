@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\RecurrentService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Recurrent\RecurrentCollection;
@@ -29,8 +29,8 @@ class RecurrentController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->recurrentService->recurrentRepository->count([]),
-            MainContract::DATA  =>  new RecurrentCollection($this->recurrentService->recurrentRepository->get($skip,$take))
+            Contract::COUNT =>  $this->recurrentService->recurrentRepository->count([]),
+            Contract::DATA  =>  new RecurrentCollection($this->recurrentService->recurrentRepository->get($skip,$take))
         ],200);
     }
 

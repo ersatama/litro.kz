@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\StockService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Stock\StockCollection;
@@ -29,8 +29,8 @@ class StockController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->stockService->stockRepository->count([]),
-            MainContract::DATA  =>  new StockCollection($this->stockService->stockRepository->get($skip,$take))
+            Contract::COUNT =>  $this->stockService->stockRepository->count([]),
+            Contract::DATA  =>  new StockCollection($this->stockService->stockRepository->get($skip,$take))
         ],200);
     }
 

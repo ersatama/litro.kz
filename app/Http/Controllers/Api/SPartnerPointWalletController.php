@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\SPartnerPointWalletService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SPartnerPointWallet\SPartnerPointWalletCollection;
@@ -29,8 +29,8 @@ class SPartnerPointWalletController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerPointWalletService->SPartnerPointWalletRepository->count([]),
-            MainContract::DATA  =>  new SPartnerPointWalletCollection($this->SPartnerPointWalletService->SPartnerPointWalletRepository->get($skip,$take))
+            Contract::COUNT =>  $this->SPartnerPointWalletService->SPartnerPointWalletRepository->count([]),
+            Contract::DATA  =>  new SPartnerPointWalletCollection($this->SPartnerPointWalletService->SPartnerPointWalletRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class SPartnerPointWalletController extends Controller
     public function getBySPartnerPointId($sPartnerPointId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerPointWalletService->SPartnerPointWalletRepository->count([
-                MainContract::S_PARTNER_POINT_ID    =>  $sPartnerPointId
+            Contract::COUNT =>  $this->SPartnerPointWalletService->SPartnerPointWalletRepository->count([
+                Contract::S_PARTNER_POINT_ID    =>  $sPartnerPointId
             ]),
-            MainContract::DATA  =>  new SPartnerPointWalletCollection($this->SPartnerPointWalletService->SPartnerPointWalletRepository->getBySPartnerPointId($sPartnerPointId,$skip,$take))
+            Contract::DATA  =>  new SPartnerPointWalletCollection($this->SPartnerPointWalletService->SPartnerPointWalletRepository->getBySPartnerPointId($sPartnerPointId,$skip,$take))
         ],200);
     }
 

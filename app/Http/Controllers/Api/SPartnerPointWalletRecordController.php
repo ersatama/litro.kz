@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\SPartnerPointWalletRecordService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SPartnerPointWalletRecord\SPartnerPointWalletRecordCollection;
@@ -29,8 +29,8 @@ class SPartnerPointWalletRecordController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerPointWalletRecordService->SPartnerPointWalletRecordRepository->count([]),
-            MainContract::DATA  =>  new SPartnerPointWalletRecordCollection($this->SPartnerPointWalletRecordService->SPartnerPointWalletRecordRepository->get($skip,$take))
+            Contract::COUNT =>  $this->SPartnerPointWalletRecordService->SPartnerPointWalletRecordRepository->count([]),
+            Contract::DATA  =>  new SPartnerPointWalletRecordCollection($this->SPartnerPointWalletRecordService->SPartnerPointWalletRecordRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class SPartnerPointWalletRecordController extends Controller
     public function getBySPartnerPointWalletId($sPartnerPointWalletId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerPointWalletRecordService->SPartnerPointWalletRecordRepository->count([
-                MainContract::S_PARTNER_POINT_WALLET_ID    =>  $sPartnerPointWalletId
+            Contract::COUNT =>  $this->SPartnerPointWalletRecordService->SPartnerPointWalletRecordRepository->count([
+                Contract::S_PARTNER_POINT_WALLET_ID    =>  $sPartnerPointWalletId
             ]),
-            MainContract::DATA  =>  new SPartnerPointWalletRecordCollection($this->SPartnerPointWalletRecordService->SPartnerPointWalletRecordRepository->getBySPartnerPointWalletId($sPartnerPointWalletId,$skip,$take))
+            Contract::DATA  =>  new SPartnerPointWalletRecordCollection($this->SPartnerPointWalletRecordService->SPartnerPointWalletRecordRepository->getBySPartnerPointWalletId($sPartnerPointWalletId,$skip,$take))
         ],200);
     }
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\SPartnerPointRequisiteService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SPartnerPointRequisite\SPartnerPointRequisiteCollection;
@@ -29,8 +29,8 @@ class SPartnerPointRequisiteController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerPointRequisiteService->SPartnerPointRequisiteRepository->count([]),
-            MainContract::DATA  =>  new SPartnerPointRequisiteCollection($this->SPartnerPointRequisiteService->SPartnerPointRequisiteRepository->get($skip,$take))
+            Contract::COUNT =>  $this->SPartnerPointRequisiteService->SPartnerPointRequisiteRepository->count([]),
+            Contract::DATA  =>  new SPartnerPointRequisiteCollection($this->SPartnerPointRequisiteService->SPartnerPointRequisiteRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class SPartnerPointRequisiteController extends Controller
     public function getBySPartnerPointId($sPartnerPointId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerPointRequisiteService->SPartnerPointRequisiteRepository->count([
-                MainContract::S_PARTNER_POINT_ID    =>  $sPartnerPointId
+            Contract::COUNT =>  $this->SPartnerPointRequisiteService->SPartnerPointRequisiteRepository->count([
+                Contract::S_PARTNER_POINT_ID    =>  $sPartnerPointId
             ]),
-            MainContract::DATA  =>  new SPartnerPointRequisiteCollection($this->SPartnerPointRequisiteService->SPartnerPointRequisiteRepository->getBySPartnerPointId($sPartnerPointId,$skip,$take))
+            Contract::DATA  =>  new SPartnerPointRequisiteCollection($this->SPartnerPointRequisiteService->SPartnerPointRequisiteRepository->getBySPartnerPointId($sPartnerPointId,$skip,$take))
         ],200);
     }
 

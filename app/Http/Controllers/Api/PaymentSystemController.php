@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\PaymentSystemService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\PaymentSystem\PaymentSystemCollection;
@@ -29,8 +29,8 @@ class PaymentSystemController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->paymentSystemService->paymentSystemRepository->count([]),
-            MainContract::DATA  =>  new PaymentSystemCollection($this->paymentSystemService->paymentSystemRepository->get($skip,$take))
+            Contract::COUNT =>  $this->paymentSystemService->paymentSystemRepository->count([]),
+            Contract::DATA  =>  new PaymentSystemCollection($this->paymentSystemService->paymentSystemRepository->get($skip,$take))
         ],200);
     }
 

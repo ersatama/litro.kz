@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CarBrandService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CarBrand\CarBrandCollection;
@@ -27,8 +27,8 @@ class CarBrandController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->carBrandService->carBrandRepository->count([]),
-            MainContract::DATA  =>  new CarBrandCollection($this->carBrandService->carBrandRepository->get($skip,$take))
+            Contract::COUNT =>  $this->carBrandService->carBrandRepository->count([]),
+            Contract::DATA  =>  new CarBrandCollection($this->carBrandService->carBrandRepository->get($skip,$take))
         ],200);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\TransactionToNonExistingUserContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,9 +17,9 @@ return new class extends Migration
     {
         Schema::create(TransactionToNonExistingUserContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->float(MainContract::SUM)->nullable();
-            $table->string(MainContract::EMAIL)->nullable();
-            $table->string(MainContract::PHONE)->nullable();
+            $table->float(Contract::SUM)->nullable();
+            $table->string(Contract::EMAIL)->nullable();
+            $table->string(Contract::PHONE)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

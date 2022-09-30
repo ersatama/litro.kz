@@ -2,27 +2,26 @@
 
 namespace App\Http\Resources\News;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
+use App\Domain\Contracts\NewsContract;
+use App\Http\Resources\Image\ImageResource;
+use App\Http\Resources\NewsCategory\NewsCategoryResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class NewsResource extends JsonResource
 {
     public function toArray($request):array
     {
-        return [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::TITLE =>  $this->{MainContract::TITLE},
-            MainContract::TITLE_KZ  =>  $this->{MainContract::TITLE_KZ},
-            MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN},
-            MainContract::DESCRIPTION   =>  $this->{MainContract::DESCRIPTION},
-            MainContract::DESCRIPTION_KZ    =>  $this->{MainContract::DESCRIPTION_KZ},
-            MainContract::DESCRIPTION_EN    =>  $this->{MainContract::DESCRIPTION_EN},
-            MainContract::IMAGE_ID  =>  $this->{MainContract::IMAGE_ID},
-            MainContract::NEWS_CATEGORY_ID  =>  $this->{MainContract::NEWS_CATEGORY_ID},
-            MainContract::IS_ACTIVE =>  $this->{MainContract::IS_ACTIVE},
-            MainContract::LINK  =>  $this->{MainContract::LINK},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+        $arr    =   [
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
+            Contract::IMAGE =>  new ImageResource($this->{Contract::IMAGE}),
+            Contract::NEWS_CATEGORY =>  new NewsCategoryResource($this->{Contract::NEWS_CATEGORY})
         ];
+        foreach (NewsContract::FILLABLE as &$value) {
+            $arr[$value]    =   $this->{$value};
+        }
+        return Contract::CLEAR($arr);
     }
 }

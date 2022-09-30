@@ -2,12 +2,12 @@
 
 namespace App\Domain\Contracts;
 
-class CardContract extends MainContract
+class CardContract extends Contract
 {
     const TABLE =   'cards';
     const FILLABLE  =   [
         self::IMAGE_ID,
-        self::CATEGORY_ID,
+        self::CARD_CATEGORY_ID,
         self::TITLE,
         self::TITLE_KZ,
         self::TITLE_EN,
@@ -29,7 +29,8 @@ class CardContract extends MainContract
         self::REFERRAL_PRICE_MONTHLY_FIRST_MONTH,
         self::IS_FOR_CORPORATE_USE,
         self::ICON,
-        self::IMAGE,
+        self::ICON_SELECTED,
+        self::IMG,
         self::COLORS,
     ];
 }

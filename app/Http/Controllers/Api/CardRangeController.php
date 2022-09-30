@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CardRangeService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CardRange\CardRangeCollection;
@@ -29,8 +29,8 @@ class CardRangeController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cardRangeService->cardRangeRepository->count([]),
-            MainContract::DATA  =>  new CardRangeCollection($this->cardRangeService->cardRangeRepository->get($skip,$take))
+            Contract::COUNT =>  $this->cardRangeService->cardRangeRepository->count([]),
+            Contract::DATA  =>  new CardRangeCollection($this->cardRangeService->cardRangeRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,8 +42,8 @@ class CardRangeController extends Controller
     public function getByCardId($cardId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cardRangeService->cardRangeRepository->count([MainContract::CARD_ID => $cardId]),
-            MainContract::DATA  =>  new CardRangeCollection($this->cardRangeService->cardRangeRepository->getByCardId($cardId,$skip,$take))
+            Contract::COUNT =>  $this->cardRangeService->cardRangeRepository->count([Contract::CARD_ID => $cardId]),
+            Contract::DATA  =>  new CardRangeCollection($this->cardRangeService->cardRangeRepository->getByCardId($cardId,$skip,$take))
         ],200);
     }
 
@@ -55,8 +55,8 @@ class CardRangeController extends Controller
     public function getByCityId($cityId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cardRangeService->cardRangeRepository->count([MainContract::CITY_ID => $cityId]),
-            MainContract::DATA  =>  new CardRangeCollection($this->cardRangeService->cardRangeRepository->getByCityId($cityId,$skip,$take))
+            Contract::COUNT =>  $this->cardRangeService->cardRangeRepository->count([Contract::CITY_ID => $cityId]),
+            Contract::DATA  =>  new CardRangeCollection($this->cardRangeService->cardRangeRepository->getByCityId($cityId,$skip,$take))
         ],200);
     }
 

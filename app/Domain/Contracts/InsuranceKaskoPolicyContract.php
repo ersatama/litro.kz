@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class InsuranceKaskoPolicyContract extends MainContract
+class InsuranceKaskoPolicyContract extends Contract
 {
     const TABLE =   'insurance_kasko_policies';
     const FILLABLE  =   [
@@ -13,6 +13,7 @@ class InsuranceKaskoPolicyContract extends MainContract
         self::PRICE,
         self::BONUS,
         self::ERROR_MSG,
+        self::POLICY_ID,
         self::POLICY_BODY,
         self::PRODUCTS,
         self::INSURANCE_PRICE,

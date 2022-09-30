@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CardServiceService;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\CardRange\CardRangeCollection;
+use App\Http\Resources\CardService\CardServiceCollection;
 use App\Http\Resources\CardService\CardServiceResource;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
@@ -29,8 +29,8 @@ class CardServiceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cardServiceService->cardServiceRepository->count([]),
-            MainContract::DATA  =>  new CardRangeCollection($this->cardServiceService->cardServiceRepository->get($skip,$take))
+            Contract::COUNT =>  $this->cardServiceService->cardServiceRepository->count([]),
+            Contract::DATA  =>  new CardServiceCollection($this->cardServiceService->cardServiceRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,8 +42,8 @@ class CardServiceController extends Controller
     public function getByCardId($cardId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cardServiceService->cardServiceRepository->count([MainContract::CARD_ID => $cardId]),
-            MainContract::DATA  =>  new CardRangeCollection($this->cardServiceService->cardServiceRepository->getByCardId($cardId,$skip,$take))
+            Contract::COUNT =>  $this->cardServiceService->cardServiceRepository->count([Contract::CARD_ID => $cardId]),
+            Contract::DATA  =>  new CardServiceCollection($this->cardServiceService->cardServiceRepository->getByCardId($cardId,$skip,$take))
         ],200);
     }
 
@@ -55,8 +55,8 @@ class CardServiceController extends Controller
     public function getByServiceId($serviceId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->cardServiceService->cardServiceRepository->count([MainContract::SERVICE_ID => $serviceId]),
-            MainContract::DATA  =>  new CardRangeCollection($this->cardServiceService->cardServiceRepository->getByServiceId($serviceId,$skip,$take))
+            Contract::COUNT =>  $this->cardServiceService->cardServiceRepository->count([Contract::SERVICE_ID => $serviceId]),
+            Contract::DATA  =>  new CardServiceCollection($this->cardServiceService->cardServiceRepository->getByServiceId($serviceId,$skip,$take))
         ],200);
     }
 

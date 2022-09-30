@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\ServiceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Service\ServiceCollection;
@@ -29,8 +29,8 @@ class ServiceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->serviceService->serviceRepository->count([]),
-            MainContract::DATA  =>  new ServiceCollection($this->serviceService->serviceRepository->get($skip,$take))
+            Contract::COUNT =>  $this->serviceService->serviceRepository->count([]),
+            Contract::DATA  =>  new ServiceCollection($this->serviceService->serviceRepository->get($skip,$take))
         ],200);
     }
 

@@ -2,19 +2,24 @@
 
 namespace App\Http\Resources\CarModel;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\CarModelContract;
+use App\Domain\Contracts\Contract;
+use App\Http\Resources\CarBrand\CarBrandResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CarModelResource extends JsonResource
 {
     public function toArray($request): array
     {
-        return [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::CAR_BRAND_ID  =>  $this->{MainContract::CAR_BRAND_ID},
-            MainContract::TITLE =>  $this->{MainContract::TITLE},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+        $arr    =   [
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
+            Contract::CAR_BRAND =>  new CarBrandResource($this->{Contract::CAR_BRAND}),
         ];
+        foreach (CarModelContract::FILLABLE as &$value) {
+            $arr[$value]    =   $this->{$value};
+        }
+        return Contract::CLEAR($arr);
     }
 }

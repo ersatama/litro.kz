@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\SPartnerServiceCategoryService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SPartnerServiceCategory\SPartnerServiceCategoryCollection;
@@ -29,8 +29,8 @@ class SPartnerServiceCategoryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerServiceCategoryService->SPartnerServiceCategoryRepository->count([]),
-            MainContract::DATA  =>  new SPartnerServiceCategoryCollection($this->SPartnerServiceCategoryService->SPartnerServiceCategoryRepository->get($skip,$take))
+            Contract::COUNT =>  $this->SPartnerServiceCategoryService->SPartnerServiceCategoryRepository->count([]),
+            Contract::DATA  =>  new SPartnerServiceCategoryCollection($this->SPartnerServiceCategoryService->SPartnerServiceCategoryRepository->get($skip,$take))
         ],200);
     }
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\ServiceLimitService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ServiceLimit\ServiceLimitCollection;
@@ -29,8 +29,8 @@ class ServiceLimitController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->serviceLimitService->serviceLimitRepository->count([]),
-            MainContract::DATA  =>  new ServiceLimitCollection($this->serviceLimitService->serviceLimitRepository->get($skip,$take))
+            Contract::COUNT =>  $this->serviceLimitService->serviceLimitRepository->count([]),
+            Contract::DATA  =>  new ServiceLimitCollection($this->serviceLimitService->serviceLimitRepository->get($skip,$take))
         ],200);
     }
 

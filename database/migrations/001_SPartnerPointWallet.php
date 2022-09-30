@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\SPartnerPointWalletContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,9 +17,9 @@ return new class extends Migration
     {
         Schema::create(SPartnerPointWalletContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger(MainContract::S_PARTNER_POINT_ID)->nullable();
-            $table->unsignedTinyInteger(MainContract::CURRENCY_ID)->nullable();
-            $table->unsignedBigInteger(MainContract::BALANCE)->default(0)->nullable();
+            $table->unsignedInteger(Contract::S_PARTNER_POINT_ID)->nullable();
+            $table->unsignedTinyInteger(Contract::CURRENCY_ID)->nullable();
+            $table->unsignedBigInteger(Contract::BALANCE)->default(0)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\CarModelAveragePriceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CarModelAveragePrice\CarModelAveragePriceCollection;
@@ -29,8 +29,8 @@ class CarModelAveragePriceController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->carModelAveragePriceService->carModelAveragePriceRepository->count([]),
-            MainContract::DATA  =>  new CarModelAveragePriceCollection($this->carModelAveragePriceService->carModelAveragePriceRepository->get($skip,$take))
+            Contract::COUNT =>  $this->carModelAveragePriceService->carModelAveragePriceRepository->count([]),
+            Contract::DATA  =>  new CarModelAveragePriceCollection($this->carModelAveragePriceService->carModelAveragePriceRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,8 +42,8 @@ class CarModelAveragePriceController extends Controller
     public function getByCarModelId($carModelId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->carModelAveragePriceService->carModelAveragePriceRepository->count([MainContract::CAR_MODEL_ID => $carModelId]),
-            MainContract::DATA  =>  new CarModelAveragePriceCollection($this->carModelAveragePriceService->carModelAveragePriceRepository->getByCarModelId($carModelId,$skip,$take))
+            Contract::COUNT =>  $this->carModelAveragePriceService->carModelAveragePriceRepository->count([Contract::CAR_MODEL_ID => $carModelId]),
+            Contract::DATA  =>  new CarModelAveragePriceCollection($this->carModelAveragePriceService->carModelAveragePriceRepository->getByCarModelId($carModelId,$skip,$take))
         ],200);
     }
 

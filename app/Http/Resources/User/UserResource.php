@@ -2,8 +2,9 @@
 
 namespace App\Http\Resources\User;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\UserContract;
+use App\Http\Resources\City\CityResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -11,13 +12,14 @@ class UserResource extends JsonResource
     public function toArray($request): array
     {
         $arr    =   [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
+            Contract::CITY  =>  new CityResource($this->{Contract::CITY}),
         ];
         foreach (UserContract::FILLABLE as &$value) {
             $arr[$value]    =   $this->{$value};
         }
-        return $arr;
+        return Contract::CLEAR($arr);
     }
 }

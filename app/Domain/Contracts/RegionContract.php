@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class RegionContract extends MainContract
+class RegionContract extends Contract
 {
     const TABLE =   'regions';
     const FILLABLE  =   [

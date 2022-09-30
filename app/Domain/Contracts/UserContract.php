@@ -2,12 +2,13 @@
 
 namespace App\Domain\Contracts;
 
-class UserContract extends MainContract
+class UserContract extends Contract
 {
     const TABLE =   'users';
 
     const FILLABLE  =   [
         self::ROLE_ID,
+        self::CITY_ID,
         self::BITRIX_ID,
         self::PHONE,
         self::EMAIL,

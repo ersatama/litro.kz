@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\SPartnerPointCategoryService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SPartnerPointCategory\SPartnerPointCategoryCollection;
@@ -29,8 +29,8 @@ class SPartnerPointCategoryController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerPointCategoryService->SPartnerPointCategoryRepository->count([]),
-            MainContract::DATA  =>  new SPartnerPointCategoryCollection($this->SPartnerPointCategoryService->SPartnerPointCategoryRepository->get($skip,$take))
+            Contract::COUNT =>  $this->SPartnerPointCategoryService->SPartnerPointCategoryRepository->count([]),
+            Contract::DATA  =>  new SPartnerPointCategoryCollection($this->SPartnerPointCategoryService->SPartnerPointCategoryRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class SPartnerPointCategoryController extends Controller
     public function getBySPartnerPointId($sPartnerPointId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->SPartnerPointCategoryService->SPartnerPointCategoryRepository->count([
-                MainContract::S_PARTNER_POINT_ID    =>  $sPartnerPointId
+            Contract::COUNT =>  $this->SPartnerPointCategoryService->SPartnerPointCategoryRepository->count([
+                Contract::S_PARTNER_POINT_ID    =>  $sPartnerPointId
             ]),
-            MainContract::DATA  =>  new SPartnerPointCategoryCollection($this->SPartnerPointCategoryService->SPartnerPointCategoryRepository->getBySPartnerPointId($sPartnerPointId,$skip,$take))
+            Contract::DATA  =>  new SPartnerPointCategoryCollection($this->SPartnerPointCategoryService->SPartnerPointCategoryRepository->getBySPartnerPointId($sPartnerPointId,$skip,$take))
         ],200);
     }
 

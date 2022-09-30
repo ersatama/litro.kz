@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\LawyerContactService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\LawyerContact\LawyerContactCollection;
@@ -29,8 +29,8 @@ class LawyerContactController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->lawyerContactService->lawyerContactRepository->count([]),
-            MainContract::DATA  =>  new LawyerContactCollection($this->lawyerContactService->lawyerContactRepository->get($skip,$take))
+            Contract::COUNT =>  $this->lawyerContactService->lawyerContactRepository->count([]),
+            Contract::DATA  =>  new LawyerContactCollection($this->lawyerContactService->lawyerContactRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class LawyerContactController extends Controller
     public function getByLawyerId($lawyerId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->lawyerContactService->lawyerContactRepository->count([
-                MainContract::LAWYER_ID =>  $lawyerId
+            Contract::COUNT =>  $this->lawyerContactService->lawyerContactRepository->count([
+                Contract::LAWYER_ID =>  $lawyerId
             ]),
-            MainContract::DATA  =>  new LawyerContactCollection($this->lawyerContactService->lawyerContactRepository->getByLawyerId($lawyerId,$skip,$take))
+            Contract::DATA  =>  new LawyerContactCollection($this->lawyerContactService->lawyerContactRepository->getByLawyerId($lawyerId,$skip,$take))
         ],200);
     }
 

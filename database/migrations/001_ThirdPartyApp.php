@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\ThirdPartyAppContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,9 +17,9 @@ return new class extends Migration
     {
         Schema::create(ThirdPartyAppContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->string(MainContract::KEY)->nullable();
-            $table->string(MainContract::NAME)->nullable();
-            $table->string(MainContract::PASSWORD)->nullable();
+            $table->string(Contract::KEY)->nullable();
+            $table->string(Contract::NAME)->nullable();
+            $table->string(Contract::PASSWORD)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

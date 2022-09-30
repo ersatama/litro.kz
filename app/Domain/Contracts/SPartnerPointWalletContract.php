@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class SPartnerPointWalletContract extends MainContract
+class SPartnerPointWalletContract extends Contract
 {
     const TABLE =   's_partner_point_wallets';
     const FILLABLE  =   [

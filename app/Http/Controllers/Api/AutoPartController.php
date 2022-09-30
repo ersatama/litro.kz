@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\AutoPartService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AutoPart\AutoPartCollection;
@@ -29,8 +29,8 @@ class AutoPartController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->autoPartService->autoPartRepository->count([]),
-            MainContract::DATA  =>  new AutoPartCollection($this->autoPartService->autoPartRepository->get($skip,$take))
+            Contract::COUNT =>  $this->autoPartService->autoPartRepository->count([]),
+            Contract::DATA  =>  new AutoPartCollection($this->autoPartService->autoPartRepository->get($skip,$take))
         ],200);
     }
 

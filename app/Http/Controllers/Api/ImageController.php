@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\ImageService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Image\ImageCollection;
@@ -29,8 +29,8 @@ class ImageController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->imageService->imageRepository->count([]),
-            MainContract::DATA  =>  new ImageCollection($this->imageService->imageRepository->get($skip,$take))
+            Contract::COUNT =>  $this->imageService->imageRepository->count([]),
+            Contract::DATA  =>  new ImageCollection($this->imageService->imageRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,8 +42,8 @@ class ImageController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->imageService->imageRepository->count([MainContract::USER_ID => $userId]),
-            MainContract::DATA  =>  new ImageCollection($this->imageService->imageRepository->getByUserId($userId,$skip,$take))
+            Contract::COUNT =>  $this->imageService->imageRepository->count([Contract::USER_ID => $userId]),
+            Contract::DATA  =>  new ImageCollection($this->imageService->imageRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 

@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\CarModelContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,11 +17,11 @@ return new class extends Migration
     {
         Schema::create(CarModelContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::CAR_BRAND_ID);
-            $table->string(MainContract::TITLE);
+            $table->unsignedBigInteger(Contract::CAR_BRAND_ID);
+            $table->string(Contract::TITLE);
             $table->timestamps();
             $table->softDeletes();
-            $table->index(MainContract::CAR_BRAND_ID);
+            $table->index(Contract::CAR_BRAND_ID);
         });
     }
 

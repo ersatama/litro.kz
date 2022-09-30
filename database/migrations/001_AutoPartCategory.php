@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\AutoPartCategoryContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,14 +17,14 @@ return new class extends Migration
     {
         Schema::create(AutoPartCategoryContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(MainContract::PARENT_ID)->nullable();
-            $table->unsignedInteger(MainContract::POSITION)->default(1);
-            $table->string(MainContract::TITLE)->nullable();
-            $table->string(MainContract::TITLE_KZ)->nullable();
-            $table->string(MainContract::TITLE_EN)->nullable();
-            $table->text(MainContract::DESCRIPTION)->nullable();
-            $table->text(MainContract::DESCRIPTION_KZ)->nullable();
-            $table->text(MainContract::DESCRIPTION_EN)->nullable();
+            $table->unsignedBigInteger(Contract::PARENT_ID)->nullable();
+            $table->unsignedInteger(Contract::POSITION)->default(1);
+            $table->string(Contract::TITLE)->nullable();
+            $table->string(Contract::TITLE_KZ)->nullable();
+            $table->string(Contract::TITLE_EN)->nullable();
+            $table->text(Contract::DESCRIPTION)->nullable();
+            $table->text(Contract::DESCRIPTION_KZ)->nullable();
+            $table->text(Contract::DESCRIPTION_EN)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

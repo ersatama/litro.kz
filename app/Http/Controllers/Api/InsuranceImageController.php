@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\InsuranceImageService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\InsuranceImage\InsuranceImageCollection;
@@ -29,8 +29,8 @@ class InsuranceImageController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceImageService->insuranceImageRepository->count([]),
-            MainContract::DATA  =>  new InsuranceImageCollection($this->insuranceImageService->insuranceImageRepository->get($skip,$take))
+            Contract::COUNT =>  $this->insuranceImageService->insuranceImageRepository->count([]),
+            Contract::DATA  =>  new InsuranceImageCollection($this->insuranceImageService->insuranceImageRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class InsuranceImageController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceImageService->insuranceImageRepository->count([
-                MainContract::USER_ID   =>  $userId
+            Contract::COUNT =>  $this->insuranceImageService->insuranceImageRepository->count([
+                Contract::USER_ID   =>  $userId
             ]),
-            MainContract::DATA  =>  new InsuranceImageCollection($this->insuranceImageService->insuranceImageRepository->getByUserId($userId,$skip,$take))
+            Contract::DATA  =>  new InsuranceImageCollection($this->insuranceImageService->insuranceImageRepository->getByUserId($userId,$skip,$take))
         ],200);
     }
 
@@ -57,10 +57,10 @@ class InsuranceImageController extends Controller
     public function getByInsuranceCompanyId($insuranceCompanyId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->insuranceImageService->insuranceImageRepository->count([
-                MainContract::INSURANCE_COMPANY_ID  =>  $insuranceCompanyId
+            Contract::COUNT =>  $this->insuranceImageService->insuranceImageRepository->count([
+                Contract::INSURANCE_COMPANY_ID  =>  $insuranceCompanyId
             ]),
-            MainContract::DATA  =>  new InsuranceImageCollection($this->insuranceImageService->insuranceImageRepository->getByInsuranceCompanyId($insuranceCompanyId,$skip,$take))
+            Contract::DATA  =>  new InsuranceImageCollection($this->insuranceImageService->insuranceImageRepository->getByInsuranceCompanyId($insuranceCompanyId,$skip,$take))
         ],200);
     }
 

@@ -2,7 +2,8 @@
 
 namespace App\Http\Resources\NewsCategory;
 
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
+use App\Domain\Contracts\NewsCategoryContract;
 use Illuminate\Http\Resources\Json\JsonResource;
 use JetBrains\PhpStorm\ArrayShape;
 
@@ -10,13 +11,14 @@ class NewsCategoryResource extends JsonResource
 {
     public function toArray($request): array
     {
-        return [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::TITLE =>  $this->{MainContract::TITLE},
-            MainContract::TITLE_EN  =>  $this->{MainContract::TITLE_EN},
-            MainContract::TITLE_KZ  =>  $this->{MainContract::TITLE_KZ},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+        $arr    =   [
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
         ];
+        foreach (NewsCategoryContract::FILLABLE as &$value) {
+            $arr[$value]    =   $this->{$value};
+        }
+        return Contract::CLEAR($arr);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class ServiceLimitContract extends MainContract
+class ServiceLimitContract extends Contract
 {
     const TABLE =   'service_limits';
     const FILLABLE  =   [

@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class WalletContract extends MainContract
+class WalletContract extends Contract
 {
     const TABLE =   'wallets';
     const FILLABLE  =   [

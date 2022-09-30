@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\TransactionService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Transaction\TransactionCollection;
@@ -29,8 +29,8 @@ class TransactionController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->transactionService->transactionRepository->count([]),
-            MainContract::DATA  =>  new TransactionCollection($this->transactionService->transactionRepository->get($skip,$take))
+            Contract::COUNT =>  $this->transactionService->transactionRepository->count([]),
+            Contract::DATA  =>  new TransactionCollection($this->transactionService->transactionRepository->get($skip,$take))
         ],200);
     }
 

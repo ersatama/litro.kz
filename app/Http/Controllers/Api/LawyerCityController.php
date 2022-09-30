@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use App\Domain\Services\LawyerCityService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\LawyerCity\LawyerCityCollection;
@@ -29,8 +29,8 @@ class LawyerCityController extends Controller
     public function get($skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->lawyerCityService->lawyerCityRepository->count([]),
-            MainContract::DATA  =>  new LawyerCityCollection($this->lawyerCityService->lawyerCityRepository->get($skip,$take))
+            Contract::COUNT =>  $this->lawyerCityService->lawyerCityRepository->count([]),
+            Contract::DATA  =>  new LawyerCityCollection($this->lawyerCityService->lawyerCityRepository->get($skip,$take))
         ],200);
     }
 
@@ -42,10 +42,10 @@ class LawyerCityController extends Controller
     public function getByCityId($cityId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            MainContract::COUNT =>  $this->lawyerCityService->lawyerCityRepository->count([
-                MainContract::CITY_ID   =>  $cityId
+            Contract::COUNT =>  $this->lawyerCityService->lawyerCityRepository->count([
+                Contract::CITY_ID   =>  $cityId
             ]),
-            MainContract::DATA  =>  new LawyerCityCollection($this->lawyerCityService->lawyerCityRepository->getByCityId($cityId,$skip,$take))
+            Contract::DATA  =>  new LawyerCityCollection($this->lawyerCityService->lawyerCityRepository->getByCityId($cityId,$skip,$take))
         ],200);
     }
 

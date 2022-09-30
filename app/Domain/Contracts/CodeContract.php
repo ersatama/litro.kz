@@ -2,7 +2,7 @@
 
 namespace App\Domain\Contracts;
 
-class CodeContract extends MainContract
+class CodeContract extends Contract
 {
     const TABLE =   'codes';
     const FILLABLE  =   [

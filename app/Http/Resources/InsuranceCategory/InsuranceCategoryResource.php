@@ -3,7 +3,7 @@
 namespace App\Http\Resources\InsuranceCategory;
 
 use App\Domain\Contracts\InsuranceCategoryContract;
-use App\Domain\Contracts\MainContract;
+use App\Domain\Contracts\Contract;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class InsuranceCategoryResource extends JsonResource
@@ -11,13 +11,13 @@ class InsuranceCategoryResource extends JsonResource
     public function toArray($request): array
     {
         $arr    =   [
-            MainContract::ID    =>  $this->{MainContract::ID},
-            MainContract::CREATED_AT    =>  $this->{MainContract::CREATED_AT},
-            MainContract::UPDATED_AT    =>  $this->{MainContract::UPDATED_AT},
+            Contract::ID    =>  $this->{Contract::ID},
+            Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
+            Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
         ];
         foreach (InsuranceCategoryContract::FILLABLE as &$value) {
             $arr[$value]    =   $this->{$value};
         }
-        return $arr;
+        return Contract::CLEAR($arr);
     }
 }
