@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AutoPartCategoryController;
 use App\Http\Controllers\Api\AutoPartController;
+use App\Http\Controllers\Api\AutoPartImageController;
 use App\Http\Controllers\Api\AutoPartParamController;
 use App\Http\Controllers\Api\AutoPartParamOptionController;
 use App\Http\Controllers\Api\AutoPartTypeController;
@@ -56,6 +57,7 @@ use App\Http\Controllers\Api\PlaceController;
 use App\Http\Controllers\Api\RecurrentController;
 use App\Http\Controllers\Api\RegionController;
 use App\Http\Controllers\Api\ServiceController;
+use App\Http\Controllers\Api\ServiceImageController;
 use App\Http\Controllers\Api\ServiceLimitController;
 use App\Http\Controllers\Api\ServicePriceController;
 use App\Http\Controllers\Api\ServiceTypeController;
@@ -67,11 +69,13 @@ use App\Http\Controllers\Api\SPartnerPointWalletRecordController;
 use App\Http\Controllers\Api\SPartnerReceivedServiceController;
 use App\Http\Controllers\Api\SPartnerServiceCategoryController;
 use App\Http\Controllers\Api\StockController;
+use App\Http\Controllers\Api\StockImageController;
 use App\Http\Controllers\Api\ThirdPartyAppController;
 use App\Http\Controllers\Api\TransactionController;
 use App\Http\Controllers\Api\TransactionToNonExistingUserController;
 use App\Http\Controllers\Api\UserCarController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\UserImageController;
 use App\Http\Controllers\Api\WalletController;
 use App\Http\Controllers\Api\WalletRecordController;
 use Illuminate\Http\Request;
@@ -334,6 +338,14 @@ Route::controller(StockController::class)->group(function() {
     });
 });
 
+Route::controller(StockImageController::class)->group(function() {
+    Route::prefix('stockImage')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('stockImage.get');
+        Route::get('getByStockId/{stockId}/{skip}/{take}','getByStockId')->name('stockImage.getByStockId');
+        Route::get('getById/{id}','getById')->name('stockImage.getById');
+    });
+});
+
 Route::controller(RecurrentController::class)->group(function() {
     Route::prefix('recurrent')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('recurrent.get');
@@ -354,6 +366,14 @@ Route::controller(PaymentSystemController::class)->group(function() {
     Route::prefix('paymentSystem')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('paymentSystem.get');
         Route::get('getById/{id}','getById')->name('paymentSystem.getById');
+    });
+});
+
+Route::controller(UserImageController::class)->group(function() {
+    Route::prefix('userImage')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('userImage.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('userImage.getByUserId');
+        Route::get('getById/{id}','getById')->name('userImage.getById');
     });
 });
 
@@ -525,6 +545,14 @@ Route::controller(ImageController::class)->group(function() {
     });
 });
 
+Route::controller(AutoPartImageController::class)->group(function() {
+    Route::prefix('autoPartImage')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('autoPartImage.get');
+        Route::get('getByAutoPartId/{autoPartId}/{skip}/{take}','getByAutoPartId')->name('autoPartImage.getByAutoPartId');
+        Route::get('getById/{id}','getById')->name('autoPartImage.getById');
+    });
+});
+
 Route::controller(AutoPartController::class)->group(function() {
     Route::prefix('autoPart')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('autoPart.get');
@@ -571,6 +599,14 @@ Route::controller(ServiceController::class)->group(function() {
     Route::prefix('service')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('service.get');
         Route::get('getById/{id}','getById')->name('service.getById');
+    });
+});
+
+Route::controller(ServiceImageController::class)->group(function() {
+    Route::prefix('serviceImage')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('serviceImage.get');
+        Route::get('getByServiceId/{stockId}/{skip}/{take}','getByServiceId')->name('serviceImage.getByServiceId');
+        Route::get('getById/{id}','getById')->name('serviceImage.getById');
     });
 });
 

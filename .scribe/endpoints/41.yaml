@@ -1,12 +1,12 @@
-name: 'News - Новости'
+name: 'MoneyOperationType - ДеньгиОперацияТип'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/news/get/{skip}/{take}'
+    uri: 'api/moneyOperationType/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - News'
+      title: 'Получить список - MoneyOperationType'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: numquam
+        example: at
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ut
+        example: cum
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":62,"data":[]}'
+        content: '{"count":4,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/news/getById/{id}'
+    uri: 'api/moneyOperationType/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - News'
+      title: 'Получить данные через ID - MoneyOperationType'
       description: ''
       authenticated: false
       custom: []
@@ -57,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: ut
+        example: sapiente
         type: string
         custom: []
     queryParameters: []

@@ -1,12 +1,12 @@
-name: 'CarCategory - АвтомобильКатегория'
+name: 'CarBrand - АвтомобильБрэнд'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/carCategory/get/{skip}/{take}'
+    uri: 'api/carBrand/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - CarCategory'
+      title: 'Получить список - CarBrand'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: cumque
+        example: quaerat
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quibusdam
+        example: suscipit
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":3,"data":[]}'
+        content: '{"count":134,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\CarModel;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\CarModel;
 
 class CarModelRepositoryEloquent implements CarModelRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected CarModel $model;
 

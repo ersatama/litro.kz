@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\OrderService;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\OrderService;
 
 class OrderServiceRepositoryEloquent implements OrderServiceRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected OrderService $model;
     public function __construct(OrderService $orderService)
     {

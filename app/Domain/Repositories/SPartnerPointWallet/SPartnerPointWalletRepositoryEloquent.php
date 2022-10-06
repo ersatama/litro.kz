@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\SPartnerPointWallet;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\SPartnerPointWallet;
 
 class SPartnerPointWalletRepositoryEloquent implements SPartnerPointWalletRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected SPartnerPointWallet $model;
     public function __construct(SPartnerPointWallet $SPartnerPointWallet)
     {

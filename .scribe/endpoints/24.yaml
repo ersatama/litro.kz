@@ -1,12 +1,12 @@
-name: 'InsuranceCompany - СтрахованияКомпания'
+name: 'InsuranceCategory - СтрахованияКатегория'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/insuranceCompany/get/{skip}/{take}'
+    uri: 'api/insuranceCategory/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - InsuranceCompany'
+      title: 'Получить список - InsuranceCategory'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: eum
+        example: et
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: nulla
+        example: expedita
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":6,"data":[]}'
+        content: '{"count":5,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/insuranceCompany/getById/{id}'
+    uri: 'api/insuranceCategory/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - InsuranceCompany'
+      title: 'Получить данные через ID - InsuranceCategory'
       description: ''
       authenticated: false
       custom: []
@@ -57,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: cumque
+        example: dolorem
         type: string
         custom: []
     queryParameters: []

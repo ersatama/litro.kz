@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\SPartnerReceivedService;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\SPartnerReceivedService;
 
 class SPartnerReceivedServiceRepositoryEloquent implements SPartnerReceivedServiceRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected SPartnerReceivedService $model;
     public function __construct(SPartnerReceivedService $SPartnerReceivedService)
     {

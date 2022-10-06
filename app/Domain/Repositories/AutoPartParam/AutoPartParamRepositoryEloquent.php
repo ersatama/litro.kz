@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\AutoPartParam;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\AutoPartParam;
 
 class AutoPartParamRepositoryEloquent implements AutoPartParamRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected AutoPartParam $model;
 

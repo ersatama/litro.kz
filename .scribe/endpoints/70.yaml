@@ -1,51 +1,12 @@
-name: 'User - Пользователь'
+name: 'ThirdPartyApp - Стороннее приложение'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/user/getByPhoneAndPassword/{phone}/{password}'
+    uri: 'api/thirdPartyApp/get/{skip}/{take}'
     metadata:
-      title: 'Получить данные через Phone Password - User'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      phone:
-        name: phone
-        description: ''
-        required: true
-        example: totam
-        type: string
-        custom: []
-      password:
-        name: password
-        description: ''
-        required: true
-        example: et
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 404
-        content: '{"message":"not found"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/user/get/{skip}/{take}'
-    metadata:
-      title: 'Получить список - User'
+      title: 'Получить список - ThirdPartyApp'
       description: ''
       authenticated: false
       custom: []
@@ -57,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: adipisci
+        example: facilis
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: hic
+        example: voluptas
         type: string
         custom: []
     queryParameters: []
@@ -72,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":64366,"data":[]}'
+        content: '{"count":1,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -82,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/user/getById/{id}'
+    uri: 'api/thirdPartyApp/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - User'
+      title: 'Получить данные через ID - ThirdPartyApp'
       description: ''
       authenticated: false
       custom: []
@@ -96,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: ut
+        example: et
         type: string
         custom: []
     queryParameters: []

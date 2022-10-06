@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\NewsCategory;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\NewsCategory;
 
 class NewsCategoryRepositoryEloquent implements NewsCategoryRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected NewsCategory $model;
 

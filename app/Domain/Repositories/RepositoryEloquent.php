@@ -4,8 +4,23 @@ namespace App\Domain\Repositories;
 
 use App\Domain\Contracts\Contract;
 
-trait MainRepositoryEloquent
+trait RepositoryEloquent
 {
+    public function getByAutoPartId($autoPartId,$skip,$take)
+    {
+        return $this->model::where(Contract::AUTO_PART_ID,$autoPartId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
+    public function getByStockId($stockId,$skip,$take)
+    {
+        return $this->model::where(Contract::STOCK_ID,$stockId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
 
     public function getByOrderServiceId($orderServiceId,$skip,$take)
     {
@@ -73,22 +88,26 @@ trait MainRepositoryEloquent
 
     public function getByPhone($phone)
     {
-        return $this->model::where(Contract::PHONE,$phone)->first();
+        return $this->model::where(Contract::PHONE,$phone)
+            ->first();
     }
 
     public function get($skip,$take)
     {
-        return $this->model::skip($skip)->take($take)->get();
+        return $this->model::skip($skip)->take($take)
+            ->get();
     }
 
     public function getById($id)
     {
-        return $this->model::where(Contract::ID,$id)->first();
+        return $this->model::where(Contract::ID,$id)
+            ->first();
     }
 
     public function count($where)
     {
-        return $this->model::where($where)->count();
+        return $this->model::where($where)
+            ->count();
     }
 
     public function getByCardId($cardId,$skip,$take)
@@ -117,7 +136,8 @@ trait MainRepositoryEloquent
 
     public function getByOrderCardId($orderCardId)
     {
-        return $this->model::where(Contract::ORDER_CARD_ID,$orderCardId)->get();
+        return $this->model::where(Contract::ORDER_CARD_ID,$orderCardId)
+            ->get();
     }
 
     public function getByPartnerId($partnerId,$skip,$take)
@@ -162,7 +182,8 @@ trait MainRepositoryEloquent
 
     public function getByEmail($email)
     {
-        return $this->model::where(Contract::EMAIL,$email)->first();
+        return $this->model::where(Contract::EMAIL,$email)
+            ->first();
     }
 
     public function create($data)

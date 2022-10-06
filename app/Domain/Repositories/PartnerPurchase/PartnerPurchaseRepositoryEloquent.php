@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\PartnerPurchase;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\PartnerPurchase;
 
 class PartnerPurchaseRepositoryEloquent implements PartnerPurchaseRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected PartnerPurchase $model;
     public function __construct(PartnerPurchase $partnerPurchase)
     {

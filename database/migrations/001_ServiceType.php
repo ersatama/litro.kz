@@ -18,6 +18,7 @@ return new class extends Migration
         Schema::create(ServiceTypeContract::TABLE, function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger(Contract::CARD_CATEGORY_ID)->nullable();
+            $table->unsignedBigInteger(Contract::IMAGE_ID)->nullable();
             $table->string(Contract::TITLE)->nullable();
             $table->string(Contract::TITLE_KZ)->nullable();
             $table->string(Contract::TITLE_EN)->nullable();

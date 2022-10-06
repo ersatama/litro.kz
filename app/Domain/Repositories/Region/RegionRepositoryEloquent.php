@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\Region;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\Region;
 
 class RegionRepositoryEloquent implements RegionRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected Region $model;
 

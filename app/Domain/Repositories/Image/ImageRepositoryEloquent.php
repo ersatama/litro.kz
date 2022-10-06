@@ -3,12 +3,12 @@
 namespace App\Domain\Repositories\Image;
 
 use App\Domain\Contracts\Contract;
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\Image;
 
 class ImageRepositoryEloquent implements ImageRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected Image $model;
 

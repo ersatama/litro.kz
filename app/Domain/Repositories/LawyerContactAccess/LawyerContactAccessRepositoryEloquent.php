@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\LawyerContactAccess;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\LawyerContactAccess;
 
 class LawyerContactAccessRepositoryEloquent implements LawyerContactAccessRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected LawyerContactAccess $model;
     public function __construct(LawyerContactAccess $lawyerContactAccess)
     {

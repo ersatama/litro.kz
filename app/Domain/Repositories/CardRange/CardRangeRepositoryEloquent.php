@@ -3,11 +3,11 @@
 namespace App\Domain\Repositories\CardRange;
 
 use App\Models\CardRange;
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 
 class CardRangeRepositoryEloquent implements CardRangeRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected CardRange $model;
 

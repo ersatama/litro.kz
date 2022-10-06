@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\LawyerService;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\LawyerService;
 
 class LawyerServiceRepositoryEloquent implements LawyerServiceRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected LawyerService $model;
     public function __construct(LawyerService $lawyerService)
     {

@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\CarModelAveragePrice;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\CarModelAveragePrice;
 
 class CarModelAveragePriceRepositoryEloquent implements CarModelAveragePriceRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected CarModelAveragePrice $model;
 

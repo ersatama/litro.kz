@@ -269,6 +269,10 @@ return [
         App\Providers\Repositories\PartnerPurchaseRepositoryProvider::class,
         App\Providers\Repositories\OrderCardOldRepositoryProvider::class,
         App\Providers\Repositories\MessageRepositoryProvider::class,
+        App\Providers\Repositories\UserImageRepositoryProvider::class,
+        App\Providers\Repositories\StockImageRepositoryProvider::class,
+        App\Providers\Repositories\ServiceImageRepositoryProvider::class,
+        App\Providers\Repositories\AutoPartImageRepositoryProvider::class,
     ],
 
     /*

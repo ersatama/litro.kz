@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\PaymentSystem;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\PaymentSystem;
 
 class PaymentSystemRepositoryEloquent implements PaymentSystemRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected PaymentSystem $model;
     public function __construct(PaymentSystem $payment)
     {

@@ -3,12 +3,12 @@
 namespace App\Domain\Repositories\News;
 
 use App\Domain\Contracts\Contract;
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\News;
 
 class NewsRepositoryEloquent implements NewsRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected News $model;
 

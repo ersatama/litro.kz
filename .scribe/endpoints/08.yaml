@@ -1,12 +1,12 @@
-name: 'CarModel - АвтомобильМодель'
+name: 'CarCategory - АвтомобильКатегория'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/carModel/get/{skip}/{take}'
+    uri: 'api/carCategory/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - CarModel'
+      title: 'Получить список - CarCategory'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: animi
+        example: molestias
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: asperiores
+        example: quia
         type: string
         custom: []
     queryParameters: []
@@ -33,85 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":4011,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/carModel/getByCarBrandId/{carBrandId}/{skip}/{take}'
-    metadata:
-      title: 'Получить данные через CarBrandID - CarModel'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      carBrandId:
-        name: carBrandId
-        description: ''
-        required: true
-        example: cupiditate
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: nisi
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: veniam
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/carModel/getById/{id}'
-    metadata:
-      title: 'Получить данные через ID - CarModel'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the getById.'
-        required: true
-        example: et
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 404
-        content: '{"message":"\u041c\u043e\u0434\u0435\u043b\u044c \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u0430"}'
+        content: '{"count":3,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

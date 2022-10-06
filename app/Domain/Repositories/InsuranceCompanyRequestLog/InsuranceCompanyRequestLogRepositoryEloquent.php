@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\InsuranceCompanyRequestLog;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\InsuranceCompanyRequestLog;
 
 class InsuranceCompanyRequestLogRepositoryEloquent implements InsuranceCompanyRequestLogRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected InsuranceCompanyRequestLog $model;
     public function __construct(InsuranceCompanyRequestLog $insuranceCompanyRequestLog)
     {

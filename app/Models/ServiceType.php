@@ -26,4 +26,9 @@ class ServiceType extends Model
     {
         return $this->belongsTo(CardCategory::class);
     }
+
+    public function image(): BelongsTo
+    {
+        return $this->belongsTo(Image::class);
+    }
 }

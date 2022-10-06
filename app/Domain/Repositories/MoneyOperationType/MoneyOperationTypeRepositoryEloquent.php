@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\MoneyOperationType;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\MoneyOperationType;
 
 class MoneyOperationTypeRepositoryEloquent implements MoneyOperationTypeRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected MoneyOperationType $model;
 

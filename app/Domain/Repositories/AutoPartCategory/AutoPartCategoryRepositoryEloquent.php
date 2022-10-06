@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\AutoPartCategory;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\AutoPartCategory;
 
 class AutoPartCategoryRepositoryEloquent implements AutoPartCategoryRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected AutoPartCategory $model;
 

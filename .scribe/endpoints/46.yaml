@@ -1,12 +1,12 @@
-name: OrderServiceService
+name: 'OrderService - ЗаказСервис'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderServiceService/get/{skip}/{take}'
+    uri: 'api/orderService/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - OrderServiceService'
+      title: 'Получить список - OrderService'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: quidem
+        example: officia
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: facere
+        example: possimus
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":2624,"data":[]}'
+        content: '{"count":3348,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderServiceService/getByOrderServiceId/{orderServiceId}/{skip}/{take}'
+    uri: 'api/orderService/getByUserId/{userId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через OrderServiceID - OrderServiceService'
+      title: 'Получить данные через UserID - OrderService'
       description: ''
       authenticated: false
       custom: []
@@ -53,33 +53,79 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      orderServiceId:
-        name: orderServiceId
+      userId:
+        name: userId
         description: ''
         required: true
-        example: a
+        example: tenetur
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: non
+        example: in
         type: string
         custom: []
       take:
         name: take
+        description: ''
+        required: true
+        example: quasi
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/orderService/getByCityId/{cityId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через CityID - OrderService'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: quia
+        type: string
+        custom: []
+      skip:
+        name: skip
         description: ''
         required: true
         example: et
         type: string
         custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: sit
+        type: string
+        custom: []
     queryParameters: []
     bodyParameters: []
     responses:
       -
         status: 200
-        content: '{"count":0,"data":[]}'
+        content: '{"count":1913,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -89,9 +135,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderServiceService/getByServiceId/{serviceId}/{skip}/{take}'
+    uri: 'api/orderService/getByPlaceId/{placeId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через ServiceID - OrderServiceService'
+      title: 'Получить данные через PlaceID - OrderService'
       description: ''
       authenticated: false
       custom: []
@@ -99,25 +145,25 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      serviceId:
-        name: serviceId
+      placeId:
+        name: placeId
         description: ''
         required: true
-        example: dolor
+        example: voluptates
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: illo
+        example: ea
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: nemo
+        example: aliquam
         type: string
         custom: []
     queryParameters: []
@@ -135,9 +181,55 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderServiceService/getById/{id}'
+    uri: 'api/orderService/getByOrderCardId/{orderCardId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через ID - OrderServiceService'
+      title: 'Получить данные через OrderCardID - OrderService'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      orderCardId:
+        name: orderCardId
+        description: ''
+        required: true
+        example: officia
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: dolore
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/orderService/getById/{id}'
+    metadata:
+      title: 'Получить данные через ID - OrderService'
       description: ''
       authenticated: false
       custom: []
@@ -149,7 +241,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: labore
+        example: cupiditate
         type: string
         custom: []
     queryParameters: []

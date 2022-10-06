@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\Transaction;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\Transaction;
 
 class TransactionRepositoryEloquent implements TransactionRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected Transaction $model;
     public function __construct(Transaction $transaction)
     {

@@ -1,12 +1,12 @@
-name: 'Driver - Водитель'
+name: 'Currency - Валюта'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/driver/get/{skip}/{take}'
+    uri: 'api/currency/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - Driver'
+      title: 'Получить список - Currency'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: voluptatem
+        example: quia
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: et
+        example: possimus
         type: string
         custom: []
     queryParameters: []
@@ -33,71 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":21453,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/driver/getByOrderCardId/{orderCardId}'
-    metadata:
-      title: 'Получить данные через OrderCardID - Driver'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      orderCardId:
-        name: orderCardId
-        description: ''
-        required: true
-        example: nihil
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/driver/getById/{id}'
-    metadata:
-      title: 'Получить данные через ID - Driver'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the getById.'
-        required: true
-        example: in
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 404
-        content: '{"message":"not found"}'
+        content: '{"count":1,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

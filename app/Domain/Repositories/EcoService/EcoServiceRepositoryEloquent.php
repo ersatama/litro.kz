@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\EcoService;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\EcoService;
 
 class EcoServiceRepositoryEloquent implements EcoServiceRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected EcoService $model;
     public function __construct(EcoService $ecoService)
     {

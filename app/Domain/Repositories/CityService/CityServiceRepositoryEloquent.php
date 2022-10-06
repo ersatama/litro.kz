@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\CityService;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\CityService;
 
 class CityServiceRepositoryEloquent implements CityServiceRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected CityService $model;
     public function __construct(CityService $cityService)
     {

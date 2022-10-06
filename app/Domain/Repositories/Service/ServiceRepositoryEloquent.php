@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\Service;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\Service;
 
 class ServiceRepositoryEloquent implements ServiceRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected Service $model;
 

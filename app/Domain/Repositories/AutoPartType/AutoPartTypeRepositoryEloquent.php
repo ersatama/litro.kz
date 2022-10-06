@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\AutoPartType;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\AutoPartType;
 
 class AutoPartTypeRepositoryEloquent implements AutoPartTypeRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected AutoPartType $model;
 

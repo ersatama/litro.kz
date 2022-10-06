@@ -1,81 +1,12 @@
-name: 'Code - Код'
+name: 'CityService - ГородСервис'
 description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/code/create
-    metadata:
-      title: 'Создать - Code'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      phone:
-        name: phone
-        description: validation.max.
-        required: false
-        example: yjmfetrtwjbnajoxdlwvczsaamdeekmcqmdmizqrdxwuoaoajbfrsxsrnxpkhpmlyjexkqczuiaaizushmypywdwxfysyoozwlblvlzgcyotifjavyifziyatcdquktynximrxwcrmicpmjbhmudasa
-        type: string
-        custom: []
-      email:
-        name: email
-        description: validation.max.
-        required: false
-        example: suabepdwpasgwvmimtjgkrvtrsuafsstwzglvqotwqonicsyburfuapqdkuqokcohsbaaccxzkztnmrnpwyuvjkjncagckauxhm
-        type: string
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/code/update
-    metadata:
-      title: 'Обновить - Code'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      phone:
-        name: phone
-        description: validation.max.
-        required: false
-        example: sniqjufxkqckqsiarideunkffswievbnmiegijvrzgvuvbmhybuhjqfnoadfabfyzvmgipvdtuorgxhcyvkgdjtidhbwmuidguputfmnoibvjpizllskpqhnlesqwitozhwdvfnfnozqdixsqwzttjdasjmegwtwybdhwsqgmoinelemptpazkmefkarcltyfdjwjzylpokqyfkzlqggglrbmelkgmpqdtxroyercvbghzhvfuztfvnmxe
-        type: string
-        custom: []
-      email:
-        name: email
-        description: validation.max.
-        required: false
-        example: vaynvayfhzkomilrhcjqzhbfjjumdkvmxtewycippydmnatfppyenekrugqhughpttnrjxopklhysnjteccgyyfbzjwipqhakczynkpvnvtrzjbomexvp
-        type: string
-        custom: []
-      code:
-        name: code
-        description: 'validation.min validation.max.'
-        required: true
-        example: 1488
-        type: integer
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
       - GET
-    uri: 'api/code/get/{skip}/{take}'
+    uri: 'api/cityService/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - Code'
+      title: 'Получить список - CityService'
       description: ''
       authenticated: false
       custom: []
@@ -87,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: sunt
+        example: harum
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: vel
+        example: repellat
         type: string
         custom: []
     queryParameters: []
@@ -102,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":17268,"data":[]}'
+        content: '{"count":204,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -112,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/code/getByPhone/{phone}'
+    uri: 'api/cityService/getByServiceId/{serviceId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через Phone - Code'
+      title: 'Получить данные через ServiceID - CityService'
       description: ''
       authenticated: false
       custom: []
@@ -122,19 +53,33 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      phone:
-        name: phone
+      serviceId:
+        name: serviceId
         description: ''
         required: true
-        example: at
+        example: nulla
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: sunt
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: maiores
         type: string
         custom: []
     queryParameters: []
     bodyParameters: []
     responses:
       -
-        status: 404
-        content: '{"message":"not found"}'
+        status: 200
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -144,9 +89,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/code/getByEmail/{email}'
+    uri: 'api/cityService/getByCityId/{cityId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через Email - Code'
+      title: 'Получить данные через CityID - CityService'
       description: ''
       authenticated: false
       custom: []
@@ -154,19 +99,33 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      email:
-        name: email
+      cityId:
+        name: cityId
         description: ''
         required: true
-        example: placeat
+        example: et
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: aliquid
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: corporis
         type: string
         custom: []
     queryParameters: []
     bodyParameters: []
     responses:
       -
-        status: 404
-        content: '{"message":"not found"}'
+        status: 200
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -176,9 +135,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/code/getById/{id}'
+    uri: 'api/cityService/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - Code'
+      title: 'Получить данные через ID - CityService'
       description: ''
       authenticated: false
       custom: []
@@ -190,7 +149,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: et
+        example: rerum
         type: string
         custom: []
     queryParameters: []

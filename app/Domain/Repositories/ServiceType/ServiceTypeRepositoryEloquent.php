@@ -3,12 +3,12 @@
 namespace App\Domain\Repositories\ServiceType;
 
 use App\Domain\Contracts\Contract;
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\ServiceType;
 
 class ServiceTypeRepositoryEloquent implements ServiceTypeRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected ServiceType $model;
 

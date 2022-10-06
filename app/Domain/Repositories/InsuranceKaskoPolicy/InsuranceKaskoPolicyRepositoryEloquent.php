@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\InsuranceKaskoPolicy;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\InsuranceKaskoPolicy;
 
 class InsuranceKaskoPolicyRepositoryEloquent implements InsuranceKaskoPolicyRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected InsuranceKaskoPolicy $model;
     public function __construct(InsuranceKaskoPolicy $insuranceKaskoPolicy)
     {

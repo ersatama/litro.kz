@@ -4,6 +4,8 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const AUTO_PART_ID  =   'auto_part_id';
+    const STOCK_ID  =   'stock_id';
     const PURCHASE_DATE =   'purchase_date';
     const PURCHASE_ID   =   'purchase_id';
     const PARTNER_ID    =   'partner_id';
@@ -296,7 +298,6 @@ abstract class Contract
         self::NEWS_CATEGORY_ID,
         self::CARD_CATEGORY_ID,
         self::ORDER_SERVICE_ID,
-        self::SERVICE_ID,
         self::PARTNER_ID,
         self::PAYMENT_SYSTEM_ID,
         self::BROWSER_IMAGE_ID,

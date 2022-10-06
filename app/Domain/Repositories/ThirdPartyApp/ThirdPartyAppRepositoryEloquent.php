@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\ThirdPartyApp;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\ThirdPartyApp;
 
 class ThirdPartyAppRepositoryEloquent implements ThirdPartyAppRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected ThirdPartyApp $model;
     public function __construct(ThirdPartyApp $thirdPartyApp)
     {

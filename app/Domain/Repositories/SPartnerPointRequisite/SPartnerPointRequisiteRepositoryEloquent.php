@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\SPartnerPointRequisite;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\SPartnerPointRequisite;
 
 class SPartnerPointRequisiteRepositoryEloquent implements SPartnerPointRequisiteRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
     protected SPartnerPointRequisite $model;
     public function __construct(SPartnerPointRequisite $SPartnerPointRequisite)
     {

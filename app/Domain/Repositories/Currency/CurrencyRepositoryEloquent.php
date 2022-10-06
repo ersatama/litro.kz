@@ -2,12 +2,12 @@
 
 namespace App\Domain\Repositories\Currency;
 
-use App\Domain\Repositories\MainRepositoryEloquent;
+use App\Domain\Repositories\RepositoryEloquent;
 use App\Models\Currency;
 
 class CurrencyRepositoryEloquent implements CurrencyRepositoryInterface
 {
-    use MainRepositoryEloquent;
+    use RepositoryEloquent;
 
     protected Currency $model;
 

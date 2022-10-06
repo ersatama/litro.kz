@@ -1864,12 +1864,92 @@ Route::get('/db', function () {
         DB::table('messages')->insert($data_info);
     }
 
-    exit;
-    return view('welcome');
+    $table  =   'eco_images';
+    echo $table.' - user<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table.' where entity_type=\'user\'');
+    foreach ($values as &$value) {
+//        $info   =   pathinfo($value->path);
+//        file_put_contents($info['basename'],file_get_contents($value->path));
+        $image_id   =   img_convert($value->name);
+
+        $data_info  =   [
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::USER_ID   =>  $value->entity_id,
+            Contract::IMAGE_ID  =>  $image_id,
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ];
+        DB::table('user_images')->insert($data_info);
+    }
+
+    $table  =   'eco_images';
+    echo $table.' - stock<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table.' where entity_type=\'stock\'');
+    foreach ($values as &$value) {
+        if (does_url_exists($value->path)) {
+            //$info   =   pathinfo($value->path);
+            //file_put_contents($info['basename'],file_get_contents($value->path));
+            $image_id   =   img_convert($value->name);
+
+            $data_info  =   [
+                Contract::ID    =>  $value->{Contract::ID},
+                Contract::STOCK_ID   =>  $value->entity_id,
+                Contract::IMAGE_ID  =>  $image_id,
+                Contract::CREATED_AT    =>  conv($value->created_at),
+                Contract::UPDATED_AT    =>  conv($value->updated_at),
+                Contract::DELETED_AT    =>  conv($value->deleted_at)
+            ];
+            DB::table('stock_images')->insert($data_info);
+        }
+    }
+
+    $table  =   'eco_images';
+    echo $table.' - service<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table.' where entity_type=\'service\'');
+    foreach ($values as &$value) {
+        if (does_url_exists($value->path)) {
+            $info   =   pathinfo($value->path);
+            file_put_contents($info['basename'],file_get_contents($value->path));
+            $image_id   =   img_convert($value->name);
+
+            $data_info  =   [
+                Contract::ID    =>  $value->{Contract::ID},
+                Contract::SERVICE_ID   =>  $value->entity_id,
+                Contract::IMAGE_ID  =>  $image_id,
+                Contract::CREATED_AT    =>  conv($value->created_at),
+                Contract::UPDATED_AT    =>  conv($value->updated_at),
+                Contract::DELETED_AT    =>  conv($value->deleted_at)
+            ];
+            DB::table('service_images')->insert($data_info);
+        }
+    }
+
+    $table  =   'eco_images';
+    echo $table.' - auto_part<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table.' where entity_type=\'auto_part\'');
+    foreach ($values as &$value) {
+        if (does_url_exists($value->path)) {
+            $info   =   pathinfo($value->path);
+            file_put_contents($info['basename'],file_get_contents($value->path));
+            $image_id   =   img_convert($value->name);
+            $data_info  =   [
+                Contract::ID    =>  $value->{Contract::ID},
+                Contract::AUTO_PART_ID  =>  $value->entity_id,
+                Contract::IMAGE_ID  =>  $image_id,
+                Contract::CREATED_AT    =>  conv($value->created_at),
+                Contract::UPDATED_AT    =>  conv($value->updated_at),
+                Contract::DELETED_AT    =>  conv($value->deleted_at)
+            ];
+            DB::table('auto_part_images')->insert($data_info);
+        }
+    }
+
 });
 
 Route::get('/add', function() {
     set_time_limit(0);
+
     function gDate($date) {
         $date   =   explode(' ',$date);
         if (sizeof($date) > 0) {
@@ -1919,7 +1999,6 @@ Route::get('/add', function() {
         }
         return $image_id;
     }
-
     function does_url_exists($url) {
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_NOBODY, true);
@@ -1935,22 +2014,24 @@ Route::get('/add', function() {
         return $status;
     }
 
-    $table  =   'messages';
-    echo $table.'<br><pre>';
-    $values  =   DB::connection('pgsql')->select('select * from '.$table);
+    $table  =   'eco_images';
+    echo $table.' - auto_part<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table.' where entity_type=\'auto_part\'');
     foreach ($values as &$value) {
-        $data_info  =   [
-            Contract::ID    =>  $value->{Contract::ID},
-            Contract::FULLNAME  =>  $value->fullname,
-            Contract::EMAIL =>  $value->email,
-            Contract::PHONE =>  $value->phone,
-            Contract::TEXT =>  $value->text,
-            Contract::CREATED_AT    =>  conv($value->created_at),
-            Contract::UPDATED_AT    =>  conv($value->updated_at),
-            Contract::DELETED_AT    =>  conv($value->deleted_at)
-        ];
-
-        DB::table('messages')->insert($data_info);
+        if (does_url_exists($value->path)) {
+            $info   =   pathinfo($value->path);
+            file_put_contents($info['basename'],file_get_contents($value->path));
+            $image_id   =   img_convert($value->name);
+            $data_info  =   [
+                Contract::ID    =>  $value->{Contract::ID},
+                Contract::AUTO_PART_ID  =>  $value->entity_id,
+                Contract::IMAGE_ID  =>  $image_id,
+                Contract::CREATED_AT    =>  conv($value->created_at),
+                Contract::UPDATED_AT    =>  conv($value->updated_at),
+                Contract::DELETED_AT    =>  conv($value->deleted_at)
+            ];
+            DB::table('auto_part_images')->insert($data_info);
+        }
     }
 });
 
