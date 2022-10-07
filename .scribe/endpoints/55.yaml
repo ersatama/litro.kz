@@ -18,7 +18,7 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: qui
+        example: veniam
         type: string
         custom: []
       take:

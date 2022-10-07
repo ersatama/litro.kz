@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: amet
+        example: eum
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: beatae
+        example: magnam
         type: string
         custom: []
     queryParameters: []

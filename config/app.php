@@ -274,6 +274,7 @@ return [
         App\Providers\Repositories\ServiceImageRepositoryProvider::class,
         App\Providers\Repositories\AutoPartImageRepositoryProvider::class,
         App\Providers\Repositories\RoleRepositoryProvider::class,
+        App\Providers\Repositories\UserProfileRepositoryProvider::class,
     ],
 
     /*

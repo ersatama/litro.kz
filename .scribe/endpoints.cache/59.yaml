@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: totam
+        example: distinctio
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: officiis
+        example: neque
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: sPartnerPointId
         description: ''
         required: true
-        example: tenetur
+        example: aut
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: voluptas
+        example: vel
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: asperiores
+        example: debitis
         type: string
         custom: []
     queryParameters: []
@@ -105,7 +105,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: repudiandae
+        example: eos
         type: string
         custom: []
     queryParameters: []

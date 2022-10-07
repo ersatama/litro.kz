@@ -18,7 +18,7 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: molestiae
+        example: odio
         type: string
         custom: []
       take:
@@ -57,7 +57,7 @@ endpoints:
         name: orderCardId
         description: ''
         required: true
-        example: non
+        example: quia
         type: string
         custom: []
     queryParameters: []
@@ -89,7 +89,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: magni
+        example: tempore
         type: string
         custom: []
     queryParameters: []

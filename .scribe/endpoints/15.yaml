@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: aut
+        example: cupiditate
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: aut
+        example: aliquam
         type: string
         custom: []
     queryParameters: []

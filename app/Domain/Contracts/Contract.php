@@ -150,6 +150,8 @@ abstract class Contract
     const PATRONYMIC    =   'patronymic';
     const LAST_NAME =   'last_name';
     const FIRST_NAME    =   'first_name';
+    const MIDDLE_NAME   =   'middle_name';
+    const LOCALE    =   'locale';
     const CODE_DOES_NOT_MATCH   =   'code does not match';
     const CODE  =   'code';
     const EMAIL =   'email';

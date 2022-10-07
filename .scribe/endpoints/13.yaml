@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: dolorum
+        example: qui
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: vitae
+        example: magni
         type: string
         custom: []
     queryParameters: []
@@ -57,21 +57,21 @@ endpoints:
         name: cardId
         description: ''
         required: true
-        example: recusandae
+        example: non
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: et
+        example: architecto
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: voluptates
+        example: rerum
         type: string
         custom: []
     queryParameters: []
@@ -103,21 +103,21 @@ endpoints:
         name: cityId
         description: ''
         required: true
-        example: quidem
+        example: veritatis
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: dignissimos
+        example: aut
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: temporibus
+        example: fugit
         type: string
         custom: []
     queryParameters: []

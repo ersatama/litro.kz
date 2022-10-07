@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: officia
+        example: aliquid
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: possimus
+        example: non
         type: string
         custom: []
     queryParameters: []
@@ -57,21 +57,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: tenetur
+        example: quia
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: in
+        example: et
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quasi
+        example: ducimus
         type: string
         custom: []
     queryParameters: []
@@ -103,21 +103,21 @@ endpoints:
         name: cityId
         description: ''
         required: true
-        example: quia
+        example: ipsum
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: et
+        example: nam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: sit
+        example: officia
         type: string
         custom: []
     queryParameters: []
@@ -149,21 +149,21 @@ endpoints:
         name: placeId
         description: ''
         required: true
-        example: voluptates
+        example: excepturi
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: ea
+        example: ut
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: aliquam
+        example: dicta
         type: string
         custom: []
     queryParameters: []
@@ -195,21 +195,21 @@ endpoints:
         name: orderCardId
         description: ''
         required: true
-        example: officia
+        example: consequuntur
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: et
+        example: ut
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: dolore
+        example: sint
         type: string
         custom: []
     queryParameters: []
@@ -241,7 +241,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: cupiditate
+        example: corrupti
         type: string
         custom: []
     queryParameters: []

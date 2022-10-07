@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: natus
+        example: consequuntur
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: culpa
+        example: explicabo
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: reiciendis
+        example: tempora
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: adipisci
+        example: rerum
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: porro
+        example: id
         type: string
         custom: []
     queryParameters: []
@@ -105,21 +105,21 @@ endpoints:
         name: cardId
         description: ''
         required: true
-        example: adipisci
+        example: iste
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: molestiae
+        example: quae
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: cumque
+        example: omnis
         type: string
         custom: []
     queryParameters: []
@@ -151,7 +151,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: officia
+        example: ipsa
         type: string
         custom: []
     queryParameters: []

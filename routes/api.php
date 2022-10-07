@@ -76,6 +76,7 @@ use App\Http\Controllers\Api\TransactionToNonExistingUserController;
 use App\Http\Controllers\Api\UserCarController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\UserImageController;
+use App\Http\Controllers\Api\UserProfileController;
 use App\Http\Controllers\Api\WalletController;
 use App\Http\Controllers\Api\WalletRecordController;
 use Illuminate\Http\Request;
@@ -282,6 +283,14 @@ Route::controller(WalletController::class)->group(function() {
         Route::get('get/{skip}/{take}','get')->name('wallet.get');
         Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('wallet.getByUserId');
         Route::get('getById/{id}','getById')->name('wallet.getById');
+    });
+});
+
+Route::controller(UserProfileController::class)->group(function() {
+    Route::prefix('userProfile')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('userProfile.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('userProfile.getByUserId');
+        Route::get('getById/{id}','getById')->name('userProfile.getById');
     });
 });
 

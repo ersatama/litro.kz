@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: deserunt
+        example: sunt
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: aut
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -57,21 +57,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: ea
+        example: ut
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: qui
+        example: animi
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: tempore
+        example: perferendis
         type: string
         custom: []
     queryParameters: []
@@ -103,21 +103,21 @@ endpoints:
         name: carModelId
         description: ''
         required: true
-        example: corporis
+        example: ducimus
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: eius
+        example: et
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quam
+        example: at
         type: string
         custom: []
     queryParameters: []
@@ -149,7 +149,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: officiis
+        example: dolor
         type: string
         custom: []
     queryParameters: []
