@@ -32,5 +32,6 @@ class CardContract extends Contract
         self::ICON_SELECTED,
         self::IMG,
         self::COLORS,
+        self::ALLOWED_CHOOSEABLE_SERVICES
     ];
 }

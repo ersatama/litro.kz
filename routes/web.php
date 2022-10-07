@@ -722,6 +722,15 @@ Route::get('/db', function () {
         ]);
     }
 
+    $table  =   'roles';
+    echo $table.'<br>';
+    $carBrands  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($carBrands as &$value) {
+        DB::table('roles')->insert([
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::NAME    =>  $value->{Contract::NAME},
+        ]);
+    }
 
     $table  =   'wallet_records';
     echo $table.'<br>';
@@ -886,6 +895,7 @@ Route::get('/db', function () {
         $data_info  =   [
             Contract::ID    =>  $value->{Contract::ID},
             Contract::IMAGE_ID  =>  $image_id,
+            Contract::POSITION  =>  $value->{Contract::POSITION},
             Contract::TITLE =>  $title,
             Contract::TITLE_KZ =>  $title_kz,
             Contract::TITLE_EN =>  $title_en,
@@ -981,7 +991,7 @@ Route::get('/db', function () {
             Contract::REFERRAL_PRICE_MONTHLY    =>  $value->referal_price_monthly,
             Contract::REFERRAL_PRICE_MONTHLY_FIRST_MONTH    =>  $value->referal_price_monthly_first_month,
             Contract::IS_FOR_CORPORATE_USE  =>  $value->is_for_corporate_use,
-
+            Contract::ALLOWED_CHOOSEABLE_SERVICES   =>  $value->allowed_chooseable_services,
             Contract::CREATED_AT    =>  conv($value->created_at),
             Contract::UPDATED_AT    =>  conv($value->updated_at),
             Contract::DELETED_AT    =>  conv($value->deleted_at)
@@ -1704,7 +1714,7 @@ Route::get('/db', function () {
             $img   =   DB::connection('pgsql')->select('select * from images where id='.$value->additional_image_id);
             if (does_url_exists($img[0]->path)) {
                 $info   =   pathinfo($img[0]->path);
-                file_put_contents($info['basename'],file_get_contents($img[0]->path));
+                //file_put_contents($info['basename'],file_get_contents($img[0]->path));
                 $additional_image_id   =   img_convert($info['filename']);
             }
         }
@@ -1910,7 +1920,7 @@ Route::get('/db', function () {
     foreach ($values as &$value) {
         if (does_url_exists($value->path)) {
             $info   =   pathinfo($value->path);
-            file_put_contents($info['basename'],file_get_contents($value->path));
+            //file_put_contents($info['basename'],file_get_contents($value->path));
             $image_id   =   img_convert($value->name);
 
             $data_info  =   [
@@ -1931,7 +1941,7 @@ Route::get('/db', function () {
     foreach ($values as &$value) {
         if (does_url_exists($value->path)) {
             $info   =   pathinfo($value->path);
-            file_put_contents($info['basename'],file_get_contents($value->path));
+            //file_put_contents($info['basename'],file_get_contents($value->path));
             $image_id   =   img_convert($value->name);
             $data_info  =   [
                 Contract::ID    =>  $value->{Contract::ID},
@@ -2020,7 +2030,7 @@ Route::get('/add', function() {
     foreach ($values as &$value) {
         if (does_url_exists($value->path)) {
             $info   =   pathinfo($value->path);
-            file_put_contents($info['basename'],file_get_contents($value->path));
+            //file_put_contents($info['basename'],file_get_contents($value->path));
             $image_id   =   img_convert($value->name);
             $data_info  =   [
                 Contract::ID    =>  $value->{Contract::ID},

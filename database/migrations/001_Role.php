@@ -1,7 +1,7 @@
 <?php
 
-use App\Domain\Contracts\CarCategoryContract;
 use App\Domain\Contracts\Contract;
+use App\Domain\Contracts\RoleContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,13 +15,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create(CarCategoryContract::TABLE, function (Blueprint $table) {
+        Schema::create(RoleContract::TABLE, function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger(Contract::IMAGE_ID)->nullable();
-            $table->unsignedBigInteger(Contract::POSITION)->nullable();
-            $table->string(Contract::TITLE)->nullable();
-            $table->string(Contract::TITLE_KZ)->nullable();
-            $table->string(Contract::TITLE_EN)->nullable();
+            $table->string(Contract::NAME)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists(CarCategoryContract::TABLE);
+        Schema::dropIfExists(RoleContract::TABLE);
     }
 };

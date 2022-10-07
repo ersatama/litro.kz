@@ -4,6 +4,7 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const ALLOWED_CHOOSEABLE_SERVICES   =   'allowed_chooseable_services';
     const AUTO_PART_ID  =   'auto_part_id';
     const STOCK_ID  =   'stock_id';
     const PURCHASE_DATE =   'purchase_date';
@@ -25,6 +26,7 @@ abstract class Contract
     const LAWYER_SERVICE    =   'lawyer_service';
     const CITY  =   'city';
     const CARD  =   'card';
+    const ROLE  =   'role';
     const PARTNER   =   'partner';
     const PLACE =   'place';
     const SERVICE   =   'service';
@@ -161,7 +163,7 @@ abstract class Contract
     const VALUE =   'value';
     const IS_CHOOSEABLE =   'is_chooseable';
     const C_TO  =   'c_to';
-    const C_FROM    =   'c_form';
+    const C_FROM    =   'c_from';
     const LEGAL_PERSON  =   'legal_person';
     const CURRENT_SYNCED    =   'current_synced';
     const YEAR  =   'year';

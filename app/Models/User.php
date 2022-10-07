@@ -29,4 +29,9 @@ class User  extends \TCG\Voyager\Models\User
     {
         return $this->belongsTo(City::class);
     }
+
+    public function role(): BelongsTo
+    {
+        return $this->belongsTo(Role::class);
+    }
 }

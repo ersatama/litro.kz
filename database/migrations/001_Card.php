@@ -43,6 +43,7 @@ return new class extends Migration
             $table->string(Contract::REFERRAL_PRICE_MONTHLY)->nullable();
             $table->string(Contract::REFERRAL_PRICE_MONTHLY_FIRST_MONTH)->nullable();
             $table->boolean(Contract::IS_FOR_CORPORATE_USE)->default(true);
+            $table->unsignedInteger(Contract::ALLOWED_CHOOSEABLE_SERVICES)->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->index(Contract::CARD_CATEGORY_ID);
