@@ -32,6 +32,7 @@ return new class extends Migration
             $table->unsignedInteger(Contract::BALANCE)->nullable();
             $table->unsignedSmallInteger(Contract::RANK)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
