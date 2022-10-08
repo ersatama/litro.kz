@@ -319,9 +319,8 @@ abstract class Contract
         foreach (self::REMOVABLE as &$value) {
             unset($arr[$value]);
         }
-        unset($value);
-        foreach ($arr as $key => $value) {
-            if (!$value) {
+        foreach ($arr as $key => $val) {
+            if (is_null($val)) {
                 unset($arr[$key]);
             }
         }
