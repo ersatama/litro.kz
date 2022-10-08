@@ -4,6 +4,11 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const SUCCESS   =   'success';
+    const PSW   =   'psw';
+    const LOGIN =   'login';
+    const MES   =   'mes';
+    const PHONES    =   'phones';
     const ALLOWED_CHOOSEABLE_SERVICES   =   'allowed_chooseable_services';
     const AUTO_PART_ID  =   'auto_part_id';
     const STOCK_ID  =   'stock_id';
@@ -170,6 +175,7 @@ abstract class Contract
     const CURRENT_SYNCED    =   'current_synced';
     const YEAR  =   'year';
     const AVERAGE_PRICE =   'average_price';
+    const _AVERAGE_PRICE    =   'averagePrice';
     const CAR_MODEL_ID  =   'car_model_id';
     const COLORS    =   'colors';
     const IMAGE =   'image';
