@@ -18,6 +18,6 @@ class ImageResource extends JsonResource
         foreach (ImageContract::FILLABLE as &$value) {
             $arr[$value]    =   $this->{$value};
         }
-        return $arr;
+        return Contract::CLEAR($arr);
     }
 }

@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: omnis
+        example: enim
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quis
+        example: nostrum
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: paymentId
         description: ''
         required: true
-        example: nihil
+        example: non
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: natus
+        example: earum
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: id
+        example: sed
         type: string
         custom: []
     queryParameters: []
@@ -105,21 +105,21 @@ endpoints:
         name: walletId
         description: ''
         required: true
-        example: ut
+        example: delectus
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: nihil
+        example: ut
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: iure
+        example: quia
         type: string
         custom: []
     queryParameters: []
@@ -151,7 +151,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: accusamus
+        example: earum
         type: string
         custom: []
     queryParameters: []

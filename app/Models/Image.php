@@ -25,17 +25,17 @@ class Image extends Model
 
     public function getPngAttribute($value): string
     {
-        return asset(ImageHelper::PATH.$value);
+        return asset(config('image.public_path').$value);
     }
 
     public function getJpgAttribute($value): string
     {
-        return asset(ImageHelper::PATH.$value);
+        return asset(config('image.public_path').$value);
     }
 
     public function getWebpAttribute($value): string
     {
-        return asset(ImageHelper::PATH.$value);
+        return asset(config('image.public_path').$value);
     }
 
 }

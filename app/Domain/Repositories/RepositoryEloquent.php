@@ -6,6 +6,15 @@ use App\Domain\Contracts\Contract;
 
 trait RepositoryEloquent
 {
+
+    public function getByCarModelIdAndYear($carModelId,$year)
+    {
+        return $this->model::where([
+            Contract::CAR_MODEL_ID  =>  $carModelId,
+            Contract::YEAR  =>  $year
+        ])->first();
+    }
+
     public function getByAutoPartId($autoPartId,$skip,$take)
     {
         return $this->model::where(Contract::AUTO_PART_ID,$autoPartId)

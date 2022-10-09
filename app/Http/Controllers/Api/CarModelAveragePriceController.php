@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
 use App\Domain\Contracts\Contract;
+use App\Domain\Helpers\Kolesa;
 use App\Domain\Services\CarModelAveragePriceService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CarModelAveragePrice\CarModelAveragePriceCollection;
@@ -16,7 +17,7 @@ use Illuminate\Http\Response;
 class CarModelAveragePriceController extends Controller
 {
     protected CarModelAveragePriceService $carModelAveragePriceService;
-    public function __construct(CarModelAveragePriceService $carModelAveragePriceService)
+    public function __construct(CarModelAveragePriceService $carModelAveragePriceService, Kolesa $kolesa)
     {
         $this->carModelAveragePriceService  =   $carModelAveragePriceService;
     }
@@ -45,6 +46,19 @@ class CarModelAveragePriceController extends Controller
             Contract::COUNT =>  $this->carModelAveragePriceService->carModelAveragePriceRepository->count([Contract::CAR_MODEL_ID => $carModelId]),
             Contract::DATA  =>  new CarModelAveragePriceCollection($this->carModelAveragePriceService->carModelAveragePriceRepository->getByCarModelId($carModelId,$skip,$take))
         ],200);
+    }
+
+    /**
+     * Получить данные через CarModelID and Year - CarModelAveragePrice
+     *
+     * @group CarModelAveragePrice - АвтомобильМодельСредняяЦена
+     */
+    public function getByCarModelIdAndYear($carModelId,$year): CarModelAveragePriceResource|Response|Application|ResponseFactory
+    {
+        if ($carModel = $this->carModelAveragePriceService->carModelAveragePriceRepository->getByCarModelIdAndYear($carModelId,$year)) {
+            return new CarModelAveragePriceResource($carModel);
+        }
+        return response(ErrorContract::ERROR_NOT_FOUND,404);
     }
 
     /**

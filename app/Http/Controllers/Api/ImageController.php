@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
 use App\Domain\Contracts\Contract;
+use App\Domain\Helpers\Image;
+use App\Domain\Requests\Image\ImageCreateRequest;
 use App\Domain\Services\ImageService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Image\ImageCollection;
@@ -12,6 +14,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Validation\ValidationException;
 
 class ImageController extends Controller
 {
@@ -19,6 +22,18 @@ class ImageController extends Controller
     public function __construct(ImageService $imageService)
     {
         $this->imageService =   $imageService;
+    }
+
+    /**
+     * @throws ValidationException
+     */
+    public function create(ImageCreateRequest $imageCreateRequest, Image $image): ImageResource
+    {
+        $data   =   $imageCreateRequest->checked();
+        return new ImageResource($this->imageService->imageRepository->create(array_merge(
+            $image->save($data[Contract::IMAGE]),
+            $data
+        )));
     }
 
     /**

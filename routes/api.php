@@ -535,6 +535,7 @@ Route::controller(CarModelAveragePriceController::class)->group(function() {
     Route::prefix('carModelAveragePrice')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('carModelAveragePrice.get');
         Route::get('getByCarModelId/{carModelId}/{skip}/{take}','getByCarModelId')->name('carModelAveragePrice.getByCarModelId');
+        Route::get('getByCarModelIdAndYear/{carModelId}/{year}','getByCarModelIdAndYear')->name('carModelAveragePrice.getByCarModelIdAndYear');
         Route::get('getById/{id}','getById')->name('carModelAveragePrice.getById');
     });
 });
@@ -548,10 +549,19 @@ Route::controller(CardController::class)->group(function() {
 
 Route::controller(ImageController::class)->group(function() {
     Route::prefix('image')->group(function() {
+        Route::post('create','create')->name('image.create');
         Route::get('get/{skip}/{take}','get')->name('image.get');
         Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('image.getByUserId');
         Route::get('getById/{id}','getById')->name('image.getById');
     });
+});
+
+
+
+Route::post('file',function (Request $request, \App\Domain\Helpers\Image $image) {
+    $img = $image->save($request->file('img'));
+    echo '<pre>';
+    print_r($img);
 });
 
 Route::controller(AutoPartImageController::class)->group(function() {
