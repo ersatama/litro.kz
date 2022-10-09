@@ -25,6 +25,9 @@ class ImageController extends Controller
     }
 
     /**
+     * Создать - Image
+     *
+     * @group Image - Картинка
      * @throws ValidationException
      */
     public function create(ImageCreateRequest $imageCreateRequest, Image $image): ImageResource
