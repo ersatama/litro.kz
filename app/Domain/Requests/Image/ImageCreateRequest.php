@@ -12,7 +12,7 @@ class ImageCreateRequest extends MainRequest
     {
         return [
             Contract::USER_ID   =>  'nullable|exists:users,id',
-            Contract::IMAGE =>  'required|file|max:10240',
+            Contract::IMAGE =>  'required|file|max:10240|mimes:jpg,webp,png',
         ];
     }
 
