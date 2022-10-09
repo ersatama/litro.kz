@@ -298,6 +298,8 @@ Route::controller(UserController::class)->group(function() {
     Route::prefix('user')->group(function() {
         Route::get('getByPhoneAndPassword/{phone}/{password}','getByPhoneAndPassword')
             ->name('user.getByPhoneAndPassword');
+        Route::get('getByEmailAndPassword/{email}/{password}','getByEmailAndPassword')
+            ->name('user.getByEmailAndPassword');
         Route::get('get/{skip}/{take}','get')->name('user.get');
         Route::get('getById/{id}','getById')->name('user.getById');
     });
@@ -554,14 +556,6 @@ Route::controller(ImageController::class)->group(function() {
         Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('image.getByUserId');
         Route::get('getById/{id}','getById')->name('image.getById');
     });
-});
-
-
-
-Route::post('file',function (Request $request, \App\Domain\Helpers\Image $image) {
-    $img = $image->save($request->file('img'));
-    echo '<pre>';
-    print_r($img);
 });
 
 Route::controller(AutoPartImageController::class)->group(function() {

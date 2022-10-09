@@ -200,6 +200,11 @@ trait RepositoryEloquent
         return $this->model::create($data);
     }
 
+    public function update($id,$data): void
+    {
+        $this->model::where(Contract::ID,$id)->update($data);
+    }
+
     public function all()
     {
         return $this->model::get();

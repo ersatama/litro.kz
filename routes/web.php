@@ -2044,7 +2044,3 @@ Route::get('/add', function() {
         }
     }
 });
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});

@@ -108,6 +108,7 @@ abstract class Contract
     const USER_TO   =   'user_to';
     const USER_FROM =   'user_from';
     const PASSWORD  =   'password';
+    const HASHED    =   'hashed';
     const KEY   =   'key';
     const CATEGORY  =   'category';
     const ORDER_ID  =   'order_id';

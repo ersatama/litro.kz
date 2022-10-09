@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
 use App\Domain\Contracts\Contract;
+use App\Domain\Helpers\OldPassword;
 use App\Domain\Services\UserService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\User\UserCollection;
@@ -17,9 +18,11 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     protected UserService $userService;
-    public function __construct(UserService $userService)
+    protected OldPassword $oldPassword;
+    public function __construct(UserService $userService, OldPassword $oldPassword)
     {
         $this->userService  =   $userService;
+        $this->oldPassword  =   $oldPassword;
     }
 
     /**
@@ -40,10 +43,36 @@ class UserController extends Controller
      *
      * @group User - Пользователь
      */
-    public function getByPhoneAndPassword($phone,$password): Response|Application|ResponseFactory|UserResource
+    public function getByPhoneAndPassword($phone, $password): Response|Application|ResponseFactory|UserResource
     {
         if ($model = $this->userService->userRepository->getByPhone($phone)) {
+            if (Hash::check($password,$model->{Contract::PASSWORD})) {
+                return new UserResource($model);
+            } elseif ($this->oldPassword->check($password,$model->{Contract::PASSWORD})) {
+                $this->userService->userRepository->update($model->{Contract::ID},[
+                    Contract::PASSWORD  =>  $password
+                ]);
+                return new UserResource($model);
+            }
+            return response(ErrorContract::FAILED_AUTH,401);
+        }
+        return response(ErrorContract::ERROR_NOT_FOUND,404);
+    }
+
+    /**
+     * Получить данные через Email Password - User
+     *
+     * @group User - Пользователь
+     */
+    public function getByEmailAndPassword($email,$password): Response|Application|ResponseFactory|UserResource
+    {
+        if ($model = $this->userService->userRepository->getByEmail($email)) {
             if (Hash::make($password,$model->{Contract::PASSWORD})) {
+                return new UserResource($model);
+            } elseif ($this->oldPassword->check($password,$model->{Contract::PASSWORD})) {
+                $this->userService->userRepository->update($model->{Contract::ID},[
+                    Contract::PASSWORD  =>  $password
+                ]);
                 return new UserResource($model);
             }
             return response(ErrorContract::FAILED_AUTH,401);
