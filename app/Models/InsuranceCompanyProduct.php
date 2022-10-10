@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class InsuranceCompanyProduct extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
     protected $table    =   InsuranceCompanyProductContract::TABLE;
     protected $fillable =   InsuranceCompanyProductContract::FILLABLE;

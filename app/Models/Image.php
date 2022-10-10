@@ -13,6 +13,7 @@ use App\Domain\Helpers\Image as ImageHelper;
 
 class Image extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
     protected $table    =   ImageContract::TABLE;
     protected $fillable =   ImageContract::FILLABLE;

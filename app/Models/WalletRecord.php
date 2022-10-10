@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class WalletRecord extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
     protected $table    =   WalletRecordContract::TABLE;
     protected $fillable =   WalletRecordContract::FILLABLE;

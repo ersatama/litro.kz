@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MoneyOperationType extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
 
     protected $table    =   MoneyOperationTypeContract::TABLE;

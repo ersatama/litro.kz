@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class InsuranceSelectOption extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
 
     protected $table    =   InsuranceSelectOptionContract::TABLE;

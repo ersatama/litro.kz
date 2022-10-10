@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Currency extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
 
     protected $table    =   CurrencyContract::TABLE;

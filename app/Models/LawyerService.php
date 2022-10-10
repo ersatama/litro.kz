@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class LawyerService extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
     protected $table    =   LawyerServiceContract::TABLE;
     protected $fillable =   LawyerServiceContract::FILLABLE;

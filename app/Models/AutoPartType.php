@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class AutoPartType extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
 
     protected $table    =   AutoPartTypeContract::TABLE;
