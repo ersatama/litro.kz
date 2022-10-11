@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Domain\Contracts\Contract;
 use App\Http\Requests\UserRequest;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -16,97 +18,90 @@ class UserCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    /**
-     * Configure the CrudPanel object. Apply settings to all operations.
-     * 
-     * @return void
-     */
-    public function setup()
+    public function setup(): void
     {
-        CRUD::setModel(\App\Models\User::class);
+        CRUD::setModel(User::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user');
-        CRUD::setEntityNameStrings('user', 'users');
+        CRUD::setEntityNameStrings(Contract::T(Contract::USER), Contract::T(Contract::USERS));
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     * 
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
-    protected function setupListOperation()
+    protected function setupShowOperation(): void
     {
-        CRUD::column('role_id');
-        CRUD::column('city_id');
-        CRUD::column('bitrix_id');
-        CRUD::column('phone');
-        CRUD::column('email');
-        CRUD::column('iin');
-        CRUD::column('first_name');
-        CRUD::column('last_name');
-        CRUD::column('patronymic');
-        CRUD::column('birthdate');
-        CRUD::column('password');
-        CRUD::column('is_blocked');
-        CRUD::column('gender');
-        CRUD::column('is_vlife_user');
-        CRUD::column('vlife_user_id');
-        CRUD::column('promo_code');
-        CRUD::column('bonus');
-
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
-         */
+        $this->extracted();
+        CRUD::column(Contract::GENDER)->label(Contract::T(Contract::GENDER));
     }
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
-    protected function setupCreateOperation()
+    protected function setupListOperation(): void
+    {
+        $this->extracted();
+        CRUD::column(Contract::GENDER)->label(Contract::T(Contract::GENDER))->type(Contract::SELECT_FROM_ARRAY)->options([
+            Contract::MALE  =>  Contract::T(Contract::MALE),
+            Contract::FEMALE    =>  Contract::T(Contract::FEMALE),
+        ]);
+        CRUD::column(Contract::IS_VLIFE_USER)->label(Contract::T(Contract::IS_VLIFE_USER))->type(Contract::SELECT_FROM_ARRAY)->options([
+            TRUE    =>  Contract::T(Contract::YES),
+            FALSE   =>  Contract::T(Contract::NO),
+        ]);
+        CRUD::column(Contract::VLIFE_USER_ID)->label(Contract::T(Contract::VLIFE_USER_ID));
+        CRUD::column(Contract::PROMO_CODE)->label(Contract::T(Contract::PROMO_CODE));
+        CRUD::column(Contract::BONUS)->label(Contract::T(Contract::BONUS));
+    }
+
+    protected function setupCreateOperation(): void
     {
         CRUD::setValidation(UserRequest::class);
 
-        CRUD::field('role_id');
-        CRUD::field('city_id');
-        CRUD::field('bitrix_id');
-        CRUD::field('phone');
-        CRUD::field('email');
-        CRUD::field('iin');
-        CRUD::field('first_name');
-        CRUD::field('last_name');
-        CRUD::field('patronymic');
-        CRUD::field('birthdate');
-        CRUD::field('password');
-        CRUD::field('is_blocked');
-        CRUD::field('gender');
-        CRUD::field('is_vlife_user');
-        CRUD::field('vlife_user_id');
-        CRUD::field('promo_code');
-        CRUD::field('bonus');
+        CRUD::field(Contract::ROLE_ID)->label(Contract::T(Contract::ROLE));
+        CRUD::field(Contract::CITY_ID)->label(Contract::T(Contract::CITY));
+        CRUD::field(Contract::BITRIX_ID)->label(Contract::T(Contract::BITRIX));
+        CRUD::field(Contract::PHONE)->label(Contract::T(Contract::PHONE));
+        CRUD::field(Contract::EMAIL)->label(Contract::T(Contract::EMAIL));
+        CRUD::field(Contract::IIN)->label(Contract::T(Contract::IIN))->type(Contract::NUMBER);
+        CRUD::field(Contract::FIRST_NAME)->label(Contract::T(Contract::FIRST_NAME));
+        CRUD::field(Contract::LAST_NAME)->label(Contract::T(Contract::LAST_NAME));
+        CRUD::field(Contract::PATRONYMIC)->label(Contract::T(Contract::PATRONYMIC));
+        CRUD::field(Contract::BIRTHDATE)->label(Contract::T(Contract::BIRTHDATE))->type(Contract::DATE);
+        CRUD::field(Contract::PASSWORD)->label(Contract::T(Contract::PASSWORD));
+        CRUD::field(Contract::IS_BLOCKED)->label(Contract::T(Contract::IS_BLOCKED))->type(Contract::SELECT_FROM_ARRAY)->options([
+            TRUE    =>  Contract::T(Contract::YES),
+            FALSE   =>  Contract::T(Contract::NO),
+        ])->default(FALSE);
+        CRUD::field(Contract::GENDER)->label(Contract::T(Contract::GENDER))->type(Contract::SELECT_FROM_ARRAY)->options([
+            Contract::MALE  =>  Contract::T(Contract::MALE),
+            Contract::FEMALE    =>  Contract::T(Contract::FEMALE),
+        ])->default(Contract::MALE);
+        CRUD::field(Contract::IS_VLIFE_USER)->label(Contract::T(Contract::IS_VLIFE_USER))->type(Contract::SELECT_FROM_ARRAY)->options([
+            TRUE    =>  Contract::T(Contract::YES),
+            FALSE   =>  Contract::T(Contract::NO),
+        ])->default(FALSE);
+        CRUD::field(Contract::VLIFE_USER_ID)->label(Contract::T(Contract::VLIFE_USER_ID));
+        CRUD::field(Contract::PROMO_CODE)->label(Contract::T(Contract::PROMO_CODE));
+        CRUD::field(Contract::BONUS)->label(Contract::T(Contract::BONUS));
+    }
 
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
-         */
+    protected function setupUpdateOperation(): void
+    {
+        $this->setupCreateOperation();
     }
 
     /**
-     * Define what happens when the Update operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */
-    protected function setupUpdateOperation()
+    protected function extracted(): void
     {
-        $this->setupCreateOperation();
+        CRUD::column(Contract::ID)->label(Contract::T(Contract::ID))->type(Contract::NUMBER);
+        CRUD::column(Contract::ROLE_ID)->label(Contract::T(Contract::ROLE));
+        CRUD::column(Contract::CITY_ID)->label(Contract::T(Contract::CITY));
+        CRUD::column(Contract::BITRIX_ID)->label(Contract::T(Contract::BITRIX));
+        CRUD::column(Contract::PHONE)->label(Contract::T(Contract::PHONE));
+        CRUD::column(Contract::EMAIL)->label(Contract::T(Contract::EMAIL));
+        CRUD::column(Contract::IIN)->label(Contract::T(Contract::IIN))->type(Contract::NUMBER);
+        CRUD::column(Contract::FIRST_NAME)->label(Contract::T(Contract::FIRST_NAME));
+        CRUD::column(Contract::LAST_NAME)->label(Contract::T(Contract::LAST_NAME));
+        CRUD::column(Contract::PATRONYMIC)->label(Contract::T(Contract::PATRONYMIC));
+        CRUD::column(Contract::BIRTHDATE)->label(Contract::T(Contract::BIRTHDATE));
+        CRUD::column(Contract::IS_BLOCKED)->label(Contract::T(Contract::IS_BLOCKED));
     }
 }

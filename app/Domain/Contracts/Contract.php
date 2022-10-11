@@ -4,6 +4,16 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const USER_CARS =   'user_cars';
+    const USER_CAR  =   'user_car';
+    const USER_PROFILES =   'user_profiles';
+    const USER_PROFILE  =   'user_profile';
+    const USER_IMAGES   =   'user_images';
+    const USER_IMAGE    =   'user_image';
+    const REQUIRED  =   'required';
+    const NO    =   'no';
+    const YES   =   'yes';
+    const CONTRACT  =   'contract';
     const SUCCESS   =   'success';
     const PSW   =   'psw';
     const LOGIN =   'login';
@@ -32,11 +42,14 @@ abstract class Contract
     const CITY  =   'city';
     const CARD  =   'card';
     const ROLE  =   'role';
+    const ROLES =   'roles';
+    const BITRIX    =   'bitrix';
     const PARTNER   =   'partner';
     const PLACE =   'place';
     const SERVICE   =   'service';
     const LAWYER    =   'lawyer';
     const USER  =   'user';
+    const USERS =   'users';
     const INSURANCE_COMPANY =   'insurance_company';
     const INSURANCE_CATEGORY    =   'insurance_category';
     const PUBLIC    =   'public';
@@ -101,6 +114,7 @@ abstract class Contract
     const ROLE_ID   =   'role_id';
     const IS_BLOCKED    =   'is_blocked';
     const BIRTHDATE =   'birthdate';
+    const DATE  =   'date';
     const REGISTRATION_CERTIFICATE  =   'registration_certificate';
     const COMMENT   =   'comment';
     const DELTA_BALANCE =   'delta_balance';
@@ -152,6 +166,7 @@ abstract class Contract
     const PAYBOX_ORDER_ID   =   'paybox_order_id';
     const IS_PAID   =   'is_paid';
     const NUMBER    =   'number';
+    const SELECT_FROM_ARRAY =   'select_from_array';
     const REFERRAL_CODE =   'referral_code';
     const PATRONYMIC    =   'patronymic';
     const LAST_NAME =   'last_name';
@@ -180,6 +195,8 @@ abstract class Contract
     const CAR_MODEL_ID  =   'car_model_id';
     const COLORS    =   'colors';
     const IMAGE =   'image';
+    const SELECT    =   'select';
+    const IMAGES    =   'images';
     const BROWSER_IMAGE =   'browser_image';
     const ADDITIONAL_IMAGE  =   'additional_image';
     const NEWS_CATEGORY =   'news_category';
@@ -326,5 +343,9 @@ abstract class Contract
             }
         }
         return $arr;
+    }
+    public static function T($key): string
+    {
+        return __(self::CONTRACT.'.'.$key);
     }
 }

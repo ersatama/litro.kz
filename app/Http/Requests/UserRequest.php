@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Domain\Contracts\Contract;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UserRequest extends FormRequest
@@ -11,7 +12,7 @@ class UserRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         // only allow updates if the user is logged in
         return backpack_auth()->check();
@@ -22,10 +23,18 @@ class UserRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            Contract::ROLE_ID   =>  'required|exists:roles,id',
+            Contract::CITY_ID   =>  'required|exists:cities,id',
+            Contract::PHONE =>  'required|unique:users,phone',
+            Contract::EMAIL =>  'required|unique:users,email',
+            Contract::FIRST_NAME    =>  'required|min:2|max:255',
+            Contract::LAST_NAME =>  'required|min:2|max:255',
+            Contract::BIRTHDATE =>  'required',
+            Contract::PASSWORD  =>  'required|min:8|max:255',
+            Contract::GENDER    =>  'required',
         ];
     }
 
@@ -34,7 +43,7 @@ class UserRequest extends FormRequest
      *
      * @return array
      */
-    public function attributes()
+    public function attributes(): array
     {
         return [
             //
@@ -46,7 +55,7 @@ class UserRequest extends FormRequest
      *
      * @return array
      */
-    public function messages()
+    public function messages(): array
     {
         return [
             //

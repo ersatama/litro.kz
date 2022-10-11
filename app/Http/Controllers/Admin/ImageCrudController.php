@@ -2,62 +2,54 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Domain\Contracts\Contract;
 use App\Http\Requests\ImageRequest;
+use App\Models\Image;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
  * Class ImageCrudController
  * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
+ * @property-read CrudPanel $crud
  */
 class ImageCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
-    public function setup()
+    public function setup(): void
     {
-        CRUD::setModel(\App\Models\Image::class);
+        CRUD::setModel(Image::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/image');
-        CRUD::setEntityNameStrings('image', 'images');
+        CRUD::setEntityNameStrings(Contract::T(Contract::IMAGE), Contract::T(Contract::IMAGES));
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     * 
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
-    protected function setupListOperation()
+    protected function setupShowOperation(): void
     {
-        CRUD::column('user_id');
-        CRUD::column('png');
-        CRUD::column('webp');
-        CRUD::column('jpg');
-
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
-         */
+        CRUD::column(Contract::ID)->label(Contract::T(Contract::ID))->type(Contract::NUMBER);
+        CRUD::column(Contract::USER_ID)->label(Contract::T(Contract::USER));
+        CRUD::column(Contract::PNG)->type(Contract::IMAGE);
+        CRUD::column(Contract::WEBP)->type(Contract::IMAGE);
+        CRUD::column(Contract::JPG)->type(Contract::IMAGE);
     }
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
-    protected function setupCreateOperation()
+    protected function setupListOperation(): void
+    {
+        CRUD::column(Contract::ID)->label(Contract::T(Contract::ID))->type(Contract::NUMBER);
+        CRUD::column(Contract::USER_ID)->label(Contract::T(Contract::USER));
+        CRUD::column(Contract::PNG)->type(Contract::IMAGE);
+        CRUD::column(Contract::WEBP)->type(Contract::IMAGE);
+        CRUD::column(Contract::JPG)->type(Contract::IMAGE);
+    }
+
+    protected function setupCreateOperation(): void
     {
         CRUD::setValidation(ImageRequest::class);
 
@@ -65,21 +57,9 @@ class ImageCrudController extends CrudController
         CRUD::field('png');
         CRUD::field('webp');
         CRUD::field('jpg');
-
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
-         */
     }
 
-    /**
-     * Define what happens when the Update operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
-    protected function setupUpdateOperation()
+    protected function setupUpdateOperation(): void
     {
         $this->setupCreateOperation();
     }
