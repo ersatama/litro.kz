@@ -1,12 +1,12 @@
-name: 'Payment - Платеж'
+name: PartnerCard
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/payment/get/{skip}/{take}'
+    uri: 'api/partnerCard/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - Payment'
+      title: 'Получить список - PartnerCard'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: id
+        example: est
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: laborum
+        example: voluptas
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":199,"data":[]}'
+        content: '{"count":13,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/payment/getByUserId/{userId}/{skip}/{take}'
+    uri: 'api/partnerCard/getByCardId/{cardId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через UserID - Payment'
+      title: 'Получить данные через CardID - PartnerCard'
       description: ''
       authenticated: false
       custom: []
@@ -53,25 +53,25 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      userId:
-        name: userId
+      cardId:
+        name: cardId
         description: ''
         required: true
-        example: a
+        example: laudantium
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: velit
+        example: ducimus
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: exercitationem
+        example: doloribus
         type: string
         custom: []
     queryParameters: []
@@ -89,9 +89,55 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/payment/getById/{id}'
+    uri: 'api/partnerCard/getByPartnerId/{partnerId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через ID - Payment'
+      title: 'Получить данные через PartnerID - PartnerCard'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      partnerId:
+        name: partnerId
+        description: ''
+        required: true
+        example: quia
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: non
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: non
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/partnerCard/getById/{id}'
+    metadata:
+      title: 'Получить данные через ID - PartnerCard'
       description: ''
       authenticated: false
       custom: []
@@ -103,7 +149,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: sit
+        example: cum
         type: string
         custom: []
     queryParameters: []

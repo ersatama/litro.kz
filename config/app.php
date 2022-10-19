@@ -275,6 +275,8 @@ return [
         App\Providers\Repositories\AutoPartImageRepositoryProvider::class,
         App\Providers\Repositories\RoleRepositoryProvider::class,
         App\Providers\Repositories\UserProfileRepositoryProvider::class,
+        App\Providers\Repositories\NotificationUserRepositoryProvider::class,
+        App\Providers\Repositories\NotificationRepositoryProvider::class,
     ],
 
     /*

@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: omnis
+        example: sint
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: laborum
+        example: reiciendis
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: lawyerId
         description: ''
         required: true
-        example: dolorum
+        example: amet
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: alias
+        example: nesciunt
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ullam
+        example: officiis
         type: string
         custom: []
     queryParameters: []
@@ -105,7 +105,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: est
+        example: ex
         type: string
         custom: []
     queryParameters: []

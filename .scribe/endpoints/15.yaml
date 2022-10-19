@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: doloribus
+        example: omnis
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: velit
+        example: voluptas
         type: string
         custom: []
     queryParameters: []

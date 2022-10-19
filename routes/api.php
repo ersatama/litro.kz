@@ -44,6 +44,8 @@ use App\Http\Controllers\Api\MoneyOperationController;
 use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\NotificationController;
+use App\Http\Controllers\Api\NotificationUserController;
 use App\Http\Controllers\Api\OrderCardController;
 use App\Http\Controllers\Api\OrderCardOldController;
 use App\Http\Controllers\Api\OrderServiceController;
@@ -266,6 +268,22 @@ Route::controller(InsuranceCompanyController::class)->group(function() {
     Route::prefix('insuranceCompany')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('insuranceCompany.get');
         Route::get('getById/{id}','getById')->name('insuranceCompany.getById');
+    });
+});
+
+Route::controller(NotificationController::class)->group(function() {
+    Route::prefix('notification')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('notification.get');
+        Route::get('getByCityId/{userId}/{skip}/{take}','getByCityId')->name('notification.getByCityId');
+        Route::get('getById/{id}','getById')->name('notification.getById');
+    });
+});
+
+Route::controller(NotificationUserController::class)->group(function() {
+    Route::prefix('notificationUser')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('notificationUser.get');
+        Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('notificationUser.getByUserId');
+        Route::get('getById/{id}','getById')->name('notificationUser.getById');
     });
 });
 

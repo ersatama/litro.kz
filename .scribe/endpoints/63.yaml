@@ -1,12 +1,12 @@
-name: 'Service - Сервис'
+name: SPartnerReceivedService
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/service/get/{skip}/{take}'
+    uri: 'api/sPartnerReceivedService/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - Service'
+      title: 'Получить список - SPartnerReceivedService'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: ut
+        example: saepe
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: dolorum
+        example: autem
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":171,"data":[]}'
+        content: '{"count":18,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,55 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/service/getById/{id}'
+    uri: 'api/sPartnerReceivedService/getByUserId/{userId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через ID - Service'
+      title: 'Получить данные через UserID - SPartnerReceivedService'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      userId:
+        name: userId
+        description: ''
+        required: true
+        example: dolorem
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: est
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: minus
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/sPartnerReceivedService/getById/{id}'
+    metadata:
+      title: 'Получить данные через ID - SPartnerReceivedService'
       description: ''
       authenticated: false
       custom: []
@@ -57,7 +103,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: adipisci
+        example: in
         type: string
         custom: []
     queryParameters: []

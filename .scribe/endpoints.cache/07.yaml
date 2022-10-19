@@ -20,7 +20,7 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: tempora
+        example: fuga
         type: string
         custom: []
       take:

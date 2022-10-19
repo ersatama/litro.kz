@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: amet
+        example: at
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: sint
+        example: voluptas
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":753,"data":[]}'
+        content: '{"count":761,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -57,21 +57,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: et
+        example: laborum
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: voluptatibus
+        example: vero
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: eum
+        example: consequuntur
         type: string
         custom: []
     queryParameters: []
@@ -103,7 +103,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: est
+        example: provident
         type: string
         custom: []
     queryParameters: []
@@ -117,4 +117,35 @@ endpoints:
           content-type: application/json
           access-control-allow-origin: '*'
         description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/image/create
+    metadata:
+      title: 'Создать - Image'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      user_id:
+        name: user_id
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      image:
+        name: image
+        description: 'Must be a file. validation.max.'
+        required: true
+        example: null
+        type: file
+        custom: []
+    responses: []
     responseFields: []

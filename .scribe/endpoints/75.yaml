@@ -1,12 +1,51 @@
-name: UserImage
+name: 'User - Пользователь'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/userImage/get/{skip}/{take}'
+    uri: 'api/user/getByPhoneAndPassword/{phone}/{password}'
     metadata:
-      title: 'Получить список - UserImage'
+      title: 'Получить данные через Phone Password - User'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: molestias
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: enim
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/user/get/{skip}/{take}'
+    metadata:
+      title: 'Получить список - User'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +57,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: corporis
+        example: similique
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ea
+        example: voluptates
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +72,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":197,"data":[]}'
+        content: '{"count":64366,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,55 +82,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/userImage/getByUserId/{userId}/{skip}/{take}'
+    uri: 'api/user/getById/{id}'
     metadata:
-      title: 'Получить данные через UserID - UserImage'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      userId:
-        name: userId
-        description: ''
-        required: true
-        example: accusantium
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: nihil
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: tenetur
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":12,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/userImage/getById/{id}'
-    metadata:
-      title: 'Получить данные через ID - UserImage'
+      title: 'Получить данные через ID - User'
       description: ''
       authenticated: false
       custom: []
@@ -103,7 +96,46 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: qui
+        example: recusandae
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/user/getByEmailAndPassword/{email}/{password}'
+    metadata:
+      title: 'Получить данные через Email Password - User'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: recusandae
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: voluptatem
         type: string
         custom: []
     queryParameters: []

@@ -14,6 +14,8 @@
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('driver') }}"><i class="nav-icon las la-id-card-alt"></i> Водители</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('code') }}"><i class="nav-icon las la-sms"></i> Коды подтверждения</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('message') }}"><i class="nav-icon las la-envelope-open"></i> Сообщения</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('notification') }}"><i class="nav-icon las la-bell"></i> Уведомление</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('notification-user') }}"><i class="nav-icon las la-bell"></i> Уведомление пользователи</a></li>
     </ul>
 </li>
 

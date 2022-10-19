@@ -250,6 +250,7 @@ abstract class Contract
     const VIEW_EN   =   'view_en';
     const VIEW_KZ   =   'view_kz';
     const VIEW  =   'view';
+    const VIEWS =   'views';
     const ADDITIONAL_IMAGE_ID   =   'additional_image_id';
     const BROWSER_IMAGE_ID  =   'browser_image_id';
     const IS_CORPORATE  =   'is_corporate';
