@@ -68,6 +68,21 @@ class NotificationController extends Controller
     }
 
     /**
+     * Получить данные через NotificationTypeId - Notification
+     *
+     * @group Notification
+     */
+    public function getByNotificationTypeId($notificationTypeId,$skip,$take): Response|Application|ResponseFactory
+    {
+        return response([
+            Contract::COUNT =>  $this->notificationService->notificationRepository->count([
+                Contract::NOTIFICATION_TYPE_ID  =>  $notificationTypeId,
+            ]),
+            Contract::DATA  =>  new NotificationCollection($this->notificationService->notificationRepository->getByNotificationTypeId($notificationTypeId,$skip,$take))
+        ],200);
+    }
+
+    /**
      * Получить данные через CityID - Notification
      *
      * @group Notification

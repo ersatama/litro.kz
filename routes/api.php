@@ -45,6 +45,7 @@ use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\NotificationController;
+use App\Http\Controllers\Api\NotificationTypeController;
 use App\Http\Controllers\Api\NotificationUserController;
 use App\Http\Controllers\Api\OrderCardController;
 use App\Http\Controllers\Api\OrderCardOldController;
@@ -272,11 +273,19 @@ Route::controller(InsuranceCompanyController::class)->group(function() {
     });
 });
 
+Route::controller(NotificationTypeController::class)->group(function() {
+    Route::prefix('notificationType')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('notificationType.get');
+        Route::get('getById/{id}','getById')->name('notificationType.getById');
+    });
+});
+
 Route::controller(NotificationController::class)->group(function() {
     Route::prefix('notification')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('notification.get');
         Route::get('getByNotificationTypeIdAndCityIdWithUser/{userId}/{notificationTypeId}/{cityId}/{skip}/{take}','getByNotificationTypeIdAndCityIdWithUser')->name('notification.getByNotificationTypeIdAndCityIdWithUser');
         Route::get('getByNotificationTypeIdAndCityId/{notificationTypeId}/{cityId}/{skip}/{take}','getByNotificationTypeIdAndCityId')->name('notification.getByNotificationTypeIdAndCityId');
+        Route::get('getByNotificationType/{notificationTypeId}/{skip}/{take}','getByNotificationTypeId')->name('notification.getByNotificationTypeIdAndCityId');
         Route::get('getByCityId/{cityId}/{skip}/{take}','getByCityId')->name('notification.getByCityId');
         Route::get('getById/{id}','getById')->name('notification.getById');
     });

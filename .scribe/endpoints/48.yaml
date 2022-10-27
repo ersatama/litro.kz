@@ -1,12 +1,12 @@
-name: 'OrderService - ЗаказСервис'
+name: OrderCardOld
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderService/get/{skip}/{take}'
+    uri: 'api/orderCardOld/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - OrderService'
+      title: 'Получить список - OrderCardOld'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: suscipit
+        example: quam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: voluptas
+        example: necessitatibus
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":3348,"data":[]}'
+        content: '{"count":13,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,193 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/orderService/getByUserId/{userId}/{skip}/{take}'
+    uri: 'api/orderCardOld/getById/{id}'
     metadata:
-      title: 'Получить данные через UserID - OrderService'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      userId:
-        name: userId
-        description: ''
-        required: true
-        example: omnis
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: ex
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: ut
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/orderService/getByCityId/{cityId}/{skip}/{take}'
-    metadata:
-      title: 'Получить данные через CityID - OrderService'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      cityId:
-        name: cityId
-        description: ''
-        required: true
-        example: odio
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: nobis
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: hic
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":1913,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/orderService/getByPlaceId/{placeId}/{skip}/{take}'
-    metadata:
-      title: 'Получить данные через PlaceID - OrderService'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      placeId:
-        name: placeId
-        description: ''
-        required: true
-        example: nobis
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: perferendis
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: minus
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/orderService/getByOrderCardId/{orderCardId}/{skip}/{take}'
-    metadata:
-      title: 'Получить данные через OrderCardID - OrderService'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      orderCardId:
-        name: orderCardId
-        description: ''
-        required: true
-        example: aliquid
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: facilis
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: aut
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/orderService/getById/{id}'
-    metadata:
-      title: 'Получить данные через ID - OrderService'
+      title: 'Получить данные через ID - OrderCardOld'
       description: ''
       authenticated: false
       custom: []
@@ -241,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: magni
+        example: voluptatem
         type: string
         custom: []
     queryParameters: []

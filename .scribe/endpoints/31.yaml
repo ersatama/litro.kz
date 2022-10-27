@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: et
+        example: explicabo
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: harum
+        example: distinctio
         type: string
         custom: []
     queryParameters: []

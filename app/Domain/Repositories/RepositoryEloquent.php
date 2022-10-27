@@ -20,6 +20,14 @@ trait RepositoryEloquent
         ])->first();
     }
 
+    public function getByNotificationTypeId($notificationTypeId, $skip, $take)
+    {
+        return $this->model::where(Contract::NOTIFICATION_TYPE_ID, $notificationTypeId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
     public function getByNotificationTypeIdAndCityId($notificationTypeId,$cityId,$skip,$take)
     {
         return $this->model::where([

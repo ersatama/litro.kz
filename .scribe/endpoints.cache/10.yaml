@@ -27,7 +27,7 @@ endpoints:
         name: take
         description: ''
         required: true
-        example: assumenda
+        example: consequuntur
         type: string
         custom: []
     queryParameters: []
@@ -35,7 +35,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":80118,"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -59,21 +59,21 @@ endpoints:
         name: carModelId
         description: ''
         required: true
-        example: praesentium
+        example: debitis
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: ut
+        example: atque
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: commodi
+        example: placeat
         type: string
         custom: []
     queryParameters: []
@@ -105,7 +105,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: esse
+        example: iste
         type: string
         custom: []
     queryParameters: []
@@ -137,14 +137,14 @@ endpoints:
         name: carModelId
         description: ''
         required: true
-        example: dolorem
+        example: quia
         type: string
         custom: []
       year:
         name: year
         description: ''
         required: true
-        example: voluptatum
+        example: ut
         type: string
         custom: []
     queryParameters: []

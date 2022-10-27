@@ -1,12 +1,12 @@
-name: ServiceImage
+name: 'Service - Сервис'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/serviceImage/get/{skip}/{take}'
+    uri: 'api/service/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - ServiceImage'
+      title: 'Получить список - Service'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: architecto
+        example: aliquam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: facere
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":14,"data":[]}'
+        content: '{"count":171,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/serviceImage/getById/{id}'
+    uri: 'api/service/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - ServiceImage'
+      title: 'Получить данные через ID - Service'
       description: ''
       authenticated: false
       custom: []
@@ -57,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: dicta
+        example: aperiam
         type: string
         custom: []
     queryParameters: []
@@ -66,52 +66,6 @@ endpoints:
       -
         status: 404
         content: '{"message":"not found"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/serviceImage/getByServiceId/{stockId}/{skip}/{take}'
-    metadata:
-      title: 'Получить данные через ServiceID - ServiceImage'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      stockId:
-        name: stockId
-        description: ''
-        required: true
-        example: fugiat
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: et
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: sed
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

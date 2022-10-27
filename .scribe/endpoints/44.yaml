@@ -18,60 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: adipisci
+        example: enim
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: iste
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/notification/getByCityId/{userId}/{skip}/{take}'
-    metadata:
-      title: 'Получить данные через CityID - Notification'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      userId:
-        name: userId
-        description: ''
-        required: true
-        example: sint
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: architecto
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: dignissimos
+        example: quisquam
         type: string
         custom: []
     queryParameters: []
@@ -103,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: velit
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -112,6 +66,211 @@ endpoints:
       -
         status: 404
         content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByNotificationTypeIdAndCityIdWithUser/{userId}/{notificationTypeId}/{cityId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через NotificationTypeId и CityID c пользователем - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      userId:
+        name: userId
+        description: ''
+        required: true
+        example: labore
+        type: string
+        custom: []
+      notificationTypeId:
+        name: notificationTypeId
+        description: ''
+        required: true
+        example: illum
+        type: string
+        custom: []
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: quos
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: omnis
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: quo
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"not_viewed":{"connection":{},"grammar":{},"processor":{},"bindings":{"select":[],"from":[],"join":[],"where":["labore","illum","quos"],"groupBy":[],"having":[],"order":[],"union":[],"unionOrder":[]},"aggregate":null,"columns":[{}],"distinct":false,"from":"notifications","joins":[{"connection":{},"grammar":{},"processor":{},"bindings":{"select":[],"from":[],"join":[],"where":[],"groupBy":[],"having":[],"order":[],"union":[],"unionOrder":[]},"aggregate":null,"columns":null,"distinct":false,"from":null,"joins":null,"wheres":[{"type":"Column","first":"notifications.id","operator":"=","second":"notification_counts.notification_id","boolean":"and"}],"groups":null,"havings":null,"orders":null,"limit":null,"offset":null,"unions":null,"unionLimit":null,"unionOffset":null,"unionOrders":null,"lock":null,"beforeQueryCallbacks":[],"operators":["=","<",">","<=",">=","<>","!=","<=>","like","like binary","not like","ilike","&","|","^","<<",">>","&~","is","is not","rlike","not rlike","regexp","not regexp","~","~*","!~","!~*","similar to","not similar to","not ilike","~~*","!~~*"],"bitwiseOperators":["&","|","^","<<",">>","&~"],"useWritePdo":false,"type":"right","table":"notification_counts"}],"wheres":[{"type":"Nested","query":{"connection":{},"grammar":{},"processor":{},"bindings":{"select":[],"from":[],"join":[],"where":["labore","illum","quos"],"groupBy":[],"having":[],"order":[],"union":[],"unionOrder":[]},"aggregate":null,"columns":null,"distinct":false,"from":"notifications","joins":null,"wheres":[{"type":"Basic","column":"notification_counts.user_id","operator":"=","value":"labore","boolean":"and"},{"type":"Basic","column":"notifications.notification_type_id","operator":"=","value":"illum","boolean":"and"},{"type":"Basic","column":"notifications.city_id","operator":"=","value":"quos","boolean":"and"}],"groups":null,"havings":null,"orders":null,"limit":null,"offset":null,"unions":null,"unionLimit":null,"unionOffset":null,"unionOrders":null,"lock":null,"beforeQueryCallbacks":[],"operators":["=","<",">","<=",">=","<>","!=","<=>","like","like binary","not like","ilike","&","|","^","<<",">>","&~","is","is not","rlike","not rlike","regexp","not regexp","~","~*","!~","!~*","similar to","not similar to","not ilike","~~*","!~~*"],"bitwiseOperators":["&","|","^","<<",">>","&~"],"useWritePdo":false},"boolean":"and"}],"groups":null,"havings":null,"orders":null,"limit":null,"offset":null,"unions":null,"unionLimit":null,"unionOffset":null,"unionOrders":null,"lock":null,"beforeQueryCallbacks":[],"operators":["=","<",">","<=",">=","<>","!=","<=>","like","like binary","not like","ilike","&","|","^","<<",">>","&~","is","is not","rlike","not rlike","regexp","not regexp","~","~*","!~","!~*","similar to","not similar to","not ilike","~~*","!~~*"],"bitwiseOperators":["&","|","^","<<",">>","&~"],"useWritePdo":false},"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByNotificationTypeIdAndCityId/{notificationTypeId}/{cityId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через NotificationTypeId и CityID - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      notificationTypeId:
+        name: notificationTypeId
+        description: ''
+        required: true
+        example: sequi
+        type: string
+        custom: []
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: quia
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: quia
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: est
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByNotificationType/{notificationTypeId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через NotificationTypeId - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      notificationTypeId:
+        name: notificationTypeId
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: blanditiis
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: sunt
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByCityId/{cityId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через CityID - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: odit
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: quod
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: deleniti
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

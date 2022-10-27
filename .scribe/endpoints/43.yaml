@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: excepturi
+        example: ab
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: qui
+        example: ullam
         type: string
         custom: []
     queryParameters: []

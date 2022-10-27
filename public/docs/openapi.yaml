@@ -7,9 +7,9 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
-  '/api/notification/get/{skip}/{take}':
+  '/api/notificationType/get/{skip}/{take}':
     get:
-      summary: 'Получить список - Notification'
+      summary: 'Получить список - NotificationType'
       description: ''
       parameters:
         -
@@ -34,24 +34,24 @@ paths:
               schema:
                 type: object
                 example:
-                  count: 0
+                  count: 2
                   data: []
                 properties:
                   count:
                     type: integer
-                    example: 0
+                    example: 2
                   data:
                     type: array
                     example: []
       tags:
-        - Notification
+        - NotificationType
       security: []
     parameters:
       -
         in: path
         name: skip
         description: ''
-        example: adipisci
+        example: doloremque
         required: true
         schema:
           type: string
@@ -59,77 +59,13 @@ paths:
         in: path
         name: take
         description: ''
-        example: iste
+        example: est
         required: true
         schema:
           type: string
-  '/api/notification/getByCityId/{userId}/{skip}/{take}':
+  '/api/notificationType/getById/{id}':
     get:
-      summary: 'Получить данные через CityID - Notification'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - Notification
-      security: []
-    parameters:
-      -
-        in: path
-        name: userId
-        description: ''
-        example: sint
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: skip
-        description: ''
-        example: architecto
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: dignissimos
-        required: true
-        schema:
-          type: string
-  '/api/notification/getById/{id}':
-    get:
-      summary: 'Получить данные через ID - Notification'
+      summary: 'Получить данные через ID - NotificationType'
       description: ''
       parameters:
         -
@@ -160,178 +96,14 @@ paths:
                     type: string
                     example: 'not found'
       tags:
-        - Notification
+        - NotificationType
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: velit
-        required: true
-        schema:
-          type: string
-  '/api/notificationUser/get/{skip}/{take}':
-    get:
-      summary: 'Получить список - NotificationUser'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - NotificationUser
-      security: []
-    parameters:
-      -
-        in: path
-        name: skip
-        description: ''
-        example: excepturi
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: modi
-        required: true
-        schema:
-          type: string
-  '/api/notificationUser/getByUserId/{userId}/{skip}/{take}':
-    get:
-      summary: 'Получить данные через UserID - NotificationUser'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  count: 0
-                  data: []
-                properties:
-                  count:
-                    type: integer
-                    example: 0
-                  data:
-                    type: array
-                    example: []
-      tags:
-        - NotificationUser
-      security: []
-    parameters:
-      -
-        in: path
-        name: userId
-        description: ''
-        example: assumenda
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: skip
-        description: ''
-        example: beatae
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: take
-        description: ''
-        example: saepe
-        required: true
-        schema:
-          type: string
-  '/api/notificationUser/getById/{id}':
-    get:
-      summary: 'Получить данные через ID - NotificationUser'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'not found'
-      tags:
-        - NotificationUser
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the getById.'
-        example: delectus
+        example: labore
         required: true
         schema:
           type: string
@@ -379,7 +151,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: libero
+        example: et
         required: true
         schema:
           type: string
@@ -387,7 +159,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: natus
+        example: enim
         required: true
         schema:
           type: string
@@ -431,7 +203,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: repudiandae
+        example: optio
         required: true
         schema:
           type: string
@@ -479,7 +251,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: deleniti
+        example: omnis
         required: true
         schema:
           type: string
@@ -487,7 +259,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: qui
+        example: consectetur
         required: true
         schema:
           type: string
@@ -531,7 +303,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: enim
+        example: ea
         required: true
         schema:
           type: string
@@ -579,7 +351,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sed
+        example: quis
         required: true
         schema:
           type: string
@@ -587,7 +359,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quod
+        example: consequuntur
         required: true
         schema:
           type: string
@@ -635,7 +407,7 @@ paths:
         in: path
         name: autoPartId
         description: ''
-        example: esse
+        example: maiores
         required: true
         schema:
           type: string
@@ -643,7 +415,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: in
+        example: quis
         required: true
         schema:
           type: string
@@ -651,7 +423,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: suscipit
+        example: vero
         required: true
         schema:
           type: string
@@ -695,7 +467,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quo
+        example: fuga
         required: true
         schema:
           type: string
@@ -743,7 +515,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: mollitia
+        example: quaerat
         required: true
         schema:
           type: string
@@ -751,7 +523,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: magnam
+        example: perspiciatis
         required: true
         schema:
           type: string
@@ -795,7 +567,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: et
+        example: vel
         required: true
         schema:
           type: string
@@ -843,7 +615,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: saepe
+        example: perferendis
         required: true
         schema:
           type: string
@@ -851,7 +623,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: minus
         required: true
         schema:
           type: string
@@ -899,7 +671,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quas
+        example: fugiat
         required: true
         schema:
           type: string
@@ -907,7 +679,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aspernatur
+        example: autem
         required: true
         schema:
           type: string
@@ -955,7 +727,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ipsum
+        example: possimus
         required: true
         schema:
           type: string
@@ -963,7 +735,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: nobis
+        example: sed
         required: true
         schema:
           type: string
@@ -1011,7 +783,7 @@ paths:
         in: path
         name: orderCardId
         description: ''
-        example: exercitationem
+        example: consequatur
         required: true
         schema:
           type: string
@@ -1055,7 +827,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: consequatur
+        example: officiis
         required: true
         schema:
           type: string
@@ -1103,7 +875,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: fuga
+        example: inventore
         required: true
         schema:
           type: string
@@ -1111,7 +883,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quia
+        example: maxime
         required: true
         schema:
           type: string
@@ -1159,7 +931,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ut
+        example: odit
         required: true
         schema:
           type: string
@@ -1167,7 +939,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quis
+        example: in
         required: true
         schema:
           type: string
@@ -1215,7 +987,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: doloribus
+        example: cumque
         required: true
         schema:
           type: string
@@ -1223,7 +995,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eum
+        example: dignissimos
         required: true
         schema:
           type: string
@@ -1271,7 +1043,7 @@ paths:
         in: path
         name: carBrandId
         description: ''
-        example: voluptas
+        example: omnis
         required: true
         schema:
           type: string
@@ -1279,7 +1051,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: id
+        example: beatae
         required: true
         schema:
           type: string
@@ -1287,7 +1059,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aut
+        example: tenetur
         required: true
         schema:
           type: string
@@ -1331,7 +1103,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: officiis
+        example: aut
         required: true
         schema:
           type: string
@@ -1362,12 +1134,12 @@ paths:
               schema:
                 type: object
                 example:
-                  count: 80118
+                  count: 0
                   data: []
                 properties:
                   count:
                     type: integer
-                    example: 80118
+                    example: 0
                   data:
                     type: array
                     example: []
@@ -1387,7 +1159,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: assumenda
+        example: consequuntur
         required: true
         schema:
           type: string
@@ -1435,7 +1207,7 @@ paths:
         in: path
         name: carModelId
         description: ''
-        example: praesentium
+        example: debitis
         required: true
         schema:
           type: string
@@ -1443,7 +1215,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ut
+        example: atque
         required: true
         schema:
           type: string
@@ -1451,7 +1223,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: commodi
+        example: placeat
         required: true
         schema:
           type: string
@@ -1495,7 +1267,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: esse
+        example: iste
         required: true
         schema:
           type: string
@@ -1539,7 +1311,7 @@ paths:
         in: path
         name: carModelId
         description: ''
-        example: dolorem
+        example: quia
         required: true
         schema:
           type: string
@@ -1547,7 +1319,7 @@ paths:
         in: path
         name: year
         description: ''
-        example: voluptatum
+        example: ut
         required: true
         schema:
           type: string
@@ -1595,7 +1367,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: iste
+        example: aut
         required: true
         schema:
           type: string
@@ -1603,7 +1375,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: facere
+        example: qui
         required: true
         schema:
           type: string
@@ -1647,7 +1419,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: repellat
+        example: architecto
         required: true
         schema:
           type: string
@@ -1695,7 +1467,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: voluptatem
+        example: suscipit
         required: true
         schema:
           type: string
@@ -1703,7 +1475,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: vitae
+        example: id
         required: true
         schema:
           type: string
@@ -1751,7 +1523,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: minus
+        example: ut
         required: true
         schema:
           type: string
@@ -1759,7 +1531,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sed
+        example: aliquam
         required: true
         schema:
           type: string
@@ -1807,7 +1579,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: alias
+        example: aut
         required: true
         schema:
           type: string
@@ -1815,7 +1587,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolorem
+        example: excepturi
         required: true
         schema:
           type: string
@@ -1823,7 +1595,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quis
+        example: in
         required: true
         schema:
           type: string
@@ -1871,7 +1643,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: aut
+        example: pariatur
         required: true
         schema:
           type: string
@@ -1879,7 +1651,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: labore
+        example: aut
         required: true
         schema:
           type: string
@@ -1887,7 +1659,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: odio
+        example: et
         required: true
         schema:
           type: string
@@ -1931,7 +1703,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: est
+        example: magnam
         required: true
         schema:
           type: string
@@ -1979,7 +1751,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: non
+        example: quibusdam
         required: true
         schema:
           type: string
@@ -1987,7 +1759,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: possimus
+        example: facere
         required: true
         schema:
           type: string
@@ -2035,7 +1807,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: eos
+        example: sit
         required: true
         schema:
           type: string
@@ -2043,7 +1815,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: qui
+        example: aliquam
         required: true
         schema:
           type: string
@@ -2051,7 +1823,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: sed
         required: true
         schema:
           type: string
@@ -2099,7 +1871,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: possimus
+        example: dicta
         required: true
         schema:
           type: string
@@ -2107,7 +1879,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sunt
+        example: delectus
         required: true
         schema:
           type: string
@@ -2115,7 +1887,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: nulla
+        example: adipisci
         required: true
         schema:
           type: string
@@ -2159,7 +1931,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: sit
+        example: inventore
         required: true
         schema:
           type: string
@@ -2207,7 +1979,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: omnis
+        example: perferendis
         required: true
         schema:
           type: string
@@ -2215,7 +1987,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptas
+        example: aperiam
         required: true
         schema:
           type: string
@@ -2263,7 +2035,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: repudiandae
+        example: eum
         required: true
         schema:
           type: string
@@ -2271,7 +2043,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: vel
+        example: velit
         required: true
         schema:
           type: string
@@ -2319,7 +2091,7 @@ paths:
         in: path
         name: serviceId
         description: ''
-        example: voluptas
+        example: laborum
         required: true
         schema:
           type: string
@@ -2327,7 +2099,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: aut
+        example: repudiandae
         required: true
         schema:
           type: string
@@ -2335,7 +2107,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: rerum
+        example: sed
         required: true
         schema:
           type: string
@@ -2383,7 +2155,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: dolorum
+        example: officiis
         required: true
         schema:
           type: string
@@ -2391,7 +2163,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: hic
+        example: veritatis
         required: true
         schema:
           type: string
@@ -2399,7 +2171,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: dolores
+        example: natus
         required: true
         schema:
           type: string
@@ -2443,7 +2215,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: et
+        example: sed
         required: true
         schema:
           type: string
@@ -2479,11 +2251,11 @@ paths:
                 phone:
                   type: string
                   description: validation.max.
-                  example: tnrbjielihwhssjdftjykkwudqckqnsinkfcgfxlvwqxaijjafqsoqhwoeeohrskmghyybttxtljmjikvizdnen
+                  example: nrtecdxwjycavxmlxjpjtzvdztoexuaatipjecobrtgyglbqumiijuluvqpltcpwpwnrvhcrdusqffsxnpvvhanhydfgbohxfxiuyipzqapvhnfydunnrljuocfiekxmxlzipzohdawyemkcyxqfrxglrhoglzgdmnespiechakwrgakdgsjbsmfbdkvllwbspxoihwhgvqswtdvcszrrzrszyvcunlfylupgbqybhsmqltgitmlzsrwlpoum
                 email:
                   type: string
                   description: validation.max.
-                  example: lhnxoqgwdoxhbzttvznnirpevafmpaw
+                  example: zjqxzojpgdtrqfbnkjqiqolhpnkbgunevoweqxenogjvoslccbzffudivsxddsp
       security: []
   /api/code/update:
     post:
@@ -2517,15 +2289,15 @@ paths:
                 phone:
                   type: string
                   description: validation.max.
-                  example: luijpfxtpfzjujvfhorrvkiufejgpdqpxzdaxvzgwhqzjjisfdayarxgupzrukqvcrxroysdoforkiudfzdltkczfwceiorlfkikukfqnlvcstx
+                  example: cmsmwqicoaclgyoclz
                 email:
                   type: string
                   description: validation.max.
-                  example: rldpbcoxxvhrjkvjgclzyipqdijppprouibvojndohseyrwuirzlwawmzbxwczmgnwkkctncszjzybxejgjqixvbtztpriofqfktxystiwzkfonpjsdciljdorhufwpqsozwhfgbmtaybdgbsawnygracvmmgsdekbpxgfvkgocdepzwtwyfcufzqdztodxyycodkmqwfqaeitpxmzhebmsjhxrtshamlexohtbcreecuywdggrbfzn
+                  example: rygyzjqfyuktpokrmdvrzjkdsrcdxoikiyegfqnrexjgxbmzmtoibwhiklrwxvjahbcsnuzvvgcqoaremntkjiqjlzxjxrogpieohuloylwrtvlwmpmzeaosfldmqbrcr
                 code:
                   type: integer
                   description: 'validation.min validation.max.'
-                  example: 3581
+                  example: 7099
               required:
                 - code
       security: []
@@ -2573,7 +2345,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: accusantium
+        example: autem
         required: true
         schema:
           type: string
@@ -2581,7 +2353,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: in
+        example: enim
         required: true
         schema:
           type: string
@@ -2669,7 +2441,7 @@ paths:
         in: path
         name: email
         description: ''
-        example: distinctio
+        example: facere
         required: true
         schema:
           type: string
@@ -2713,7 +2485,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: rerum
+        example: ut
         required: true
         schema:
           type: string
@@ -2761,7 +2533,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ut
+        example: iusto
         required: true
         schema:
           type: string
@@ -2769,7 +2541,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: consequatur
+        example: commodi
         required: true
         schema:
           type: string
@@ -2817,7 +2589,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: fugiat
+        example: distinctio
         required: true
         schema:
           type: string
@@ -2825,7 +2597,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: exercitationem
+        example: quia
         required: true
         schema:
           type: string
@@ -2873,7 +2645,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: minima
+        example: quam
         required: true
         schema:
           type: string
@@ -2881,7 +2653,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ipsum
+        example: error
         required: true
         schema:
           type: string
@@ -2929,7 +2701,7 @@ paths:
         in: path
         name: orderCardId
         description: ''
-        example: dolor
+        example: quia
         required: true
         schema:
           type: string
@@ -2973,7 +2745,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: voluptatibus
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -3021,7 +2793,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sunt
+        example: molestias
         required: true
         schema:
           type: string
@@ -3029,7 +2801,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quo
+        example: ut
         required: true
         schema:
           type: string
@@ -3073,7 +2845,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: odio
+        example: est
         required: true
         schema:
           type: string
@@ -3121,7 +2893,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nostrum
+        example: aut
         required: true
         schema:
           type: string
@@ -3129,7 +2901,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: hic
         required: true
         schema:
           type: string
@@ -3177,7 +2949,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: sint
+        example: quia
         required: true
         schema:
           type: string
@@ -3185,7 +2957,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: incidunt
         required: true
         schema:
           type: string
@@ -3193,7 +2965,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: reprehenderit
+        example: iure
         required: true
         schema:
           type: string
@@ -3241,7 +3013,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: ducimus
+        example: et
         required: true
         schema:
           type: string
@@ -3249,7 +3021,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ut
+        example: autem
         required: true
         schema:
           type: string
@@ -3257,7 +3029,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sit
+        example: perferendis
         required: true
         schema:
           type: string
@@ -3301,7 +3073,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: sint
+        example: vitae
         required: true
         schema:
           type: string
@@ -3332,12 +3104,12 @@ paths:
               schema:
                 type: object
                 example:
-                  count: 761
+                  count: 753
                   data: []
                 properties:
                   count:
                     type: integer
-                    example: 761
+                    example: 753
                   data:
                     type: array
                     example: []
@@ -3349,7 +3121,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: at
+        example: et
         required: true
         schema:
           type: string
@@ -3357,7 +3129,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptas
+        example: illum
         required: true
         schema:
           type: string
@@ -3405,7 +3177,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: laborum
+        example: iure
         required: true
         schema:
           type: string
@@ -3413,7 +3185,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: vero
+        example: consectetur
         required: true
         schema:
           type: string
@@ -3421,7 +3193,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: consequuntur
+        example: voluptas
         required: true
         schema:
           type: string
@@ -3465,7 +3237,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: provident
+        example: vero
         required: true
         schema:
           type: string
@@ -3553,7 +3325,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: quis
         required: true
         schema:
           type: string
@@ -3561,7 +3333,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: dolorem
         required: true
         schema:
           type: string
@@ -3605,7 +3377,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quisquam
+        example: aspernatur
         required: true
         schema:
           type: string
@@ -3653,7 +3425,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: reiciendis
+        example: laboriosam
         required: true
         schema:
           type: string
@@ -3661,7 +3433,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: qui
+        example: totam
         required: true
         schema:
           type: string
@@ -3705,7 +3477,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: aperiam
+        example: voluptate
         required: true
         schema:
           type: string
@@ -3753,7 +3525,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: qui
+        example: exercitationem
         required: true
         schema:
           type: string
@@ -3761,7 +3533,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: vero
+        example: tempora
         required: true
         schema:
           type: string
@@ -3809,7 +3581,7 @@ paths:
         in: path
         name: insuranceCompanyId
         description: ''
-        example: omnis
+        example: qui
         required: true
         schema:
           type: string
@@ -3817,7 +3589,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: consequatur
+        example: ducimus
         required: true
         schema:
           type: string
@@ -3825,7 +3597,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aut
+        example: est
         required: true
         schema:
           type: string
@@ -3869,7 +3641,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: in
+        example: ab
         required: true
         schema:
           type: string
@@ -3917,7 +3689,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: aperiam
+        example: rerum
         required: true
         schema:
           type: string
@@ -3925,7 +3697,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quia
+        example: ullam
         required: true
         schema:
           type: string
@@ -3973,7 +3745,7 @@ paths:
         in: path
         name: insuranceCompanyId
         description: ''
-        example: ut
+        example: temporibus
         required: true
         schema:
           type: string
@@ -3981,7 +3753,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sunt
+        example: atque
         required: true
         schema:
           type: string
@@ -3989,7 +3761,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: rerum
+        example: distinctio
         required: true
         schema:
           type: string
@@ -4033,7 +3805,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: sapiente
+        example: quisquam
         required: true
         schema:
           type: string
@@ -4081,7 +3853,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: animi
+        example: dolorem
         required: true
         schema:
           type: string
@@ -4089,7 +3861,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: est
+        example: earum
         required: true
         schema:
           type: string
@@ -4137,7 +3909,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: omnis
+        example: perspiciatis
         required: true
         schema:
           type: string
@@ -4145,7 +3917,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: vitae
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -4153,7 +3925,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: numquam
+        example: cum
         required: true
         schema:
           type: string
@@ -4201,7 +3973,7 @@ paths:
         in: path
         name: insuranceCompanyId
         description: ''
-        example: in
+        example: ut
         required: true
         schema:
           type: string
@@ -4209,7 +3981,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ut
+        example: cum
         required: true
         schema:
           type: string
@@ -4217,7 +3989,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: veniam
+        example: tenetur
         required: true
         schema:
           type: string
@@ -4261,7 +4033,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: placeat
+        example: voluptate
         required: true
         schema:
           type: string
@@ -4309,7 +4081,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quidem
+        example: atque
         required: true
         schema:
           type: string
@@ -4317,7 +4089,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ea
+        example: magni
         required: true
         schema:
           type: string
@@ -4365,7 +4137,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: distinctio
+        example: quam
         required: true
         schema:
           type: string
@@ -4373,7 +4145,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: necessitatibus
+        example: omnis
         required: true
         schema:
           type: string
@@ -4381,7 +4153,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: quis
         required: true
         schema:
           type: string
@@ -4429,7 +4201,7 @@ paths:
         in: path
         name: userCarId
         description: ''
-        example: nulla
+        example: rerum
         required: true
         schema:
           type: string
@@ -4437,7 +4209,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: doloremque
+        example: perspiciatis
         required: true
         schema:
           type: string
@@ -4445,7 +4217,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: enim
+        example: excepturi
         required: true
         schema:
           type: string
@@ -4489,7 +4261,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: consequatur
+        example: aperiam
         required: true
         schema:
           type: string
@@ -4537,7 +4309,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolor
+        example: enim
         required: true
         schema:
           type: string
@@ -4545,7 +4317,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: non
+        example: qui
         required: true
         schema:
           type: string
@@ -4593,7 +4365,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: ex
+        example: sequi
         required: true
         schema:
           type: string
@@ -4601,7 +4373,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ex
+        example: recusandae
         required: true
         schema:
           type: string
@@ -4609,7 +4381,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sint
+        example: ut
         required: true
         schema:
           type: string
@@ -4657,7 +4429,7 @@ paths:
         in: path
         name: insuranceCompanyId
         description: ''
-        example: explicabo
+        example: praesentium
         required: true
         schema:
           type: string
@@ -4665,7 +4437,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ea
+        example: voluptas
         required: true
         schema:
           type: string
@@ -4673,7 +4445,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: et
         required: true
         schema:
           type: string
@@ -4717,7 +4489,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: modi
+        example: dignissimos
         required: true
         schema:
           type: string
@@ -4765,7 +4537,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: explicabo
         required: true
         schema:
           type: string
@@ -4773,7 +4545,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: harum
+        example: distinctio
         required: true
         schema:
           type: string
@@ -4865,7 +4637,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nihil
+        example: minus
         required: true
         schema:
           type: string
@@ -4873,7 +4645,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sed
+        example: voluptas
         required: true
         schema:
           type: string
@@ -4917,7 +4689,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: voluptatum
+        example: temporibus
         required: true
         schema:
           type: string
@@ -4965,7 +4737,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: ut
         required: true
         schema:
           type: string
@@ -4973,7 +4745,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sapiente
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -5017,7 +4789,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: similique
+        example: sit
         required: true
         schema:
           type: string
@@ -5065,7 +4837,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: officia
+        example: facilis
         required: true
         schema:
           type: string
@@ -5073,7 +4845,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: qui
         required: true
         schema:
           type: string
@@ -5121,7 +4893,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: porro
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -5129,7 +4901,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: magnam
+        example: eum
         required: true
         schema:
           type: string
@@ -5137,7 +4909,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: magni
         required: true
         schema:
           type: string
@@ -5181,7 +4953,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: qui
+        example: tempora
         required: true
         schema:
           type: string
@@ -5229,7 +5001,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quis
+        example: quasi
         required: true
         schema:
           type: string
@@ -5237,7 +5009,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: laboriosam
+        example: natus
         required: true
         schema:
           type: string
@@ -5285,7 +5057,7 @@ paths:
         in: path
         name: lawyerId
         description: ''
-        example: doloribus
+        example: et
         required: true
         schema:
           type: string
@@ -5293,7 +5065,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: debitis
         required: true
         schema:
           type: string
@@ -5301,7 +5073,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: incidunt
+        example: iure
         required: true
         schema:
           type: string
@@ -5345,7 +5117,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: occaecati
+        example: eum
         required: true
         schema:
           type: string
@@ -5393,7 +5165,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sint
+        example: ratione
         required: true
         schema:
           type: string
@@ -5401,7 +5173,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: reiciendis
+        example: hic
         required: true
         schema:
           type: string
@@ -5449,7 +5221,7 @@ paths:
         in: path
         name: lawyerId
         description: ''
-        example: amet
+        example: natus
         required: true
         schema:
           type: string
@@ -5457,7 +5229,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nesciunt
+        example: assumenda
         required: true
         schema:
           type: string
@@ -5465,7 +5237,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: officiis
+        example: quia
         required: true
         schema:
           type: string
@@ -5509,7 +5281,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: ex
+        example: numquam
         required: true
         schema:
           type: string
@@ -5557,7 +5329,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: eos
+        example: quam
         required: true
         schema:
           type: string
@@ -5565,7 +5337,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: laboriosam
+        example: labore
         required: true
         schema:
           type: string
@@ -5609,7 +5381,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: consequatur
+        example: labore
         required: true
         schema:
           type: string
@@ -5657,7 +5429,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ab
+        example: quis
         required: true
         schema:
           type: string
@@ -5665,7 +5437,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: distinctio
+        example: et
         required: true
         schema:
           type: string
@@ -5713,7 +5485,7 @@ paths:
         in: path
         name: lawyerId
         description: ''
-        example: facilis
+        example: voluptas
         required: true
         schema:
           type: string
@@ -5721,7 +5493,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quasi
+        example: sint
         required: true
         schema:
           type: string
@@ -5729,7 +5501,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: excepturi
+        example: nihil
         required: true
         schema:
           type: string
@@ -5773,7 +5545,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: illo
+        example: consequatur
         required: true
         schema:
           type: string
@@ -5817,7 +5589,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: id
+        example: odit
         required: true
         schema:
           type: string
@@ -5865,7 +5637,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: aut
+        example: enim
         required: true
         schema:
           type: string
@@ -5873,7 +5645,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: qui
+        example: blanditiis
         required: true
         schema:
           type: string
@@ -5921,7 +5693,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: aut
+        example: est
         required: true
         schema:
           type: string
@@ -5929,7 +5701,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quam
+        example: et
         required: true
         schema:
           type: string
@@ -5973,7 +5745,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: in
+        example: repellendus
         required: true
         schema:
           type: string
@@ -6021,7 +5793,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: porro
+        example: dolorem
         required: true
         schema:
           type: string
@@ -6029,7 +5801,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: dolores
+        example: amet
         required: true
         schema:
           type: string
@@ -6073,7 +5845,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quia
+        example: eos
         required: true
         schema:
           type: string
@@ -6121,7 +5893,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: libero
+        example: ad
         required: true
         schema:
           type: string
@@ -6129,7 +5901,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: molestiae
+        example: ut
         required: true
         schema:
           type: string
@@ -6173,7 +5945,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quis
+        example: commodi
         required: true
         schema:
           type: string
@@ -6221,7 +5993,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: excepturi
+        example: ab
         required: true
         schema:
           type: string
@@ -6229,7 +6001,1981 @@ paths:
         in: path
         name: take
         description: ''
-        example: qui
+        example: ullam
+        required: true
+        schema:
+          type: string
+  '/api/notification/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - Notification'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Notification
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: enim
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: quisquam
+        required: true
+        schema:
+          type: string
+  '/api/notification/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - Notification'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - Notification
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: et
+        required: true
+        schema:
+          type: string
+  '/api/notification/getByNotificationTypeIdAndCityIdWithUser/{userId}/{notificationTypeId}/{cityId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через NotificationTypeId и CityID c пользователем - Notification'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  not_viewed:
+                    connection: {  }
+                    grammar: {  }
+                    processor: {  }
+                    bindings:
+                      select: []
+                      from: []
+                      join: []
+                      where:
+                        - labore
+                        - illum
+                        - quos
+                      groupBy: []
+                      having: []
+                      order: []
+                      union: []
+                      unionOrder: []
+                    aggregate: null
+                    columns:
+                      - {  }
+                    distinct: false
+                    from: notifications
+                    joins:
+                      -
+                        connection: {  }
+                        grammar: {  }
+                        processor: {  }
+                        bindings:
+                          select: []
+                          from: []
+                          join: []
+                          where: []
+                          groupBy: []
+                          having: []
+                          order: []
+                          union: []
+                          unionOrder: []
+                        aggregate: null
+                        columns: null
+                        distinct: false
+                        from: null
+                        joins: null
+                        wheres:
+                          -
+                            type: Column
+                            first: notifications.id
+                            operator: '='
+                            second: notification_counts.notification_id
+                            boolean: and
+                        groups: null
+                        havings: null
+                        orders: null
+                        limit: null
+                        offset: null
+                        unions: null
+                        unionLimit: null
+                        unionOffset: null
+                        unionOrders: null
+                        lock: null
+                        beforeQueryCallbacks: []
+                        operators:
+                          - '='
+                          - '<'
+                          - '>'
+                          - '<='
+                          - '>='
+                          - '<>'
+                          - '!='
+                          - '<=>'
+                          - like
+                          - 'like binary'
+                          - 'not like'
+                          - ilike
+                          - '&'
+                          - '|'
+                          - ^
+                          - '<<'
+                          - '>>'
+                          - '&~'
+                          - is
+                          - 'is not'
+                          - rlike
+                          - 'not rlike'
+                          - regexp
+                          - 'not regexp'
+                          - '~'
+                          - '~*'
+                          - '!~'
+                          - '!~*'
+                          - 'similar to'
+                          - 'not similar to'
+                          - 'not ilike'
+                          - '~~*'
+                          - '!~~*'
+                        bitwiseOperators:
+                          - '&'
+                          - '|'
+                          - ^
+                          - '<<'
+                          - '>>'
+                          - '&~'
+                        useWritePdo: false
+                        type: right
+                        table: notification_counts
+                    wheres:
+                      -
+                        type: Nested
+                        query:
+                          connection: {  }
+                          grammar: {  }
+                          processor: {  }
+                          bindings:
+                            select: []
+                            from: []
+                            join: []
+                            where:
+                              - labore
+                              - illum
+                              - quos
+                            groupBy: []
+                            having: []
+                            order: []
+                            union: []
+                            unionOrder: []
+                          aggregate: null
+                          columns: null
+                          distinct: false
+                          from: notifications
+                          joins: null
+                          wheres:
+                            -
+                              type: Basic
+                              column: notification_counts.user_id
+                              operator: '='
+                              value: labore
+                              boolean: and
+                            -
+                              type: Basic
+                              column: notifications.notification_type_id
+                              operator: '='
+                              value: illum
+                              boolean: and
+                            -
+                              type: Basic
+                              column: notifications.city_id
+                              operator: '='
+                              value: quos
+                              boolean: and
+                          groups: null
+                          havings: null
+                          orders: null
+                          limit: null
+                          offset: null
+                          unions: null
+                          unionLimit: null
+                          unionOffset: null
+                          unionOrders: null
+                          lock: null
+                          beforeQueryCallbacks: []
+                          operators:
+                            - '='
+                            - '<'
+                            - '>'
+                            - '<='
+                            - '>='
+                            - '<>'
+                            - '!='
+                            - '<=>'
+                            - like
+                            - 'like binary'
+                            - 'not like'
+                            - ilike
+                            - '&'
+                            - '|'
+                            - ^
+                            - '<<'
+                            - '>>'
+                            - '&~'
+                            - is
+                            - 'is not'
+                            - rlike
+                            - 'not rlike'
+                            - regexp
+                            - 'not regexp'
+                            - '~'
+                            - '~*'
+                            - '!~'
+                            - '!~*'
+                            - 'similar to'
+                            - 'not similar to'
+                            - 'not ilike'
+                            - '~~*'
+                            - '!~~*'
+                          bitwiseOperators:
+                            - '&'
+                            - '|'
+                            - ^
+                            - '<<'
+                            - '>>'
+                            - '&~'
+                          useWritePdo: false
+                        boolean: and
+                    groups: null
+                    havings: null
+                    orders: null
+                    limit: null
+                    offset: null
+                    unions: null
+                    unionLimit: null
+                    unionOffset: null
+                    unionOrders: null
+                    lock: null
+                    beforeQueryCallbacks: []
+                    operators:
+                      - '='
+                      - '<'
+                      - '>'
+                      - '<='
+                      - '>='
+                      - '<>'
+                      - '!='
+                      - '<=>'
+                      - like
+                      - 'like binary'
+                      - 'not like'
+                      - ilike
+                      - '&'
+                      - '|'
+                      - ^
+                      - '<<'
+                      - '>>'
+                      - '&~'
+                      - is
+                      - 'is not'
+                      - rlike
+                      - 'not rlike'
+                      - regexp
+                      - 'not regexp'
+                      - '~'
+                      - '~*'
+                      - '!~'
+                      - '!~*'
+                      - 'similar to'
+                      - 'not similar to'
+                      - 'not ilike'
+                      - '~~*'
+                      - '!~~*'
+                    bitwiseOperators:
+                      - '&'
+                      - '|'
+                      - ^
+                      - '<<'
+                      - '>>'
+                      - '&~'
+                    useWritePdo: false
+                  count: 0
+                  data: []
+                properties:
+                  not_viewed:
+                    type: object
+                    example:
+                      connection: {  }
+                      grammar: {  }
+                      processor: {  }
+                      bindings:
+                        select: []
+                        from: []
+                        join: []
+                        where:
+                          - labore
+                          - illum
+                          - quos
+                        groupBy: []
+                        having: []
+                        order: []
+                        union: []
+                        unionOrder: []
+                      aggregate: null
+                      columns:
+                        - {  }
+                      distinct: false
+                      from: notifications
+                      joins:
+                        -
+                          connection: {  }
+                          grammar: {  }
+                          processor: {  }
+                          bindings:
+                            select: []
+                            from: []
+                            join: []
+                            where: []
+                            groupBy: []
+                            having: []
+                            order: []
+                            union: []
+                            unionOrder: []
+                          aggregate: null
+                          columns: null
+                          distinct: false
+                          from: null
+                          joins: null
+                          wheres:
+                            -
+                              type: Column
+                              first: notifications.id
+                              operator: '='
+                              second: notification_counts.notification_id
+                              boolean: and
+                          groups: null
+                          havings: null
+                          orders: null
+                          limit: null
+                          offset: null
+                          unions: null
+                          unionLimit: null
+                          unionOffset: null
+                          unionOrders: null
+                          lock: null
+                          beforeQueryCallbacks: []
+                          operators:
+                            - '='
+                            - '<'
+                            - '>'
+                            - '<='
+                            - '>='
+                            - '<>'
+                            - '!='
+                            - '<=>'
+                            - like
+                            - 'like binary'
+                            - 'not like'
+                            - ilike
+                            - '&'
+                            - '|'
+                            - ^
+                            - '<<'
+                            - '>>'
+                            - '&~'
+                            - is
+                            - 'is not'
+                            - rlike
+                            - 'not rlike'
+                            - regexp
+                            - 'not regexp'
+                            - '~'
+                            - '~*'
+                            - '!~'
+                            - '!~*'
+                            - 'similar to'
+                            - 'not similar to'
+                            - 'not ilike'
+                            - '~~*'
+                            - '!~~*'
+                          bitwiseOperators:
+                            - '&'
+                            - '|'
+                            - ^
+                            - '<<'
+                            - '>>'
+                            - '&~'
+                          useWritePdo: false
+                          type: right
+                          table: notification_counts
+                      wheres:
+                        -
+                          type: Nested
+                          query:
+                            connection: {  }
+                            grammar: {  }
+                            processor: {  }
+                            bindings:
+                              select: []
+                              from: []
+                              join: []
+                              where:
+                                - labore
+                                - illum
+                                - quos
+                              groupBy: []
+                              having: []
+                              order: []
+                              union: []
+                              unionOrder: []
+                            aggregate: null
+                            columns: null
+                            distinct: false
+                            from: notifications
+                            joins: null
+                            wheres:
+                              -
+                                type: Basic
+                                column: notification_counts.user_id
+                                operator: '='
+                                value: labore
+                                boolean: and
+                              -
+                                type: Basic
+                                column: notifications.notification_type_id
+                                operator: '='
+                                value: illum
+                                boolean: and
+                              -
+                                type: Basic
+                                column: notifications.city_id
+                                operator: '='
+                                value: quos
+                                boolean: and
+                            groups: null
+                            havings: null
+                            orders: null
+                            limit: null
+                            offset: null
+                            unions: null
+                            unionLimit: null
+                            unionOffset: null
+                            unionOrders: null
+                            lock: null
+                            beforeQueryCallbacks: []
+                            operators:
+                              - '='
+                              - '<'
+                              - '>'
+                              - '<='
+                              - '>='
+                              - '<>'
+                              - '!='
+                              - '<=>'
+                              - like
+                              - 'like binary'
+                              - 'not like'
+                              - ilike
+                              - '&'
+                              - '|'
+                              - ^
+                              - '<<'
+                              - '>>'
+                              - '&~'
+                              - is
+                              - 'is not'
+                              - rlike
+                              - 'not rlike'
+                              - regexp
+                              - 'not regexp'
+                              - '~'
+                              - '~*'
+                              - '!~'
+                              - '!~*'
+                              - 'similar to'
+                              - 'not similar to'
+                              - 'not ilike'
+                              - '~~*'
+                              - '!~~*'
+                            bitwiseOperators:
+                              - '&'
+                              - '|'
+                              - ^
+                              - '<<'
+                              - '>>'
+                              - '&~'
+                            useWritePdo: false
+                          boolean: and
+                      groups: null
+                      havings: null
+                      orders: null
+                      limit: null
+                      offset: null
+                      unions: null
+                      unionLimit: null
+                      unionOffset: null
+                      unionOrders: null
+                      lock: null
+                      beforeQueryCallbacks: []
+                      operators:
+                        - '='
+                        - '<'
+                        - '>'
+                        - '<='
+                        - '>='
+                        - '<>'
+                        - '!='
+                        - '<=>'
+                        - like
+                        - 'like binary'
+                        - 'not like'
+                        - ilike
+                        - '&'
+                        - '|'
+                        - ^
+                        - '<<'
+                        - '>>'
+                        - '&~'
+                        - is
+                        - 'is not'
+                        - rlike
+                        - 'not rlike'
+                        - regexp
+                        - 'not regexp'
+                        - '~'
+                        - '~*'
+                        - '!~'
+                        - '!~*'
+                        - 'similar to'
+                        - 'not similar to'
+                        - 'not ilike'
+                        - '~~*'
+                        - '!~~*'
+                      bitwiseOperators:
+                        - '&'
+                        - '|'
+                        - ^
+                        - '<<'
+                        - '>>'
+                        - '&~'
+                      useWritePdo: false
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Notification
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: labore
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: notificationTypeId
+        description: ''
+        example: illum
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: cityId
+        description: ''
+        example: quos
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: omnis
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: quo
+        required: true
+        schema:
+          type: string
+  '/api/notification/getByNotificationTypeIdAndCityId/{notificationTypeId}/{cityId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через NotificationTypeId и CityID - Notification'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Notification
+      security: []
+    parameters:
+      -
+        in: path
+        name: notificationTypeId
+        description: ''
+        example: sequi
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: cityId
+        description: ''
+        example: quia
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: quia
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: est
+        required: true
+        schema:
+          type: string
+  '/api/notification/getByNotificationType/{notificationTypeId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через NotificationTypeId - Notification'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Notification
+      security: []
+    parameters:
+      -
+        in: path
+        name: notificationTypeId
+        description: ''
+        example: et
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: blanditiis
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: sunt
+        required: true
+        schema:
+          type: string
+  '/api/notification/getByCityId/{cityId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через CityID - Notification'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 0
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Notification
+      security: []
+    parameters:
+      -
+        in: path
+        name: cityId
+        description: ''
+        example: odit
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: quod
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: deleniti
+        required: true
+        schema:
+          type: string
+  '/api/notificationUser/get/{skip}/{take}':
+    get:
+      summary: 'Получить список - NotificationUser'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  count: 2
+                  data: []
+                properties:
+                  count:
+                    type: integer
+                    example: 2
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - NotificationUser
+      security: []
+    parameters:
+      -
+        in: path
+        name: skip
+        description: ''
+        example: suscipit
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: expedita
+        required: true
+        schema:
+          type: string
+  '/api/notificationUser/getByUserId/{userId}/{skip}/{take}':
+    get:
+      summary: 'Получить данные через UserID - NotificationUser'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  not_viewed: 0
+                  count: 0
+                  data: []
+                properties:
+                  not_viewed:
+                    type: integer
+                    example: 0
+                  count:
+                    type: integer
+                    example: 0
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - NotificationUser
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: totam
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: skip
+        description: ''
+        example: quo
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: take
+        description: ''
+        example: tenetur
+        required: true
+        schema:
+          type: string
+  '/api/notificationUser/getById/{id}':
+    get:
+      summary: 'Получить данные через ID - NotificationUser'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - NotificationUser
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the getById.'
+        example: quia
+        required: true
+        schema:
+          type: string
+  '/api/notificationUser/updateViewByUserId/{userId}':
+    get:
+      summary: 'обновить views через UserID - NotificationUser'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: "SQLSTATE[22007]: Invalid datetime format: 1292 Truncated incorrect INTEGER value: 'dolorem' (SQL: update `notification_users` set `views` = 1, `notification_users`.`updated_at` = 2022-10-27 15:49:00 where `user_id` = dolorem and `deleted_at` is null)"
+                  exception: Illuminate\Database\QueryException
+                  file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                  line: 759
+                  trace:
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                      line: 719
+                      function: runQueryCallback
+                      class: Illuminate\Database\Connection
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                      line: 576
+                      function: run
+                      class: Illuminate\Database\Connection
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                      line: 509
+                      function: affectingStatement
+                      class: Illuminate\Database\Connection
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                      line: 3281
+                      function: update
+                      class: Illuminate\Database\Connection
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                      line: 999
+                      function: update
+                      class: Illuminate\Database\Query\Builder
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/app/Domain/Repositories/NotificationUser/NotificationUserRepositoryEloquent.php
+                      line: 22
+                      function: update
+                      class: Illuminate\Database\Eloquent\Builder
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/app/Http/Controllers/Api/NotificationUserController.php
+                      line: 44
+                      function: updateViewByUserId
+                      class: App\Domain\Repositories\NotificationUser\NotificationUserRepositoryEloquent
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                      line: 54
+                      function: updateViewByUserId
+                      class: App\Http\Controllers\Api\NotificationUserController
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
+                      line: 45
+                      function: callAction
+                      class: Illuminate\Routing\Controller
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                      line: 261
+                      function: dispatch
+                      class: Illuminate\Routing\ControllerDispatcher
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                      line: 204
+                      function: runController
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 725
+                      function: run
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Routing\{closure}'
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 726
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 703
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 667
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 656
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 167
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Http/SetRequestIpMiddleware.php
+                      line: 45
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Sentry\Laravel\Http\SetRequestIpMiddleware
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Http/SetRequestMiddleware.php
+                      line: 31
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Sentry\Laravel\Http\SetRequestMiddleware
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 86
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Tracing/Middleware.php
+                      line: 53
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Sentry\Laravel\Tracing\Middleware
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 142
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 111
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 299
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 287
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 89
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 45
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 222
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 179
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 116
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 123
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 80
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 56
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 55
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 37
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 651
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 139
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
+                      line: 308
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 124
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
+                      line: 998
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
+                      line: 299
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/symfony/console/Application.php
+                      line: 171
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
+                      line: 102
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 129
+                      function: run
+                      class: Illuminate\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/admin-unified/artisan
+                      line: 37
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: "SQLSTATE[22007]: Invalid datetime format: 1292 Truncated incorrect INTEGER value: 'dolorem' (SQL: update `notification_users` set `views` = 1, `notification_users`.`updated_at` = 2022-10-27 15:49:00 where `user_id` = dolorem and `deleted_at` is null)"
+                  exception:
+                    type: string
+                    example: Illuminate\Database\QueryException
+                  file:
+                    type: string
+                    example: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                  line:
+                    type: integer
+                    example: 759
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                        line: 719
+                        function: runQueryCallback
+                        class: Illuminate\Database\Connection
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                        line: 576
+                        function: run
+                        class: Illuminate\Database\Connection
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                        line: 509
+                        function: affectingStatement
+                        class: Illuminate\Database\Connection
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                        line: 3281
+                        function: update
+                        class: Illuminate\Database\Connection
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                        line: 999
+                        function: update
+                        class: Illuminate\Database\Query\Builder
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/app/Domain/Repositories/NotificationUser/NotificationUserRepositoryEloquent.php
+                        line: 22
+                        function: update
+                        class: Illuminate\Database\Eloquent\Builder
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/app/Http/Controllers/Api/NotificationUserController.php
+                        line: 44
+                        function: updateViewByUserId
+                        class: App\Domain\Repositories\NotificationUser\NotificationUserRepositoryEloquent
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                        line: 54
+                        function: updateViewByUserId
+                        class: App\Http\Controllers\Api\NotificationUserController
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
+                        line: 45
+                        function: callAction
+                        class: Illuminate\Routing\Controller
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                        line: 261
+                        function: dispatch
+                        class: Illuminate\Routing\ControllerDispatcher
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                        line: 204
+                        function: runController
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 725
+                        function: run
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Routing\{closure}'
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 726
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 703
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 667
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 656
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 167
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Http/SetRequestIpMiddleware.php
+                        line: 45
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Sentry\Laravel\Http\SetRequestIpMiddleware
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Http/SetRequestMiddleware.php
+                        line: 31
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Sentry\Laravel\Http\SetRequestMiddleware
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 86
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Tracing/Middleware.php
+                        line: 53
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Sentry\Laravel\Tracing\Middleware
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 142
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 111
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 299
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 287
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 89
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 45
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 222
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 179
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 116
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 123
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 80
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 56
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 55
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 37
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 651
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 139
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/symfony/console/Command/Command.php
+                        line: 308
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 124
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
+                        line: 998
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
+                        line: 299
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/symfony/console/Application.php
+                        line: 171
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php
+                        line: 102
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 129
+                        function: run
+                        class: Illuminate\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/admin-unified/artisan
+                        line: 37
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+      tags:
+        - NotificationUser
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: dolorem
         required: true
         schema:
           type: string
@@ -6277,7 +8023,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: alias
+        example: corporis
         required: true
         schema:
           type: string
@@ -6285,7 +8031,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eos
+        example: et
         required: true
         schema:
           type: string
@@ -6333,7 +8079,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: aut
+        example: corrupti
         required: true
         schema:
           type: string
@@ -6341,7 +8087,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: beatae
+        example: esse
         required: true
         schema:
           type: string
@@ -6349,7 +8095,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: esse
+        example: consequatur
         required: true
         schema:
           type: string
@@ -6397,7 +8143,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: quae
+        example: expedita
         required: true
         schema:
           type: string
@@ -6405,7 +8151,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: id
+        example: quidem
         required: true
         schema:
           type: string
@@ -6413,7 +8159,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: adipisci
+        example: necessitatibus
         required: true
         schema:
           type: string
@@ -6457,7 +8203,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: illo
+        example: mollitia
         required: true
         schema:
           type: string
@@ -6505,7 +8251,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: voluptatem
+        example: quam
         required: true
         schema:
           type: string
@@ -6513,7 +8259,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aut
+        example: necessitatibus
         required: true
         schema:
           type: string
@@ -6557,7 +8303,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: doloribus
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -6605,7 +8351,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: suscipit
+        example: ab
         required: true
         schema:
           type: string
@@ -6613,7 +8359,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptas
+        example: quidem
         required: true
         schema:
           type: string
@@ -6661,7 +8407,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: omnis
+        example: quo
         required: true
         schema:
           type: string
@@ -6669,7 +8415,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ex
+        example: omnis
         required: true
         schema:
           type: string
@@ -6677,7 +8423,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ut
+        example: voluptas
         required: true
         schema:
           type: string
@@ -6725,7 +8471,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: odio
+        example: facilis
         required: true
         schema:
           type: string
@@ -6733,7 +8479,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: nobis
+        example: iure
         required: true
         schema:
           type: string
@@ -6741,7 +8487,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: hic
+        example: aperiam
         required: true
         schema:
           type: string
@@ -6789,7 +8535,7 @@ paths:
         in: path
         name: placeId
         description: ''
-        example: nobis
+        example: dignissimos
         required: true
         schema:
           type: string
@@ -6797,7 +8543,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: perferendis
+        example: quia
         required: true
         schema:
           type: string
@@ -6805,7 +8551,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: minus
+        example: in
         required: true
         schema:
           type: string
@@ -6853,7 +8599,7 @@ paths:
         in: path
         name: orderCardId
         description: ''
-        example: aliquid
+        example: ullam
         required: true
         schema:
           type: string
@@ -6861,7 +8607,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: facilis
+        example: ad
         required: true
         schema:
           type: string
@@ -6869,7 +8615,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aut
+        example: amet
         required: true
         schema:
           type: string
@@ -6913,7 +8659,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: magni
+        example: adipisci
         required: true
         schema:
           type: string
@@ -6961,7 +8707,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: culpa
+        example: voluptatibus
         required: true
         schema:
           type: string
@@ -6969,7 +8715,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: est
+        example: autem
         required: true
         schema:
           type: string
@@ -7017,7 +8763,7 @@ paths:
         in: path
         name: orderServiceId
         description: ''
-        example: et
+        example: praesentium
         required: true
         schema:
           type: string
@@ -7025,7 +8771,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: eos
+        example: dignissimos
         required: true
         schema:
           type: string
@@ -7033,7 +8779,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: exercitationem
+        example: enim
         required: true
         schema:
           type: string
@@ -7081,7 +8827,7 @@ paths:
         in: path
         name: serviceId
         description: ''
-        example: voluptatibus
+        example: dolores
         required: true
         schema:
           type: string
@@ -7089,7 +8835,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quisquam
+        example: quia
         required: true
         schema:
           type: string
@@ -7097,7 +8843,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: doloremque
+        example: et
         required: true
         schema:
           type: string
@@ -7141,7 +8887,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: repudiandae
+        example: a
         required: true
         schema:
           type: string
@@ -7189,7 +8935,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: vero
+        example: consequuntur
         required: true
         schema:
           type: string
@@ -7197,7 +8943,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: impedit
+        example: fuga
         required: true
         schema:
           type: string
@@ -7241,7 +8987,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: dolorem
+        example: modi
         required: true
         schema:
           type: string
@@ -7289,7 +9035,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: est
+        example: sunt
         required: true
         schema:
           type: string
@@ -7297,7 +9043,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptas
+        example: quaerat
         required: true
         schema:
           type: string
@@ -7345,7 +9091,7 @@ paths:
         in: path
         name: cardId
         description: ''
-        example: laudantium
+        example: quisquam
         required: true
         schema:
           type: string
@@ -7353,7 +9099,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: ducimus
+        example: animi
         required: true
         schema:
           type: string
@@ -7361,7 +9107,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: doloribus
+        example: consequuntur
         required: true
         schema:
           type: string
@@ -7409,7 +9155,7 @@ paths:
         in: path
         name: partnerId
         description: ''
-        example: quia
+        example: ut
         required: true
         schema:
           type: string
@@ -7417,7 +9163,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: non
+        example: eveniet
         required: true
         schema:
           type: string
@@ -7425,7 +9171,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: non
+        example: qui
         required: true
         schema:
           type: string
@@ -7469,7 +9215,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: cum
+        example: molestiae
         required: true
         schema:
           type: string
@@ -7517,7 +9263,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sed
+        example: omnis
         required: true
         schema:
           type: string
@@ -7525,7 +9271,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: harum
+        example: est
         required: true
         schema:
           type: string
@@ -7573,7 +9319,7 @@ paths:
         in: path
         name: partnerId
         description: ''
-        example: consequatur
+        example: vel
         required: true
         schema:
           type: string
@@ -7581,7 +9327,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sequi
+        example: quam
         required: true
         schema:
           type: string
@@ -7589,7 +9335,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ullam
+        example: possimus
         required: true
         schema:
           type: string
@@ -7633,7 +9379,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: vitae
+        example: accusamus
         required: true
         schema:
           type: string
@@ -7681,7 +9427,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: repudiandae
+        example: dolor
         required: true
         schema:
           type: string
@@ -7689,7 +9435,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sapiente
+        example: necessitatibus
         required: true
         schema:
           type: string
@@ -7737,7 +9483,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: reiciendis
+        example: accusantium
         required: true
         schema:
           type: string
@@ -7745,7 +9491,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: pariatur
+        example: quas
         required: true
         schema:
           type: string
@@ -7753,7 +9499,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: nemo
+        example: aut
         required: true
         schema:
           type: string
@@ -7797,7 +9543,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: ullam
+        example: est
         required: true
         schema:
           type: string
@@ -7845,7 +9591,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quia
+        example: vel
         required: true
         schema:
           type: string
@@ -7853,7 +9599,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: facere
+        example: animi
         required: true
         schema:
           type: string
@@ -7897,7 +9643,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: deleniti
+        example: consequatur
         required: true
         schema:
           type: string
@@ -7945,7 +9691,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolor
+        example: atque
         required: true
         schema:
           type: string
@@ -7953,7 +9699,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ipsum
+        example: aut
         required: true
         schema:
           type: string
@@ -8001,7 +9747,7 @@ paths:
         in: path
         name: serviceId
         description: ''
-        example: nihil
+        example: distinctio
         required: true
         schema:
           type: string
@@ -8009,7 +9755,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: inventore
+        example: ratione
         required: true
         schema:
           type: string
@@ -8017,7 +9763,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quo
+        example: temporibus
         required: true
         schema:
           type: string
@@ -8065,7 +9811,7 @@ paths:
         in: path
         name: cityId
         description: ''
-        example: cum
+        example: et
         required: true
         schema:
           type: string
@@ -8073,7 +9819,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quos
+        example: delectus
         required: true
         schema:
           type: string
@@ -8081,7 +9827,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quibusdam
+        example: et
         required: true
         schema:
           type: string
@@ -8125,7 +9871,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: aliquam
+        example: reprehenderit
         required: true
         schema:
           type: string
@@ -8173,7 +9919,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quo
+        example: omnis
         required: true
         schema:
           type: string
@@ -8181,7 +9927,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: incidunt
+        example: tempora
         required: true
         schema:
           type: string
@@ -8225,7 +9971,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: molestias
+        example: aliquid
         required: true
         schema:
           type: string
@@ -8273,7 +10019,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: natus
+        example: facilis
         required: true
         schema:
           type: string
@@ -8281,7 +10027,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quas
+        example: nulla
         required: true
         schema:
           type: string
@@ -8329,7 +10075,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: fuga
+        example: odio
         required: true
         schema:
           type: string
@@ -8337,7 +10083,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eveniet
+        example: nobis
         required: true
         schema:
           type: string
@@ -8381,7 +10127,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: iusto
+        example: qui
         required: true
         schema:
           type: string
@@ -8429,7 +10175,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: aperiam
+        example: illo
         required: true
         schema:
           type: string
@@ -8437,7 +10183,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: in
+        example: eos
         required: true
         schema:
           type: string
@@ -8485,7 +10231,7 @@ paths:
         in: path
         name: sPartnerPointId
         description: ''
-        example: rerum
+        example: debitis
         required: true
         schema:
           type: string
@@ -8493,7 +10239,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: officiis
+        example: provident
         required: true
         schema:
           type: string
@@ -8501,7 +10247,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: fugiat
+        example: accusamus
         required: true
         schema:
           type: string
@@ -8545,7 +10291,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: illo
+        example: saepe
         required: true
         schema:
           type: string
@@ -8593,7 +10339,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: aut
+        example: est
         required: true
         schema:
           type: string
@@ -8601,7 +10347,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: ea
         required: true
         schema:
           type: string
@@ -8649,7 +10395,7 @@ paths:
         in: path
         name: sPartnerPointId
         description: ''
-        example: ea
+        example: culpa
         required: true
         schema:
           type: string
@@ -8657,7 +10403,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: porro
+        example: eum
         required: true
         schema:
           type: string
@@ -8665,7 +10411,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aut
+        example: alias
         required: true
         schema:
           type: string
@@ -8709,7 +10455,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: odio
+        example: atque
         required: true
         schema:
           type: string
@@ -8757,7 +10503,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: blanditiis
+        example: repudiandae
         required: true
         schema:
           type: string
@@ -8765,7 +10511,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: reprehenderit
+        example: repellendus
         required: true
         schema:
           type: string
@@ -8813,7 +10559,7 @@ paths:
         in: path
         name: sPartnerPointId
         description: ''
-        example: est
+        example: id
         required: true
         schema:
           type: string
@@ -8821,7 +10567,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: accusamus
+        example: a
         required: true
         schema:
           type: string
@@ -8829,7 +10575,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: quia
+        example: hic
         required: true
         schema:
           type: string
@@ -8873,7 +10619,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: reprehenderit
+        example: enim
         required: true
         schema:
           type: string
@@ -8921,7 +10667,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sapiente
+        example: rerum
         required: true
         schema:
           type: string
@@ -8929,7 +10675,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: aspernatur
+        example: magni
         required: true
         schema:
           type: string
@@ -8977,7 +10723,7 @@ paths:
         in: path
         name: sPartnerPointWalletId
         description: ''
-        example: neque
+        example: illum
         required: true
         schema:
           type: string
@@ -8985,7 +10731,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: neque
+        example: aliquam
         required: true
         schema:
           type: string
@@ -8993,7 +10739,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: ab
+        example: facere
         required: true
         schema:
           type: string
@@ -9037,7 +10783,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: et
+        example: ducimus
         required: true
         schema:
           type: string
@@ -9085,7 +10831,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: saepe
+        example: deleniti
         required: true
         schema:
           type: string
@@ -9093,7 +10839,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: autem
+        example: saepe
         required: true
         schema:
           type: string
@@ -9141,7 +10887,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: dolorem
+        example: possimus
         required: true
         schema:
           type: string
@@ -9149,7 +10895,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: est
+        example: iusto
         required: true
         schema:
           type: string
@@ -9157,7 +10903,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: minus
+        example: earum
         required: true
         schema:
           type: string
@@ -9201,7 +10947,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: in
+        example: repellendus
         required: true
         schema:
           type: string
@@ -9249,7 +10995,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: natus
+        example: corporis
         required: true
         schema:
           type: string
@@ -9257,7 +11003,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: similique
+        example: odit
         required: true
         schema:
           type: string
@@ -9301,7 +11047,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: itaque
+        example: molestias
         required: true
         schema:
           type: string
@@ -9349,7 +11095,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sunt
+        example: aliquam
         required: true
         schema:
           type: string
@@ -9357,7 +11103,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: doloremque
+        example: et
         required: true
         schema:
           type: string
@@ -9401,7 +11147,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: ducimus
+        example: aperiam
         required: true
         schema:
           type: string
@@ -9449,7 +11195,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: architecto
+        example: omnis
         required: true
         schema:
           type: string
@@ -9457,7 +11203,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: facere
+        example: in
         required: true
         schema:
           type: string
@@ -9501,7 +11247,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: dicta
+        example: rerum
         required: true
         schema:
           type: string
@@ -9549,7 +11295,7 @@ paths:
         in: path
         name: stockId
         description: ''
-        example: fugiat
+        example: esse
         required: true
         schema:
           type: string
@@ -9557,7 +11303,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: et
+        example: numquam
         required: true
         schema:
           type: string
@@ -9565,7 +11311,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sed
+        example: non
         required: true
         schema:
           type: string
@@ -9613,7 +11359,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quae
+        example: esse
         required: true
         schema:
           type: string
@@ -9621,7 +11367,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: sunt
+        example: dolorem
         required: true
         schema:
           type: string
@@ -9665,7 +11411,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: et
+        example: magni
         required: true
         schema:
           type: string
@@ -9713,7 +11459,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: rerum
+        example: earum
         required: true
         schema:
           type: string
@@ -9721,7 +11467,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: dignissimos
+        example: esse
         required: true
         schema:
           type: string
@@ -9765,7 +11511,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: possimus
+        example: quis
         required: true
         schema:
           type: string
@@ -9809,7 +11555,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: qui
+        example: voluptas
         required: true
         schema:
           type: string
@@ -9857,7 +11603,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: consequatur
+        example: architecto
         required: true
         schema:
           type: string
@@ -9865,7 +11611,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: pariatur
+        example: ut
         required: true
         schema:
           type: string
@@ -9913,7 +11659,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: cumque
+        example: impedit
         required: true
         schema:
           type: string
@@ -9921,7 +11667,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: autem
+        example: et
         required: true
         schema:
           type: string
@@ -9965,7 +11711,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: commodi
+        example: nostrum
         required: true
         schema:
           type: string
@@ -10013,7 +11759,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: repellat
+        example: quis
         required: true
         schema:
           type: string
@@ -10021,7 +11767,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: eos
+        example: est
         required: true
         schema:
           type: string
@@ -10065,7 +11811,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quo
+        example: eos
         required: true
         schema:
           type: string
@@ -10113,7 +11859,7 @@ paths:
         in: path
         name: stockId
         description: ''
-        example: pariatur
+        example: consectetur
         required: true
         schema:
           type: string
@@ -10121,7 +11867,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: omnis
+        example: accusamus
         required: true
         schema:
           type: string
@@ -10129,7 +11875,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: consequatur
         required: true
         schema:
           type: string
@@ -10177,7 +11923,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: omnis
+        example: sit
         required: true
         schema:
           type: string
@@ -10185,7 +11931,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: dolorum
+        example: et
         required: true
         schema:
           type: string
@@ -10229,7 +11975,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: quo
+        example: inventore
         required: true
         schema:
           type: string
@@ -10277,7 +12023,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: sed
+        example: ipsa
         required: true
         schema:
           type: string
@@ -10285,7 +12031,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptate
+        example: dolores
         required: true
         schema:
           type: string
@@ -10329,7 +12075,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: nostrum
+        example: deserunt
         required: true
         schema:
           type: string
@@ -10377,7 +12123,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: voluptatem
+        example: ullam
         required: true
         schema:
           type: string
@@ -10385,7 +12131,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: vitae
+        example: illo
         required: true
         schema:
           type: string
@@ -10429,7 +12175,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: non
+        example: at
         required: true
         schema:
           type: string
@@ -10473,7 +12219,7 @@ paths:
         in: path
         name: phone
         description: ''
-        example: molestias
+        example: at
         required: true
         schema:
           type: string
@@ -10481,7 +12227,7 @@ paths:
         in: path
         name: password
         description: ''
-        example: enim
+        example: qui
         required: true
         schema:
           type: string
@@ -10529,7 +12275,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: similique
+        example: dolores
         required: true
         schema:
           type: string
@@ -10537,7 +12283,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptates
+        example: aut
         required: true
         schema:
           type: string
@@ -10581,7 +12327,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: recusandae
+        example: assumenda
         required: true
         schema:
           type: string
@@ -10625,7 +12371,7 @@ paths:
         in: path
         name: email
         description: ''
-        example: recusandae
+        example: vel
         required: true
         schema:
           type: string
@@ -10633,7 +12379,7 @@ paths:
         in: path
         name: password
         description: ''
-        example: voluptatem
+        example: facilis
         required: true
         schema:
           type: string
@@ -10681,7 +12427,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: similique
+        example: illo
         required: true
         schema:
           type: string
@@ -10689,7 +12435,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: a
+        example: reiciendis
         required: true
         schema:
           type: string
@@ -10737,7 +12483,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: numquam
+        example: vitae
         required: true
         schema:
           type: string
@@ -10745,7 +12491,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: minima
+        example: est
         required: true
         schema:
           type: string
@@ -10753,7 +12499,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: commodi
+        example: harum
         required: true
         schema:
           type: string
@@ -10801,7 +12547,7 @@ paths:
         in: path
         name: carModelId
         description: ''
-        example: deleniti
+        example: unde
         required: true
         schema:
           type: string
@@ -10809,7 +12555,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolores
+        example: possimus
         required: true
         schema:
           type: string
@@ -10817,7 +12563,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: debitis
+        example: beatae
         required: true
         schema:
           type: string
@@ -10861,7 +12607,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: tenetur
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -10909,7 +12655,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: rem
+        example: dolores
         required: true
         schema:
           type: string
@@ -10917,7 +12663,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: a
+        example: eos
         required: true
         schema:
           type: string
@@ -10965,7 +12711,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: ducimus
+        example: est
         required: true
         schema:
           type: string
@@ -10973,7 +12719,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: iure
+        example: fugit
         required: true
         schema:
           type: string
@@ -10981,7 +12727,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: perferendis
+        example: ea
         required: true
         schema:
           type: string
@@ -11073,7 +12819,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: impedit
+        example: quod
         required: true
         schema:
           type: string
@@ -11081,7 +12827,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: occaecati
+        example: dolorum
         required: true
         schema:
           type: string
@@ -11129,7 +12875,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: sint
+        example: autem
         required: true
         schema:
           type: string
@@ -11137,7 +12883,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: incidunt
+        example: qui
         required: true
         schema:
           type: string
@@ -11145,7 +12891,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: earum
+        example: id
         required: true
         schema:
           type: string
@@ -11189,7 +12935,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: qui
+        example: dolorem
         required: true
         schema:
           type: string
@@ -11237,7 +12983,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: illo
+        example: eos
         required: true
         schema:
           type: string
@@ -11245,7 +12991,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: voluptate
+        example: maxime
         required: true
         schema:
           type: string
@@ -11293,7 +13039,7 @@ paths:
         in: path
         name: userId
         description: ''
-        example: impedit
+        example: vitae
         required: true
         schema:
           type: string
@@ -11301,7 +13047,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolor
+        example: adipisci
         required: true
         schema:
           type: string
@@ -11309,7 +13055,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: tempore
+        example: repudiandae
         required: true
         schema:
           type: string
@@ -11353,7 +13099,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: alias
+        example: consequatur
         required: true
         schema:
           type: string
@@ -11401,7 +13147,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: voluptatum
+        example: rerum
         required: true
         schema:
           type: string
@@ -11409,7 +13155,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: dolore
+        example: deserunt
         required: true
         schema:
           type: string
@@ -11457,7 +13203,7 @@ paths:
         in: path
         name: paymentId
         description: ''
-        example: distinctio
+        example: consequatur
         required: true
         schema:
           type: string
@@ -11465,7 +13211,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: quia
+        example: ab
         required: true
         schema:
           type: string
@@ -11473,7 +13219,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: provident
+        example: omnis
         required: true
         schema:
           type: string
@@ -11521,7 +13267,7 @@ paths:
         in: path
         name: walletId
         description: ''
-        example: dicta
+        example: est
         required: true
         schema:
           type: string
@@ -11529,7 +13275,7 @@ paths:
         in: path
         name: skip
         description: ''
-        example: dolores
+        example: perspiciatis
         required: true
         schema:
           type: string
@@ -11537,7 +13283,7 @@ paths:
         in: path
         name: take
         description: ''
-        example: et
+        example: esse
         required: true
         schema:
           type: string
@@ -11581,16 +13327,13 @@ paths:
         in: path
         name: id
         description: 'The ID of the getById.'
-        example: doloribus
+        example: voluptas
         required: true
         schema:
           type: string
 tags:
   -
-    name: Notification
-    description: ''
-  -
-    name: NotificationUser
+    name: NotificationType
     description: ''
   -
     name: 'AutoPart - АвтомобильЗапчасти'
@@ -11723,6 +13466,12 @@ tags:
     description: ''
   -
     name: 'NewsCategory - НовостиКатегория'
+    description: ''
+  -
+    name: Notification
+    description: ''
+  -
+    name: NotificationUser
     description: ''
   -
     name: 'OrderCard - ЗаказКарточка'
