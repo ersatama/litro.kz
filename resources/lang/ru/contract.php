@@ -40,4 +40,7 @@ return [
     Contract::USER_PROFILES =>  'Профили',
     Contract::USER_CAR  =>  'Автовладелец',
     Contract::USER_CARS =>  'Автовладельцы',
+    Contract::TITLE =>  'Заголовок',
+    Contract::TITLE_EN  =>  'Заголовок (Анг)',
+    Contract::TITLE_KZ  =>  'Заголовок (Каз)',
 ];

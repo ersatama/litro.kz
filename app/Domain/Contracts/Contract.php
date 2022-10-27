@@ -4,6 +4,8 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const INPUT =   'input';
+    const KZ    =   'kz';
     const RU    =   'ru';
     const EN    =   'en';
     const USER_CARS =   'user_cars';

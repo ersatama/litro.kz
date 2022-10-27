@@ -21,9 +21,6 @@ return new class extends Migration
             $table->string(Contract::TITLE)->nullable();
             $table->string(Contract::TITLE_EN)->nullable();
             $table->string(Contract::TITLE_KZ)->nullable();
-            $table->text(Contract::DESCRIPTION)->nullable();
-            $table->text(Contract::DESCRIPTION_EN)->nullable();
-            $table->text(Contract::DESCRIPTION_KZ)->nullable();
             $table->boolean(Contract::VIEWS)->default(false)->nullable();
             $table->timestamps();
             $table->softDeletes();

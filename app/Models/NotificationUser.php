@@ -8,6 +8,7 @@ use App\Domain\Scopes\WithDeleted;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class NotificationUser extends Model
 {
@@ -19,5 +20,10 @@ class NotificationUser extends Model
     {
         static::addGlobalScope(new OrderBy);
         static::addGlobalScope(new WithDeleted);
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
     }
 }

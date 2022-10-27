@@ -10,9 +10,6 @@ class NotificationUserContract extends Contract
         self::TITLE,
         self::TITLE_EN,
         self::TITLE_KZ,
-        self::DESCRIPTION,
-        self::DESCRIPTION_EN,
-        self::DESCRIPTION_KZ,
         self::VIEWS
     ];
 }

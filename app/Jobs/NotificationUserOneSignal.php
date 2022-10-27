@@ -38,8 +38,9 @@ class NotificationUserOneSignal implements ShouldQueue
     public function handle(OneSignal $oneSignal, UserService $userService): void
     {
         $arr    =   [];
+        $user   =   $userService->userRepository->getById($this->notificationUser->{Contract::USER_ID});
         $oneSignal->send(
-            $userService->userRepository->getById($this->notificationUser->{Contract::USER_ID}),
+            $user,
             $this->notificationUser->{Contract::TITLE},
             [],
             'default',
