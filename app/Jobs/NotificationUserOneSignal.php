@@ -32,6 +32,7 @@ class NotificationUserOneSignal implements ShouldQueue
      * Execute the job.
      *
      * @param OneSignal $oneSignal
+     * @param UserService $userService
      * @return void
      */
     public function handle(OneSignal $oneSignal, UserService $userService): void

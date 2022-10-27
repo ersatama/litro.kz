@@ -2,6 +2,8 @@
 
 namespace App\Domain\Helpers;
 
+use Illuminate\Support\Facades\Log;
+
 class Curl
 {
     public function get(string $url): bool|string
@@ -23,9 +25,9 @@ class Curl
         curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_POST, TRUE);
+        curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($fields));
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($curl);
         curl_close($curl);
         return $result;

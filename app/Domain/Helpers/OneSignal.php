@@ -42,6 +42,11 @@ class OneSignal
             ];
         }
 
+        $fields[Contract::ADDITIONAL]   =   [
+            Contract::EN    =>  $fields[Contract::TEXT],
+            Contract::RU    =>  $fields[Contract::TEXT]
+        ];
+
         if (array_key_exists(Contract::TYPE, $fields) && $fields[Contract::TYPE] !== 'default') {
             $fields[Contract::ADDITIONAL][Contract::TYPE]   =   $fields[Contract::TYPE];
         }
