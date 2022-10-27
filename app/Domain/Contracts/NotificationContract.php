@@ -6,6 +6,7 @@ class NotificationContract extends Contract
 {
     const TABLE =   'notifications';
     const FILLABLE  =   [
+        self::NOTIFICATION_TYPE_ID,
         self::CITY_ID,
         self::TITLE,
         self::TITLE_EN,

@@ -181,6 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Ladumor\OneSignal\OneSignalServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -277,6 +278,8 @@ return [
         App\Providers\Repositories\UserProfileRepositoryProvider::class,
         App\Providers\Repositories\NotificationUserRepositoryProvider::class,
         App\Providers\Repositories\NotificationRepositoryProvider::class,
+        App\Providers\Repositories\NotificationCountRepositoryProvider::class,
+        App\Providers\Repositories\NotificationTypeRepositoryProvider::class,
     ],
 
     /*
@@ -292,6 +295,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'OneSignal' => \Ladumor\OneSignal\OneSignal::class,
     ])->toArray(),
 
 ];

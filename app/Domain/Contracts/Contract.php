@@ -4,6 +4,8 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const RU    =   'ru';
+    const EN    =   'en';
     const USER_CARS =   'user_cars';
     const USER_CAR  =   'user_car';
     const USER_PROFILES =   'user_profiles';
@@ -49,6 +51,7 @@ abstract class Contract
     const SERVICE   =   'service';
     const LAWYER    =   'lawyer';
     const USER  =   'user';
+    const PARAMETERS    =   'parameters';
     const USERS =   'users';
     const INSURANCE_COMPANY =   'insurance_company';
     const INSURANCE_CATEGORY    =   'insurance_category';
@@ -184,6 +187,7 @@ abstract class Contract
     const ORDER_CARD_ID_OLD =   'order_card_id_old';
     const CAR_NUMBER    =   'car_number';
     const VALUE =   'value';
+    const RELATION  =   'relation';
     const IS_CHOOSEABLE =   'is_chooseable';
     const C_TO  =   'c_to';
     const C_FROM    =   'c_from';
@@ -228,12 +232,27 @@ abstract class Contract
     const PAYMENT_ID    =   'payment_id';
     const WALLET_RECORD_ID  =   'wallet_record_id';
     const USER_ID   =   'user_id';
+    const NOTIFICATION_ID   =   'notification_id';
     const STATUS    =   'status';
     const MONEY_OPERATION_TYPE_ID   =   'money_operation_type_id';
     const INFO  =   'info';
     const SKIP  =   'skip';
     const TAKE  =   'take';
     const DATA  =   'data';
+    const APP_ID    =   'app_id';
+    const TAGS  =   'tags';
+    const IS_ANDROID    =   'isAndroid';
+    const IS_IOS    =   'isIos';
+    const IS_ANY_WEB    =   'isAnyWeb';
+    const ANDROID_SOUND =   'android_sound';
+    const IOS_SOUND =   'ios_sound';
+    const CONTENTS  =   'contents';
+    const HEADINGS  =   'headings';
+    const IOS_BADGE_TYPE    =   'ios_badgeType';
+    const IOS_BADGE_COUNT   =   'ios_badgeCount';
+    const BIG_PICTURE   =   'big_picture';
+    const IOS_ATTACHMENTS   =   'ios_attachments';
+    const INCREASE  =   'Increase';
     const COUNT =   'count';
     const IS_NEGOTIABLE_PRICE   =   'is_negotiable_price';
     const IS_WITH_CHECK =   'is_with_check';
@@ -241,6 +260,7 @@ abstract class Contract
     const CAR_CATEGORY_ID   =   'car_category_id';
     const SERVICE_ID    =   'service_id';
     const CITY_ID   =   'city_id';
+    const NOTIFICATION_TYPE_ID  =   'notification_type_id';
     const ANNOTATION_EN =   'annotation_en';
     const ANNOTATION_KZ =   'annotation_kz';
     const ANNOTATION    =   'annotation';
@@ -273,6 +293,9 @@ abstract class Contract
     const AUTO_PART_PARAM_ID    =   'auto_part_param_id';
     const FILTER    =   'filter';
     const TYPE  =   'type';
+    const ADDITIONAL    =   'additional';
+    const TYPE_ID   =   'type_id';
+    const SOUND =   'sound';
     const POSITION  =   'position';
     const PARENT_ID =   'parent_id';
     const NEWS_CATEGORY_ID  =   'news_category_id';
@@ -308,6 +331,7 @@ abstract class Contract
     const ASC   =   'asc';
     const DESC  =   'desc';
     const DRIVER    =   'driver';
+    const NOT_VIEWED    =   'not_viewed';
     const ORDER_BY_TYPES    =   [
         self::ASC,
         self::DESC
@@ -333,6 +357,7 @@ abstract class Contract
         self::ADDITIONAL_IMAGE_ID,
         self::COUNTRY_ID,
     ];
+
     public static function CLEAR(array $arr) :array
     {
         foreach (self::REMOVABLE as &$value) {

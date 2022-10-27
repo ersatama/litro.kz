@@ -98,4 +98,5 @@ Route::group([
     Route::crud('wallet-record', 'WalletRecordCrudController');
     Route::crud('notification-user', 'NotificationUserCrudController');
     Route::crud('notification', 'NotificationCrudController');
+    Route::crud('notification-type', 'NotificationTypeCrudController');
 }); // this should be the absolute last line of this file

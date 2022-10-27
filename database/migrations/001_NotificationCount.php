@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\Contracts\Contract;
-use App\Domain\Contracts\NotificationUserContract;
+use App\Domain\Contracts\NotificationCountContract;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,19 +15,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create(NotificationUserContract::TABLE, function (Blueprint $table) {
+        Schema::create(NotificationCountContract::TABLE, function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger(Contract::USER_ID)->nullable();
-            $table->string(Contract::TITLE)->nullable();
-            $table->string(Contract::TITLE_EN)->nullable();
-            $table->string(Contract::TITLE_KZ)->nullable();
-            $table->text(Contract::DESCRIPTION)->nullable();
-            $table->text(Contract::DESCRIPTION_EN)->nullable();
-            $table->text(Contract::DESCRIPTION_KZ)->nullable();
-            $table->boolean(Contract::VIEWS)->default(false)->nullable();
+            $table->unsignedBigInteger(Contract::NOTIFICATION_ID)->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->index(Contract::USER_ID);
+            $table->index(Contract::NOTIFICATION_ID);
         });
     }
 
@@ -38,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists(NotificationUserContract::TABLE);
+        Schema::dropIfExists(NotificationCountContract::TABLE);
     }
 };

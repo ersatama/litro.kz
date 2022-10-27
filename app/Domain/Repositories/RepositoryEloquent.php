@@ -3,9 +3,33 @@
 namespace App\Domain\Repositories;
 
 use App\Domain\Contracts\Contract;
+use Illuminate\Support\Facades\DB;
 
 trait RepositoryEloquent
 {
+    public function upsert($data, $search, $update)
+    {
+        DB::table($this->model->getTable())->upsert($data, $search, $update);
+    }
+
+    public function getByNotificationIdAndUserId($notificationId,$userId)
+    {
+        return $this->model::where([
+            Contract::NOTIFICATION_ID   =>  $notificationId,
+            Contract::USER_ID   =>  $userId
+        ])->first();
+    }
+
+    public function getByNotificationTypeIdAndCityId($notificationTypeId,$cityId,$skip,$take)
+    {
+        return $this->model::where([
+            Contract::NOTIFICATION_TYPE_ID  =>  $notificationTypeId,
+            Contract::CITY_ID   =>  $cityId
+        ])
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
 
     public function getByCarModelIdAndYear($carModelId,$year)
     {
@@ -165,11 +189,15 @@ trait RepositoryEloquent
             ->get();
     }
 
-    public function getByCityId($cityId,$skip,$take)
+    public function getByCityId($cityId, $skip = null,$take = null)
     {
+        if (!is_null($skip) && !is_null($take)) {
+            return $this->model::where(Contract::CITY_ID, $cityId)
+                ->skip($skip)
+                ->take($take)
+                ->get();
+        }
         return $this->model::where(Contract::CITY_ID, $cityId)
-            ->skip($skip)
-            ->take($take)
             ->get();
     }
 

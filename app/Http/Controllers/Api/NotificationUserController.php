@@ -35,6 +35,20 @@ class NotificationUserController extends Controller
     }
 
     /**
+     * обновить views через UserID - NotificationUser
+     *
+     * @group NotificationUser
+     */
+    public function updateViewByUserId($userId): Response|Application|ResponseFactory
+    {
+        $this->notificationUserService->notificationUserRepository->updateViewByUserId($userId);
+        return response([
+            Contract::USER_ID   =>  $userId,
+            Contract::NOT_VIEWED    =>  0
+        ],200);
+    }
+
+    /**
      * Получить данные через UserID - NotificationUser
      *
      * @group NotificationUser
@@ -42,6 +56,10 @@ class NotificationUserController extends Controller
     public function getByUserId($userId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
+            Contract::NOT_VIEWED    =>  $this->notificationUserService->notificationUserRepository->count([
+                Contract::USER_ID   =>  $userId,
+                Contract::VIEWS =>  false
+            ]),
             Contract::COUNT =>  $this->notificationUserService->notificationUserRepository->count([
                 Contract::USER_ID   =>  $userId
             ]),

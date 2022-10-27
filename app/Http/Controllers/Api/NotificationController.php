@@ -35,6 +35,39 @@ class NotificationController extends Controller
     }
 
     /**
+     * Получить данные через NotificationTypeId и CityID c пользователем - Notification
+     *
+     * @group Notification
+     */
+    public function getByNotificationTypeIdAndCityIdWithUser($userId,$notificationTypeId,$cityId,$skip,$take): Response|Application|ResponseFactory
+    {
+        return response([
+            Contract::NOT_VIEWED    =>  $this->notificationService->notificationRepository->countNotViewed($userId, $notificationTypeId, $cityId),
+            Contract::COUNT =>  $this->notificationService->notificationRepository->count([
+                Contract::NOTIFICATION_TYPE_ID  =>  $notificationTypeId,
+                Contract::CITY_ID   =>  $cityId
+            ]),
+            Contract::DATA  =>  new NotificationCollection($this->notificationService->getByNotificationTypeIdAndCityIdWithUser($userId,$notificationTypeId,$cityId,$skip,$take))
+        ],200);
+    }
+
+    /**
+     * Получить данные через NotificationTypeId и CityID - Notification
+     *
+     * @group Notification
+     */
+    public function getByNotificationTypeIdAndCityId($notificationTypeId,$cityId,$skip,$take): Response|Application|ResponseFactory
+    {
+        return response([
+            Contract::COUNT =>  $this->notificationService->notificationRepository->count([
+                Contract::NOTIFICATION_TYPE_ID  =>  $notificationTypeId,
+                Contract::CITY_ID   =>  $cityId
+            ]),
+            Contract::DATA  =>  new NotificationCollection($this->notificationService->notificationRepository->getByNotificationTypeIdAndCityId($notificationTypeId,$cityId,$skip,$take))
+        ],200);
+    }
+
+    /**
      * Получить данные через CityID - Notification
      *
      * @group Notification

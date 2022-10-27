@@ -2,19 +2,18 @@
 
 namespace App\Models;
 
-use App\Domain\Contracts\NotificationContract;
+use App\Domain\Contracts\NotificationCountContract;
 use App\Domain\Scopes\OrderBy;
 use App\Domain\Scopes\WithDeleted;
-use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Notification extends Model
+class NotificationCount extends Model
 {
-    use CrudTrait;
     use HasFactory;
-    protected $table    =   NotificationContract::TABLE;
-    protected $fillable =   NotificationContract::FILLABLE;
+
+    protected $table    =   NotificationCountContract::TABLE;
+    protected $fillable =   NotificationCountContract::FILLABLE;
 
     protected static function booted(): void
     {

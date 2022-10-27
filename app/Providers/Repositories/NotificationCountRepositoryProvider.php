@@ -3,10 +3,12 @@
 namespace App\Providers\Repositories;
 
 use App\Models\Notification;
+use App\Models\NotificationCount;
+use App\Observers\NotificationCountObserver;
 use App\Observers\NotificationObserver;
 use Illuminate\Support\ServiceProvider;
 
-class NotificationRepositoryProvider extends ServiceProvider
+class NotificationCountRepositoryProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -16,8 +18,8 @@ class NotificationRepositoryProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(
-            \App\Domain\Repositories\Notification\NotificationRepositoryInterface::class,
-            \App\Domain\Repositories\Notification\NotificationRepositoryEloquent::class,
+            \App\Domain\Repositories\NotificationCount\NotificationCountRepositoryInterface::class,
+            \App\Domain\Repositories\NotificationCount\NotificationCountRepositoryEloquent::class,
         );
     }
 
@@ -28,6 +30,6 @@ class NotificationRepositoryProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Notification::observe(NotificationObserver::class);
+        NotificationCount::observe(NotificationCountObserver::class);
     }
 }

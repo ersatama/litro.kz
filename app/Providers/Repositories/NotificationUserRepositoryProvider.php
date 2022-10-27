@@ -2,6 +2,8 @@
 
 namespace App\Providers\Repositories;
 
+use App\Models\NotificationUser;
+use App\Observers\NotificationUserObserver;
 use Illuminate\Support\ServiceProvider;
 
 class NotificationUserRepositoryProvider extends ServiceProvider
@@ -26,6 +28,6 @@ class NotificationUserRepositoryProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        NotificationUser::observe(NotificationUserObserver::class);
     }
 }

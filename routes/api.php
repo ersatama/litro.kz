@@ -56,6 +56,7 @@ use App\Http\Controllers\Api\PartnerPurchaseController;
 use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\PaymentSystemController;
 use App\Http\Controllers\Api\PlaceController;
+use App\Http\Controllers\Api\ProductCompanyController;
 use App\Http\Controllers\Api\RecurrentController;
 use App\Http\Controllers\Api\RegionController;
 use App\Http\Controllers\Api\ServiceController;
@@ -274,13 +275,16 @@ Route::controller(InsuranceCompanyController::class)->group(function() {
 Route::controller(NotificationController::class)->group(function() {
     Route::prefix('notification')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('notification.get');
-        Route::get('getByCityId/{userId}/{skip}/{take}','getByCityId')->name('notification.getByCityId');
+        Route::get('getByNotificationTypeIdAndCityIdWithUser/{userId}/{notificationTypeId}/{cityId}/{skip}/{take}','getByNotificationTypeIdAndCityIdWithUser')->name('notification.getByNotificationTypeIdAndCityIdWithUser');
+        Route::get('getByNotificationTypeIdAndCityId/{notificationTypeId}/{cityId}/{skip}/{take}','getByNotificationTypeIdAndCityId')->name('notification.getByNotificationTypeIdAndCityId');
+        Route::get('getByCityId/{cityId}/{skip}/{take}','getByCityId')->name('notification.getByCityId');
         Route::get('getById/{id}','getById')->name('notification.getById');
     });
 });
 
 Route::controller(NotificationUserController::class)->group(function() {
     Route::prefix('notificationUser')->group(function() {
+        Route::get('updateViewByUserId/{userId}','updateViewByUserId')->name('notificationUser.updateViewByUserId');
         Route::get('get/{skip}/{take}','get')->name('notificationUser.get');
         Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('notificationUser.getByUserId');
         Route::get('getById/{id}','getById')->name('notificationUser.getById');
