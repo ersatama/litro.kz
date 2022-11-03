@@ -15,4 +15,9 @@ class CardServiceRepositoryEloquent implements CardServiceRepositoryInterface
     {
         $this->model    =   $cardService;
     }
+
+    public static function count()
+    {
+        return CardService::count();
+    }
 }

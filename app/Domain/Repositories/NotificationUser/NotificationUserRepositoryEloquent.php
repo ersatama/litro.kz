@@ -22,4 +22,9 @@ class NotificationUserRepositoryEloquent implements NotificationUserRepositoryIn
             Contract::VIEWS =>  true
         ]);
     }
+
+    public static function count()
+    {
+        return NotificationUser::count();
+    }
 }

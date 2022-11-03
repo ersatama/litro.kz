@@ -13,4 +13,9 @@ class PartnerRepositoryEloquent implements PartnerRepositoryInterface
     {
         $this->model    =   $partner;
     }
+
+    public static function count()
+    {
+        return Partner::count();
+    }
 }

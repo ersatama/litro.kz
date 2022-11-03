@@ -13,4 +13,9 @@ class MoneyOperationRepositoryEloquent implements MoneyOperationRepositoryInterf
     {
         $this->model    =   $moneyOperation;
     }
+
+    public static function count()
+    {
+        return MoneyOperation::count();
+    }
 }

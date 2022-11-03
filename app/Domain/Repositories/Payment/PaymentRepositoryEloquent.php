@@ -13,4 +13,9 @@ class PaymentRepositoryEloquent implements PaymentRepositoryInterface
     {
         $this->model    =   $payment;
     }
+
+    public static function count()
+    {
+        return Payment::count();
+    }
 }

@@ -13,4 +13,9 @@ class InsuranceCompanyRepositoryEloquent implements InsuranceCompanyRepositoryIn
     {
         $this->model    =   $insuranceCompany;
     }
+
+    public static function count()
+    {
+        return InsuranceCompany::count();
+    }
 }

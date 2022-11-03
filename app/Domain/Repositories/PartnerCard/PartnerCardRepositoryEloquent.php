@@ -13,4 +13,9 @@ class PartnerCardRepositoryEloquent implements PartnerCardRepositoryInterface
     {
         $this->model    =   $partnerCard;
     }
+
+    public static function count()
+    {
+        return PartnerCard::count();
+    }
 }

@@ -16,4 +16,9 @@ class NewsRepositoryEloquent implements NewsRepositoryInterface
     {
         $this->model    =   $news;
     }
+
+    public static function count()
+    {
+        return News::count();
+    }
 }

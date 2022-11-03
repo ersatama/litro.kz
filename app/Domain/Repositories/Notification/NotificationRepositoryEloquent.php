@@ -50,4 +50,9 @@ class NotificationRepositoryEloquent implements NotificationRepositoryInterface
                 ]
             ]);
     }
+
+    public static function count()
+    {
+        return Notification::count();
+    }
 }

@@ -15,4 +15,9 @@ class ServiceRepositoryEloquent implements ServiceRepositoryInterface
     {
         $this->model    =   $service;
     }
+
+    public static function count()
+    {
+        return Service::count();
+    }
 }

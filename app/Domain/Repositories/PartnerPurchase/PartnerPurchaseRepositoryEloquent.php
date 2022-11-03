@@ -13,4 +13,9 @@ class PartnerPurchaseRepositoryEloquent implements PartnerPurchaseRepositoryInte
     {
         $this->model    =   $partnerPurchase;
     }
+
+    public static function count()
+    {
+        return PartnerPurchase::count();
+    }
 }

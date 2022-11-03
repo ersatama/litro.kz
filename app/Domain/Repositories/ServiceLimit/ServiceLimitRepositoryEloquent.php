@@ -15,4 +15,9 @@ class ServiceLimitRepositoryEloquent implements ServiceLimitRepositoryInterface
     {
         $this->model    =   $serviceLimit;
     }
+
+    public static function count()
+    {
+        return ServiceLimit::count();
+    }
 }

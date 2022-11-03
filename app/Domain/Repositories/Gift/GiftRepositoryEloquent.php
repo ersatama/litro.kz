@@ -13,4 +13,9 @@ class GiftRepositoryEloquent implements GiftRepositoryInterface
     {
         $this->model    =   $gift;
     }
+
+    public static function count()
+    {
+        return Gift::count();
+    }
 }

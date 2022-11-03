@@ -13,4 +13,9 @@ class OrderServiceRepositoryEloquent implements OrderServiceRepositoryInterface
     {
         $this->model    =   $orderService;
     }
+
+    public static function count()
+    {
+        return OrderService::count();
+    }
 }

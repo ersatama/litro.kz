@@ -13,4 +13,9 @@ class WalletRepositoryEloquent implements WalletRepositoryInterface
     {
         $this->model    =   $wallet;
     }
+
+    public static function count()
+    {
+        return Wallet::count();
+    }
 }

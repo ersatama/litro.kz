@@ -13,4 +13,9 @@ class StockRepositoryEloquent implements StockRepositoryInterface
     {
         $this->model    =   $stock;
     }
+
+    public static function count()
+    {
+        return Stock::count();
+    }
 }

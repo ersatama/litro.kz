@@ -13,4 +13,9 @@ class InsuranceKaskoPolicyRepositoryEloquent implements InsuranceKaskoPolicyRepo
     {
         $this->model    =   $insuranceKaskoPolicy;
     }
+
+    public static function count()
+    {
+        return InsuranceKaskoPolicy::count();
+    }
 }

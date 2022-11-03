@@ -16,4 +16,9 @@ class ImageRepositoryEloquent implements ImageRepositoryInterface
     {
         $this->model    =   $image;
     }
+
+    public static function count()
+    {
+        return Image::count();
+    }
 }

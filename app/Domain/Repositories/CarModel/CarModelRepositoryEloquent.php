@@ -15,4 +15,9 @@ class CarModelRepositoryEloquent implements CarModelRepositoryInterface
     {
         $this->model    =   $carModel;
     }
+
+    public static function count()
+    {
+        return CarModel::count();
+    }
 }

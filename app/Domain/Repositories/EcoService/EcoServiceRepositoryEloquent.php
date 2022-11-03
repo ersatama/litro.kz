@@ -13,4 +13,9 @@ class EcoServiceRepositoryEloquent implements EcoServiceRepositoryInterface
     {
         $this->model    =   $ecoService;
     }
+
+    public static function count()
+    {
+        return EcoService::count();
+    }
 }
