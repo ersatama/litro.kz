@@ -1,12 +1,12 @@
-name: PartnerPurchase
+name: PartnerCard
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/partnerPurchase/get/{skip}/{take}'
+    uri: 'api/partnerCard/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - PartnerPurchase'
+      title: 'Получить список - PartnerCard'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: omnis
+        example: quibusdam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: est
+        example: vitae
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":19,"data":[]}'
+        content: '{"count":20,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,55 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/partnerPurchase/getByPartnerId/{partnerId}/{skip}/{take}'
+    uri: 'api/partnerCard/getByCardId/{cardId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через PartnerID - PartnerPurchase'
+      title: 'Получить данные через CardID - PartnerCard'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cardId:
+        name: cardId
+        description: ''
+        required: true
+        example: ut
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: ratione
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: ut
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":20,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/partnerCard/getByPartnerId/{partnerId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через PartnerID - PartnerCard'
       description: ''
       authenticated: false
       custom: []
@@ -57,21 +103,21 @@ endpoints:
         name: partnerId
         description: ''
         required: true
-        example: vel
+        example: rerum
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: quam
+        example: numquam
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: possimus
+        example: quidem
         type: string
         custom: []
     queryParameters: []
@@ -79,7 +125,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":0,"data":[]}'
+        content: '{"count":20,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -89,9 +135,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/partnerPurchase/getById/{id}'
+    uri: 'api/partnerCard/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - PartnerPurchase'
+      title: 'Получить данные через ID - PartnerCard'
       description: ''
       authenticated: false
       custom: []
@@ -103,7 +149,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: accusamus
+        example: aut
         type: string
         custom: []
     queryParameters: []

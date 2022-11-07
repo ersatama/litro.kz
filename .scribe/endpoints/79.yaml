@@ -1,12 +1,12 @@
-name: UserProfile
+name: 'UserCar - ПользовательАвтомобиль'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/userProfile/get/{skip}/{take}'
+    uri: 'api/userCar/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - UserProfile'
+      title: 'Получить список - UserCar'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: quod
+        example: quas
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: dolorum
+        example: sunt
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":0,"data":[]}'
+        content: '{"count":277,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/userProfile/getByUserId/{userId}/{skip}/{take}'
+    uri: 'api/userCar/getByUserId/{userId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через UserID - UserProfile'
+      title: 'Получить данные через UserID - UserCar'
       description: ''
       authenticated: false
       custom: []
@@ -57,21 +57,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: autem
+        example: et
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: qui
+        example: itaque
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: id
+        example: pariatur
         type: string
         custom: []
     queryParameters: []
@@ -89,9 +89,55 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/userProfile/getById/{id}'
+    uri: 'api/userCar/getByCarModelId/{carModelId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через ID - UserProfile'
+      title: 'Получить данные через CarModelID - UserCar'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      carModelId:
+        name: carModelId
+        description: ''
+        required: true
+        example: pariatur
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: porro
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/userCar/getById/{id}'
+    metadata:
+      title: 'Получить данные через ID - UserCar'
       description: ''
       authenticated: false
       custom: []
@@ -103,7 +149,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: dolorem
+        example: eos
         type: string
         custom: []
     queryParameters: []

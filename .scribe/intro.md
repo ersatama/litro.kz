@@ -18,5 +18,5 @@ API документация для litro.kz
 > Base URL
 
 ```yaml
-http://localhost:8000
+http://localhost
 ```

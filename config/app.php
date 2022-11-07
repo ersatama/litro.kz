@@ -279,6 +279,8 @@ return [
         App\Providers\Repositories\NotificationRepositoryProvider::class,
         App\Providers\Repositories\NotificationCountRepositoryProvider::class,
         App\Providers\Repositories\NotificationTypeRepositoryProvider::class,
+        App\Providers\Repositories\OrderCardChosenServiceRepositoryProvider::class,
+        App\Providers\Repositories\RepeatedPartnerGiftCardRepositoryProvider::class,
     ],
 
     /*

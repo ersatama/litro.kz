@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: quam
+        example: qui
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: error
+        example: qui
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":21453,"data":[]}'
+        content: '{"count":36613,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -57,7 +57,7 @@ endpoints:
         name: orderCardId
         description: ''
         required: true
-        example: quia
+        example: cupiditate
         type: string
         custom: []
     queryParameters: []
@@ -65,7 +65,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":0,"data":[]}'
+        content: '{"count":36613,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -89,7 +89,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: voluptatem
+        example: ipsum
         type: string
         custom: []
     queryParameters: []

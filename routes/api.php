@@ -47,6 +47,7 @@ use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\NotificationController;
 use App\Http\Controllers\Api\NotificationTypeController;
 use App\Http\Controllers\Api\NotificationUserController;
+use App\Http\Controllers\Api\OrderCardChosenServiceController;
 use App\Http\Controllers\Api\OrderCardController;
 use App\Http\Controllers\Api\OrderCardOldController;
 use App\Http\Controllers\Api\OrderServiceController;
@@ -60,6 +61,7 @@ use App\Http\Controllers\Api\PlaceController;
 use App\Http\Controllers\Api\ProductCompanyController;
 use App\Http\Controllers\Api\RecurrentController;
 use App\Http\Controllers\Api\RegionController;
+use App\Http\Controllers\Api\RepeatedPartnerGiftCardController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\ServiceImageController;
 use App\Http\Controllers\Api\ServiceLimitController;
@@ -455,6 +457,22 @@ Route::controller(MessageController::class)->group(function() {
     Route::prefix('message')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('message.get');
         Route::get('getById/{id}','getById')->name('message.getById');
+    });
+});
+
+Route::controller(RepeatedPartnerGiftCardController::class)->group(function() {
+    Route::prefix('repeatedPartnerGiftCard')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('repeatedPartnerGiftCard.get');
+        Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('repeatedPartnerGiftCard.getByCardId');
+        Route::get('getByPartnerId/{partnerId}/{skip}/{take}','getByPartnerId')->name('repeatedPartnerGiftCard.getByPartnerId');
+        Route::get('getById/{id}','getById')->name('repeatedPartnerGiftCard.getById');
+    });
+});
+
+Route::controller(OrderCardChosenServiceController::class)->group(function() {
+    Route::prefix('orderCardChosenService')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('orderCardChosenService.get');
+        Route::get('getById/{id}','getById')->name('orderCardChosenService.getById');
     });
 });
 

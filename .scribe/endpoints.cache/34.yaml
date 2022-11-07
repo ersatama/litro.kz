@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: facilis
+        example: tempore
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: qui
+        example: omnis
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: cityId
         description: ''
         required: true
-        example: voluptatem
+        example: consequatur
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: eum
+        example: dicta
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: magni
+        example: quia
         type: string
         custom: []
     queryParameters: []
@@ -105,7 +105,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: tempora
+        example: atque
         type: string
         custom: []
     queryParameters: []

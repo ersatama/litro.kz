@@ -6,6 +6,7 @@ class EcoServiceContract extends Contract
 {
     const TABLE =   'eco_services';
     const FILLABLE  =   [
+        self::IMAGE_ID,
         self::POSITION,
         self::STATUS,
         self::TYPE,

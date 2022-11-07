@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: inventore
+        example: vel
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: maxime
+        example: voluptatem
         type: string
         custom: []
     queryParameters: []
@@ -35,7 +35,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":134,"data":[]}'
+        content: '{"count":146,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

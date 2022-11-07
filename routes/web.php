@@ -60,13 +60,19 @@ Route::get('/db', function () {
     }
     function img_convert($img) {
         $image_id   =   null;
+        $arg    =   null;
         if (str_starts_with($img,'https')) {
             $info   =   pathinfo($img);
             $img    =   $info['filename'];
+            $arg    =   $img;
         }
         if ($i  =   Image::where(Contract::PNG,$img.'.png')->first()) {
             $image_id   =   $i->id;
         } else {
+            if ($arg && $info && !file_exists( public_path() . '/storage/img/'.$img.'.png')) {
+                file_put_contents($info['basename'],file_get_contents($arg));
+            }
+
             $arr_img    =   [
                 Contract::USER_ID   =>  1,
                 Contract::PNG   =>  $img.'.png',
@@ -83,6 +89,7 @@ Route::get('/db', function () {
                 ];
             }
             $image  =   Image::create($arr_img);
+            $image_id   =   $image->id;
         }
         return $image_id;
     }
@@ -909,6 +916,7 @@ Route::get('/db', function () {
     }
     $table  =   'cards';
     echo $table.'<br>';
+    $i = 0;
     $carBrands  =   DB::connection('pgsql')->select('select * from '.$table.' ORDER BY id');
     foreach ($carBrands as &$value) {
         $data   =   DB::connection('pgsql')->select('select * from card_nodes where card_id='.$value->id);
@@ -937,8 +945,15 @@ Route::get('/db', function () {
             }
         }
         $img    =   DB::connection('pgsql')->select('select * from images where id='.$value->image_id);
-        $info   =   pathinfo($img[0]->path);
-        $image_id   =   img_convert($info['filename']);
+
+        $image_id = null;
+        if (sizeof($img) > 0) {
+            $info   =   pathinfo($img[0]->path);
+            $image_id   =   img_convert($info['filename']);
+            $i++;
+        }
+
+
 
         $settings   =   json_decode($value->settings);
 
@@ -1917,7 +1932,7 @@ Route::get('/db', function () {
     }
 
     $table  =   'eco_images';
-    echo $table.' - service<br><pre>';
+    echo $table.' - eco_images<br><pre>';
     $values  =   DB::connection('pgsql')->select('select * from '.$table.' where entity_type=\'service\'');
     foreach ($values as &$value) {
         if (does_url_exists($value->path)) {
@@ -1957,6 +1972,49 @@ Route::get('/db', function () {
         }
     }
 
+    $table  =   'repeated_partner_gift_cards';
+    echo $table.'<br>';
+    $carBrands  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($carBrands as &$value) {
+        DB::table('repeated_partner_gift_cards')->insert([
+            Contract::ID    =>  $value->{Contract::ID},
+            Contract::CARD_ID   =>  $value->card_id,
+            Contract::PARTNER_ID   =>  $value->partner_id,
+            Contract::PHONE    =>  $value->{Contract::PHONE},
+            Contract::CREATED_AT    =>  conv($value->created_at),
+            Contract::UPDATED_AT    =>  conv($value->updated_at),
+            Contract::DELETED_AT    =>  conv($value->deleted_at)
+        ]);
+    }
+
+    try {
+        $table  =   'user_profiles';
+        echo $table.'<br>';
+        $carBrands  =   DB::connection('pgsql')->select('select * from '.$table);
+        foreach ($carBrands as &$value) {
+            DB::table('user_profiles')->insert([
+                Contract::ID    =>  NULL,
+                Contract::USER_ID   =>  $value->user_id,
+                Contract::PARENT_ID   =>  $value->parent_referal_user_id,
+                Contract::FIRST_NAME   =>  $value->firstname,
+                Contract::MIDDLE_NAME   =>  $value->middlename,
+                Contract::LAST_NAME   =>  $value->lastname,
+                Contract::LOCALE   =>  $value->locale,
+                Contract::GENDER   =>  $value->gender,
+                Contract::DESCRIPTION   =>  $value->description,
+                Contract::DISCOUNT   =>  $value->clients_discount,
+                Contract::BONUS   =>  $value->stuff_bonus,
+                Contract::REFERRAL_CODE   =>  $value->referal_code,
+                Contract::BALANCE   =>  $value->balance,
+                Contract::RANK   =>  $value->rank,
+                Contract::CREATED_AT    =>  now(),
+                Contract::UPDATED_AT    =>  now(),
+            ]);
+        }
+    } catch (\Exception $exception) {
+
+    }
+
 });
 
 Route::get('/add', function() {
@@ -1983,13 +2041,19 @@ Route::get('/add', function() {
     }
     function img_convert($img) {
         $image_id   =   null;
+        $arg    =   null;
         if (str_starts_with($img,'https')) {
             $info   =   pathinfo($img);
             $img    =   $info['filename'];
+            $arg    =   $img;
         }
         if ($i  =   Image::where(Contract::PNG,$img.'.png')->first()) {
             $image_id   =   $i->id;
         } else {
+            if ($arg && $info && !file_exists( public_path() . '/storage/img/'.$img.'.png')) {
+                file_put_contents($info['basename'],file_get_contents($arg));
+            }
+
             $arr_img    =   [
                 Contract::USER_ID   =>  1,
                 Contract::PNG   =>  $img.'.png',
@@ -2007,7 +2071,6 @@ Route::get('/add', function() {
             }
             $image  =   Image::create($arr_img);
             $image_id   =   $image->id;
-            echo $image_id.'<br>';
         }
         return $image_id;
     }
@@ -2026,23 +2089,35 @@ Route::get('/add', function() {
         return $status;
     }
 
-    $table  =   'eco_images';
-    echo $table.' - auto_part<br><pre>';
-    $values  =   DB::connection('pgsql')->select('select * from '.$table.' where entity_type=\'auto_part\'');
-    foreach ($values as &$value) {
-        if (does_url_exists($value->path)) {
-            $info   =   pathinfo($value->path);
-            //file_put_contents($info['basename'],file_get_contents($value->path));
-            $image_id   =   img_convert($value->name);
-            $data_info  =   [
-                Contract::ID    =>  $value->{Contract::ID},
-                Contract::AUTO_PART_ID  =>  $value->entity_id,
-                Contract::IMAGE_ID  =>  $image_id,
-                Contract::CREATED_AT    =>  conv($value->created_at),
-                Contract::UPDATED_AT    =>  conv($value->updated_at),
-                Contract::DELETED_AT    =>  conv($value->deleted_at)
-            ];
-            DB::table('auto_part_images')->insert($data_info);
-        }
+    $table  =   'user_profiles';
+    echo $table.'<br>';
+    $carBrands  =   DB::connection('pgsql')->select('select * from '.$table);
+    foreach ($carBrands as &$value) {
+        DB::table('user_profiles')->insert([
+            Contract::ID    =>  NULL,
+            Contract::USER_ID   =>  $value->user_id,
+            Contract::PARENT_ID   =>  $value->parent_referal_user_id,
+            Contract::FIRST_NAME   =>  $value->firstname,
+            Contract::MIDDLE_NAME   =>  $value->middlename,
+            Contract::LAST_NAME   =>  $value->lastname,
+            Contract::LOCALE   =>  $value->locale,
+            Contract::GENDER   =>  $value->gender,
+            Contract::DESCRIPTION   =>  $value->description,
+            Contract::DISCOUNT   =>  $value->clients_discount,
+            Contract::BONUS   =>  $value->stuff_bonus,
+            Contract::REFERRAL_CODE   =>  $value->referal_code,
+            Contract::BALANCE   =>  $value->balance,
+            Contract::RANK   =>  $value->rank,
+            Contract::CREATED_AT    =>  now(),
+            Contract::UPDATED_AT    =>  now(),
+        ]);
+    }
+});
+
+Route::get('/cards', function() {
+    if (file_exists( public_path() . '/storage/img/0-hN5Clmd9j98ZlETotHXzsaWVX9v_o6.jpg')) {
+        echo 'exists';
+    } else {
+        echo 'not exists';
     }
 });

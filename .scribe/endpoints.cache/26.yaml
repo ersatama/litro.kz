@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: exercitationem
+        example: ut
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: tempora
+        example: repudiandae
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: insuranceCompanyId
         description: ''
         required: true
-        example: qui
+        example: molestiae
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: ducimus
+        example: modi
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: est
+        example: et
         type: string
         custom: []
     queryParameters: []
@@ -105,7 +105,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: ab
+        example: excepturi
         type: string
         custom: []
     queryParameters: []

@@ -1,12 +1,12 @@
-name: SPartnerPointRequisite
+name: SPartnerPoint
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/sPartnerPointRequisite/get/{skip}/{take}'
+    uri: 'api/sPartnerPoint/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - SPartnerPointRequisite'
+      title: 'Получить список - SPartnerPoint'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: est
+        example: voluptatem
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ea
+        example: ducimus
         type: string
         custom: []
     queryParameters: []
@@ -43,55 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/sPartnerPointRequisite/getBySPartnerPointId/{sPartnerPointId}/{skip}/{take}'
+    uri: 'api/sPartnerPoint/getById/{id}'
     metadata:
-      title: 'Получить данные через SPartnerPointID - SPartnerPointRequisite'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      sPartnerPointId:
-        name: sPartnerPointId
-        description: ''
-        required: true
-        example: culpa
-        type: string
-        custom: []
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: eum
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: alias
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":0,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/sPartnerPointRequisite/getById/{id}'
-    metadata:
-      title: 'Получить данные через ID - SPartnerPointRequisite'
+      title: 'Получить данные через ID - SPartnerPoint'
       description: ''
       authenticated: false
       custom: []
@@ -103,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: atque
+        example: quaerat
         type: string
         custom: []
     queryParameters: []

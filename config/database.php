@@ -66,10 +66,10 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_PG_HOST', '127.0.0.1'),
-            'port' => env('DB_PG_PORT', '5433'),
+            'host' => env('DB_PG_HOST', 'localhost'),
+            'port' => env('DB_PG_PORT', '5432'),
             'database' => env('DB_PG_DATABASE', 'litromob'),
-            'username' => env('DB_PG_USERNAME', 'postgres'),
+            'username' => env('DB_PG_USERNAME', 'user1'),
             'password' => env('DB_PG_PASSWORD', 'password'),
             'charset' => 'utf8',
             'prefix' => '',

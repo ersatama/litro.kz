@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: atque
+        example: nulla
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: magni
+        example: nostrum
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: quam
+        example: libero
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: omnis
+        example: voluptatem
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quis
+        example: voluptatem
         type: string
         custom: []
     queryParameters: []
@@ -81,7 +81,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":0,"data":[]}'
+        content: '{"count":61,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -105,21 +105,21 @@ endpoints:
         name: userCarId
         description: ''
         required: true
-        example: rerum
+        example: soluta
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: perspiciatis
+        example: impedit
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: excepturi
+        example: quo
         type: string
         custom: []
     queryParameters: []
@@ -127,7 +127,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":0,"data":[]}'
+        content: '{"count":61,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -151,7 +151,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: aperiam
+        example: necessitatibus
         type: string
         custom: []
     queryParameters: []

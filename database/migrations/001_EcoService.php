@@ -17,6 +17,7 @@ return new class extends Migration
     {
         Schema::create(EcoServiceContract::TABLE, function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger(Contract::IMAGE_ID)->nullable();
             $table->unsignedInteger(Contract::POSITION)->default(1);
             $table->string(Contract::STATUS)->nullable();
             $table->string(Contract::TYPE)->nullable();

@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: iusto
+        example: est
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: commodi
+        example: laboriosam
         type: string
         custom: []
     queryParameters: []
