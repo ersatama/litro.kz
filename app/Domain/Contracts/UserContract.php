@@ -24,6 +24,8 @@ class UserContract extends Contract
         self::VLIFE_USER_ID,
         self::PROMO_CODE,
         self::BONUS,
+        self::ANDROID,
+        self::IOS,
     ];
 
     const HIDDEN    =   [

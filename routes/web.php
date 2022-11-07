@@ -702,6 +702,8 @@ Route::get('/db', function () {
             Contract::PROMO_CODE    =>  $value->promocode,
             Contract::IIN   =>  $value->{Contract::IIN},
             Contract::BONUS =>  $value->{Contract::BONUS},
+            Contract::ANDROID   =>  $value->{Contract::ANDROID},
+            Contract::IOS   =>  $value->{Contract::IOS},
             Contract::CREATED_AT    =>  conv($value->created_at),
             Contract::UPDATED_AT    =>  conv($value->updated_at),
             Contract::DELETED_AT    =>  conv($value->deleted_at)

@@ -34,6 +34,8 @@ return new class extends Migration
             $table->string(Contract::VLIFE_USER_ID)->nullable();
             $table->string(Contract::PROMO_CODE)->nullable();
             $table->unsignedInteger(Contract::BONUS)->nullable();
+            $table->string(Contract::ANDROID)->unique()->nullable();
+            $table->string(Contract::IOS)->unique()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

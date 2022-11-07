@@ -4,6 +4,8 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const IOS   =   'ios';
+    const ANDROID   =   'android';
     const INPUT =   'input';
     const KZ    =   'kz';
     const RU    =   'ru';
