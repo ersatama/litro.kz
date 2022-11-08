@@ -1942,13 +1942,13 @@ Route::get('/db', function () {
 
             $data_info  =   [
                 Contract::ID    =>  $value->{Contract::ID},
-                Contract::SERVICE_ID   =>  $value->entity_id,
+                Contract::ECO_SERVICE_ID   =>  $value->entity_id,
                 Contract::IMAGE_ID  =>  $image_id,
                 Contract::CREATED_AT    =>  conv($value->created_at),
                 Contract::UPDATED_AT    =>  conv($value->updated_at),
                 Contract::DELETED_AT    =>  conv($value->deleted_at)
             ];
-            DB::table('service_images')->insert($data_info);
+            DB::table('eco_service_images')->insert($data_info);
         }
     }
 
@@ -2089,28 +2089,25 @@ Route::get('/add', function() {
         return $status;
     }
 
-    $table  =   'user_profiles';
-    echo $table.'<br>';
-    $carBrands  =   DB::connection('pgsql')->select('select * from '.$table);
-    foreach ($carBrands as &$value) {
-        DB::table('user_profiles')->insert([
-            Contract::ID    =>  NULL,
-            Contract::USER_ID   =>  $value->user_id,
-            Contract::PARENT_ID   =>  $value->parent_referal_user_id,
-            Contract::FIRST_NAME   =>  $value->firstname,
-            Contract::MIDDLE_NAME   =>  $value->middlename,
-            Contract::LAST_NAME   =>  $value->lastname,
-            Contract::LOCALE   =>  $value->locale,
-            Contract::GENDER   =>  $value->gender,
-            Contract::DESCRIPTION   =>  $value->description,
-            Contract::DISCOUNT   =>  $value->clients_discount,
-            Contract::BONUS   =>  $value->stuff_bonus,
-            Contract::REFERRAL_CODE   =>  $value->referal_code,
-            Contract::BALANCE   =>  $value->balance,
-            Contract::RANK   =>  $value->rank,
-            Contract::CREATED_AT    =>  now(),
-            Contract::UPDATED_AT    =>  now(),
-        ]);
+    $table  =   'eco_images';
+    echo $table.' - eco_images<br><pre>';
+    $values  =   DB::connection('pgsql')->select('select * from '.$table.' where entity_type=\'service\'');
+    foreach ($values as &$value) {
+        if (does_url_exists($value->path)) {
+            $info   =   pathinfo($value->path);
+            //file_put_contents($info['basename'],file_get_contents($value->path));
+            $image_id   =   img_convert($value->name);
+
+            $data_info  =   [
+                Contract::ID    =>  $value->{Contract::ID},
+                Contract::ECO_SERVICE_ID   =>  $value->entity_id,
+                Contract::IMAGE_ID  =>  $image_id,
+                Contract::CREATED_AT    =>  conv($value->created_at),
+                Contract::UPDATED_AT    =>  conv($value->updated_at),
+                Contract::DELETED_AT    =>  conv($value->deleted_at)
+            ];
+            DB::table('eco_service_images')->insert($data_info);
+        }
     }
 });
 

@@ -281,6 +281,7 @@ return [
         App\Providers\Repositories\NotificationTypeRepositoryProvider::class,
         App\Providers\Repositories\OrderCardChosenServiceRepositoryProvider::class,
         App\Providers\Repositories\RepeatedPartnerGiftCardRepositoryProvider::class,
+        App\Providers\Repositories\EcoServiceImageRepositoryProvider::class,
     ],
 
     /*

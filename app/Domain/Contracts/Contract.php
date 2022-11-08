@@ -4,6 +4,7 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const ECO_SERVICE_ID    =   'eco_service_id';
     const IOS   =   'ios';
     const ANDROID   =   'android';
     const INPUT =   'input';
