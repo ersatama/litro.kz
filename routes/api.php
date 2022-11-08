@@ -22,6 +22,7 @@ use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\CurrencyController;
 use App\Http\Controllers\Api\DriverController;
 use App\Http\Controllers\Api\EcoServiceController;
+use App\Http\Controllers\Api\EcoServiceImageController;
 use App\Http\Controllers\Api\GiftController;
 use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\InsuranceCategoryController;
@@ -509,6 +510,14 @@ Route::controller(GiftController::class)->group(function() {
         Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('gift.getByUserId');
         Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('gift.getByCardId');
         Route::get('getById/{id}','getById')->name('gift.getById');
+    });
+});
+
+Route::controller(EcoServiceImageController::class)->group(function() {
+    Route::prefix('ecoServiceImage')->group(function() {
+        Route::get('get/{skip}/{take}','get')->name('ecoServiceImage.get');
+        Route::get('getByEcoServiceId/{ecoServiceId}/{skip}/{take}','getByEcoServiceId')->name('ecoServiceImage.getByEcoServiceId');
+        Route::get('getById/{id}','getById')->name('ecoServiceImage.getById');
     });
 });
 

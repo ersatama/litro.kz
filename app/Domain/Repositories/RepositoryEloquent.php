@@ -12,6 +12,14 @@ trait RepositoryEloquent
         DB::table($this->model->getTable())->upsert($data, $search, $update);
     }
 
+    public function getByEcoServiceId($ecoServiceId, $skip, $take)
+    {
+        return $this->model::where(Contract::ECO_SERVICE_ID, $ecoServiceId)
+            ->skip($skip)
+            ->take($take)
+            ->get();
+    }
+
     public function getByNotificationIdAndUserId($notificationId,$userId)
     {
         return $this->model::where([
