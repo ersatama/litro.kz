@@ -1897,7 +1897,7 @@ Route::get('/db', function () {
     foreach ($values as &$value) {
 //        $info   =   pathinfo($value->path);
 //        file_put_contents($info['basename'],file_get_contents($value->path));
-        $image_id   =   img_convert($value->name);
+        $image_id   =   img_convert($value->path);
 
         $data_info  =   [
             Contract::ID    =>  $value->{Contract::ID},
@@ -1917,7 +1917,7 @@ Route::get('/db', function () {
         if (does_url_exists($value->path)) {
             //$info   =   pathinfo($value->path);
             //file_put_contents($info['basename'],file_get_contents($value->path));
-            $image_id   =   img_convert($value->name);
+            $image_id   =   img_convert($value->path);
 
             $data_info  =   [
                 Contract::ID    =>  $value->{Contract::ID},
@@ -1938,7 +1938,7 @@ Route::get('/db', function () {
         if (does_url_exists($value->path)) {
             $info   =   pathinfo($value->path);
             //file_put_contents($info['basename'],file_get_contents($value->path));
-            $image_id   =   img_convert($value->name);
+            $image_id   =   img_convert($value->path);
 
             $data_info  =   [
                 Contract::ID    =>  $value->{Contract::ID},
@@ -1959,7 +1959,7 @@ Route::get('/db', function () {
         if (does_url_exists($value->path)) {
             $info   =   pathinfo($value->path);
             //file_put_contents($info['basename'],file_get_contents($value->path));
-            $image_id   =   img_convert($value->name);
+            $image_id   =   img_convert($value->path);
             $data_info  =   [
                 Contract::ID    =>  $value->{Contract::ID},
                 Contract::AUTO_PART_ID  =>  $value->entity_id,
@@ -2096,7 +2096,7 @@ Route::get('/add', function() {
         if (does_url_exists($value->path)) {
             $info   =   pathinfo($value->path);
             //file_put_contents($info['basename'],file_get_contents($value->path));
-            $image_id   =   img_convert($value->name);
+            $image_id   =   img_convert($value->path);
 
             $data_info  =   [
                 Contract::ID    =>  $value->{Contract::ID},

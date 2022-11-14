@@ -11,4 +11,5 @@ class UserService extends MainService
     {
         $this->userRepository   =   $userRepository;
     }
+
 }

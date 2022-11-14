@@ -185,7 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Maatwebsite\Excel\ExcelServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -282,6 +282,7 @@ return [
         App\Providers\Repositories\OrderCardChosenServiceRepositoryProvider::class,
         App\Providers\Repositories\RepeatedPartnerGiftCardRepositoryProvider::class,
         App\Providers\Repositories\EcoServiceImageRepositoryProvider::class,
+
     ],
 
     /*
@@ -298,6 +299,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'OneSignal' => \Ladumor\OneSignal\OneSignal::class,
+        'ExcelOrderCard' => Maatwebsite\Excel\Facades\Excel::class,
     ])->toArray(),
 
 ];

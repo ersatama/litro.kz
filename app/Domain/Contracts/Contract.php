@@ -4,6 +4,8 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const TIME  =   'time';
+    const FILE  =   'file';
     const ECO_SERVICE_ID    =   'eco_service_id';
     const IOS   =   'ios';
     const ANDROID   =   'android';
@@ -22,6 +24,7 @@ abstract class Contract
     const YES   =   'yes';
     const CONTRACT  =   'contract';
     const SUCCESS   =   'success';
+    const FAILURE   =   'failure';
     const PSW   =   'psw';
     const LOGIN =   'login';
     const MES   =   'mes';
@@ -259,6 +262,7 @@ abstract class Contract
     const IOS_ATTACHMENTS   =   'ios_attachments';
     const INCREASE  =   'Increase';
     const COUNT =   'count';
+    const SIZE  =   'size';
     const IS_NEGOTIABLE_PRICE   =   'is_negotiable_price';
     const IS_WITH_CHECK =   'is_with_check';
     const IS_FREE   =   'is_free';

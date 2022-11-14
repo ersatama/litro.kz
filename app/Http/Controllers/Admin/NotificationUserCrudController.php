@@ -18,6 +18,7 @@ class NotificationUserCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
     public function setup(): void
@@ -25,6 +26,10 @@ class NotificationUserCrudController extends CrudController
         CRUD::setModel(NotificationUser::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/notification-user');
         CRUD::setEntityNameStrings('Уведомления пользователя', 'Уведомление пользователей');
+        if (backpack_user()->{Contract::ROLE_ID} !== 2) {
+            CRUD::denyAccess('delete');
+            CRUD::denyAccess('create');
+        }
     }
 
     protected function setupListOperation()

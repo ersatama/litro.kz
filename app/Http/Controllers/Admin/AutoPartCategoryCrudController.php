@@ -20,6 +20,9 @@ class AutoPartCategoryCrudController extends CrudController
         CRUD::setModel(\App\Models\AutoPartCategory::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/auto-part-category');
         CRUD::setEntityNameStrings('auto part category', 'auto part categories');
+        if (backpack_user()->{Contract::ROLE_ID} !== 2) {
+            CRUD::denyAccess('delete');
+        }
     }
 
     protected function setupListOperation()

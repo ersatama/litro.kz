@@ -12,6 +12,7 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class UserProfileCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
@@ -25,6 +26,9 @@ class UserProfileCrudController extends CrudController
         CRUD::setModel(UserProfile::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user-profile');
         CRUD::setEntityNameStrings(Contract::T(Contract::USER_PROFILE), Contract::T(Contract::USER_PROFILES));
+        if (backpack_user()->{Contract::ROLE_ID} !== 2) {
+            CRUD::denyAccess('delete');
+        }
     }
 
     /**

@@ -22,7 +22,7 @@ abstract class MainRequest extends FormRequest
     /**
      * @throws ValidationException
      */
-    public function checked(): array
+    public function checked()
     {
         return $this->validator->validated();
     }

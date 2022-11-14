@@ -7,6 +7,16 @@ use Illuminate\Support\Facades\DB;
 
 trait RepositoryEloquent
 {
+    public function getByTitle($title)
+    {
+        return $this->model::where(Contract::TITLE,$title)->first();
+    }
+
+    public function getByNumber($number)
+    {
+        return $this->model::where(Contract::NUMBER,$number)->first();
+    }
+
     public function upsert($data, $search, $update)
     {
         DB::table($this->model->getTable())->upsert($data, $search, $update);

@@ -25,6 +25,9 @@ class UserImageCrudController extends CrudController
         CRUD::setModel(UserImage::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user-image');
         CRUD::setEntityNameStrings(Contract::T(Contract::USER_IMAGE), Contract::T(Contract::USER_IMAGES));
+        if (backpack_user()->{Contract::ROLE_ID} !== 2) {
+            CRUD::denyAccess('delete');
+        }
     }
 
     protected function setupShowOperation(): void

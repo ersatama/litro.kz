@@ -18,22 +18,17 @@ class UserRequest extends FormRequest
         return backpack_auth()->check();
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules(): array
     {
         return [
             Contract::ROLE_ID   =>  'required|exists:roles,id',
             Contract::CITY_ID   =>  'required|exists:cities,id',
-            Contract::PHONE =>  'required|unique:users,phone',
-            Contract::EMAIL =>  'required|unique:users,email',
+            Contract::PHONE =>  'required|unique:users,phone,'.$this->request->get('id'),
+            Contract::EMAIL =>  'nullable|unique:users,email,'.$this->request->get('id'),
             Contract::FIRST_NAME    =>  'required|min:2|max:255',
             Contract::LAST_NAME =>  'required|min:2|max:255',
             Contract::BIRTHDATE =>  'required',
-            Contract::PASSWORD  =>  'required|min:8|max:255',
+            Contract::PASSWORD  =>  'nullable|min:8|max:255',
             Contract::GENDER    =>  'required',
         ];
     }

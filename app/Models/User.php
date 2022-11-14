@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\UserContract;
 use App\Domain\Scopes\OrderBy;
 use App\Domain\Scopes\WithDeleted;
@@ -43,5 +44,10 @@ class User  extends Authenticatable
         return Attribute::make(
             set: fn ($value) => Hash::make($value),
         );
+    }
+
+    public function fullname(): string
+    {
+        return $this->{Contract::FIRST_NAME} . ' ' . $this->{Contract::LAST_NAME};
     }
 }

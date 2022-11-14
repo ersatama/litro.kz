@@ -497,6 +497,8 @@ Route::controller(OrderServiceController::class)->group(function() {
 
 Route::controller(OrderCardController::class)->group(function() {
     Route::prefix('orderCard')->group(function() {
+        Route::post('uploadExcel','uploadExcel')->name('orderCard.uploadExcel');
+        Route::post('saveExcel','saveExcel')->name('orderCard.saveExcel');
         Route::get('get/{skip}/{take}','get')->name('orderCard.get');
         Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('orderCard.getByUserId');
         Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('orderCard.getByCardId');

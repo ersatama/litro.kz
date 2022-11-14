@@ -2,80 +2,59 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Domain\Contracts\Contract;
 use App\Http\Requests\OrderCardRequest;
+use App\Models\OrderCard;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
-/**
- * Class OrderCardCrudController
- * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
- */
 class OrderCardCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
-    public function setup()
+    public function setup(): void
     {
-        CRUD::setModel(\App\Models\OrderCard::class);
+        CRUD::setModel(OrderCard::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/order-card');
-        CRUD::setEntityNameStrings('order card', 'order cards');
+        CRUD::setEntityNameStrings('Карта', 'Заказные карты');
+        $this->crud->setListView('vendor.backpack.crud.orderCard.list');
     }
 
     /**
      * Define what happens when the List operation is loaded.
-     * 
+     *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
-    protected function setupListOperation()
+    protected function setupListOperation(): void
     {
-        CRUD::column('card_id');
-        CRUD::column('user_id');
-        CRUD::column('bitrix_id');
-        CRUD::column('synced');
-        CRUD::column('price');
-        CRUD::column('start_date');
-        CRUD::column('end_date');
-        CRUD::column('number');
-        CRUD::column('payment_type');
-        CRUD::column('paybox_order_id');
-        CRUD::column('paybox_order_date');
-        CRUD::column('status');
-        CRUD::column('referral');
-        CRUD::column('recurrent_enabled');
-        CRUD::column('is_paid');
-        CRUD::column('is_canceled');
-        CRUD::column('monthly');
-        CRUD::column('is_from_excel');
-        CRUD::column('activate_date');
-        CRUD::column('payment_method');
-        CRUD::column('utm_campaign');
-        CRUD::column('import_id');
-
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
-         */
+        CRUD::column(Contract::CARD_ID)->label('Карточка');
+        CRUD::column(Contract::USER)->type(Contract::SELECT)->label(Contract::T(Contract::USER))
+            ->entity(Contract::USER)
+            ->model(User::class)
+            ->attribute(Contract::ID);
+        CRUD::column('number')->label('Номер');
+        CRUD::column('payment_type')->label('Тип платежа');;
+        CRUD::column('status')->label('Статус');
     }
 
     /**
      * Define what happens when the Create operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
-    protected function setupCreateOperation()
+    protected function setupCreateOperation(): void
     {
         CRUD::setValidation(OrderCardRequest::class);
 
@@ -105,13 +84,13 @@ class OrderCardCrudController extends CrudController
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
+         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
          */
     }
 
     /**
      * Define what happens when the Update operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */
