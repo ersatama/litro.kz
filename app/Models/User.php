@@ -45,9 +45,4 @@ class User  extends Authenticatable
             set: fn ($value) => Hash::make($value),
         );
     }
-
-    public function fullname(): string
-    {
-        return $this->{Contract::FIRST_NAME} . ' ' . $this->{Contract::LAST_NAME};
-    }
 }
