@@ -93,4 +93,30 @@ class UserController extends Controller
         return response(ErrorContract::ERROR_NOT_FOUND,404);
     }
 
+    /**
+     * Получить данные через Android Token - User
+     *
+     * @group User - Пользователь
+     */
+    public function getByAndroidToken($token): Response|Application|ResponseFactory|UserResource
+    {
+        if ($model = $this->userService->userRepository->getByAndroid($token)) {
+            return new UserResource($model);
+        }
+        return response(ErrorContract::ERROR_NOT_FOUND,404);
+    }
+
+    /**
+     * Получить данные через IOS Token - User
+     *
+     * @group User - Пользователь
+     */
+    public function getByIosToken($token): Response|Application|ResponseFactory|UserResource
+    {
+        if ($model = $this->userService->userRepository->getByIos($token)) {
+            return new UserResource($model);
+        }
+        return response(ErrorContract::ERROR_NOT_FOUND,404);
+    }
+
 }

@@ -59,7 +59,6 @@ use App\Http\Controllers\Api\PartnerPurchaseController;
 use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\PaymentSystemController;
 use App\Http\Controllers\Api\PlaceController;
-use App\Http\Controllers\Api\ProductCompanyController;
 use App\Http\Controllers\Api\RecurrentController;
 use App\Http\Controllers\Api\RegionController;
 use App\Http\Controllers\Api\RepeatedPartnerGiftCardController;
@@ -336,6 +335,8 @@ Route::controller(UserController::class)->group(function() {
             ->name('user.getByEmailAndPassword');
         Route::get('get/{skip}/{take}','get')->name('user.get');
         Route::get('getById/{id}','getById')->name('user.getById');
+        Route::get('getByAndroidToken/{token}','getByAndroidToken')->name('user.getByAndroidToken');
+        Route::get('getByIosToken/{token}','getByIosToken')->name('user.getByIosToken');
     });
 });
 
