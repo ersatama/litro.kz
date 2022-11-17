@@ -57,6 +57,7 @@ class OrderCardImport implements ToCollection
                 }
             } else if (sizeof($row) >= 31) {
                 $data[] =   $excelOrderCardHelper->create($row);
+                $count++;
             } else {
                 break;
             }
@@ -69,7 +70,6 @@ class OrderCardImport implements ToCollection
                 ])));
                 $data   =   [];
             }
-            $count++;
         }
 
         if (sizeof($data) > 0) {

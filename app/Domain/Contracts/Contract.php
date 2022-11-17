@@ -4,6 +4,12 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const NEWS  =   'news';
+    const PARTNERS  =   'partners';
+    const CARDS =   'cards';
+    const DRIVERS   =   'drivers';
+    const CARS  =   'cars';
+    const GIFT  =   'gift';
     const TIME  =   'time';
     const FILE  =   'file';
     const ECO_SERVICE_ID    =   'eco_service_id';
@@ -59,6 +65,9 @@ abstract class Contract
     const SERVICE   =   'service';
     const LAWYER    =   'lawyer';
     const USER  =   'user';
+    const ADMIN =   'admin';
+    const MANAGER   =   'manager';
+    const SUPER_ADMIN   =   'super_admin';
     const PARAMETERS    =   'parameters';
     const USERS =   'users';
     const INSURANCE_COMPANY =   'insurance_company';
@@ -136,6 +145,8 @@ abstract class Contract
     const HASHED    =   'hashed';
     const KEY   =   'key';
     const CATEGORY  =   'category';
+    const CARD_RANGE    =   'card_range';
+    const SERVICES  =   'services';
     const ORDER_ID  =   'order_id';
     const SALT  =   'salt';
     const RESULT    =   'result';
@@ -328,6 +339,7 @@ abstract class Contract
     const DELETED_AT    =   'deleted_at';
     const UPDATED_AT    =   'updated_at';
     const SERVICE_TYPE  =   'service_type';
+    const ORDER_SERVICE_SERVICE =   'order_service_service';
     const PAYMENT_SYSTEM    =   'payment_system';
     const CREATED_AT    =   'created_at';
     const UNIVERSAL =   'universal';

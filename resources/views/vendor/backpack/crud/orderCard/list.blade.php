@@ -360,6 +360,8 @@
                     if (message.data.length !== 10 || (message.size === message.count)) {
                         this.processing =   false;
                         this.time   =   null;
+                    } else if (message.data.length === 0) {
+                        this.hardReset();
                     }
                 }
             });

@@ -10,6 +10,7 @@ use App\Domain\Services\OrderCardService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderCard\OrderCardCollection;
 use App\Http\Resources\OrderCard\OrderCardResource;
+use App\Jobs\OrderCardSaveExcel;
 use App\Jobs\OrderCardUploadExcel;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
@@ -101,9 +102,12 @@ class OrderCardController extends Controller
      * @group OrderCard - ЗаказКарточка
      * @throws ValidationException
      */
-    public function saveExcel(SaveExcelRequest $saveExcelRequest)
+    public function saveExcel(SaveExcelRequest $saveExcelRequest): Response|Application|ResponseFactory
     {
-        return $saveExcelRequest->checked();
+        OrderCardSaveExcel::dispatch($saveExcelRequest->checked());
+        return response([
+            Contract::MESSAGE   =>  Contract::SUCCESS
+        ],200);
     }
 
 }

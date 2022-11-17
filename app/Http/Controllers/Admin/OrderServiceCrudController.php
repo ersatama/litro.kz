@@ -7,11 +7,6 @@ use App\Http\Requests\OrderServiceRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
-/**
- * Class OrderServiceCrudController
- * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
- */
 class OrderServiceCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
@@ -29,26 +24,21 @@ class OrderServiceCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\OrderService::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/order-service');
-        CRUD::setEntityNameStrings('order service', 'order services');
-        if (backpack_user()->{Contract::ROLE_ID} !== 2) {
+        CRUD::setEntityNameStrings('Заказ сервис', 'Заказ сервисы');
+        if (!in_array(backpack_user()->{Contract::ROLE_ID},[2,4])) {
             CRUD::denyAccess('delete');
         }
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     *
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
-    protected function setupListOperation()
+    public function setupShowOperation()
     {
-        CRUD::column('master_id');
+        CRUD::column(Contract::ID)->label(Contract::T(Contract::ID))->type(Contract::NUMBER);
+        CRUD::column(Contract::MASTER_ID)->label(Contract::T(Contract::MASTER_ID));
         CRUD::column('user_id');
         CRUD::column('order_card_id');
         CRUD::column('bitrix_id');
         CRUD::column('place_id');
-        CRUD::column('city_id');
+        CRUD::column(Contract::CITY_ID)->label(Contract::T(Contract::CITY));
         CRUD::column('car_category_id');
         CRUD::column('paybox_order_id');
         CRUD::column('paybox_order_date');
@@ -68,12 +58,16 @@ class OrderServiceCrudController extends CrudController
         CRUD::column('is_card');
         CRUD::column('is_canceled');
         CRUD::column('utm_campaign');
+    }
 
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
-         */
+    protected function setupListOperation(): void
+    {
+        CRUD::column(Contract::ID)->label(Contract::T(Contract::ID))->type(Contract::NUMBER);
+        CRUD::column(Contract::CREATED_AT)->label(Contract::T(Contract::CREATED_AT));
+        CRUD::column(Contract::ADDRESS)->label(Contract::T(Contract::ADDRESS));
+        CRUD::column(Contract::PHONE)->label(Contract::T(Contract::PHONE));
+        CRUD::column(Contract::NAME)->label(Contract::T(Contract::NAME));
+        CRUD::column(Contract::STATUS)->label(Contract::T(Contract::STATUS));
     }
 
     /**
@@ -82,7 +76,7 @@ class OrderServiceCrudController extends CrudController
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
-    protected function setupCreateOperation()
+    protected function setupCreateOperation(): void
     {
         CRUD::setValidation(OrderServiceRequest::class);
 

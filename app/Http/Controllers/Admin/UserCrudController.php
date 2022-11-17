@@ -26,7 +26,7 @@ class UserCrudController extends CrudController
         CRUD::setModel(User::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user');
         CRUD::setEntityNameStrings(Contract::T(Contract::USER), Contract::T(Contract::USERS));
-        if (backpack_user()->{Contract::ROLE_ID} !== 2) {
+        if (!in_array(backpack_user()->{Contract::ROLE_ID},[2,4])) {
             CRUD::denyAccess('delete');
         }
     }
@@ -34,16 +34,22 @@ class UserCrudController extends CrudController
     protected function setupShowOperation(): void
     {
         $this->extracted();
-        CRUD::column(Contract::GENDER)->label(Contract::T(Contract::GENDER));
+        CRUD::column(Contract::ROLE_ID)->label(Contract::T(Contract::ROLE))->type(Contract::SELECT_FROM_ARRAY)->options([
+            1   =>  Contract::T(Contract::USER),
+            2   =>  Contract::T(Contract::ADMIN),
+            3   =>  Contract::T(Contract::MANAGER),
+            4   =>  Contract::T(Contract::SUPER_ADMIN),
+        ]);
+        CRUD::column(Contract::BITRIX_ID)->label(Contract::T(Contract::BITRIX));
+        CRUD::column(Contract::PHONE)->label(Contract::T(Contract::PHONE));
+        CRUD::column(Contract::EMAIL)->label(Contract::T(Contract::EMAIL));
+        CRUD::column(Contract::IIN)->label(Contract::T(Contract::IIN))->type(Contract::NUMBER);
+        CRUD::column(Contract::IS_BLOCKED)->label(Contract::T(Contract::IS_BLOCKED));
     }
 
     protected function setupListOperation(): void
     {
         $this->extracted();
-        CRUD::column(Contract::GENDER)->label(Contract::T(Contract::GENDER))->type(Contract::SELECT_FROM_ARRAY)->options([
-            Contract::MALE  =>  Contract::T(Contract::MALE),
-            Contract::FEMALE    =>  Contract::T(Contract::FEMALE),
-        ]);
         CRUD::column(Contract::IS_VLIFE_USER)->label(Contract::T(Contract::IS_VLIFE_USER))->type(Contract::SELECT_FROM_ARRAY)->options([
             TRUE    =>  Contract::T(Contract::YES),
             FALSE   =>  Contract::T(Contract::NO),
@@ -96,16 +102,16 @@ class UserCrudController extends CrudController
     protected function extracted(): void
     {
         CRUD::column(Contract::ID)->label(Contract::T(Contract::ID))->type(Contract::NUMBER);
-        CRUD::column(Contract::ROLE_ID)->label(Contract::T(Contract::ROLE));
-        CRUD::column(Contract::CITY_ID)->label(Contract::T(Contract::CITY));
-        CRUD::column(Contract::BITRIX_ID)->label(Contract::T(Contract::BITRIX));
-        CRUD::column(Contract::PHONE)->label(Contract::T(Contract::PHONE));
-        CRUD::column(Contract::EMAIL)->label(Contract::T(Contract::EMAIL));
-        CRUD::column(Contract::IIN)->label(Contract::T(Contract::IIN))->type(Contract::NUMBER);
         CRUD::column(Contract::FIRST_NAME)->label(Contract::T(Contract::FIRST_NAME));
         CRUD::column(Contract::LAST_NAME)->label(Contract::T(Contract::LAST_NAME));
         CRUD::column(Contract::PATRONYMIC)->label(Contract::T(Contract::PATRONYMIC));
         CRUD::column(Contract::BIRTHDATE)->label(Contract::T(Contract::BIRTHDATE));
-        CRUD::column(Contract::IS_BLOCKED)->label(Contract::T(Contract::IS_BLOCKED));
+        CRUD::column(Contract::GENDER)->label(Contract::T(Contract::GENDER))->type(Contract::SELECT_FROM_ARRAY)->options([
+            Contract::MALE  =>  Contract::T(Contract::MALE),
+            Contract::FEMALE    =>  Contract::T(Contract::FEMALE),
+        ]);
+        CRUD::column(Contract::CITY_ID)->label(Contract::T(Contract::CITY));
+        CRUD::column(Contract::PHONE)->label(Contract::T(Contract::PHONE));
+        CRUD::column(Contract::EMAIL)->label(Contract::T(Contract::EMAIL));
     }
 }

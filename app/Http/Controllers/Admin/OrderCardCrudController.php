@@ -30,22 +30,28 @@ class OrderCardCrudController extends CrudController
         $this->crud->setListView('vendor.backpack.crud.orderCard.list');
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     *
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
     protected function setupListOperation(): void
     {
-        CRUD::column(Contract::CARD_ID)->label('Карточка');
+        CRUD::column(Contract::ID)->label(Contract::T(Contract::ID))->type(Contract::NUMBER);
+        CRUD::column(Contract::PRICE)->label(Contract::T(Contract::PRICE));
         CRUD::column(Contract::USER)->type(Contract::SELECT)->label(Contract::T(Contract::USER))
             ->entity(Contract::USER)
             ->model(User::class)
             ->attribute(Contract::ID);
-        CRUD::column('number')->label('Номер');
-        CRUD::column('payment_type')->label('Тип платежа');;
-        CRUD::column('status')->label('Статус');
+        CRUD::column(Contract::CARD_ID)->label(Contract::T(Contract::CARD));
+        CRUD::column(Contract::IS_FROM_EXCEL)->label(Contract::T(Contract::IS_FROM_EXCEL))->type(Contract::SELECT_FROM_ARRAY)->options([
+            1   =>  Contract::T(Contract::YES),
+            0   =>  Contract::T(Contract::NO),
+        ]);
+        CRUD::column(Contract::NUMBER)->label(Contract::T(Contract::NUMBER));
+        CRUD::column(Contract::START_DATE)->label(Contract::T(Contract::START_DATE))->type(Contract::DATE);
+        CRUD::column(Contract::PAYMENT_TYPE)->label(Contract::T(Contract::PAYMENT_TYPE));
+        CRUD::column(Contract::IS_PAID)->label(Contract::T(Contract::IS_PAID))->type(Contract::SELECT_FROM_ARRAY)->options([
+            1   =>  Contract::T(Contract::YES),
+            0   =>  Contract::T(Contract::NO),
+        ]);
+        CRUD::column(Contract::PAYBOX_ORDER_ID)->label(Contract::T(Contract::PAYBOX_ORDER_ID));
+        CRUD::column(Contract::STATUS)->label(Contract::T(Contract::STATUS));
     }
 
     /**
