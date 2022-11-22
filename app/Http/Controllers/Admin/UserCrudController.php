@@ -8,11 +8,6 @@ use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
-/**
- * Class UserCrudController
- * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
- */
 class UserCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
@@ -21,11 +16,13 @@ class UserCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
+
     public function setup(): void
     {
         CRUD::setModel(User::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user');
         CRUD::setEntityNameStrings(Contract::T(Contract::USER), Contract::T(Contract::USERS));
+
         if (!in_array(backpack_user()->{Contract::ROLE_ID},[2,4])) {
             CRUD::denyAccess('delete');
         }
@@ -49,6 +46,7 @@ class UserCrudController extends CrudController
 
     protected function setupListOperation(): void
     {
+
         $this->extracted();
         CRUD::column(Contract::IS_VLIFE_USER)->label(Contract::T(Contract::IS_VLIFE_USER))->type(Contract::SELECT_FROM_ARRAY)->options([
             TRUE    =>  Contract::T(Contract::YES),

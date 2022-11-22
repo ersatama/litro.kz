@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 trait RepositoryEloquent
 {
+
     public function getByIos($ios)
     {
         return $this->model::where(Contract::IOS,$ios)->first();
