@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Domain\Contracts\Contract;
 use Illuminate\Foundation\Http\FormRequest;
 
 class OrderCardRequest extends FormRequest
@@ -11,9 +12,8 @@ class OrderCardRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        // only allow updates if the user is logged in
         return backpack_auth()->check();
     }
 
@@ -22,10 +22,16 @@ class OrderCardRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            Contract::CARD_ID   =>  'required|exists:cards,id',
+            Contract::USER_ID   =>  'required|exists:users,id',
+            Contract::NUMBER    =>  'required|unique:order_cards,number',
+            Contract::PRICE     =>  'required',
+            Contract::START_DATE    =>  'required|date',
+            Contract::END_DATE      =>  'required|date',
+            Contract::ACTIVATE_DATE =>  'required|date',
         ];
     }
 
@@ -34,10 +40,10 @@ class OrderCardRequest extends FormRequest
      *
      * @return array
      */
-    public function attributes()
+    public function attributes(): array
     {
         return [
-            //
+
         ];
     }
 
@@ -46,10 +52,17 @@ class OrderCardRequest extends FormRequest
      *
      * @return array
      */
-    public function messages()
+    public function messages(): array
     {
         return [
-            //
+            Contract::CARD_ID . '.required' =>  'Выберите карту',
+            Contract::USER_ID . '.required' =>  'Выберите пользователя',
+            Contract::NUMBER  . '.required' =>  'Укажите номер карты',
+            Contract::NUMBER  . '.unique'   =>  'Номер карты занят',
+            Contract::PRICE   . '.required' =>  'Укажите цену',
+            Contract::START_DATE    . '.required' =>  'Укажите начало даты',
+            Contract::END_DATE      . '.required' =>  'Укажите конец даты',
+            Contract::ACTIVATE_DATE . '.required' =>  'Укажите дату активации',
         ];
     }
 }

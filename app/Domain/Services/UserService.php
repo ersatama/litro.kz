@@ -2,6 +2,8 @@
 
 namespace App\Domain\Services;
 
+use App\Domain\Contracts\Contract;
+use App\Domain\Contracts\UserContract;
 use App\Domain\Repositories\User\UserRepositoryInterface;
 
 class UserService extends MainService
@@ -11,5 +13,4 @@ class UserService extends MainService
     {
         $this->userRepository   =   $userRepository;
     }
-
 }

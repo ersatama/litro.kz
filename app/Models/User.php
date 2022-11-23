@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\UserContract;
 use App\Domain\Scopes\OrderBy;
+use App\Domain\Scopes\Page;
 use App\Domain\Scopes\WithDeleted;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -27,6 +28,7 @@ class User  extends Authenticatable
     {
         static::addGlobalScope(new OrderBy);
         static::addGlobalScope(new WithDeleted);
+        static::addGlobalScope(new Page);
     }
 
     public function city(): BelongsTo

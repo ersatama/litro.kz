@@ -20,200 +20,231 @@
   </div>
 @endsection
 <div id="app">
-    <div class="modal fade" id="orderCardModal" tabindex="-1" role="dialog" aria-labelledby="orderCardModal" aria-hidden="true" @mouseup.stop="hardReset">
-        <div class="modal-dialog modal-lg" role="document" @mouseup.stop>
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"><i class="las la-cloud-upload-alt"></i> Импорт карт из Excel</h5>
-                    <button type="button" class="close" data-dismiss="modal" @mouseup.stop="hardReset">
-                        <span aria-hidden="true" >&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="mt-4">
-                        <div class="d-flex justify-content-center align-items-center" style="gap: 15px;">
-                            <div class="p-2 step-items" :class="{ 'bg-light': firstStep,  border: firstStep, 'text-primary': firstStep, 'text-secondary': !firstStep}">
-                                <div class="d-flex align-items-center font-weight-bold">
-                                    <button class="rounded-circle border-0 text-white" style="width: 40px; height:40px;font-size: 14px;" :class="{'bg-primary': firstStep, 'bg-secondary': !firstStep}">1</button>
-                                    <div>
-                                        <div>Шаг 1</div>
-                                        <div class="font-weight-normal text-muted">Загрузка карт</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <i class="las la-angle-right text-secondary" style="font-size: 20px;color: grey;"></i>
-                            <div class="p-2 step-items" :class="{ 'bg-light': secondStep,  border: secondStep, 'text-primary': secondStep, 'text-secondary': !secondStep}">
-                                <div class="d-flex align-items-center font-weight-bold">
-                                    <button class="rounded-circle border-0 text-white" style="width: 40px; height:40px;font-size: 14px;" :class="{'bg-primary': secondStep, 'bg-secondary': !secondStep}">2</button>
-                                    <div>
-                                        <div>Шаг 2</div>
-                                        <div class="font-weight-normal text-muted">Обработка карт</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <i class="las la-angle-right text-secondary" style="font-size: 20px;color: grey;"></i>
-                            <div class="p-2 step-items" :class="{ 'bg-light': thirdStep,  border: thirdStep, 'text-primary': thirdStep, 'text-secondary': !thirdStep}">
-                                <div class="d-flex align-items-center font-weight-bold">
-                                    <button class="rounded-circle border-0 text-white" style="width: 40px; height:40px;font-size: 14px;" :class="{'bg-primary': thirdStep, 'bg-secondary': !thirdStep}">3</button>
-                                    <div>
-                                        <div>Шаг 3</div>
-                                        <div class="font-weight-normal text-muted">Завершение</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div ref="app" style="visibility: hidden;">
+        <div class="modal fade" id="orderCardModal" tabindex="-1" role="dialog" aria-labelledby="orderCardModal" aria-hidden="true" @mouseup.stop="hardReset">
+            <div class="modal-dialog modal-lg" role="document" @mouseup.stop>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"><i class="las la-cloud-upload-alt"></i> Импорт карт из Excel</h5>
+                        <button type="button" class="close" data-dismiss="modal" @mouseup.stop="hardReset">
+                            <span aria-hidden="true" >&times;</span>
+                        </button>
                     </div>
-                    <template v-if="firstStep">
-                        <div class="mt-5 mx-5">
-                            <h3 style="font-weight: 600;">Загрузка карт</h3>
-                            <p class="text-muted my-2">Прежде чем загружать файл просим проверить все ли поля соответствуют порядку и правилам.</p>
-                            <ul class="list-group list-group-flush" :class="{'text-primary':!error,'text-danger':error}">
-                                <li class="list-group-item border-0 px-0" :class="{'error-item':error}">
-                                    <i class="las la-angle-right"></i>
-                                    Документ не должен превышать 10 мегабайт
-                                </li>
-                                <li class="list-group-item border-0 px-0" :class="{'error-item':error}">
-                                    <i class="las la-angle-right"></i>
-                                    Документ должен быть в формате MS Excel
-                                </li>
-                                <li class="list-group-item border-0 px-0" :class="{'error-item':error}">
-                                    <i class="las la-angle-right"></i>
-                                    <span style="border-bottom: 1px dotted; cursor: pointer;" @click="tableShow = !tableShow">Порядок столбцов построена правильно <i class="las la-question-circle"></i></span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="my-5" v-if="!uploading">
-                            <div class="d-flex justify-content-center">
-                                <input type="file" class="d-none" ref="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" @change="startUpload">
-                                <button type="button" class="btn btn-primary" @click="$refs.file.click()"><i class="las la-cloud-upload-alt"></i> Выбрать файл</button>
-                            </div>
-                        </div>
-                        <div class="my-5" v-else>
-                            <div class="d-flex justify-content-center flex-column align-items-center">
-                                <div class="indicator bg-light overflow-hidden rounded">
-                                    <div class="bg-primary" :style="{'width' : uploadPercentage + '%'}"></div>
+                    <div class="modal-body">
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-center align-items-center" style="gap: 15px;">
+                                <div class="p-2 step-items" :class="{ 'bg-light': firstStep,  border: firstStep, 'text-primary': firstStep, 'text-secondary': !firstStep}">
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <button class="rounded-circle border-0 text-white" style="width: 40px; height:40px;font-size: 14px;" :class="{'bg-primary': firstStep, 'bg-secondary': !firstStep}">1</button>
+                                        <div>
+                                            <div>Шаг 1</div>
+                                            <div class="font-weight-normal text-muted">Загрузка карт</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text-danger mt-2">Не закрывайте окно идет загрузка</div>
-                            </div>
-                        </div>
-                        <div class="list-group-info my-5 mx-5" v-show="tableShow">
-                            <table class="table table-sm table-bordered">
-                                <thead>
-                                </thead>
-                                <tbody>
-                                <tr v-for="(cell,key) in table" :key="key">
-                                    <th scope="row" class="text-primary">@{{cell.key}}</th>
-                                    <td class="pl-2 text-muted">@{{cell.value}}</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </template>
-                    <template v-else-if="secondStep">
-                        <div class="mt-5 mx-5 ">
-                            <h3 style="font-weight: 600;">Обработка карт</h3>
-                            <p class="text-muted my-2" v-show="!processing">Убедитесь что все данные заполнены правильно.</p>
-                        </div>
-                        <div class="mt-5 max-5 d-flex justify-content-center align-items-center" v-if="processing" style="gap: 20px;">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="lds-roller">
-                                    <div class="bg-primary"></div>
-                                    <div class="bg-primary"></div>
-                                    <div class="bg-primary"></div>
-                                    <div class="bg-primary"></div>
-                                    <div class="bg-primary"></div>
-                                    <div class="bg-primary"></div>
-                                    <div class="bg-primary"></div>
-                                    <div class="bg-primary"></div>
+                                <i class="las la-angle-right text-secondary" style="font-size: 20px;color: grey;"></i>
+                                <div class="p-2 step-items" :class="{ 'bg-light': secondStep,  border: secondStep, 'text-primary': secondStep, 'text-secondary': !secondStep}">
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <button class="rounded-circle border-0 text-white" style="width: 40px; height:40px;font-size: 14px;" :class="{'bg-primary': secondStep, 'bg-secondary': !secondStep}">2</button>
+                                        <div>
+                                            <div>Шаг 2</div>
+                                            <div class="font-weight-normal text-muted">Обработка карт</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="las la-angle-right text-secondary" style="font-size: 20px;color: grey;"></i>
+                                <div class="p-2 step-items" :class="{ 'bg-light': thirdStep,  border: thirdStep, 'text-primary': thirdStep, 'text-secondary': !thirdStep}">
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <button class="rounded-circle border-0 text-white" style="width: 40px; height:40px;font-size: 14px;" :class="{'bg-primary': thirdStep, 'bg-secondary': !thirdStep}">3</button>
+                                        <div>
+                                            <div>Шаг 3</div>
+                                            <div class="font-weight-normal text-muted">Завершение</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-primary mt-2 text-center h4">Пожалуйста, не закрывайте окно!</div>
                         </div>
-                        <div class="d-flex justify-content-center align-items-center my-5 text-center" style="gap: 40px">
-                            <div class="text-primary">
-                                <div>Обработано</div>
-                                <div class=" h4">@{{ list.length }}</div>
+                        <template v-if="firstStep">
+                            <div class="mt-5 mx-5">
+                                <h3 style="font-weight: 600;">Загрузка карт</h3>
+                                <p class="text-muted my-2">Прежде чем загружать файл просим проверить все ли поля соответствуют порядку и правилам.</p>
+                                <ul class="list-group list-group-flush" :class="{'text-primary':!error,'text-danger':error}">
+                                    <li class="list-group-item border-0 px-0" :class="{'error-item':error}">
+                                        <i class="las la-angle-right"></i>
+                                        Документ не должен превышать 10 мегабайт
+                                    </li>
+                                    <li class="list-group-item border-0 px-0" :class="{'error-item':error}">
+                                        <i class="las la-angle-right"></i>
+                                        Документ должен быть в формате MS Excel
+                                    </li>
+                                    <li class="list-group-item border-0 px-0" :class="{'error-item':error}">
+                                        <i class="las la-angle-right"></i>
+                                        <span style="border-bottom: 1px dotted; cursor: pointer;" @click="tableShow = !tableShow">Порядок столбцов построена правильно <i class="las la-question-circle"></i></span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="text-success">
-                                <div>Успешных</div>
-                                <div class=" h4">@{{ success }}</div>
-                            </div>
-                            <div class="text-danger">
-                                <div>Неудачных</div>
-                                <div class=" h4">@{{ failure }}</div>
-                            </div>
-                        </div>
-                        <template v-if="!processing">
-                            <div class="d-flex justify-content-center my-5 text-center" style="gap: 20px">
-                                <div>
-                                    <button type="button" class="btn btn-danger" v-if="failure > 0" @click="downloadFailure">Скопировать таблицу неудачных</button>
-                                    <div class="text-secondary" v-show="failureText">Скопировано</div>
+                            <div class="my-5" v-if="!uploading">
+                                <div class="d-flex justify-content-center">
+                                    <input type="file" class="d-none" ref="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" @change="startUpload">
+                                    <button type="button" class="btn btn-primary" @click="$refs.file.click()"><i class="las la-cloud-upload-alt"></i> Выбрать файл</button>
                                 </div>
-                                <div>
-                                    <button type="button" class="btn btn-success" v-if="success > 0" @click="startThirdStep">Импортировать успешных</button>
-                                    <button type="button" class="btn btn-warning text-white" @click="hardReset" v-else>Вернуться назад</button>
+                            </div>
+                            <div class="my-5" v-else>
+                                <div class="d-flex justify-content-center flex-column align-items-center">
+                                    <div class="indicator bg-light overflow-hidden rounded">
+                                        <div class="bg-primary" :style="{'width' : uploadPercentage + '%'}"></div>
+                                    </div>
+                                    <div class="text-danger mt-2">Не закрывайте окно идет загрузка</div>
                                 </div>
                             </div>
-                            <div class="list-group-info my-5 mx-5 overflow-auto">
-                                <h4 class="text-center">Таблица неудачных карт</h4>
-                                <table class="table table-sm table-striped table-bordered" style="font-size: 11px;" ref="failureTable">
+                            <div class="list-group-info my-5 mx-5" v-show="tableShow">
+                                <table class="table table-sm table-bordered">
                                     <thead>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td class="text-nowrap">Дата активации</th>
-                                        <td class="text-nowrap">Срок действия</td>
-                                        <td class="text-nowrap">№ присвоенной карты</td>
-                                        <td class="text-nowrap">Город</td>
-                                        <td class="text-nowrap">Тип карты</td>
-                                        <td class="text-nowrap">Статус карты</td>
-                                        <td class="text-nowrap">Фамилия Владельца 1</td>
-                                        <td class="text-nowrap">Имя Владельца 1</td>
-                                        <td class="text-nowrap">Отчество Владельца 1</td>
-                                        <td class="text-nowrap">День рождения Владельца 1</td>
-                                        <td class="text-nowrap">Пол Владельца 1</td>
-                                        <td class="text-nowrap">Марка Владельца 1</td>
-                                        <td class="text-nowrap">Модель Владельца 1</td>
-                                        <td class="text-nowrap">Год выпуска Владельца 1</td>
-                                        <td class="text-nowrap">Гос. Номер* Владельца 1</td>
-                                        <td class="text-nowrap">Vin code Владельца 1</td>
-                                        <td class="text-nowrap">Телефон Владельца 1</td>
-                                        <td class="text-nowrap">Email Владельца 1</td>
-                                        <td class="text-nowrap">Фамилия Владельца 2</td>
-                                        <td class="text-nowrap">Имя Владельца 2</td>
-                                        <td class="text-nowrap">Отчество Владельца 2</td>
-                                        <td class="text-nowrap">День рождения Владельца 2</td>
-                                        <td class="text-nowrap">Пол Владельца 2</td>
-                                        <td class="text-nowrap">Марка Владельца 2</td>
-                                        <td class="text-nowrap">Модель Владельца 2</td>
-                                        <td class="text-nowrap">Год выпуска Владельца 2</td>
-                                        <td class="text-nowrap">Гос. Номер* Владельца 2</td>
-                                        <td class="text-nowrap">Vin code Владельца 2</td>
-                                        <td class="text-nowrap">Телефон Владельца 2</td>
-                                        <td class="text-nowrap">Email Владельца 2</td>
-                                        <td class="text-nowrap">Создать учетную запись в приложении (да/нет)**</td>
-                                    </tr>
-                                    <tr v-for="(row,key) in failureList" :key="key">
-                                        <td class="text-nowrap" v-for="(cell,cellKey) in row" :key="cellKey" :class="{'bg-danger':Array.isArray(cell)}">
-                                            <template v-if="Array.isArray(cell)"><u><strong>@{{ cell[0] }}</strong></u></template>
-                                            <template v-else>@{{ cell }}</template>
-                                        </td>
+                                    <tr v-for="(cell,key) in table" :key="key">
+                                        <th scope="row" class="text-primary">@{{cell.key}}</th>
+                                        <td class="pl-2 text-muted">@{{cell.value}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </template>
-                    </template>
-                    <template v-else-if="thirdStep">
-                        <div class="mt-5 mx-5">
-                            <h3 style="font-weight: 600;">Завершение</h3>
-                            <p class="text-muted my-2">Пожалуйста, не закрывайте модальное окно пока загрузка карт не закончиться.</p>
-                            <p class="text-success my-2">@{{success}} карт были успешно загружены. Скоро все карты появится в админке.</p>
-                        </div>
-                        <div class="d-flex justify-content-center my-5 text-center">
-                            <button type="button" class="btn btn-success" @click="hardReset">Завершить импорт карт</button>
-                        </div>
-                    </template>
+                        <template v-else-if="secondStep">
+                            <div class="mt-5 mx-5 ">
+                                <h3 style="font-weight: 600;">Обработка карт</h3>
+                                <p class="text-muted my-2" v-show="!processing">Убедитесь что все данные заполнены правильно.</p>
+                            </div>
+                            <div class="mt-5 max-5 d-flex justify-content-center align-items-center" v-if="processing" style="gap: 20px;">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="lds-roller">
+                                        <div class="bg-primary"></div>
+                                        <div class="bg-primary"></div>
+                                        <div class="bg-primary"></div>
+                                        <div class="bg-primary"></div>
+                                        <div class="bg-primary"></div>
+                                        <div class="bg-primary"></div>
+                                        <div class="bg-primary"></div>
+                                        <div class="bg-primary"></div>
+                                    </div>
+                                </div>
+                                <div class="text-primary mt-2 text-center h4">Пожалуйста, не закрывайте окно!</div>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center my-5 text-center" style="gap: 40px">
+                                <div class="text-primary">
+                                    <div>Обработано</div>
+                                    <div class=" h4">@{{ list.length }}</div>
+                                </div>
+                                <div class="text-success">
+                                    <div>Успешных</div>
+                                    <div class=" h4">@{{ success }}</div>
+                                </div>
+                                <div class="text-danger">
+                                    <div>Неудачных</div>
+                                    <div class=" h4">@{{ failure }}</div>
+                                </div>
+                            </div>
+                            <template v-if="!processing">
+                                <div class="d-flex justify-content-center my-5 text-center" style="gap: 20px">
+                                    <div>
+                                        <button type="button" class="btn btn-danger" v-if="failure > 0" @click="downloadFailure">Скопировать таблицу неудачных</button>
+                                        <div class="text-secondary" v-show="failureText">Скопировано</div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-success" v-if="success > 0" @click="startThirdStep">Импортировать успешных</button>
+                                        <button type="button" class="btn btn-warning text-white" @click="hardReset" v-else>Вернуться назад</button>
+                                    </div>
+                                </div>
+                                <div class="list-group-info my-5 mx-5 overflow-auto">
+                                    <h4 class="text-center">Таблица неудачных карт</h4>
+                                    <table class="table table-sm table-striped table-bordered" style="font-size: 11px;" ref="failureTable">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-nowrap">Дата активации</th>
+                                            <td class="text-nowrap">Срок действия</td>
+                                            <td class="text-nowrap">№ присвоенной карты</td>
+                                            <td class="text-nowrap">Город</td>
+                                            <td class="text-nowrap">Тип карты</td>
+                                            <td class="text-nowrap">Статус карты</td>
+                                            <td class="text-nowrap">Фамилия Владельца 1</td>
+                                            <td class="text-nowrap">Имя Владельца 1</td>
+                                            <td class="text-nowrap">Отчество Владельца 1</td>
+                                            <td class="text-nowrap">День рождения Владельца 1</td>
+                                            <td class="text-nowrap">Пол Владельца 1</td>
+                                            <td class="text-nowrap">Марка Владельца 1</td>
+                                            <td class="text-nowrap">Модель Владельца 1</td>
+                                            <td class="text-nowrap">Год выпуска Владельца 1</td>
+                                            <td class="text-nowrap">Гос. Номер* Владельца 1</td>
+                                            <td class="text-nowrap">Vin code Владельца 1</td>
+                                            <td class="text-nowrap">Телефон Владельца 1</td>
+                                            <td class="text-nowrap">Email Владельца 1</td>
+                                            <td class="text-nowrap">Фамилия Владельца 2</td>
+                                            <td class="text-nowrap">Имя Владельца 2</td>
+                                            <td class="text-nowrap">Отчество Владельца 2</td>
+                                            <td class="text-nowrap">День рождения Владельца 2</td>
+                                            <td class="text-nowrap">Пол Владельца 2</td>
+                                            <td class="text-nowrap">Марка Владельца 2</td>
+                                            <td class="text-nowrap">Модель Владельца 2</td>
+                                            <td class="text-nowrap">Год выпуска Владельца 2</td>
+                                            <td class="text-nowrap">Гос. Номер* Владельца 2</td>
+                                            <td class="text-nowrap">Vin code Владельца 2</td>
+                                            <td class="text-nowrap">Телефон Владельца 2</td>
+                                            <td class="text-nowrap">Email Владельца 2</td>
+                                            <td class="text-nowrap">Создать учетную запись в приложении (да/нет)**</td>
+                                        </tr>
+                                        <tr v-for="(row,key) in failureList" :key="key">
+                                            <td class="text-nowrap" v-for="(cell,cellKey) in row" :key="cellKey" :class="{'bg-danger':Array.isArray(cell)}">
+                                                <template v-if="Array.isArray(cell)"><u><strong>@{{ cell[0] }}</strong></u></template>
+                                                <template v-else>@{{ cell }}</template>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </template>
+                        </template>
+                        <template v-else-if="thirdStep">
+                            <div class="mt-5 mx-5">
+                                <h3 style="font-weight: 600;">Завершение</h3>
+                                <p class="text-muted my-2">Пожалуйста, не закрывайте модальное окно пока загрузка карт не закончиться.</p>
+                                <p class="text-success my-2">@{{success}} карт были успешно загружены. Скоро все карты появится в админке.</p>
+                            </div>
+                            <div class="d-flex justify-content-center my-5 text-center">
+                                <button type="button" class="btn btn-success" @click="hardReset">Завершить импорт карт</button>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="orderCardModalAnalytics" tabindex="-1" role="dialog" aria-labelledby="orderCardModalAnalytics" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"><i class="las la-cloud-upload-alt"></i> Аналитика</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true" >&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">{{ \App\Domain\Contracts\Contract::T(\App\Domain\Contracts\Contract::START_DATE) }}</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">{{ \App\Domain\Contracts\Contract::T(\App\Domain\Contracts\Contract::END_DATE) }}</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">{{ \App\Domain\Contracts\Contract::T(\App\Domain\Contracts\Contract::UTM_CAMPAIGN) }}</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-info w-100">Экспорт</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,6 +267,7 @@
     createApp({
         data() {
             return {
+                main: true,
                 failureText: false,
                 time: null,
                 step: 1,
@@ -365,6 +397,7 @@
                     }
                 }
             });
+            this.$refs['app'].removeAttribute('style');
         },
         methods: {
             startThirdStep() {
@@ -591,7 +624,7 @@
                 <button class="btn btn-success" data-toggle="modal" data-target="#orderCardModal">
                     <i class="las la-file-alt"></i> Импорт карт
                 </button>
-                    <button class="btn btn-info">
+                    <button class="btn btn-info" data-toggle="modal" data-target="#orderCardModalAnalytics">
                         <i class="las la-file-medical-alt"></i> Аналитика
                     </button>
             </div>

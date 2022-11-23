@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
 use App\Domain\Contracts\Contract;
+use App\Domain\Contracts\UserContract;
 use App\Domain\Helpers\OldPassword;
+use App\Domain\Requests\User\SearchRequest;
 use App\Domain\Services\UserService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\User\UserCollection;
@@ -14,6 +16,7 @@ use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
 {
@@ -117,6 +120,20 @@ class UserController extends Controller
             return new UserResource($model);
         }
         return response(ErrorContract::ERROR_NOT_FOUND,404);
+    }
+
+    /**
+     *  поиск - User
+     *
+     * @group User - Пользователь
+     * @throws ValidationException
+     */
+    public function search(SearchRequest $searchRequest): UserCollection
+    {
+        if ($search = $searchRequest->checked()) {
+            return new UserCollection($this->userService->userRepository->search(UserContract::SEARCH,$search));
+        }
+        return new UserCollection($this->userService->userRepository->all());
     }
 
 }

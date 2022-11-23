@@ -3,10 +3,19 @@
 namespace App\Domain\Repositories;
 
 use App\Domain\Contracts\Contract;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\DB;
 
 trait RepositoryEloquent
 {
+    public function search($searchColumns,$data): Collection|array
+    {
+        $query  =   $this->model::query();
+        foreach($searchColumns as &$column) {
+            $query->orWhere($column, Contract::LIKE, $data . '%');
+        }
+        return $query->get();
+    }
 
     public function getByIos($ios)
     {

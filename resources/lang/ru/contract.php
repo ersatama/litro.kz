@@ -70,7 +70,15 @@ return [
     Contract::PRICE =>  'Цена',
     Contract::IS_FROM_EXCEL =>  'Из экселя',
     Contract::START_DATE    =>  'Дата начало',
+    Contract::END_DATE  =>  'Дата окончания',
     Contract::PAYMENT_TYPE  =>  'Тип платежа',
     Contract::IS_PAID   =>  'Оплачено',
-    Contract::PAYBOX_ORDER_ID   =>  'Paybox ID платежа'
+    Contract::PAYBOX_ORDER_ID   =>  'Paybox ID платежа',
+    Contract::PAYMENT_METHOD    =>  'Метод платежа',
+    Contract::ACTIVATE_DATE =>  'Дата активации',
+    Contract::UTM_CAMPAIGN  =>  'utm-метка',
+    Contract::MONTHLY   =>  'Помесячно',
+    Contract::IS_CANCELED   =>  'Отменен',
+    Contract::REFERRAL  =>  'Реферал',
+    Contract::PAYBOX_ORDER_DATE =>  'Paybox Дата',
 ];

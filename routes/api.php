@@ -329,6 +329,7 @@ Route::controller(UserProfileController::class)->group(function() {
 
 Route::controller(UserController::class)->group(function() {
     Route::prefix('user')->group(function() {
+        Route::any('search','search')->name('user.search');
         Route::get('getByPhoneAndPassword/{phone}/{password}','getByPhoneAndPassword')
             ->name('user.getByPhoneAndPassword');
         Route::get('getByEmailAndPassword/{email}/{password}','getByEmailAndPassword')

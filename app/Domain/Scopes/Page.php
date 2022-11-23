@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Domain\Scopes;
+
+use App\Domain\Contracts\Contract;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Scope;
+
+class Page implements Scope
+{
+    protected int $take =   100;
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     *
+     * @param Builder $builder
+     * @param Model $model
+     * @return void
+     */
+    public function apply(Builder $builder, Model $model): void
+    {
+        if (request()->has(Contract::PAGE)) {
+            $page   =   (int) request()->input(Contract::PAGE) - 1;
+            $builder->skip(($this->take * $page))->take($this->take);
+        } else {
+            $builder->take($this->take);
+        }
+    }
+}

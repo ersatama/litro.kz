@@ -204,68 +204,128 @@ class OrderCardCrudController extends CrudController
         CRUD::column(Contract::STATUS)->label(Contract::T(Contract::STATUS));
     }
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
     protected function setupCreateOperation(): void
     {
         CRUD::setValidation(OrderCardRequest::class);
 
-        CRUD::field('card_id');
-        CRUD::field('user_id');
-        CRUD::field('bitrix_id');
-        CRUD::field('synced');
-        CRUD::field('price');
-        CRUD::field('start_date');
-        CRUD::field('end_date');
-        CRUD::field('number');
-        CRUD::field('payment_type');
-        CRUD::field('paybox_order_id');
-        CRUD::field('paybox_order_date');
-        CRUD::field('status');
-        CRUD::field('referral');
-        CRUD::field('recurrent_enabled')->type(Contract::SELECT_FROM_ARRAY)->options([
-            1   =>  Contract::T(Contract::YES),
-            0   =>  Contract::T(Contract::NO),
-        ])->default(0);
-        CRUD::field('is_paid')->label('Оплачено')->type(Contract::SELECT_FROM_ARRAY)->options([
-            1   =>  Contract::T(Contract::YES),
-            0   =>  Contract::T(Contract::NO),
-        ])->default(0);
-        CRUD::field('is_canceled')->label('Отменен')->type(Contract::SELECT_FROM_ARRAY)->options([
-            1   =>  Contract::T(Contract::YES),
-            0   =>  Contract::T(Contract::NO),
-        ])->default(0);
-        CRUD::field('monthly')->label('Помесячно')->type(Contract::SELECT_FROM_ARRAY)->options([
-            1   =>  Contract::T(Contract::YES),
-            0   =>  Contract::T(Contract::NO),
-        ])->default(0);
-        CRUD::field('is_from_excel')->label('Из экселя')->type(Contract::SELECT_FROM_ARRAY)->options([
-            1   =>  Contract::T(Contract::YES),
-            0   =>  Contract::T(Contract::NO),
-        ])->default(0);
-        CRUD::field('activate_date');
-        CRUD::field('payment_method');
-        CRUD::field('utm_campaign');
-        CRUD::field('import_id');
+        CRUD::field(Contract::CARD_ID)
+            ->label(Contract::T(Contract::CARD));
 
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
-         */
+        $this->crud->addField([
+            Contract::NAME  =>  Contract::USER_ID,
+            Contract::LABEL =>  Contract::T(Contract::USER),
+            Contract::TYPE  =>  Contract::SELECT2_FROM_ARRAY,
+            Contract::ENTITY    =>  Contract::USER,
+            Contract::PLACEHOLDER   => 'ID или Ф.И.О пользователя',
+            Contract::MINIMUM_INPUT_LENGTH  =>  '',
+            Contract::ATTRIBUTE =>  Contract::FULL,
+            Contract::DATA_SOURCE   =>  url('api/user/search')
+        ]);
+
+        CRUD::field(Contract::SYNCED);
+
+        CRUD::field(Contract::PRICE)
+            ->label(Contract::T(Contract::PRICE));
+
+        CRUD::field(Contract::START_DATE)
+            ->label(Contract::T(Contract::START_DATE))
+            ->type(Contract::DATE);
+
+        CRUD::field(Contract::END_DATE)
+            ->label(Contract::T(Contract::END_DATE))
+            ->type(Contract::DATE);
+
+        CRUD::field(Contract::NUMBER)
+            ->label(Contract::T(Contract::NUMBER));
+
+        $this->crud->addField([
+            Contract::NAME  =>  Contract::PAYMENT_TYPE,
+            Contract::LABEL =>  Contract::T(Contract::PAYMENT_TYPE),
+            Contract::TYPE  =>  Contract::SELECT_FROM_ARRAY,
+            Contract::OPTIONS   =>  ['cash','paybox','pay_box'],
+            Contract::ALLOWS_NULL   =>  true,
+        ]);
+
+        CRUD::field(Contract::PAYBOX_ORDER_ID)
+            ->label(Contract::T(Contract::PAYBOX_ORDER_ID));
+
+        CRUD::field(Contract::PAYBOX_ORDER_DATE)
+            ->label(Contract::T(Contract::PAYBOX_ORDER_DATE))
+            ->type(Contract::DATE);
+
+        $this->crud->addField([
+            Contract::NAME  =>  Contract::STATUS,
+            Contract::LABEL =>  Contract::T(Contract::STATUS),
+            Contract::TYPE  =>  Contract::SELECT_FROM_ARRAY,
+            Contract::OPTIONS   =>  ['Активна','Оплачено','Не оплачено','Отменена','Не оплачен'],
+            Contract::ALLOWS_NULL   =>  true,
+            Contract::DEFAULT   =>  0
+        ]);
+
+        CRUD::field(Contract::REFERRAL)
+            ->label(Contract::T(Contract::REFERRAL));
+
+        CRUD::field(Contract::RECURRENT_ENABLED)
+            ->type(Contract::SELECT_FROM_ARRAY)
+            ->options([
+                Contract::T(Contract::NO),
+                Contract::T(Contract::YES),
+            ])
+            ->default(0);
+
+        CRUD::field(Contract::IS_PAID)
+            ->label(Contract::T(Contract::IS_PAID))
+            ->type(Contract::SELECT_FROM_ARRAY)
+            ->options([
+                Contract::T(Contract::NO),
+                Contract::T(Contract::YES),
+            ])
+            ->default(0);
+
+        CRUD::field(Contract::IS_CANCELED)
+            ->label(Contract::T(Contract::IS_CANCELED))
+            ->type(Contract::SELECT_FROM_ARRAY)
+            ->options([
+                Contract::T(Contract::NO),
+                Contract::T(Contract::YES),
+            ])
+            ->default(0);
+
+        CRUD::field(Contract::MONTHLY)
+            ->label(Contract::T(Contract::MONTHLY))
+            ->type(Contract::SELECT_FROM_ARRAY)
+            ->options([
+                Contract::T(Contract::NO),
+                Contract::T(Contract::YES),
+            ])
+            ->default(0);
+
+        CRUD::field(Contract::IS_FROM_EXCEL)
+            ->label(Contract::T(Contract::IS_FROM_EXCEL))
+            ->type(Contract::SELECT_FROM_ARRAY)
+            ->options([
+                Contract::T(Contract::NO),
+                Contract::T(Contract::YES),
+            ])
+            ->default(0);
+
+        CRUD::field(Contract::ACTIVATE_DATE)
+            ->label(Contract::T(Contract::ACTIVATE_DATE))
+            ->type(Contract::DATE);
+
+        $this->crud->addField([
+            Contract::NAME  =>  Contract::PAYMENT_METHOD,
+            Contract::LABEL =>  Contract::T(Contract::PAYMENT_METHOD),
+            Contract::TYPE  =>  Contract::SELECT_FROM_ARRAY,
+            Contract::OPTIONS   =>  ['mobile_commerce','bankcard'],
+            Contract::ALLOWS_NULL   =>  true,
+        ]);
+
+        CRUD::field(Contract::UTM_CAMPAIGN)
+            ->label(Contract::T(Contract::UTM_CAMPAIGN));
     }
 
-    /**
-     * Define what happens when the Update operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
-    protected function setupUpdateOperation()
+    protected function setupUpdateOperation(): void
     {
         $this->setupCreateOperation();
     }

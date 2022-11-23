@@ -16,6 +16,7 @@ class UserResource extends JsonResource
             Contract::ID    =>  $this->{Contract::ID},
             Contract::CREATED_AT    =>  $this->{Contract::CREATED_AT},
             Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
+            Contract::FULL  =>  $this->{Contract::ID} . ' - ' . $this->{Contract::FIRST_NAME} . ' ' . $this->{Contract::LAST_NAME},
             Contract::CITY  =>  new CityResource($this->{Contract::CITY}),
             Contract::ROLE  =>  new RoleResource($this->{Contract::ROLE})
         ];

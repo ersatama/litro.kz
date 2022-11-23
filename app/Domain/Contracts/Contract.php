@@ -4,6 +4,9 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const PAGE  =   'page';
+    const LIKE  =   'like';
+    const Q =   'q';
     const NEWS  =   'news';
     const PARTNERS  =   'partners';
     const CARDS =   'cards';
@@ -189,6 +192,7 @@ abstract class Contract
     const IS_PAID   =   'is_paid';
     const NUMBER    =   'number';
     const SELECT_FROM_ARRAY =   'select_from_array';
+    const SELECT2_FROM_ARRAY    =   'select2_from_ajax';
     const REFERRAL_CODE =   'referral_code';
     const PATRONYMIC    =   'patronymic';
     const LAST_NAME =   'last_name';
@@ -253,6 +257,7 @@ abstract class Contract
     const USER_ID   =   'user_id';
     const NOTIFICATION_ID   =   'notification_id';
     const STATUS    =   'status';
+    const DEFAULT   =   'default';
     const MONEY_OPERATION_TYPE_ID   =   'money_operation_type_id';
     const INFO  =   'info';
     const SKIP  =   'skip';
@@ -313,6 +318,12 @@ abstract class Contract
     const AUTO_PART_PARAM_ID    =   'auto_part_param_id';
     const FILTER    =   'filter';
     const TYPE  =   'type';
+    const ENTITY    =   'entity';
+    const ATTRIBUTE =   'attribute';
+    const PLACEHOLDER   =   'placeholder';
+    const MINIMUM_INPUT_LENGTH  =   'minimum_input_length';
+    const DATA_SOURCE   =   'data_source';
+    const ALLOWS_NULL   =   'allows_null';
     const ADDITIONAL    =   'additional';
     const TYPE_ID   =   'type_id';
     const SOUND =   'sound';
@@ -333,6 +344,8 @@ abstract class Contract
     const IMAGE_ID  =   'image_id';
     const IMG   =   'img';
     const NAME  =   'name';
+    const OPTIONS   =   'options';
+    const LABEL =   'label';
     const FILTER_NAME   =   'filter_name';
     const AUTO_PART_CATEGORY_ID =   'auto_part_category_id';
     const ORDER_SERVICE =   'order_service';
@@ -351,6 +364,7 @@ abstract class Contract
     const ID    =   'id';
     const ASC   =   'asc';
     const DESC  =   'desc';
+    const FULL  =   'full';
     const DRIVER    =   'driver';
     const NOT_VIEWED    =   'not_viewed';
     const ORDER_BY_TYPES    =   [

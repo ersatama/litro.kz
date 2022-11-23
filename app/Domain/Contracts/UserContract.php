@@ -31,4 +31,10 @@ class UserContract extends Contract
     const HIDDEN    =   [
         self::PASSWORD
     ];
+
+    const SEARCH    =   [
+        self::ID,
+        self::FIRST_NAME,
+        self::LAST_NAME,
+    ];
 }
