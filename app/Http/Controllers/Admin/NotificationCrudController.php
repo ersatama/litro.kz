@@ -30,8 +30,9 @@ class NotificationCrudController extends CrudController
         CRUD::setModel(\App\Models\Notification::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/notification');
         CRUD::setEntityNameStrings('notification', 'notifications');
-        if (backpack_user()->{Contract::ROLE_ID} !== 2) {
+        if (!in_array(backpack_user()->{Contract::ROLE_ID},[2,4])) {
             CRUD::denyAccess('delete');
+            CRUD::denyAccess('create');
         }
     }
 
