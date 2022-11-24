@@ -30,32 +30,35 @@ class OrderCardCrudController extends CrudController
         CRUD::setEntityNameStrings('Карта', 'Заказные карты');
         $this->crud->setListView('vendor.backpack.crud.orderCard.list');
         $this->crud->addFilter([
-            'type'  => 'text',
-            'name'  => 'id',
-            'label' => 'ID'
+            Contract::TYPE  =>  Contract::TEXT,
+            Contract::NAME  =>  Contract::ID,
+            Contract::LABEL =>  'ID',
         ],
             false,
             function($value) { // if the filter is active
                 $this->crud->addClause('where', 'id', 'like', "$value%");
             });
+
         $this->crud->addFilter([
-            'type'  => 'text',
-            'name'  => 'price',
-            'label' => 'цена'
+            Contract::TYPE  =>  Contract::TEXT,
+            Contract::NAME  =>  Contract::PRICE,
+            Contract::LABEL =>  Contract::T(Contract::PRICE)
+            ],
+            false,
+            function($value) {
+                $this->crud->addClause('where', Contract::PRICE, 'like', "$value%");
+            });
+
+        $this->crud->addFilter([
+            Contract::TYPE  =>  Contract::TEXT,
+            Contract::NAME  =>  Contract::USER_ID,
+            Contract::LABEL =>  'ID пользователя'
         ],
             false,
-            function($value) { // if the filter is active
-                $this->crud->addClause('where', 'price', 'like', "$value%");
+            function($value) {
+                $this->crud->addClause('where', Contract::USER_ID, 'like', "$value%");
             });
-        $this->crud->addFilter([
-            'type'  => 'text',
-            'name'  => 'user_id',
-            'label' => 'ID пользователя'
-        ],
-            false,
-            function($value) { // if the filter is active
-                $this->crud->addClause('where', 'user_id', 'like', "$value%");
-            });
+
         $this->crud->addFilter([
             'name'  => 'is_from_excel',
             'type'  => 'dropdown',
@@ -63,6 +66,7 @@ class OrderCardCrudController extends CrudController
         ], ['Нет','Да'], function($value) { // if the filter is active
             $this->crud->addClause('where', 'is_from_excel', $value);
         });
+
         $this->crud->addFilter([
             'type'  => 'text',
             'name'  => 'number',
@@ -72,6 +76,7 @@ class OrderCardCrudController extends CrudController
             function($value) { // if the filter is active
                 $this->crud->addClause('where', 'number', 'like', "$value%");
             });
+
         $this->crud->addFilter([
             'name'  => 'card_id',
             'type'  => 'select2',
@@ -86,17 +91,31 @@ class OrderCardCrudController extends CrudController
         }, function ($value) { // if the filter is active
             $this->crud->addClause('where', 'card_id', $value);
         });
+
         $this->crud->addFilter([
-            'type'  => 'date_range',
-            'name'  => 'from_to',
-            'label' => 'Дата начало'
+            'type'  => Contract::DATE_RANGE,
+            'name'  => Contract::START_DATE,
+            'label' => Contract::T(Contract::START_DATE)
         ],
             false,
-            function ($value) { // if the filter is active, apply these constraints
+            function ($value) {
                 $dates  =   json_decode($value);
-                $this->crud->addClause('whereDate', 'start_date', '>=', $dates->from);
-                $this->crud->addClause('whereDate', 'start_date', '<=', $dates->to);
+                $this->crud->addClause('whereDate', Contract::START_DATE, '>=', $dates->from);
+                $this->crud->addClause('whereDate', Contract::START_DATE, '<=', $dates->to);
             });
+
+        $this->crud->addFilter([
+            'type'  => Contract::DATE_RANGE,
+            'name'  => Contract::END_DATE,
+            'label' => Contract::T(Contract::END_DATE)
+        ],
+            false,
+            function ($value) {
+                $dates  =   json_decode($value);
+                $this->crud->addClause('whereDate', Contract::END_DATE, '>=', $dates->from);
+                $this->crud->addClause('whereDate', Contract::END_DATE, '<=', $dates->to);
+            });
+
         $this->crud->addFilter([
             'type'  => 'text',
             'name'  => 'payment_type',
@@ -106,6 +125,7 @@ class OrderCardCrudController extends CrudController
             function($value) { // if the filter is active
                 $this->crud->addClause('where', 'payment_type', 'like', "$value%");
             });
+
         $this->crud->addFilter([
             'name'  => 'is_paid',
             'type'  => 'dropdown',

@@ -11,9 +11,6 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class RoleCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
     public function setup()
@@ -21,11 +18,6 @@ class RoleCrudController extends CrudController
         CRUD::setModel(Role::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/role');
         CRUD::setEntityNameStrings(Contract::T(Contract::ROLE), Contract::T(Contract::ROLES));
-        if (backpack_user()->{Contract::ROLE_ID} !== 2) {
-            CRUD::denyAccess('delete');
-            CRUD::denyAccess('update');
-            CRUD::denyAccess('create');
-        }
     }
 
     protected function setupShowOperation(): void

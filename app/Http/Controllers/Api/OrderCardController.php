@@ -4,9 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\ErrorContract;
 use App\Domain\Contracts\Contract;
+use App\Domain\Contracts\OrderCardContract;
+use App\Domain\Requests\OrderCard\AnalyticsRequest;
 use App\Domain\Requests\OrderCard\SaveExcelRequest;
+use App\Domain\Requests\OrderCard\SearchRequest;
 use App\Domain\Requests\OrderCard\UploadExcelRequest;
 use App\Domain\Services\OrderCardService;
+use App\Exports\OrderCardExport;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderCard\OrderCardCollection;
 use App\Http\Resources\OrderCard\OrderCardResource;
@@ -17,6 +21,8 @@ use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Validation\ValidationException;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class OrderCardController extends Controller
 {
@@ -110,4 +116,25 @@ class OrderCardController extends Controller
         ],200);
     }
 
+    /**
+     *  поиск - OrderCard
+     *
+     * @group OrderCard - ЗаказКарточка
+     * @throws ValidationException
+     */
+    public function search(SearchRequest $searchRequest): OrderCardCollection
+    {
+        if ($search = $searchRequest->checked()) {
+            return new OrderCardCollection($this->orderCardService->orderCardRepository->search(OrderCardContract::SEARCH,$search));
+        }
+        return new OrderCardCollection($this->orderCardService->orderCardRepository->all());
+    }
+
+    /**
+     * @throws ValidationException
+     */
+    public function analytics(AnalyticsRequest $analyticsRequest): BinaryFileResponse
+    {
+        return Excel::download(new OrderCardExport($this->orderCardService->orderCardRepository->analytics($analyticsRequest->checked())), 'export.xlsx');
+    }
 }

@@ -505,6 +505,8 @@ Route::controller(OrderCardController::class)->group(function() {
         Route::get('getByUserId/{userId}/{skip}/{take}','getByUserId')->name('orderCard.getByUserId');
         Route::get('getByCardId/{cardId}/{skip}/{take}','getByCardId')->name('orderCard.getByCardId');
         Route::get('getById/{id}','getById')->name('orderCard.getById');
+        Route::any('search','search')->name('user.search');
+        Route::any('analytics','analytics')->name('user.search');
     });
 });
 

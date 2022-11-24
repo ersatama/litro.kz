@@ -18,6 +18,7 @@ class OrderCardResource extends JsonResource
             Contract::UPDATED_AT    =>  $this->{Contract::UPDATED_AT},
             Contract::CARD  =>  new CardResource($this->{Contract::CARD}),
             Contract::USER  =>  new UserResource($this->{Contract::USER}),
+            Contract::FULL  =>  'ID ' . $this->{Contract::ID} . ' - Номер ' . $this->{Contract::NUMBER}
         ];
         foreach (OrderCardContract::FILLABLE as &$value) {
             $arr[$value]    =   $this->{$value};

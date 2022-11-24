@@ -219,38 +219,9 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="orderCardModalAnalytics" tabindex="-1" role="dialog" aria-labelledby="orderCardModalAnalytics" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle"><i class="las la-cloud-upload-alt"></i> Аналитика</h5>
-                        <button type="button" class="close" data-dismiss="modal">
-                            <span aria-hidden="true" >&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">{{ \App\Domain\Contracts\Contract::T(\App\Domain\Contracts\Contract::START_DATE) }}</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">{{ \App\Domain\Contracts\Contract::T(\App\Domain\Contracts\Contract::END_DATE) }}</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">{{ \App\Domain\Contracts\Contract::T(\App\Domain\Contracts\Contract::UTM_CAMPAIGN) }}</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <button type="submit" class="btn btn-info w-100">Экспорт</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue@3.2.45/dist/vue.global.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
 <script>
@@ -267,6 +238,7 @@
     createApp({
         data() {
             return {
+                selectedDate: null,
                 main: true,
                 failureText: false,
                 time: null,
@@ -624,16 +596,28 @@
                 <button class="btn btn-success" data-toggle="modal" data-target="#orderCardModal">
                     <i class="las la-file-alt"></i> Импорт карт
                 </button>
-                    <button class="btn btn-info" data-toggle="modal" data-target="#orderCardModalAnalytics">
-                        <i class="las la-file-medical-alt"></i> Аналитика
-                    </button>
+                <a class="btn btn-info" id="export">
+                    <i class="las la-file-medical-alt"></i> Экспорт карт
+                </a>
             </div>
           </div>
           <div class="col-sm-6">
             <div id="datatable_search_stack" class="mt-sm-0 mt-2 d-print-none"></div>
           </div>
         </div>
-
+        <script>
+            function downloadURI(uri, name) {
+                let link = document.createElement("a");
+                link.download = name;
+                link.href = uri;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+            document.getElementById('export').onclick   =   function() {
+                downloadURI('/api/orderCard/analytics'+window.location.search,'export.xlsx');
+            };
+        </script>
         {{-- Backpack List Filters --}}
         @if ($crud->filtersEnabled())
           @include('crud::inc.filters_navbar')

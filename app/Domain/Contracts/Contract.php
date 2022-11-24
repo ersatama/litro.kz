@@ -4,6 +4,12 @@ namespace App\Domain\Contracts;
 
 abstract class Contract
 {
+    const CANCELED  =   'canceled';
+    const NEW   =   'new';
+    const FINISHED  =   'finished';
+    const DONE  =   'done';
+    const IN_WORK   =   'in work';
+    const FAILED    =   'failed';
     const PAGE  =   'page';
     const LIKE  =   'like';
     const Q =   'q';
@@ -185,6 +191,8 @@ abstract class Contract
     const PAYMENT_TYPE  =   'payment_type';
     const END_DATE  =   'end_date';
     const START_DATE    =   'start_date';
+    const FROM  =   'from';
+    const TO    =   'to';
     const PROMO_CODE    =   'promo_code';
     const ACTIVATED_BY  =   'activated_by';
     const PAYBOX_ORDER_DATE =   'paybox_order_date';
@@ -223,6 +231,7 @@ abstract class Contract
     const COLORS    =   'colors';
     const IMAGE =   'image';
     const SELECT    =   'select';
+    const SELECT2   =   'select2';
     const IMAGES    =   'images';
     const BROWSER_IMAGE =   'browser_image';
     const ADDITIONAL_IMAGE  =   'additional_image';
@@ -318,6 +327,8 @@ abstract class Contract
     const AUTO_PART_PARAM_ID    =   'auto_part_param_id';
     const FILTER    =   'filter';
     const TYPE  =   'type';
+    const DATE_RANGE    =   'date_range';
+    const DROPDOWN  =   'dropdown';
     const ENTITY    =   'entity';
     const ATTRIBUTE =   'attribute';
     const PLACEHOLDER   =   'placeholder';

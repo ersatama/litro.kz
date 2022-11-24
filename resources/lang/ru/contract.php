@@ -81,4 +81,14 @@ return [
     Contract::IS_CANCELED   =>  'Отменен',
     Contract::REFERRAL  =>  'Реферал',
     Contract::PAYBOX_ORDER_DATE =>  'Paybox Дата',
+    Contract::ORDER_CARD_ID =>  'ID заказных карт',
+    Contract::PLACE =>  'Адреса',
+    Contract::CAR_CATEGORY  =>  'Категория Машины',
+    Contract::OLD_PRICE =>  'Старая цена',
+    Contract::LAT   =>  'Широта',
+    Contract::LONG  =>  'Долгота',
+    Contract::REVIEW    =>  'Обзор',
+    Contract::RANK  =>  'Классификация',
+    Contract::IS_CARD   =>  'Это карта?',
+    Contract::BITRIX_ID =>  'битрикс ID'
 ];

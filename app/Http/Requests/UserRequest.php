@@ -53,7 +53,14 @@ class UserRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            Contract::ROLE_ID   . '.required' =>  'Укажите роль',
+            Contract::CITY_ID   . '.required' =>  'Укажите город',
+            Contract::PHONE     . '.required' =>  'Укажите телефон номер',
+            Contract::PHONE     . '.unique'   =>  'Телефон номер занят',
+            Contract::EMAIL     . '.unique'   =>  'Эл.почта занят',
+            Contract::FIRST_NAME    . '.required' =>  'Укажите имя',
+            Contract::LAST_NAME     . '.required' =>  'Укажите фамилию',
+            Contract::BIRTHDATE     . '.required' =>  'Укажите дату рождения',
         ];
     }
 }

@@ -29,4 +29,8 @@ class OrderCardContract extends Contract
         self::UTM_CAMPAIGN,
         self::IMPORT_ID,
     ];
+    const SEARCH    =   [
+        self::ID,
+        self::NUMBER
+    ];
 }
