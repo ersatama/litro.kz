@@ -615,7 +615,10 @@
                 document.body.removeChild(link);
             }
             document.getElementById('export').onclick   =   function() {
-                downloadURI('/api/orderCard/analytics'+window.location.search,'export.xlsx');
+                let query   =   URI(window.location.href).query(true);
+                if (query.start_date || query.end_date || query.utm_campaign) {
+                    downloadURI('/api/orderCard/analytics'+window.location.search,'export.xlsx');
+                }
             };
         </script>
         {{-- Backpack List Filters --}}
