@@ -16,6 +16,7 @@ class NotificationCountRepositoryEloquent implements NotificationCountRepository
         $this->model    =   $notificationCount;
     }
 
+
     public function countNotViewedByNotificationTypeIdAndUserId($userId, $ids)
     {
         $count  =   $this->model::where(Contract::USER_ID,$userId)->whereIn(Contract::ID,$ids)->count();

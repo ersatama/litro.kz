@@ -46,6 +46,7 @@ use App\Http\Controllers\Api\MoneyOperationTypeController;
 use App\Http\Controllers\Api\NewsCategoryController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\NotificationController;
+use App\Http\Controllers\Api\NotificationCountController;
 use App\Http\Controllers\Api\NotificationTypeController;
 use App\Http\Controllers\Api\NotificationUserController;
 use App\Http\Controllers\Api\OrderCardChosenServiceController;
@@ -279,6 +280,12 @@ Route::controller(NotificationTypeController::class)->group(function() {
     Route::prefix('notificationType')->group(function() {
         Route::get('get/{skip}/{take}','get')->name('notificationType.get');
         Route::get('getById/{id}','getById')->name('notificationType.getById');
+    });
+});
+
+Route::controller(NotificationCountController::class)->group(function() {
+    Route::prefix('notificationCount')->group(function() {
+        Route::get('resetCountView/{notificationTypeId}/{userId}','resetCountView')->name('notificationCount.resetCountView');
     });
 });
 

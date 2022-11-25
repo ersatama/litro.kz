@@ -22,6 +22,33 @@ class NotificationCountController extends Controller
         $this->notificationService  =   $notificationService;
     }
 
+    /**
+     * сбросить счетчик через NotificationTypeId & UserId - NotificationCount
+     *
+     * @group NotificationCount
+     */
+    public function resetCountView($notificationTypeId,$userId): Response|Application|ResponseFactory
+    {
+        $notifications  =   $this->notificationService->notificationRepository->getByNotificationTypeIdAll($notificationTypeId);
+        foreach ($notifications as &$notification) {
+            $this->notificationCountService->notificationCountRepository->updateOrCreate([
+                Contract::NOTIFICATION_ID   =>  $notification->{Contract::ID},
+                Contract::USER_ID   =>  $userId,
+            ],[
+                Contract::NOTIFICATION_ID   =>  $notification->{Contract::ID},
+                Contract::USER_ID   =>  $userId,
+            ]);
+        }
+        return response([
+            Contract::NOT_VIEWED    =>  0
+        ],200);
+    }
+
+    /**
+     * @hideFromAPIDocumentation
+     *
+     * @group Notification
+     */
     public function update($cityId,$userId): Response|Application|ResponseFactory
     {
         $notifications  =   $this->notificationService->notificationRepository->getByCityId($cityId);

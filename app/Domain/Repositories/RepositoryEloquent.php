@@ -37,6 +37,11 @@ trait RepositoryEloquent
         return $this->model::where(Contract::NUMBER,$number)->first();
     }
 
+    public function updateOrCreate($create, $update)
+    {
+        return $this->model::updateOrCreate($create, $update);
+    }
+
     public function upsert($data, $search, $update)
     {
         DB::table($this->model->getTable())->upsert($data, $search, $update);
@@ -56,6 +61,11 @@ trait RepositoryEloquent
             Contract::NOTIFICATION_ID   =>  $notificationId,
             Contract::USER_ID   =>  $userId
         ])->first();
+    }
+
+    public function getByNotificationTypeIdAll($notificationTypeId)
+    {
+        return $this->model::where(Contract::NOTIFICATION_TYPE_ID, $notificationTypeId)->get();
     }
 
     public function getByNotificationTypeId($notificationTypeId, $skip, $take)
