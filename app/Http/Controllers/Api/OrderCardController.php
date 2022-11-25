@@ -89,9 +89,8 @@ class OrderCardController extends Controller
     }
 
     /**
-     * Загрузить карты через excel - OrderCard
+     * @hideFromAPIDocumentation
      *
-     * @group OrderCard - ЗаказКарточка
      * @throws ValidationException
      */
     public function uploadExcel(UploadExcelRequest $uploadExcel): Response|Application|ResponseFactory
@@ -103,9 +102,8 @@ class OrderCardController extends Controller
     }
 
     /**
-     * Сохранить карты через excel - OrderCard
+     * @hideFromAPIDocumentation
      *
-     * @group OrderCard - ЗаказКарточка
      * @throws ValidationException
      */
     public function saveExcel(SaveExcelRequest $saveExcelRequest): Response|Application|ResponseFactory
@@ -117,9 +115,8 @@ class OrderCardController extends Controller
     }
 
     /**
-     *  поиск - OrderCard
+     * @hideFromAPIDocumentation
      *
-     * @group OrderCard - ЗаказКарточка
      * @throws ValidationException
      */
     public function search(SearchRequest $searchRequest): OrderCardCollection
@@ -131,6 +128,8 @@ class OrderCardController extends Controller
     }
 
     /**
+     * @hideFromAPIDocumentation
+     *
      * @throws ValidationException
      */
     public function analytics(AnalyticsRequest $analyticsRequest): BinaryFileResponse

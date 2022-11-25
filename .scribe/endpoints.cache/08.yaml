@@ -20,14 +20,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: non
+        example: placeat
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: voluptatem
+        example: natus
         type: string
         custom: []
     queryParameters: []

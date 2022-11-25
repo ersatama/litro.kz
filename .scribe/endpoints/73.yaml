@@ -1,51 +1,12 @@
-name: 'Stock - Запас'
+name: 'ServiceType - СервисТип'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/stock/get/{skip}/{take}'
+    uri: 'api/serviceType/getById/{id}'
     metadata:
-      title: 'Получить список - Stock'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      skip:
-        name: skip
-        description: ''
-        required: true
-        example: quia
-        type: string
-        custom: []
-      take:
-        name: take
-        description: ''
-        required: true
-        example: qui
-        type: string
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"count":4,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/stock/getById/{id}'
-    metadata:
-      title: 'Получить данные через ID - Stock'
+      title: 'Получить данные через ID - ServiceType'
       description: ''
       authenticated: false
       custom: []
@@ -57,7 +18,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: magnam
+        example: nemo
         type: string
         custom: []
     queryParameters: []
@@ -66,6 +27,45 @@ endpoints:
       -
         status: 404
         content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/serviceType/get/{skip}/{take}'
+    metadata:
+      title: 'Получить список - ServiceType'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: voluptatem
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: eum
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":21,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

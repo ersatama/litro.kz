@@ -1,12 +1,12 @@
-name: 'Wallet - Бумажник'
+name: UserProfile
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/wallet/get/{skip}/{take}'
+    uri: 'api/userProfile/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - Wallet'
+      title: 'Получить список - UserProfile'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: exercitationem
+        example: modi
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: autem
+        example: ut
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":6365,"data":[]}'
+        content: '{"count":264,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/wallet/getByUserId/{userId}/{skip}/{take}'
+    uri: 'api/userProfile/getByUserId/{userId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через UserID - Wallet'
+      title: 'Получить данные через UserID - UserProfile'
       description: ''
       authenticated: false
       custom: []
@@ -57,21 +57,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: ut
+        example: et
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: eaque
+        example: labore
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: ut
+        example: omnis
         type: string
         custom: []
     queryParameters: []
@@ -79,7 +79,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":6365,"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -89,9 +89,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/wallet/getById/{id}'
+    uri: 'api/userProfile/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - Wallet'
+      title: 'Получить данные через ID - UserProfile'
       description: ''
       authenticated: false
       custom: []
@@ -103,7 +103,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: repellendus
+        example: non
         type: string
         custom: []
     queryParameters: []

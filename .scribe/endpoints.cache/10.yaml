@@ -27,7 +27,7 @@ endpoints:
         name: take
         description: ''
         required: true
-        example: eius
+        example: provident
         type: string
         custom: []
     queryParameters: []
@@ -59,21 +59,21 @@ endpoints:
         name: carModelId
         description: ''
         required: true
-        example: nulla
+        example: rerum
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: dolorem
+        example: et
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: est
+        example: repellendus
         type: string
         custom: []
     queryParameters: []
@@ -105,7 +105,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: sed
+        example: laborum
         type: string
         custom: []
     queryParameters: []
@@ -137,14 +137,14 @@ endpoints:
         name: carModelId
         description: ''
         required: true
-        example: fuga
+        example: asperiores
         type: string
         custom: []
       year:
         name: year
         description: ''
         required: true
-        example: vel
+        example: dolore
         type: string
         custom: []
     queryParameters: []

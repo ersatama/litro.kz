@@ -287,6 +287,7 @@ Route::controller(NotificationController::class)->group(function() {
         Route::get('get/{skip}/{take}','get')->name('notification.get');
         Route::get('getByNotificationTypeIdAndCityIdWithUser/{userId}/{notificationTypeId}/{cityId}/{skip}/{take}','getByNotificationTypeIdAndCityIdWithUser')->name('notification.getByNotificationTypeIdAndCityIdWithUser');
         Route::get('getByNotificationTypeIdAndCityId/{notificationTypeId}/{cityId}/{skip}/{take}','getByNotificationTypeIdAndCityId')->name('notification.getByNotificationTypeIdAndCityId');
+        Route::get('getByNotificationTypeIdAndUserId/{notificationTypeId}/{userId}/{skip}/{take}','getByNotificationTypeIdAndUserId')->name('notification.getByNotificationTypeIdAndUserId');
         Route::get('getByNotificationTypeId/{notificationTypeId}/{skip}/{take}','getByNotificationTypeId')->name('notification.getByNotificationTypeIdAndCityId');
         Route::get('getByCityId/{cityId}/{skip}/{take}','getByCityId')->name('notification.getByCityId');
         Route::get('getById/{id}','getById')->name('notification.getById');

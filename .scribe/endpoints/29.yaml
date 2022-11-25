@@ -1,12 +1,12 @@
-name: 'InsuranceKaskoPolicy - СтрахованияКаскоПолитика'
+name: InsuranceImage
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/insuranceKaskoPolicy/get/{skip}/{take}'
+    uri: 'api/insuranceImage/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - InsuranceKaskoPolicy'
+      title: 'Получить список - InsuranceImage'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: nulla
+        example: fugiat
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: nostrum
+        example: itaque
         type: string
         custom: []
     queryParameters: []
@@ -33,7 +33,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":61,"data":[]}'
+        content: '{"count":24,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/insuranceKaskoPolicy/getByUserId/{userId}/{skip}/{take}'
+    uri: 'api/insuranceImage/getByUserId/{userId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через UserID - InsuranceKaskoPolicy'
+      title: 'Получить данные через UserID - InsuranceImage'
       description: ''
       authenticated: false
       custom: []
@@ -57,21 +57,21 @@ endpoints:
         name: userId
         description: ''
         required: true
-        example: libero
+        example: officia
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: voluptatem
+        example: laudantium
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: voluptatem
+        example: consequuntur
         type: string
         custom: []
     queryParameters: []
@@ -79,7 +79,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":61,"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -89,9 +89,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/insuranceKaskoPolicy/getByUserCarId/{userCarId}/{skip}/{take}'
+    uri: 'api/insuranceImage/getByInsuranceCompanyId/{insuranceCompanyId}/{skip}/{take}'
     metadata:
-      title: 'Получить данные через UserCarID - InsuranceKaskoPolicy'
+      title: 'Получить данные через InsuranceCompanyID - InsuranceImage'
       description: ''
       authenticated: false
       custom: []
@@ -99,25 +99,25 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      userCarId:
-        name: userCarId
+      insuranceCompanyId:
+        name: insuranceCompanyId
         description: ''
         required: true
-        example: soluta
+        example: adipisci
         type: string
         custom: []
       skip:
         name: skip
         description: ''
         required: true
-        example: impedit
+        example: est
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: quo
+        example: delectus
         type: string
         custom: []
     queryParameters: []
@@ -125,7 +125,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"count":61,"data":[]}'
+        content: '{"count":0,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -135,9 +135,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/insuranceKaskoPolicy/getById/{id}'
+    uri: 'api/insuranceImage/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - InsuranceKaskoPolicy'
+      title: 'Получить данные через ID - InsuranceImage'
       description: ''
       authenticated: false
       custom: []
@@ -149,7 +149,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: necessitatibus
+        example: est
         type: string
         custom: []
     queryParameters: []

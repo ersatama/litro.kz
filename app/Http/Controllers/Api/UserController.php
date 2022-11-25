@@ -123,9 +123,8 @@ class UserController extends Controller
     }
 
     /**
-     *  поиск - User
+     * @hideFromAPIDocumentation
      *
-     * @group User - Пользователь
      * @throws ValidationException
      */
     public function search(SearchRequest $searchRequest): UserCollection

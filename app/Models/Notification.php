@@ -8,11 +8,13 @@ use App\Domain\Scopes\WithDeleted;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Notification extends Model
 {
     use CrudTrait;
     use HasFactory;
+    use SoftDeletes;
     protected $table    =   NotificationContract::TABLE;
     protected $fillable =   NotificationContract::FILLABLE;
 

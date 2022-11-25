@@ -18,6 +18,11 @@ class NotificationRepositoryEloquent implements NotificationRepositoryInterface
         $this->model    =   $notification;
     }
 
+    public function getIds($notificationTypeId)
+    {
+        return $this->model::where(Contract::NOTIFICATION_TYPE_ID, $notificationTypeId)->get(Contract::ID);
+    }
+
     public function countNotViewed($userId, $notificationTypeId, $cityId)
     {
         return DB::table(NotificationContract::TABLE)
@@ -51,7 +56,7 @@ class NotificationRepositoryEloquent implements NotificationRepositoryInterface
             ]);
     }
 
-    public static function count()
+    public static function count($where = [])
     {
         return Notification::count();
     }

@@ -1,12 +1,12 @@
-name: NotificationType
+name: Notification
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/notificationType/get/{skip}/{take}'
+    uri: 'api/notification/get/{skip}/{take}'
     metadata:
-      title: 'Получить список - NotificationType'
+      title: 'Получить список - Notification'
       description: ''
       authenticated: false
       custom: []
@@ -18,14 +18,14 @@ endpoints:
         name: skip
         description: ''
         required: true
-        example: eaque
+        example: consequatur
         type: string
         custom: []
       take:
         name: take
         description: ''
         required: true
-        example: voluptate
+        example: dolorem
         type: string
         custom: []
     queryParameters: []
@@ -43,9 +43,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/notificationType/getById/{id}'
+    uri: 'api/notification/getById/{id}'
     metadata:
-      title: 'Получить данные через ID - NotificationType'
+      title: 'Получить данные через ID - Notification'
       description: ''
       authenticated: false
       custom: []
@@ -57,7 +57,7 @@ endpoints:
         name: id
         description: 'The ID of the getById.'
         required: true
-        example: non
+        example: ea
         type: string
         custom: []
     queryParameters: []
@@ -66,6 +66,755 @@ endpoints:
       -
         status: 404
         content: '{"message":"not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByNotificationTypeIdAndCityIdWithUser/{userId}/{notificationTypeId}/{cityId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через NotificationTypeId и CityID c пользователем - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      userId:
+        name: userId
+        description: ''
+        required: true
+        example: a
+        type: string
+        custom: []
+      notificationTypeId:
+        name: notificationTypeId
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: voluptates
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: aut
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: eum
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByNotificationTypeIdAndCityId/{notificationTypeId}/{cityId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через NotificationTypeId и CityID - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      notificationTypeId:
+        name: notificationTypeId
+        description: ''
+        required: true
+        example: quo
+        type: string
+        custom: []
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: pariatur
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: sequi
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: aperiam
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByCityId/{cityId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через CityID - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cityId:
+        name: cityId
+        description: ''
+        required: true
+        example: ratione
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: qui
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: voluptas
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByNotificationTypeId/{notificationTypeId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через NotificationTypeId - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      notificationTypeId:
+        name: notificationTypeId
+        description: ''
+        required: true
+        example: corporis
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: voluptas
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: at
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"count":0,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/notification/getByNotificationTypeIdAndUserId/{notificationTypeId}/{userId}/{skip}/{take}'
+    metadata:
+      title: 'Получить данные через NotificationTypeIdAndUserId - Notification'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      notificationTypeId:
+        name: notificationTypeId
+        description: ''
+        required: true
+        example: dolor
+        type: string
+        custom: []
+      userId:
+        name: userId
+        description: ''
+        required: true
+        example: qui
+        type: string
+        custom: []
+      skip:
+        name: skip
+        description: ''
+        required: true
+        example: esse
+        type: string
+        custom: []
+      take:
+        name: take
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'deleted_at' in where clause is ambiguous (SQL: select count(*) as aggregate from `notifications` left join `notification_counts` on `notifications`.`id` = `notification_counts`.`notification_id` where `notification_counts`.`id` is null and `deleted_at` is null)",
+              "exception": "Illuminate\\Database\\QueryException",
+              "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+              "line": 760,
+              "trace": [
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+                      "line": 720,
+                      "function": "runQueryCallback",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Connection.php",
+                      "line": 422,
+                      "function": "run",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2650,
+                      "function": "select",
+                      "class": "Illuminate\\Database\\Connection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2638,
+                      "function": "runSelect",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 3174,
+                      "function": "Illuminate\\Database\\Query\\{closure}",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 2639,
+                      "function": "onceWithColumns",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 3101,
+                      "function": "get",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+                      "line": 3029,
+                      "function": "aggregate",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+                      "line": 1861,
+                      "function": "count",
+                      "class": "Illuminate\\Database\\Query\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/app/Domain/Repositories/Notification/NotificationRepositoryEloquent.php",
+                      "line": 29,
+                      "function": "__call",
+                      "class": "Illuminate\\Database\\Eloquent\\Builder",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/app/Http/Controllers/Api/NotificationController.php",
+                      "line": 78,
+                      "function": "countNotViewedByNotificationTypeIdAndUserId",
+                      "class": "App\\Domain\\Repositories\\Notification\\NotificationRepositoryEloquent",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
+                      "line": 54,
+                      "function": "getByNotificationTypeIdAndUserId",
+                      "class": "App\\Http\\Controllers\\Api\\NotificationController",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php",
+                      "line": 43,
+                      "function": "callAction",
+                      "class": "Illuminate\\Routing\\Controller",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+                      "line": 260,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\ControllerDispatcher",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+                      "line": 205,
+                      "function": "runController",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 727,
+                      "function": "run",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Routing\\{closure}",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 728,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 705,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 669,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 658,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 190,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 165,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 134,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 89,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 222,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 179,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 116,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 123,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 80,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 56,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 55,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 651,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 178,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Command/Command.php",
+                      "line": 308,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 148,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 1014,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 301,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/symfony/console/Application.php",
+                      "line": 171,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Console/Application.php",
+                      "line": 102,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 155,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/admin-unified/artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

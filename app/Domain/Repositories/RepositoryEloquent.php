@@ -183,6 +183,12 @@ trait RepositoryEloquent
             ->first();
     }
 
+    public function countWhere($where)
+    {
+        return $this->model::where($where)
+            ->count();
+    }
+
     public function count($where)
     {
         return $this->model::where($where)

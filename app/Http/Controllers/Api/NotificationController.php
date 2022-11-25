@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Domain\Contracts\Contract;
 use App\Domain\Contracts\ErrorContract;
+use App\Domain\Services\NotificationCountService;
 use App\Domain\Services\NotificationService;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Notification\NotificationCollection;
@@ -16,9 +17,11 @@ use Illuminate\Http\Response;
 class NotificationController extends Controller
 {
     protected NotificationService $notificationService;
-    public function __construct(NotificationService $notificationService)
+    protected NotificationCountService $notificationCountService;
+    public function __construct(NotificationService $notificationService, NotificationCountService $notificationCountService)
     {
         $this->notificationService  =   $notificationService;
+        $this->notificationCountService =   $notificationCountService;
     }
 
     /**
@@ -42,7 +45,6 @@ class NotificationController extends Controller
     public function getByNotificationTypeIdAndCityIdWithUser($userId,$notificationTypeId,$cityId,$skip,$take): Response|Application|ResponseFactory
     {
         return response([
-            Contract::NOT_VIEWED    =>  $this->notificationService->notificationRepository->countNotViewed($userId, $notificationTypeId, $cityId),
             Contract::COUNT =>  $this->notificationService->notificationRepository->count([
                 Contract::NOTIFICATION_TYPE_ID  =>  $notificationTypeId,
                 Contract::CITY_ID   =>  $cityId
@@ -64,6 +66,22 @@ class NotificationController extends Controller
                 Contract::CITY_ID   =>  $cityId
             ]),
             Contract::DATA  =>  new NotificationCollection($this->notificationService->notificationRepository->getByNotificationTypeIdAndCityId($notificationTypeId,$cityId,$skip,$take))
+        ],200);
+    }
+
+    /**
+     * Получить данные через NotificationTypeIdAndUserId - Notification
+     *
+     * @group Notification
+     */
+    public function getByNotificationTypeIdAndUserId($notificationTypeId,$userId,$skip,$take): Response|Application|ResponseFactory
+    {
+        return response([
+            Contract::NOT_VIEWED    =>  $this->notificationCountService->notificationCountRepository->countNotViewedByNotificationTypeIdAndUserId($userId, $this->notificationService->notificationRepository->getIds($notificationTypeId)),
+            Contract::COUNT =>  $this->notificationService->notificationRepository->countWhere([
+                Contract::NOTIFICATION_TYPE_ID  =>  $notificationTypeId,
+            ]),
+            Contract::DATA  =>  new NotificationCollection($this->notificationService->notificationRepository->getByNotificationTypeId($notificationTypeId,$skip,$take))
         ],200);
     }
 
