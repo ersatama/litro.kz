@@ -7,6 +7,7 @@ use App\Http\Requests\OrderCardRequest;
 use App\Models\Card;
 use App\Models\OrderCard;
 use App\Models\User;
+use Backpack\CRUD\app\Exceptions\BackpackProRequiredException;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -22,6 +23,7 @@ class OrderCardCrudController extends CrudController
      * Configure the CrudPanel object. Apply settings to all operations.
      *
      * @return void
+     * @throws BackpackProRequiredException
      */
     public function setup(): void
     {
@@ -29,6 +31,10 @@ class OrderCardCrudController extends CrudController
         CRUD::setRoute(config('backpack.base.route_prefix') . '/order-card');
         CRUD::setEntityNameStrings('Карта', 'Заказные карты');
         $this->crud->setListView('vendor.backpack.crud.orderCard.list');
+        $this->crud->enableDetailsRow();
+        $this->crud->enableExportButtons();
+        $this->crud->enableDetailsRow();
+        $this->crud->allowAccess((array)'details_row');
         $this->crud->addFilter([
             Contract::TYPE  =>  Contract::TEXT,
             Contract::NAME  =>  Contract::ID,
@@ -348,5 +354,13 @@ class OrderCardCrudController extends CrudController
     protected function setupUpdateOperation(): void
     {
         $this->setupCreateOperation();
+    }
+
+    protected function showDetailsRow($id)
+    {
+        $this->crud->hasAccessOrFail('details_row');
+        $this->data['entry'] = $this->crud->getEntry($id);
+        $this->data['crud'] = $this->crud;
+        return view($this->crud->getDetailsRowView(), $this->data);
     }
 }
