@@ -4,14 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Domain\Contracts\Contract;
 use App\Http\Requests\GiftRequest;
+use App\Models\Gift;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
-/**
- * Class GiftCrudController
- * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
- */
 class GiftCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
@@ -20,53 +16,28 @@ class GiftCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    /**
-     * Configure the CrudPanel object. Apply settings to all operations.
-     *
-     * @return void
-     */
-    public function setup()
+    public function setup(): void
     {
-        CRUD::setModel(\App\Models\Gift::class);
+        CRUD::setModel(Gift::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/gift');
-        CRUD::setEntityNameStrings('gift', 'gifts');
+        CRUD::setEntityNameStrings('Подарочная карта', 'Подарочные карты');
+        $this->crud->enableDetailsRow();
+        $this->crud->enableExportButtons();
         if (backpack_user()->{Contract::ROLE_ID} !== 2) {
             CRUD::denyAccess('delete');
         }
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     *
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
-    protected function setupListOperation()
+    protected function setupShowOperation(): void
     {
-        CRUD::column('user_id');
-        CRUD::column('number');
-        CRUD::column('is_paid');
-        CRUD::column('paybox_order_id');
-        CRUD::column('paybox_order_date');
-        CRUD::column('activated_by');
-        CRUD::column('card_id');
-        CRUD::column('price');
-        CRUD::column('promo_code');
-        CRUD::column('phone');
-
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
-         */
+        $this->extracted();
     }
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
+    protected function setupListOperation(): void
+    {
+        $this->extracted();
+    }
+
     protected function setupCreateOperation()
     {
         CRUD::setValidation(GiftRequest::class);
@@ -81,22 +52,28 @@ class GiftCrudController extends CrudController
         CRUD::field('price');
         CRUD::field('promo_code');
         CRUD::field('phone');
-
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
-         */
     }
 
-    /**
-     * Define what happens when the Update operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+
+    protected function extracted(): void
+    {
+        CRUD::column(Contract::ID)->label(Contract::T(Contract::ID))->type(Contract::NUMBER);
+        CRUD::column(Contract::USER_ID)->label(Contract::T(Contract::USER));
+        CRUD::column(Contract::NUMBER)->label(Contract::T(Contract::NUMBER));
+        CRUD::column(Contract::IS_PAID)->label(Contract::T(Contract::IS_PAID))->type(Contract::SELECT_FROM_ARRAY)->options([
+            1 => Contract::T(Contract::YES),
+            0 => Contract::T(Contract::NO),
+        ]);
+        CRUD::column(Contract::PAYBOX_ORDER_ID)->label('Paybox ID');
+        CRUD::column(Contract::PAYBOX_ORDER_DATE)->label('Paybox Дата');
+        CRUD::column('activated_by');
+        CRUD::column(Contract::CARD_ID)->label(Contract::T(Contract::CARD));
+        CRUD::column(Contract::PRICE)->label(Contract::T(Contract::PRICE));
+        CRUD::column(Contract::PROMO_CODE)->label(Contract::T(Contract::PROMO_CODE));
+        CRUD::column(Contract::PHONE)->label(Contract::T(Contract::PHONE));
     }
 }

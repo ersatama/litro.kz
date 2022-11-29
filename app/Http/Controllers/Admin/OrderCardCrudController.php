@@ -19,12 +19,6 @@ class OrderCardCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    /**
-     * Configure the CrudPanel object. Apply settings to all operations.
-     *
-     * @return void
-     * @throws BackpackProRequiredException
-     */
     public function setup(): void
     {
         CRUD::setModel(OrderCard::class);
@@ -33,7 +27,6 @@ class OrderCardCrudController extends CrudController
         $this->crud->setListView('vendor.backpack.crud.orderCard.list');
         $this->crud->enableDetailsRow();
         $this->crud->enableExportButtons();
-        $this->crud->enableDetailsRow();
         $this->crud->allowAccess((array)'details_row');
         $this->crud->addFilter([
             Contract::TYPE  =>  Contract::TEXT,
