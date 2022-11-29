@@ -93,5 +93,6 @@ return [
     Contract::BITRIX_ID =>  'Битрикс ID',
     Contract::YEAR  =>  'Год',
     Contract::CAR_NUMBER    =>  'Номер автомобиля',
-    Contract::VIN   =>  'VIN номер'
+    Contract::VIN   =>  'VIN номер',
+    Contract::REFERRAL_CODE =>  'Реферальный код'
 ];

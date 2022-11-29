@@ -596,9 +596,6 @@
                 <button class="btn btn-success" data-toggle="modal" data-target="#orderCardModal">
                     <i class="las la-file-alt"></i> Импорт карт
                 </button>
-                <a class="btn btn-info" id="export">
-                    <i class="las la-file-medical-alt"></i> Экспорт карт
-                </a>
             </div>
           </div>
           <div class="col-sm-6">
