@@ -90,5 +90,8 @@ return [
     Contract::REVIEW    =>  'Обзор',
     Contract::RANK  =>  'Классификация',
     Contract::IS_CARD   =>  'Это карта?',
-    Contract::BITRIX_ID =>  'битрикс ID'
+    Contract::BITRIX_ID =>  'Битрикс ID',
+    Contract::YEAR  =>  'Год',
+    Contract::CAR_NUMBER    =>  'Номер автомобиля',
+    Contract::VIN   =>  'VIN номер'
 ];
