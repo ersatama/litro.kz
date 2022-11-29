@@ -94,5 +94,6 @@ return [
     Contract::YEAR  =>  'Год',
     Contract::CAR_NUMBER    =>  'Номер автомобиля',
     Contract::VIN   =>  'VIN номер',
-    Contract::REFERRAL_CODE =>  'Реферальный код'
+    Contract::REFERRAL_CODE =>  'Реферальный код',
+    Contract::CARD_CATEGORY =>  'Категория карты'
 ];
